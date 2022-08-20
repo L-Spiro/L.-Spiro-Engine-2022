@@ -1,0 +1,9 @@
+uniform float[4][4]	g_mModelViewProjMatrix : WORLDVIEWPROJ;
+
+void Main( lse_MainVsInputs,
+	lse_MainVsOutputs ) {
+	_vOutPosition = mul( g_mModelViewProjMatrix, vec4( _vInPosition, 1.0f ) );
+	
+	// Copy all non-custom texture coordinates directly.
+	LSE_TEXCOORD_COPY
+}

@@ -1,0 +1,23 @@
+#ifndef LSD_G_TERMS
+#define LSD_G_TERMS
+
+#include "LSDSqr.lssl"
+
+float SmithG1_GGX( float _fVdotN, float _fAlphaG ) {
+	return _fVdotN / (_fVdotN * (1.0 - _fAlphaG) + _fAlphaG);
+}
+
+// _fAlphaG = Roughness.
+float SmithG_GGX( float _fLdotN, float _fVdotN, float _fAlphaG ) {
+	float fK = Sqr( _fAlphaG + 1.0 ) * (1.0 / 8.0);
+	return SmithG1_GGX( _fLdotN, fK ) * SmithG1_GGX( _fVdotN, fK );
+}
+
+float CookTorranceG( float _fNdotV, float _fNdotL, float _fVdotH, float _fNdotH ) {
+	float fNdotHDouble = _fNdotH + _fNdotH;
+	float fInvVdotH = 1.0 / _fVdotH;
+	float fNdotHDoubleInvVdotH = fNdotHDouble * fInvVdotH;
+	return min( 1.0, min( fNdotHDoubleInvVdotH * _fNdotV, fNdotHDoubleInvVdotH * _fNdotL ) );
+}
+
+#endif	// #ifndef LSD_G_TERMS

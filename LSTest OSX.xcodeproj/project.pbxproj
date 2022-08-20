@@ -1,0 +1,1020 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE2FD9581B150C6C00E430F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9571B150C6C00E430F7 /* Images.xcassets */; };
+		CE2FD95B1B150C6C00E430F7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9591B150C6C00E430F7 /* MainMenu.xib */; };
+		CE2FD9901B150F3D00E430F7 /* libFreeImageLib OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9761B150F3D00E430F7 /* libFreeImageLib OSX.a */; };
+		CE2FD9911B150F3D00E430F7 /* libLibJPEG OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9771B150F3D00E430F7 /* libLibJPEG OSX.a */; };
+		CE2FD9921B150F3D00E430F7 /* libLibJXR OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9781B150F3D00E430F7 /* libLibJXR OSX.a */; };
+		CE2FD9931B150F3D00E430F7 /* libLibOpenJPEG OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9791B150F3D00E430F7 /* libLibOpenJPEG OSX.a */; };
+		CE2FD9941B150F3D00E430F7 /* libLibPNG OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD97A1B150F3D00E430F7 /* libLibPNG OSX.a */; };
+		CE2FD9951B150F3D00E430F7 /* libLibRawLite OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD97B1B150F3D00E430F7 /* libLibRawLite OSX.a */; };
+		CE2FD9961B150F3D00E430F7 /* libLibTIFF4 OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD97C1B150F3D00E430F7 /* libLibTIFF4 OSX.a */; };
+		CE2FD9971B150F3D00E430F7 /* libLibWebP OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD97D1B150F3D00E430F7 /* libLibWebP OSX.a */; };
+		CE2FD9981B150F3D00E430F7 /* libLSCompressionLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD97E1B150F3D00E430F7 /* libLSCompressionLib.a */; };
+		CE2FD9991B150F3D00E430F7 /* libLSEngine OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD97F1B150F3D00E430F7 /* libLSEngine OSX.a */; };
+		CE2FD99A1B150F3D00E430F7 /* libLSFileLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9801B150F3D00E430F7 /* libLSFileLib.a */; };
+		CE2FD99B1B150F3D00E430F7 /* libLSGraphicsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9811B150F3D00E430F7 /* libLSGraphicsLib.a */; };
+		CE2FD99C1B150F3D00E430F7 /* libLSImageLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9821B150F3D00E430F7 /* libLSImageLib.a */; };
+		CE2FD99D1B150F3D00E430F7 /* libLSMathLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9831B150F3D00E430F7 /* libLSMathLib.a */; };
+		CE2FD99E1B150F3D00E430F7 /* libLSMemLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9841B150F3D00E430F7 /* libLSMemLib.a */; };
+		CE2FD99F1B150F3D00E430F7 /* libLSModelLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9851B150F3D00E430F7 /* libLSModelLib.a */; };
+		CE2FD9A01B150F3E00E430F7 /* libLSNetLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9861B150F3D00E430F7 /* libLSNetLib.a */; };
+		CE2FD9A11B150F3E00E430F7 /* libLSPhysicsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9871B150F3D00E430F7 /* libLSPhysicsLib.a */; };
+		CE2FD9A21B150F3E00E430F7 /* libLSSoundLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9881B150F3D00E430F7 /* libLSSoundLib.a */; };
+		CE2FD9A31B150F3E00E430F7 /* libLSStandardLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9891B150F3D00E430F7 /* libLSStandardLib.a */; };
+		CE2FD9A41B150F3E00E430F7 /* libLSThreadLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD98A1B150F3D00E430F7 /* libLSThreadLib.a */; };
+		CE2FD9A51B150F3E00E430F7 /* libLSTL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD98B1B150F3D00E430F7 /* libLSTL.a */; };
+		CE2FD9A61B150F3E00E430F7 /* libOpenEXR OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD98C1B150F3D00E430F7 /* libOpenEXR OSX.a */; };
+		CE2FD9A71B150F3E00E430F7 /* libZLib OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD98D1B150F3D00E430F7 /* libZLib OSX.a */; };
+		CE2FD9A81B150F3E00E430F7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD98E1B150F3D00E430F7 /* OpenAL.framework */; };
+		CE2FD9A91B150F3E00E430F7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD98F1B150F3D00E430F7 /* OpenGL.framework */; };
+		CE2FD9BB1B15765B00E430F7 /* LSTTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FD9AB1B15765B00E430F7 /* LSTTest.cpp */; };
+		CE2FD9BC1B15765B00E430F7 /* LSTBaseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FD9AE1B15765B00E430F7 /* LSTBaseTest.cpp */; };
+		CE2FD9BD1B15765B00E430F7 /* LSTBenchMark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FD9B01B15765B00E430F7 /* LSTBenchMark.cpp */; };
+		CE2FD9BE1B15765B00E430F7 /* LSTLoadMeshTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FD9B21B15765B00E430F7 /* LSTLoadMeshTest.cpp */; };
+		CE2FD9BF1B15765B00E430F7 /* LSTStateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FD9B41B15765B00E430F7 /* LSTStateFactory.cpp */; };
+		CE2FD9C01B15765B00E430F7 /* LSTTextureTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FD9B71B15765B00E430F7 /* LSTTextureTest.cpp */; };
+		CE2FD9C11B15765B00E430F7 /* LSTTriangleTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2FD9B91B15765B00E430F7 /* LSTTriangleTest.cpp */; };
+		CE2FD9C31B15778900E430F7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9C21B15778900E430F7 /* CoreFoundation.framework */; };
+		CE2FD9C51B1577B900E430F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2FD9C41B1577B900E430F7 /* CoreGraphics.framework */; };
+		CE2FDA3E1B15C3F100E430F7 /* 001.dds in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9C71B15C3E500E430F7 /* 001.dds */; };
+		CE2FDA3F1B15C3F100E430F7 /* 001.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9C81B15C3E500E430F7 /* 001.JPG */; };
+		CE2FDA401B15C3F100E430F7 /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9C91B15C3E500E430F7 /* 001.png */; };
+		CE2FDA411B15C3F100E430F7 /* 002.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9CA1B15C3E500E430F7 /* 002.png */; };
+		CE2FDA421B15C3F100E430F7 /* 1x1x1-3.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9CB1B15C3E500E430F7 /* 1x1x1-3.lsm */; };
+		CE2FDA431B15C3F100E430F7 /* Amy.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9CC1B15C3E500E430F7 /* Amy.lsm */; };
+		CE2FDA441B15C3F100E430F7 /* Ashley.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9CD1B15C3E500E430F7 /* Ashley.lsm */; };
+		CE2FDA451B15C3F100E430F7 /* Aston.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9CE1B15C3E500E430F7 /* Aston.lsm */; };
+		CE2FDA461B15C3F100E430F7 /* Audi A4.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9CF1B15C3E500E430F7 /* Audi A4.lsm */; };
+		CE2FDA471B15C3F100E430F7 /* Audi A6.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9D01B15C3E500E430F7 /* Audi A6.lsm */; };
+		CE2FDA481B15C3F100E430F7 /* Beam Kirby.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9D11B15C3E600E430F7 /* Beam Kirby.lsm */; };
+		CE2FDA491B15C3F100E430F7 /* Big Donut.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9D21B15C3E600E430F7 /* Big Donut.lsm */; };
+		CE2FDA4A1B15C3F100E430F7 /* Blue Falcon.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9D31B15C3E600E430F7 /* Blue Falcon.lsm */; };
+		CE2FDA4B1B15C3F100E430F7 /* BMW X6.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9D41B15C3E600E430F7 /* BMW X6.lsm */; };
+		CE2FDA4C1B15C3F100E430F7 /* BMW Z4.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9D51B15C3E600E430F7 /* BMW Z4.lsm */; };
+		CE2FDA4D1B15C3F100E430F7 /* BMW.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9D61B15C3E600E430F7 /* BMW.lsm */; };
+		CE2FDA4E1B15C3F100E430F7 /* Bobomb Battlefield.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9D71B15C3E600E430F7 /* Bobomb Battlefield.lsm */; };
+		CE2FDA4F1B15C3F100E430F7 /* Bowser's Castle.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9D81B15C3E600E430F7 /* Bowser's Castle.lsm */; };
+		CE2FDA501B15C3F100E430F7 /* C-17 Globemaster.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9D91B15C3E600E430F7 /* C-17 Globemaster.lsm */; };
+		CE2FDA511B15C3F100E430F7 /* Cali.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9DA1B15C3E600E430F7 /* Cali.lsm */; };
+		CE2FDA521B15C3F100E430F7 /* Cayman.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9DB1B15C3E600E430F7 /* Cayman.lsm */; };
+		CE2FDA531B15C3F100E430F7 /* Char01.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9DC1B15C3E700E430F7 /* Char01.lsm */; };
+		CE2FDA541B15C3F100E430F7 /* Charizard.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9DD1B15C3E700E430F7 /* Charizard.lsm */; };
+		CE2FDA551B15C3F100E430F7 /* Chevy.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9DE1B15C3E700E430F7 /* Chevy.lsm */; };
+		CE2FDA561B15C3F100E430F7 /* Cobra.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9DF1B15C3E700E430F7 /* Cobra.lsm */; };
+		CE2FDA571B15C3F100E430F7 /* Colin.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9E01B15C3E700E430F7 /* Colin.lsm */; };
+		CE2FDA581B15C3F100E430F7 /* Corneria.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9E11B15C3E700E430F7 /* Corneria.lsm */; };
+		CE2FDA591B15C3F100E430F7 /* Corvette.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9E21B15C3E700E430F7 /* Corvette.lsm */; };
+		CE2FDA5A1B15C3F100E430F7 /* Cruiser.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9E31B15C3E700E430F7 /* Cruiser.lsm */; };
+		CE2FDA5B1B15C3F100E430F7 /* Data.rar in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9E41B15C3E700E430F7 /* Data.rar */; };
+		CE2FDA5C1B15C3F100E430F7 /* DB5.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9E51B15C3E800E430F7 /* DB5.lsm */; };
+		CE2FDA5D1B15C3F100E430F7 /* DBR9.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9E61B15C3E800E430F7 /* DBR9.lsm */; };
+		CE2FDA5E1B15C3F100E430F7 /* DeDeDe.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9E71B15C3E800E430F7 /* DeDeDe.lsm */; };
+		CE2FDA5F1B15C3F100E430F7 /* Dodge Challenger.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9E81B15C3E800E430F7 /* Dodge Challenger.lsm */; };
+		CE2FDA601B15C3F100E430F7 /* Dodge.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9E91B15C3E800E430F7 /* Dodge.lsm */; };
+		CE2FDA611B15C3F100E430F7 /* Evo.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9EA1B15C3E800E430F7 /* Evo.lsm */; };
+		CE2FDA621B15C3F100E430F7 /* Fang.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9EB1B15C3E800E430F7 /* Fang.lsm */; };
+		CE2FDA631B15C3F100E430F7 /* Fenix.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9EC1B15C3E800E430F7 /* Fenix.lsm */; };
+		CE2FDA641B15C3F100E430F7 /* Ferrari.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9ED1B15C3E800E430F7 /* Ferrari.lsm */; };
+		CE2FDA651B15C3F100E430F7 /* Fiat.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9EE1B15C3E800E430F7 /* Fiat.lsm */; };
+		CE2FDA661B15C3F100E430F7 /* GigaBowser.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9EF1B15C3E900E430F7 /* GigaBowser.lsm */; };
+		CE2FDA671B15C3F100E430F7 /* Glut.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9F01B15C3E900E430F7 /* Glut.lsm */; };
+		CE2FDA681B15C3F100E430F7 /* Gorem_U_01_pa.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9F11B15C3E900E430F7 /* Gorem_U_01_pa.lsm */; };
+		CE2FDA691B15C3F100E430F7 /* GT.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9F21B15C3E900E430F7 /* GT.lsm */; };
+		CE2FDA6A1B15C3F100E430F7 /* Guido.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9F31B15C3E900E430F7 /* Guido.lsm */; };
+		CE2FDA6B1B15C3F100E430F7 /* Hilux.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9F41B15C3E900E430F7 /* Hilux.lsm */; };
+		CE2FDA6C1B15C3F100E430F7 /* Hmv.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9F51B15C3EA00E430F7 /* Hmv.lsm */; };
+		CE2FDA6D1B15C3F100E430F7 /* Hole Planet.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9F61B15C3EA00E430F7 /* Hole Planet.lsm */; };
+		CE2FDA6E1B15C3F100E430F7 /* Hover.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9F71B15C3EA00E430F7 /* Hover.lsm */; };
+		CE2FDA6F1B15C3F100E430F7 /* Hunter.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9F81B15C3EA00E430F7 /* Hunter.lsm */; };
+		CE2FDA701B15C3F100E430F7 /* janken_02_idle.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9F91B15C3EA00E430F7 /* janken_02_idle.lsm */; };
+		CE2FDA711B15C3F100E430F7 /* jumpwoman.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9FA1B15C3EA00E430F7 /* jumpwoman.lsm */; };
+		CE2FDA721B15C3F100E430F7 /* LSDAshikhminShirley.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9FB1B15C3EA00E430F7 /* LSDAshikhminShirley.lssl */; };
+		CE2FDA731B15C3F100E430F7 /* LSDBlinnPhong.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9FC1B15C3EA00E430F7 /* LSDBlinnPhong.lssl */; };
+		CE2FDA741B15C3F100E430F7 /* LSDCookTorrance.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9FD1B15C3EB00E430F7 /* LSDCookTorrance.lssl */; };
+		CE2FDA751B15C3F100E430F7 /* LSDDTerms.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9FE1B15C3EB00E430F7 /* LSDDTerms.lssl */; };
+		CE2FDA761B15C3F100E430F7 /* LSDEpic.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FD9FF1B15C3EB00E430F7 /* LSDEpic.lssl */; };
+		CE2FDA771B15C3F100E430F7 /* LSDFresnel.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA001B15C3EB00E430F7 /* LSDFresnel.lssl */; };
+		CE2FDA781B15C3F100E430F7 /* LSDGTerms.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA011B15C3EB00E430F7 /* LSDGTerms.lssl */; };
+		CE2FDA791B15C3F100E430F7 /* LSDLightArgs.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA021B15C3EB00E430F7 /* LSDLightArgs.lssl */; };
+		CE2FDA7A1B15C3F100E430F7 /* LSDOrenNayar.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA031B15C3EB00E430F7 /* LSDOrenNayar.lssl */; };
+		CE2FDA7B1B15C3F100E430F7 /* LSDPi.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA041B15C3EB00E430F7 /* LSDPi.lssl */; };
+		CE2FDA7C1B15C3F100E430F7 /* LSDPixelForwardDefaultPS.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA051B15C3EC00E430F7 /* LSDPixelForwardDefaultPS.lssl */; };
+		CE2FDA7D1B15C3F100E430F7 /* LSDPixelForwardDefaultVS.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA061B15C3EC00E430F7 /* LSDPixelForwardDefaultVS.lssl */; };
+		CE2FDA7E1B15C3F100E430F7 /* LSDPixelShader.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA071B15C3EC00E430F7 /* LSDPixelShader.lssl */; };
+		CE2FDA7F1B15C3F100E430F7 /* LSDSqr.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA081B15C3EC00E430F7 /* LSDSqr.lssl */; };
+		CE2FDA801B15C3F100E430F7 /* LSDVertexShader.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA091B15C3EC00E430F7 /* LSDVertexShader.lssl */; };
+		CE2FDA811B15C3F100E430F7 /* Mansion Planet.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA0A1B15C3EC00E430F7 /* Mansion Planet.lsm */; };
+		CE2FDA821B15C3F100E430F7 /* Mario Circuit.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA0B1B15C3EC00E430F7 /* Mario Circuit.lsm */; };
+		CE2FDA831B15C3F100E430F7 /* Merc.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA0C1B15C3EC00E430F7 /* Merc.lsm */; };
+		CE2FDA841B15C3F100E430F7 /* Mercedes.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA0D1B15C3EC00E430F7 /* Mercedes.lsm */; };
+		CE2FDA851B15C3F100E430F7 /* mikubest.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA0E1B15C3EC00E430F7 /* mikubest.lsm */; };
+		CE2FDA861B15C3F100E430F7 /* model.nut0 BC1 ATI.dds in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA0F1B15C3ED00E430F7 /* model.nut0 BC1 ATI.dds */; };
+		CE2FDA871B15C3F100E430F7 /* model.nut0 BC4 ATI.dds in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA101B15C3ED00E430F7 /* model.nut0 BC4 ATI.dds */; };
+		CE2FDA881B15C3F100E430F7 /* model.nut0 BC5 ATI.dds in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA111B15C3ED00E430F7 /* model.nut0 BC5 ATI.dds */; };
+		CE2FDA891B15C3F100E430F7 /* model.nut0.dds in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA121B15C3ED00E430F7 /* model.nut0.dds */; };
+		CE2FDA8A1B15C3F100E430F7 /* Nissan.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA131B15C3ED00E430F7 /* Nissan.lsm */; };
+		CE2FDA8B1B15C3F100E430F7 /* Noire.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA141B15C3EE00E430F7 /* Noire.lsm */; };
+		CE2FDA8C1B15C3F100E430F7 /* P149.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA151B15C3EE00E430F7 /* P149.lsm */; };
+		CE2FDA8D1B15C3F100E430F7 /* p785_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA161B15C3EE00E430F7 /* p785_11.jpg */; };
+		CE2FDA8E1B15C3F100E430F7 /* PC-21.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA171B15C3EE00E430F7 /* PC-21.lsm */; };
+		CE2FDA8F1B15C3F100E430F7 /* Peach Beach.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA181B15C3EE00E430F7 /* Peach Beach.lsm */; };
+		CE2FDA901B15C3F100E430F7 /* Peach Blossom.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA191B15C3EE00E430F7 /* Peach Blossom.lsm */; };
+		CE2FDA911B15C3F100E430F7 /* Peach.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA1A1B15C3EE00E430F7 /* Peach.lsm */; };
+		CE2FDA921B15C3F100E430F7 /* Petey Prianha.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA1B1B15C3EE00E430F7 /* Petey Prianha.lsm */; };
+		CE2FDA931B15C3F100E430F7 /* Peugot.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA1C1B15C3EE00E430F7 /* Peugot.lsm */; };
+		CE2FDA941B15C3F100E430F7 /* PixelTemp.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA1D1B15C3EE00E430F7 /* PixelTemp.lssl */; };
+		CE2FDA951B15C3F100E430F7 /* Polaras.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA1E1B15C3EE00E430F7 /* Polaras.lsm */; };
+		CE2FDA961B15C3F100E430F7 /* Rainbow Road.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA1F1B15C3EE00E430F7 /* Rainbow Road.lsm */; };
+		CE2FDA971B15C3F100E430F7 /* RX7.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA201B15C3EE00E430F7 /* RX7.lsm */; };
+		CE2FDA981B15C3F100E430F7 /* Saleen.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA211B15C3EF00E430F7 /* Saleen.lsm */; };
+		CE2FDA991B15C3F100E430F7 /* Samus.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA221B15C3EF00E430F7 /* Samus.lsm */; };
+		CE2FDA9A1B15C3F100E430F7 /* Shinjuku5 BC6 BTex.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA231B15C3EF00E430F7 /* Shinjuku5 BC6 BTex.png */; };
+		CE2FDA9B1B15C3F100E430F7 /* Shinjuku5 BC6.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA241B15C3EF00E430F7 /* Shinjuku5 BC6.png */; };
+		CE2FDA9C1B15C3F100E430F7 /* Shinjuku5 BC7 BTex.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA251B15C3EF00E430F7 /* Shinjuku5 BC7 BTex.png */; };
+		CE2FDA9D1B15C3F100E430F7 /* Shinjuku5 BC7.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA261B15C3EF00E430F7 /* Shinjuku5 BC7.png */; };
+		CE2FDA9E1B15C3F100E430F7 /* Shinjuku5 Btex BC6.dds in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA271B15C3EF00E430F7 /* Shinjuku5 Btex BC6.dds */; };
+		CE2FDA9F1B15C3F100E430F7 /* Shinjuku5 Btex BC7.dds in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA281B15C3EF00E430F7 /* Shinjuku5 Btex BC7.dds */; };
+		CE2FDAA01B15C3F100E430F7 /* Shinjuku5.dds in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA291B15C3EF00E430F7 /* Shinjuku5.dds */; };
+		CE2FDAA11B15C3F100E430F7 /* Shinjuku5.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA2A1B15C3EF00E430F7 /* Shinjuku5.png */; };
+		CE2FDAA21B15C3F100E430F7 /* simple_quadbot2.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA2B1B15C3EF00E430F7 /* simple_quadbot2.lsm */; };
+		CE2FDAA31B15C3F100E430F7 /* Spartan.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA2C1B15C3F000E430F7 /* Spartan.lsm */; };
+		CE2FDAA41B15C3F100E430F7 /* Spitfire.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA2D1B15C3F000E430F7 /* Spitfire.lsm */; };
+		CE2FDAA51B15C3F100E430F7 /* Terrain.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA2E1B15C3F000E430F7 /* Terrain.lsm */; };
+		CE2FDAA61B15C3F100E430F7 /* Test.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA2F1B15C3F000E430F7 /* Test.lsm */; };
+		CE2FDAA71B15C3F100E430F7 /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA301B15C3F000E430F7 /* Thumbs.db */; };
+		CE2FDAA81B15C3F100E430F7 /* Thunderbord.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA311B15C3F000E430F7 /* Thunderbord.lsm */; };
+		CE2FDAA91B15C3F100E430F7 /* tigrerra_01_pa.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA321B15C3F000E430F7 /* tigrerra_01_pa.lsm */; };
+		CE2FDAAA1B15C3F100E430F7 /* ToonGirl.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA331B15C3F000E430F7 /* ToonGirl.lsm */; };
+		CE2FDAAB1B15C3F100E430F7 /* Toyota.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA341B15C3F000E430F7 /* Toyota.lsm */; };
+		CE2FDAAC1B15C3F100E430F7 /* TugBoat.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA351B15C3F000E430F7 /* TugBoat.lsm */; };
+		CE2FDAAD1B15C3F100E430F7 /* UAZ.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA361B15C3F000E430F7 /* UAZ.lsm */; };
+		CE2FDAAE1B15C3F100E430F7 /* UH60.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA371B15C3F000E430F7 /* UH60.lsm */; };
+		CE2FDAAF1B15C3F100E430F7 /* VertexTemp.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA381B15C3F000E430F7 /* VertexTemp.lssl */; };
+		CE2FDAB01B15C3F100E430F7 /* Viper.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA391B15C3F000E430F7 /* Viper.lsm */; };
+		CE2FDAB11B15C3F100E430F7 /* Woman.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA3A1B15C3F000E430F7 /* Woman.lsm */; };
+		CE2FDAB21B15C3F100E430F7 /* Yoshi's Island.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA3B1B15C3F100E430F7 /* Yoshi's Island.lsm */; };
+		CE2FDAB31B15C3F100E430F7 /* Zelda.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA3C1B15C3F100E430F7 /* Zelda.lsm */; };
+		CE2FDAB41B15C3F100E430F7 /* Zo6.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CE2FDA3D1B15C3F100E430F7 /* Zo6.lsm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE2FD94D1B150C6C00E430F7 /* LSTest OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LSTest OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2FD9511B150C6C00E430F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE2FD9571B150C6C00E430F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CE2FD95A1B150C6C00E430F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CE2FD9761B150F3D00E430F7 /* libFreeImageLib OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libFreeImageLib OSX.a"; path = "Modules/LSImageLib/Src/FreeImage/OSXLibs/Debug/libFreeImageLib OSX.a"; sourceTree = "<group>"; };
+		CE2FD9771B150F3D00E430F7 /* libLibJPEG OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLibJPEG OSX.a"; path = "Modules/LSImageLib/Src/FreeImage/Source/LibJPEG/OSXLibs/Debug/libLibJPEG OSX.a"; sourceTree = "<group>"; };
+		CE2FD9781B150F3D00E430F7 /* libLibJXR OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLibJXR OSX.a"; path = "Modules/LSImageLib/Src/FreeImage/Source/LibJXR/OSXLibs/Debug/libLibJXR OSX.a"; sourceTree = "<group>"; };
+		CE2FD9791B150F3D00E430F7 /* libLibOpenJPEG OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLibOpenJPEG OSX.a"; path = "Modules/LSImageLib/Src/FreeImage/Source/LibOpenJPEG/OSXLibs/Debug/libLibOpenJPEG OSX.a"; sourceTree = "<group>"; };
+		CE2FD97A1B150F3D00E430F7 /* libLibPNG OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLibPNG OSX.a"; path = "Modules/LSImageLib/Src/FreeImage/Source/LibPNG/OSXLibs/Debug/libLibPNG OSX.a"; sourceTree = "<group>"; };
+		CE2FD97B1B150F3D00E430F7 /* libLibRawLite OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLibRawLite OSX.a"; path = "Modules/LSImageLib/Src/FreeImage/Source/LibRawLite/OSXLibs/Debug/libLibRawLite OSX.a"; sourceTree = "<group>"; };
+		CE2FD97C1B150F3D00E430F7 /* libLibTIFF4 OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLibTIFF4 OSX.a"; path = "Modules/LSImageLib/Src/FreeImage/Source/LibTIFF4/OSXLibs/Debug/libLibTIFF4 OSX.a"; sourceTree = "<group>"; };
+		CE2FD97D1B150F3D00E430F7 /* libLibWebP OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLibWebP OSX.a"; path = "Modules/LSImageLib/Src/FreeImage/Source/LibWebP/OSXLibs/Debug/libLibWebP OSX.a"; sourceTree = "<group>"; };
+		CE2FD97E1B150F3D00E430F7 /* libLSCompressionLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSCompressionLib.a; path = OSXLibs/Debug/libLSCompressionLib.a; sourceTree = "<group>"; };
+		CE2FD97F1B150F3D00E430F7 /* libLSEngine OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLSEngine OSX.a"; path = "OSXLibs/Debug/libLSEngine OSX.a"; sourceTree = "<group>"; };
+		CE2FD9801B150F3D00E430F7 /* libLSFileLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSFileLib.a; path = OSXLibs/Debug/libLSFileLib.a; sourceTree = "<group>"; };
+		CE2FD9811B150F3D00E430F7 /* libLSGraphicsLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSGraphicsLib.a; path = OSXLibs/Debug/libLSGraphicsLib.a; sourceTree = "<group>"; };
+		CE2FD9821B150F3D00E430F7 /* libLSImageLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSImageLib.a; path = OSXLibs/Debug/libLSImageLib.a; sourceTree = "<group>"; };
+		CE2FD9831B150F3D00E430F7 /* libLSMathLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSMathLib.a; path = OSXLibs/Debug/libLSMathLib.a; sourceTree = "<group>"; };
+		CE2FD9841B150F3D00E430F7 /* libLSMemLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSMemLib.a; path = OSXLibs/Debug/libLSMemLib.a; sourceTree = "<group>"; };
+		CE2FD9851B150F3D00E430F7 /* libLSModelLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSModelLib.a; path = OSXLibs/Debug/libLSModelLib.a; sourceTree = "<group>"; };
+		CE2FD9861B150F3D00E430F7 /* libLSNetLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSNetLib.a; path = OSXLibs/Debug/libLSNetLib.a; sourceTree = "<group>"; };
+		CE2FD9871B150F3D00E430F7 /* libLSPhysicsLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSPhysicsLib.a; path = OSXLibs/Debug/libLSPhysicsLib.a; sourceTree = "<group>"; };
+		CE2FD9881B150F3D00E430F7 /* libLSSoundLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSSoundLib.a; path = OSXLibs/Debug/libLSSoundLib.a; sourceTree = "<group>"; };
+		CE2FD9891B150F3D00E430F7 /* libLSStandardLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSStandardLib.a; path = OSXLibs/Debug/libLSStandardLib.a; sourceTree = "<group>"; };
+		CE2FD98A1B150F3D00E430F7 /* libLSThreadLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSThreadLib.a; path = OSXLibs/Debug/libLSThreadLib.a; sourceTree = "<group>"; };
+		CE2FD98B1B150F3D00E430F7 /* libLSTL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSTL.a; path = OSXLibs/Debug/libLSTL.a; sourceTree = "<group>"; };
+		CE2FD98C1B150F3D00E430F7 /* libOpenEXR OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libOpenEXR OSX.a"; path = "Modules/LSImageLib/Src/FreeImage/Source/OpenEXR/OSXLibs/Debug/libOpenEXR OSX.a"; sourceTree = "<group>"; };
+		CE2FD98D1B150F3D00E430F7 /* libZLib OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libZLib OSX.a"; path = "/Users/user/Library/Developer/Xcode/DerivedData/LSTest_OSX-dsigrcspsgeprvcilztvhxroeryu/Build/Products/Debug/libZLib OSX.a"; sourceTree = "<absolute>"; };
+		CE2FD98E1B150F3D00E430F7 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		CE2FD98F1B150F3D00E430F7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		CE2FD9AB1B15765B00E430F7 /* LSTTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LSTTest.cpp; path = "../../LSEngine Copy/LSTest/Src/LSTTest.cpp"; sourceTree = "<group>"; };
+		CE2FD9AC1B15765B00E430F7 /* LSTTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSTTest.h; path = "../../LSEngine Copy/LSTest/Src/LSTTest.h"; sourceTree = "<group>"; };
+		CE2FD9AE1B15765B00E430F7 /* LSTBaseTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTBaseTest.cpp; sourceTree = "<group>"; };
+		CE2FD9AF1B15765B00E430F7 /* LSTBaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTBaseTest.h; sourceTree = "<group>"; };
+		CE2FD9B01B15765B00E430F7 /* LSTBenchMark.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTBenchMark.cpp; sourceTree = "<group>"; };
+		CE2FD9B11B15765B00E430F7 /* LSTBenchMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTBenchMark.h; sourceTree = "<group>"; };
+		CE2FD9B21B15765B00E430F7 /* LSTLoadMeshTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTLoadMeshTest.cpp; sourceTree = "<group>"; };
+		CE2FD9B31B15765B00E430F7 /* LSTLoadMeshTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTLoadMeshTest.h; sourceTree = "<group>"; };
+		CE2FD9B41B15765B00E430F7 /* LSTStateFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTStateFactory.cpp; sourceTree = "<group>"; };
+		CE2FD9B51B15765B00E430F7 /* LSTStateFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTStateFactory.h; sourceTree = "<group>"; };
+		CE2FD9B61B15765B00E430F7 /* LSTStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTStates.h; sourceTree = "<group>"; };
+		CE2FD9B71B15765B00E430F7 /* LSTTextureTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTTextureTest.cpp; sourceTree = "<group>"; };
+		CE2FD9B81B15765B00E430F7 /* LSTTextureTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTTextureTest.h; sourceTree = "<group>"; };
+		CE2FD9B91B15765B00E430F7 /* LSTTriangleTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTTriangleTest.cpp; sourceTree = "<group>"; };
+		CE2FD9BA1B15765B00E430F7 /* LSTTriangleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTTriangleTest.h; sourceTree = "<group>"; };
+		CE2FD9C21B15778900E430F7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		CE2FD9C41B1577B900E430F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE2FD9C71B15C3E500E430F7 /* 001.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = 001.dds; sourceTree = "<group>"; };
+		CE2FD9C81B15C3E500E430F7 /* 001.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001.JPG; sourceTree = "<group>"; };
+		CE2FD9C91B15C3E500E430F7 /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
+		CE2FD9CA1B15C3E500E430F7 /* 002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 002.png; sourceTree = "<group>"; };
+		CE2FD9CB1B15C3E500E430F7 /* 1x1x1-3.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1x1x1-3.lsm"; sourceTree = "<group>"; };
+		CE2FD9CC1B15C3E500E430F7 /* Amy.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Amy.lsm; sourceTree = "<group>"; };
+		CE2FD9CD1B15C3E500E430F7 /* Ashley.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ashley.lsm; sourceTree = "<group>"; };
+		CE2FD9CE1B15C3E500E430F7 /* Aston.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aston.lsm; sourceTree = "<group>"; };
+		CE2FD9CF1B15C3E500E430F7 /* Audi A4.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Audi A4.lsm"; sourceTree = "<group>"; };
+		CE2FD9D01B15C3E500E430F7 /* Audi A6.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Audi A6.lsm"; sourceTree = "<group>"; };
+		CE2FD9D11B15C3E600E430F7 /* Beam Kirby.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beam Kirby.lsm"; sourceTree = "<group>"; };
+		CE2FD9D21B15C3E600E430F7 /* Big Donut.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Big Donut.lsm"; sourceTree = "<group>"; };
+		CE2FD9D31B15C3E600E430F7 /* Blue Falcon.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blue Falcon.lsm"; sourceTree = "<group>"; };
+		CE2FD9D41B15C3E600E430F7 /* BMW X6.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BMW X6.lsm"; sourceTree = "<group>"; };
+		CE2FD9D51B15C3E600E430F7 /* BMW Z4.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BMW Z4.lsm"; sourceTree = "<group>"; };
+		CE2FD9D61B15C3E600E430F7 /* BMW.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMW.lsm; sourceTree = "<group>"; };
+		CE2FD9D71B15C3E600E430F7 /* Bobomb Battlefield.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bobomb Battlefield.lsm"; sourceTree = "<group>"; };
+		CE2FD9D81B15C3E600E430F7 /* Bowser's Castle.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bowser's Castle.lsm"; sourceTree = "<group>"; };
+		CE2FD9D91B15C3E600E430F7 /* C-17 Globemaster.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "C-17 Globemaster.lsm"; sourceTree = "<group>"; };
+		CE2FD9DA1B15C3E600E430F7 /* Cali.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cali.lsm; sourceTree = "<group>"; };
+		CE2FD9DB1B15C3E600E430F7 /* Cayman.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cayman.lsm; sourceTree = "<group>"; };
+		CE2FD9DC1B15C3E700E430F7 /* Char01.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Char01.lsm; sourceTree = "<group>"; };
+		CE2FD9DD1B15C3E700E430F7 /* Charizard.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Charizard.lsm; sourceTree = "<group>"; };
+		CE2FD9DE1B15C3E700E430F7 /* Chevy.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chevy.lsm; sourceTree = "<group>"; };
+		CE2FD9DF1B15C3E700E430F7 /* Cobra.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cobra.lsm; sourceTree = "<group>"; };
+		CE2FD9E01B15C3E700E430F7 /* Colin.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Colin.lsm; sourceTree = "<group>"; };
+		CE2FD9E11B15C3E700E430F7 /* Corneria.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Corneria.lsm; sourceTree = "<group>"; };
+		CE2FD9E21B15C3E700E430F7 /* Corvette.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Corvette.lsm; sourceTree = "<group>"; };
+		CE2FD9E31B15C3E700E430F7 /* Cruiser.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cruiser.lsm; sourceTree = "<group>"; };
+		CE2FD9E41B15C3E700E430F7 /* Data.rar */ = {isa = PBXFileReference; lastKnownFileType = file; path = Data.rar; sourceTree = "<group>"; };
+		CE2FD9E51B15C3E800E430F7 /* DB5.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = DB5.lsm; sourceTree = "<group>"; };
+		CE2FD9E61B15C3E800E430F7 /* DBR9.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = DBR9.lsm; sourceTree = "<group>"; };
+		CE2FD9E71B15C3E800E430F7 /* DeDeDe.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = DeDeDe.lsm; sourceTree = "<group>"; };
+		CE2FD9E81B15C3E800E430F7 /* Dodge Challenger.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dodge Challenger.lsm"; sourceTree = "<group>"; };
+		CE2FD9E91B15C3E800E430F7 /* Dodge.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dodge.lsm; sourceTree = "<group>"; };
+		CE2FD9EA1B15C3E800E430F7 /* Evo.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Evo.lsm; sourceTree = "<group>"; };
+		CE2FD9EB1B15C3E800E430F7 /* Fang.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fang.lsm; sourceTree = "<group>"; };
+		CE2FD9EC1B15C3E800E430F7 /* Fenix.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fenix.lsm; sourceTree = "<group>"; };
+		CE2FD9ED1B15C3E800E430F7 /* Ferrari.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ferrari.lsm; sourceTree = "<group>"; };
+		CE2FD9EE1B15C3E800E430F7 /* Fiat.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fiat.lsm; sourceTree = "<group>"; };
+		CE2FD9EF1B15C3E900E430F7 /* GigaBowser.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = GigaBowser.lsm; sourceTree = "<group>"; };
+		CE2FD9F01B15C3E900E430F7 /* Glut.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Glut.lsm; sourceTree = "<group>"; };
+		CE2FD9F11B15C3E900E430F7 /* Gorem_U_01_pa.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gorem_U_01_pa.lsm; sourceTree = "<group>"; };
+		CE2FD9F21B15C3E900E430F7 /* GT.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = GT.lsm; sourceTree = "<group>"; };
+		CE2FD9F31B15C3E900E430F7 /* Guido.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Guido.lsm; sourceTree = "<group>"; };
+		CE2FD9F41B15C3E900E430F7 /* Hilux.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hilux.lsm; sourceTree = "<group>"; };
+		CE2FD9F51B15C3EA00E430F7 /* Hmv.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hmv.lsm; sourceTree = "<group>"; };
+		CE2FD9F61B15C3EA00E430F7 /* Hole Planet.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hole Planet.lsm"; sourceTree = "<group>"; };
+		CE2FD9F71B15C3EA00E430F7 /* Hover.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hover.lsm; sourceTree = "<group>"; };
+		CE2FD9F81B15C3EA00E430F7 /* Hunter.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hunter.lsm; sourceTree = "<group>"; };
+		CE2FD9F91B15C3EA00E430F7 /* janken_02_idle.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = janken_02_idle.lsm; sourceTree = "<group>"; };
+		CE2FD9FA1B15C3EA00E430F7 /* jumpwoman.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = jumpwoman.lsm; sourceTree = "<group>"; };
+		CE2FD9FB1B15C3EA00E430F7 /* LSDAshikhminShirley.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDAshikhminShirley.lssl; sourceTree = "<group>"; };
+		CE2FD9FC1B15C3EA00E430F7 /* LSDBlinnPhong.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDBlinnPhong.lssl; sourceTree = "<group>"; };
+		CE2FD9FD1B15C3EB00E430F7 /* LSDCookTorrance.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDCookTorrance.lssl; sourceTree = "<group>"; };
+		CE2FD9FE1B15C3EB00E430F7 /* LSDDTerms.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDDTerms.lssl; sourceTree = "<group>"; };
+		CE2FD9FF1B15C3EB00E430F7 /* LSDEpic.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDEpic.lssl; sourceTree = "<group>"; };
+		CE2FDA001B15C3EB00E430F7 /* LSDFresnel.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDFresnel.lssl; sourceTree = "<group>"; };
+		CE2FDA011B15C3EB00E430F7 /* LSDGTerms.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDGTerms.lssl; sourceTree = "<group>"; };
+		CE2FDA021B15C3EB00E430F7 /* LSDLightArgs.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDLightArgs.lssl; sourceTree = "<group>"; };
+		CE2FDA031B15C3EB00E430F7 /* LSDOrenNayar.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDOrenNayar.lssl; sourceTree = "<group>"; };
+		CE2FDA041B15C3EB00E430F7 /* LSDPi.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDPi.lssl; sourceTree = "<group>"; };
+		CE2FDA051B15C3EC00E430F7 /* LSDPixelForwardDefaultPS.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDPixelForwardDefaultPS.lssl; sourceTree = "<group>"; };
+		CE2FDA061B15C3EC00E430F7 /* LSDPixelForwardDefaultVS.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDPixelForwardDefaultVS.lssl; sourceTree = "<group>"; };
+		CE2FDA071B15C3EC00E430F7 /* LSDPixelShader.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDPixelShader.lssl; sourceTree = "<group>"; };
+		CE2FDA081B15C3EC00E430F7 /* LSDSqr.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDSqr.lssl; sourceTree = "<group>"; };
+		CE2FDA091B15C3EC00E430F7 /* LSDVertexShader.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSDVertexShader.lssl; sourceTree = "<group>"; };
+		CE2FDA0A1B15C3EC00E430F7 /* Mansion Planet.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mansion Planet.lsm"; sourceTree = "<group>"; };
+		CE2FDA0B1B15C3EC00E430F7 /* Mario Circuit.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mario Circuit.lsm"; sourceTree = "<group>"; };
+		CE2FDA0C1B15C3EC00E430F7 /* Merc.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Merc.lsm; sourceTree = "<group>"; };
+		CE2FDA0D1B15C3EC00E430F7 /* Mercedes.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mercedes.lsm; sourceTree = "<group>"; };
+		CE2FDA0E1B15C3EC00E430F7 /* mikubest.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = mikubest.lsm; sourceTree = "<group>"; };
+		CE2FDA0F1B15C3ED00E430F7 /* model.nut0 BC1 ATI.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = "model.nut0 BC1 ATI.dds"; sourceTree = "<group>"; };
+		CE2FDA101B15C3ED00E430F7 /* model.nut0 BC4 ATI.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = "model.nut0 BC4 ATI.dds"; sourceTree = "<group>"; };
+		CE2FDA111B15C3ED00E430F7 /* model.nut0 BC5 ATI.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = "model.nut0 BC5 ATI.dds"; sourceTree = "<group>"; };
+		CE2FDA121B15C3ED00E430F7 /* model.nut0.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.nut0.dds; sourceTree = "<group>"; };
+		CE2FDA131B15C3ED00E430F7 /* Nissan.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nissan.lsm; sourceTree = "<group>"; };
+		CE2FDA141B15C3EE00E430F7 /* Noire.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Noire.lsm; sourceTree = "<group>"; };
+		CE2FDA151B15C3EE00E430F7 /* P149.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = P149.lsm; sourceTree = "<group>"; };
+		CE2FDA161B15C3EE00E430F7 /* p785_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p785_11.jpg; sourceTree = "<group>"; };
+		CE2FDA171B15C3EE00E430F7 /* PC-21.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PC-21.lsm"; sourceTree = "<group>"; };
+		CE2FDA181B15C3EE00E430F7 /* Peach Beach.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Peach Beach.lsm"; sourceTree = "<group>"; };
+		CE2FDA191B15C3EE00E430F7 /* Peach Blossom.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Peach Blossom.lsm"; sourceTree = "<group>"; };
+		CE2FDA1A1B15C3EE00E430F7 /* Peach.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Peach.lsm; sourceTree = "<group>"; };
+		CE2FDA1B1B15C3EE00E430F7 /* Petey Prianha.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Petey Prianha.lsm"; sourceTree = "<group>"; };
+		CE2FDA1C1B15C3EE00E430F7 /* Peugot.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Peugot.lsm; sourceTree = "<group>"; };
+		CE2FDA1D1B15C3EE00E430F7 /* PixelTemp.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PixelTemp.lssl; sourceTree = "<group>"; };
+		CE2FDA1E1B15C3EE00E430F7 /* Polaras.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Polaras.lsm; sourceTree = "<group>"; };
+		CE2FDA1F1B15C3EE00E430F7 /* Rainbow Road.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rainbow Road.lsm"; sourceTree = "<group>"; };
+		CE2FDA201B15C3EE00E430F7 /* RX7.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = RX7.lsm; sourceTree = "<group>"; };
+		CE2FDA211B15C3EF00E430F7 /* Saleen.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Saleen.lsm; sourceTree = "<group>"; };
+		CE2FDA221B15C3EF00E430F7 /* Samus.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Samus.lsm; sourceTree = "<group>"; };
+		CE2FDA231B15C3EF00E430F7 /* Shinjuku5 BC6 BTex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shinjuku5 BC6 BTex.png"; sourceTree = "<group>"; };
+		CE2FDA241B15C3EF00E430F7 /* Shinjuku5 BC6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shinjuku5 BC6.png"; sourceTree = "<group>"; };
+		CE2FDA251B15C3EF00E430F7 /* Shinjuku5 BC7 BTex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shinjuku5 BC7 BTex.png"; sourceTree = "<group>"; };
+		CE2FDA261B15C3EF00E430F7 /* Shinjuku5 BC7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shinjuku5 BC7.png"; sourceTree = "<group>"; };
+		CE2FDA271B15C3EF00E430F7 /* Shinjuku5 Btex BC6.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shinjuku5 Btex BC6.dds"; sourceTree = "<group>"; };
+		CE2FDA281B15C3EF00E430F7 /* Shinjuku5 Btex BC7.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shinjuku5 Btex BC7.dds"; sourceTree = "<group>"; };
+		CE2FDA291B15C3EF00E430F7 /* Shinjuku5.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shinjuku5.dds; sourceTree = "<group>"; };
+		CE2FDA2A1B15C3EF00E430F7 /* Shinjuku5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shinjuku5.png; sourceTree = "<group>"; };
+		CE2FDA2B1B15C3EF00E430F7 /* simple_quadbot2.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = simple_quadbot2.lsm; sourceTree = "<group>"; };
+		CE2FDA2C1B15C3F000E430F7 /* Spartan.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Spartan.lsm; sourceTree = "<group>"; };
+		CE2FDA2D1B15C3F000E430F7 /* Spitfire.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Spitfire.lsm; sourceTree = "<group>"; };
+		CE2FDA2E1B15C3F000E430F7 /* Terrain.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Terrain.lsm; sourceTree = "<group>"; };
+		CE2FDA2F1B15C3F000E430F7 /* Test.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Test.lsm; sourceTree = "<group>"; };
+		CE2FDA301B15C3F000E430F7 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
+		CE2FDA311B15C3F000E430F7 /* Thunderbord.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thunderbord.lsm; sourceTree = "<group>"; };
+		CE2FDA321B15C3F000E430F7 /* tigrerra_01_pa.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = tigrerra_01_pa.lsm; sourceTree = "<group>"; };
+		CE2FDA331B15C3F000E430F7 /* ToonGirl.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = ToonGirl.lsm; sourceTree = "<group>"; };
+		CE2FDA341B15C3F000E430F7 /* Toyota.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Toyota.lsm; sourceTree = "<group>"; };
+		CE2FDA351B15C3F000E430F7 /* TugBoat.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = TugBoat.lsm; sourceTree = "<group>"; };
+		CE2FDA361B15C3F000E430F7 /* UAZ.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = UAZ.lsm; sourceTree = "<group>"; };
+		CE2FDA371B15C3F000E430F7 /* UH60.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = UH60.lsm; sourceTree = "<group>"; };
+		CE2FDA381B15C3F000E430F7 /* VertexTemp.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VertexTemp.lssl; sourceTree = "<group>"; };
+		CE2FDA391B15C3F000E430F7 /* Viper.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Viper.lsm; sourceTree = "<group>"; };
+		CE2FDA3A1B15C3F000E430F7 /* Woman.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Woman.lsm; sourceTree = "<group>"; };
+		CE2FDA3B1B15C3F100E430F7 /* Yoshi's Island.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yoshi's Island.lsm"; sourceTree = "<group>"; };
+		CE2FDA3C1B15C3F100E430F7 /* Zelda.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zelda.lsm; sourceTree = "<group>"; };
+		CE2FDA3D1B15C3F100E430F7 /* Zo6.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zo6.lsm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE2FD94A1B150C6C00E430F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2FD9C51B1577B900E430F7 /* CoreGraphics.framework in Frameworks */,
+				CE2FD9C31B15778900E430F7 /* CoreFoundation.framework in Frameworks */,
+				CE2FD9901B150F3D00E430F7 /* libFreeImageLib OSX.a in Frameworks */,
+				CE2FD9911B150F3D00E430F7 /* libLibJPEG OSX.a in Frameworks */,
+				CE2FD9921B150F3D00E430F7 /* libLibJXR OSX.a in Frameworks */,
+				CE2FD9931B150F3D00E430F7 /* libLibOpenJPEG OSX.a in Frameworks */,
+				CE2FD9941B150F3D00E430F7 /* libLibPNG OSX.a in Frameworks */,
+				CE2FD9951B150F3D00E430F7 /* libLibRawLite OSX.a in Frameworks */,
+				CE2FD9961B150F3D00E430F7 /* libLibTIFF4 OSX.a in Frameworks */,
+				CE2FD9971B150F3D00E430F7 /* libLibWebP OSX.a in Frameworks */,
+				CE2FD9981B150F3D00E430F7 /* libLSCompressionLib.a in Frameworks */,
+				CE2FD9991B150F3D00E430F7 /* libLSEngine OSX.a in Frameworks */,
+				CE2FD99A1B150F3D00E430F7 /* libLSFileLib.a in Frameworks */,
+				CE2FD99B1B150F3D00E430F7 /* libLSGraphicsLib.a in Frameworks */,
+				CE2FD99C1B150F3D00E430F7 /* libLSImageLib.a in Frameworks */,
+				CE2FD99D1B150F3D00E430F7 /* libLSMathLib.a in Frameworks */,
+				CE2FD99E1B150F3D00E430F7 /* libLSMemLib.a in Frameworks */,
+				CE2FD99F1B150F3D00E430F7 /* libLSModelLib.a in Frameworks */,
+				CE2FD9A01B150F3E00E430F7 /* libLSNetLib.a in Frameworks */,
+				CE2FD9A11B150F3E00E430F7 /* libLSPhysicsLib.a in Frameworks */,
+				CE2FD9A21B150F3E00E430F7 /* libLSSoundLib.a in Frameworks */,
+				CE2FD9A31B150F3E00E430F7 /* libLSStandardLib.a in Frameworks */,
+				CE2FD9A41B150F3E00E430F7 /* libLSThreadLib.a in Frameworks */,
+				CE2FD9A51B150F3E00E430F7 /* libLSTL.a in Frameworks */,
+				CE2FD9A61B150F3E00E430F7 /* libOpenEXR OSX.a in Frameworks */,
+				CE2FD9A71B150F3E00E430F7 /* libZLib OSX.a in Frameworks */,
+				CE2FD9A81B150F3E00E430F7 /* OpenAL.framework in Frameworks */,
+				CE2FD9A91B150F3E00E430F7 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE2FD9441B150C6C00E430F7 = {
+			isa = PBXGroup;
+			children = (
+				CE2FD9AA1B15107700E430F7 /* Frameworks */,
+				CE2FD94F1B150C6C00E430F7 /* LSTest OSX */,
+				CE2FD94E1B150C6C00E430F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE2FD94E1B150C6C00E430F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE2FD94D1B150C6C00E430F7 /* LSTest OSX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE2FD94F1B150C6C00E430F7 /* LSTest OSX */ = {
+			isa = PBXGroup;
+			children = (
+				CE2FD9AB1B15765B00E430F7 /* LSTTest.cpp */,
+				CE2FD9AC1B15765B00E430F7 /* LSTTest.h */,
+				CE2FD9AD1B15765B00E430F7 /* States */,
+				CE2FD9571B150C6C00E430F7 /* Images.xcassets */,
+				CE2FD9591B150C6C00E430F7 /* MainMenu.xib */,
+				CE2FD9501B150C6C00E430F7 /* Supporting Files */,
+			);
+			path = "LSTest OSX";
+			sourceTree = "<group>";
+		};
+		CE2FD9501B150C6C00E430F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE2FD9C61B15C3E500E430F7 /* Data */,
+				CE2FD9511B150C6C00E430F7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE2FD9AA1B15107700E430F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE2FD9C21B15778900E430F7 /* CoreFoundation.framework */,
+				CE2FD9C41B1577B900E430F7 /* CoreGraphics.framework */,
+				CE2FD9761B150F3D00E430F7 /* libFreeImageLib OSX.a */,
+				CE2FD9771B150F3D00E430F7 /* libLibJPEG OSX.a */,
+				CE2FD9781B150F3D00E430F7 /* libLibJXR OSX.a */,
+				CE2FD9791B150F3D00E430F7 /* libLibOpenJPEG OSX.a */,
+				CE2FD97A1B150F3D00E430F7 /* libLibPNG OSX.a */,
+				CE2FD97B1B150F3D00E430F7 /* libLibRawLite OSX.a */,
+				CE2FD97C1B150F3D00E430F7 /* libLibTIFF4 OSX.a */,
+				CE2FD97D1B150F3D00E430F7 /* libLibWebP OSX.a */,
+				CE2FD97E1B150F3D00E430F7 /* libLSCompressionLib.a */,
+				CE2FD97F1B150F3D00E430F7 /* libLSEngine OSX.a */,
+				CE2FD9801B150F3D00E430F7 /* libLSFileLib.a */,
+				CE2FD9811B150F3D00E430F7 /* libLSGraphicsLib.a */,
+				CE2FD9821B150F3D00E430F7 /* libLSImageLib.a */,
+				CE2FD9831B150F3D00E430F7 /* libLSMathLib.a */,
+				CE2FD9841B150F3D00E430F7 /* libLSMemLib.a */,
+				CE2FD9851B150F3D00E430F7 /* libLSModelLib.a */,
+				CE2FD9861B150F3D00E430F7 /* libLSNetLib.a */,
+				CE2FD9871B150F3D00E430F7 /* libLSPhysicsLib.a */,
+				CE2FD9881B150F3D00E430F7 /* libLSSoundLib.a */,
+				CE2FD9891B150F3D00E430F7 /* libLSStandardLib.a */,
+				CE2FD98A1B150F3D00E430F7 /* libLSThreadLib.a */,
+				CE2FD98B1B150F3D00E430F7 /* libLSTL.a */,
+				CE2FD98C1B150F3D00E430F7 /* libOpenEXR OSX.a */,
+				CE2FD98D1B150F3D00E430F7 /* libZLib OSX.a */,
+				CE2FD98E1B150F3D00E430F7 /* OpenAL.framework */,
+				CE2FD98F1B150F3D00E430F7 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE2FD9AD1B15765B00E430F7 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				CE2FD9AE1B15765B00E430F7 /* LSTBaseTest.cpp */,
+				CE2FD9AF1B15765B00E430F7 /* LSTBaseTest.h */,
+				CE2FD9B01B15765B00E430F7 /* LSTBenchMark.cpp */,
+				CE2FD9B11B15765B00E430F7 /* LSTBenchMark.h */,
+				CE2FD9B21B15765B00E430F7 /* LSTLoadMeshTest.cpp */,
+				CE2FD9B31B15765B00E430F7 /* LSTLoadMeshTest.h */,
+				CE2FD9B41B15765B00E430F7 /* LSTStateFactory.cpp */,
+				CE2FD9B51B15765B00E430F7 /* LSTStateFactory.h */,
+				CE2FD9B61B15765B00E430F7 /* LSTStates.h */,
+				CE2FD9B71B15765B00E430F7 /* LSTTextureTest.cpp */,
+				CE2FD9B81B15765B00E430F7 /* LSTTextureTest.h */,
+				CE2FD9B91B15765B00E430F7 /* LSTTriangleTest.cpp */,
+				CE2FD9BA1B15765B00E430F7 /* LSTTriangleTest.h */,
+			);
+			name = States;
+			path = "../../LSEngine Copy/LSTest/Src/States";
+			sourceTree = "<group>";
+		};
+		CE2FD9C61B15C3E500E430F7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CE2FD9C71B15C3E500E430F7 /* 001.dds */,
+				CE2FD9C81B15C3E500E430F7 /* 001.JPG */,
+				CE2FD9C91B15C3E500E430F7 /* 001.png */,
+				CE2FD9CA1B15C3E500E430F7 /* 002.png */,
+				CE2FD9CB1B15C3E500E430F7 /* 1x1x1-3.lsm */,
+				CE2FD9CC1B15C3E500E430F7 /* Amy.lsm */,
+				CE2FD9CD1B15C3E500E430F7 /* Ashley.lsm */,
+				CE2FD9CE1B15C3E500E430F7 /* Aston.lsm */,
+				CE2FD9CF1B15C3E500E430F7 /* Audi A4.lsm */,
+				CE2FD9D01B15C3E500E430F7 /* Audi A6.lsm */,
+				CE2FD9D11B15C3E600E430F7 /* Beam Kirby.lsm */,
+				CE2FD9D21B15C3E600E430F7 /* Big Donut.lsm */,
+				CE2FD9D31B15C3E600E430F7 /* Blue Falcon.lsm */,
+				CE2FD9D41B15C3E600E430F7 /* BMW X6.lsm */,
+				CE2FD9D51B15C3E600E430F7 /* BMW Z4.lsm */,
+				CE2FD9D61B15C3E600E430F7 /* BMW.lsm */,
+				CE2FD9D71B15C3E600E430F7 /* Bobomb Battlefield.lsm */,
+				CE2FD9D81B15C3E600E430F7 /* Bowser's Castle.lsm */,
+				CE2FD9D91B15C3E600E430F7 /* C-17 Globemaster.lsm */,
+				CE2FD9DA1B15C3E600E430F7 /* Cali.lsm */,
+				CE2FD9DB1B15C3E600E430F7 /* Cayman.lsm */,
+				CE2FD9DC1B15C3E700E430F7 /* Char01.lsm */,
+				CE2FD9DD1B15C3E700E430F7 /* Charizard.lsm */,
+				CE2FD9DE1B15C3E700E430F7 /* Chevy.lsm */,
+				CE2FD9DF1B15C3E700E430F7 /* Cobra.lsm */,
+				CE2FD9E01B15C3E700E430F7 /* Colin.lsm */,
+				CE2FD9E11B15C3E700E430F7 /* Corneria.lsm */,
+				CE2FD9E21B15C3E700E430F7 /* Corvette.lsm */,
+				CE2FD9E31B15C3E700E430F7 /* Cruiser.lsm */,
+				CE2FD9E41B15C3E700E430F7 /* Data.rar */,
+				CE2FD9E51B15C3E800E430F7 /* DB5.lsm */,
+				CE2FD9E61B15C3E800E430F7 /* DBR9.lsm */,
+				CE2FD9E71B15C3E800E430F7 /* DeDeDe.lsm */,
+				CE2FD9E81B15C3E800E430F7 /* Dodge Challenger.lsm */,
+				CE2FD9E91B15C3E800E430F7 /* Dodge.lsm */,
+				CE2FD9EA1B15C3E800E430F7 /* Evo.lsm */,
+				CE2FD9EB1B15C3E800E430F7 /* Fang.lsm */,
+				CE2FD9EC1B15C3E800E430F7 /* Fenix.lsm */,
+				CE2FD9ED1B15C3E800E430F7 /* Ferrari.lsm */,
+				CE2FD9EE1B15C3E800E430F7 /* Fiat.lsm */,
+				CE2FD9EF1B15C3E900E430F7 /* GigaBowser.lsm */,
+				CE2FD9F01B15C3E900E430F7 /* Glut.lsm */,
+				CE2FD9F11B15C3E900E430F7 /* Gorem_U_01_pa.lsm */,
+				CE2FD9F21B15C3E900E430F7 /* GT.lsm */,
+				CE2FD9F31B15C3E900E430F7 /* Guido.lsm */,
+				CE2FD9F41B15C3E900E430F7 /* Hilux.lsm */,
+				CE2FD9F51B15C3EA00E430F7 /* Hmv.lsm */,
+				CE2FD9F61B15C3EA00E430F7 /* Hole Planet.lsm */,
+				CE2FD9F71B15C3EA00E430F7 /* Hover.lsm */,
+				CE2FD9F81B15C3EA00E430F7 /* Hunter.lsm */,
+				CE2FD9F91B15C3EA00E430F7 /* janken_02_idle.lsm */,
+				CE2FD9FA1B15C3EA00E430F7 /* jumpwoman.lsm */,
+				CE2FD9FB1B15C3EA00E430F7 /* LSDAshikhminShirley.lssl */,
+				CE2FD9FC1B15C3EA00E430F7 /* LSDBlinnPhong.lssl */,
+				CE2FD9FD1B15C3EB00E430F7 /* LSDCookTorrance.lssl */,
+				CE2FD9FE1B15C3EB00E430F7 /* LSDDTerms.lssl */,
+				CE2FD9FF1B15C3EB00E430F7 /* LSDEpic.lssl */,
+				CE2FDA001B15C3EB00E430F7 /* LSDFresnel.lssl */,
+				CE2FDA011B15C3EB00E430F7 /* LSDGTerms.lssl */,
+				CE2FDA021B15C3EB00E430F7 /* LSDLightArgs.lssl */,
+				CE2FDA031B15C3EB00E430F7 /* LSDOrenNayar.lssl */,
+				CE2FDA041B15C3EB00E430F7 /* LSDPi.lssl */,
+				CE2FDA051B15C3EC00E430F7 /* LSDPixelForwardDefaultPS.lssl */,
+				CE2FDA061B15C3EC00E430F7 /* LSDPixelForwardDefaultVS.lssl */,
+				CE2FDA071B15C3EC00E430F7 /* LSDPixelShader.lssl */,
+				CE2FDA081B15C3EC00E430F7 /* LSDSqr.lssl */,
+				CE2FDA091B15C3EC00E430F7 /* LSDVertexShader.lssl */,
+				CE2FDA0A1B15C3EC00E430F7 /* Mansion Planet.lsm */,
+				CE2FDA0B1B15C3EC00E430F7 /* Mario Circuit.lsm */,
+				CE2FDA0C1B15C3EC00E430F7 /* Merc.lsm */,
+				CE2FDA0D1B15C3EC00E430F7 /* Mercedes.lsm */,
+				CE2FDA0E1B15C3EC00E430F7 /* mikubest.lsm */,
+				CE2FDA0F1B15C3ED00E430F7 /* model.nut0 BC1 ATI.dds */,
+				CE2FDA101B15C3ED00E430F7 /* model.nut0 BC4 ATI.dds */,
+				CE2FDA111B15C3ED00E430F7 /* model.nut0 BC5 ATI.dds */,
+				CE2FDA121B15C3ED00E430F7 /* model.nut0.dds */,
+				CE2FDA131B15C3ED00E430F7 /* Nissan.lsm */,
+				CE2FDA141B15C3EE00E430F7 /* Noire.lsm */,
+				CE2FDA151B15C3EE00E430F7 /* P149.lsm */,
+				CE2FDA161B15C3EE00E430F7 /* p785_11.jpg */,
+				CE2FDA171B15C3EE00E430F7 /* PC-21.lsm */,
+				CE2FDA181B15C3EE00E430F7 /* Peach Beach.lsm */,
+				CE2FDA191B15C3EE00E430F7 /* Peach Blossom.lsm */,
+				CE2FDA1A1B15C3EE00E430F7 /* Peach.lsm */,
+				CE2FDA1B1B15C3EE00E430F7 /* Petey Prianha.lsm */,
+				CE2FDA1C1B15C3EE00E430F7 /* Peugot.lsm */,
+				CE2FDA1D1B15C3EE00E430F7 /* PixelTemp.lssl */,
+				CE2FDA1E1B15C3EE00E430F7 /* Polaras.lsm */,
+				CE2FDA1F1B15C3EE00E430F7 /* Rainbow Road.lsm */,
+				CE2FDA201B15C3EE00E430F7 /* RX7.lsm */,
+				CE2FDA211B15C3EF00E430F7 /* Saleen.lsm */,
+				CE2FDA221B15C3EF00E430F7 /* Samus.lsm */,
+				CE2FDA231B15C3EF00E430F7 /* Shinjuku5 BC6 BTex.png */,
+				CE2FDA241B15C3EF00E430F7 /* Shinjuku5 BC6.png */,
+				CE2FDA251B15C3EF00E430F7 /* Shinjuku5 BC7 BTex.png */,
+				CE2FDA261B15C3EF00E430F7 /* Shinjuku5 BC7.png */,
+				CE2FDA271B15C3EF00E430F7 /* Shinjuku5 Btex BC6.dds */,
+				CE2FDA281B15C3EF00E430F7 /* Shinjuku5 Btex BC7.dds */,
+				CE2FDA291B15C3EF00E430F7 /* Shinjuku5.dds */,
+				CE2FDA2A1B15C3EF00E430F7 /* Shinjuku5.png */,
+				CE2FDA2B1B15C3EF00E430F7 /* simple_quadbot2.lsm */,
+				CE2FDA2C1B15C3F000E430F7 /* Spartan.lsm */,
+				CE2FDA2D1B15C3F000E430F7 /* Spitfire.lsm */,
+				CE2FDA2E1B15C3F000E430F7 /* Terrain.lsm */,
+				CE2FDA2F1B15C3F000E430F7 /* Test.lsm */,
+				CE2FDA301B15C3F000E430F7 /* Thumbs.db */,
+				CE2FDA311B15C3F000E430F7 /* Thunderbord.lsm */,
+				CE2FDA321B15C3F000E430F7 /* tigrerra_01_pa.lsm */,
+				CE2FDA331B15C3F000E430F7 /* ToonGirl.lsm */,
+				CE2FDA341B15C3F000E430F7 /* Toyota.lsm */,
+				CE2FDA351B15C3F000E430F7 /* TugBoat.lsm */,
+				CE2FDA361B15C3F000E430F7 /* UAZ.lsm */,
+				CE2FDA371B15C3F000E430F7 /* UH60.lsm */,
+				CE2FDA381B15C3F000E430F7 /* VertexTemp.lssl */,
+				CE2FDA391B15C3F000E430F7 /* Viper.lsm */,
+				CE2FDA3A1B15C3F000E430F7 /* Woman.lsm */,
+				CE2FDA3B1B15C3F100E430F7 /* Yoshi's Island.lsm */,
+				CE2FDA3C1B15C3F100E430F7 /* Zelda.lsm */,
+				CE2FDA3D1B15C3F100E430F7 /* Zo6.lsm */,
+			);
+			name = Data;
+			path = LSTest/Data;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE2FD94C1B150C6C00E430F7 /* LSTest OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE2FD96A1B150C6C00E430F7 /* Build configuration list for PBXNativeTarget "LSTest OSX" */;
+			buildPhases = (
+				CE2FD9491B150C6C00E430F7 /* Sources */,
+				CE2FD94A1B150C6C00E430F7 /* Frameworks */,
+				CE2FD94B1B150C6C00E430F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LSTest OSX";
+			productName = "LSTest OSX";
+			productReference = CE2FD94D1B150C6C00E430F7 /* LSTest OSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE2FD9451B150C6C00E430F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "L. Spiro Soft";
+				TargetAttributes = {
+					CE2FD94C1B150C6C00E430F7 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CE2FD9481B150C6C00E430F7 /* Build configuration list for PBXProject "LSTest OSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE2FD9441B150C6C00E430F7;
+			productRefGroup = CE2FD94E1B150C6C00E430F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE2FD94C1B150C6C00E430F7 /* LSTest OSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE2FD94B1B150C6C00E430F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2FDAB21B15C3F100E430F7 /* Yoshi's Island.lsm in Resources */,
+				CE2FDAA11B15C3F100E430F7 /* Shinjuku5.png in Resources */,
+				CE2FDA8B1B15C3F100E430F7 /* Noire.lsm in Resources */,
+				CE2FDA591B15C3F100E430F7 /* Corvette.lsm in Resources */,
+				CE2FDA9D1B15C3F100E430F7 /* Shinjuku5 BC7.png in Resources */,
+				CE2FDAAB1B15C3F100E430F7 /* Toyota.lsm in Resources */,
+				CE2FDA4E1B15C3F100E430F7 /* Bobomb Battlefield.lsm in Resources */,
+				CE2FDA751B15C3F100E430F7 /* LSDDTerms.lssl in Resources */,
+				CE2FDA991B15C3F100E430F7 /* Samus.lsm in Resources */,
+				CE2FDA9B1B15C3F100E430F7 /* Shinjuku5 BC6.png in Resources */,
+				CE2FDAAD1B15C3F100E430F7 /* UAZ.lsm in Resources */,
+				CE2FDA9C1B15C3F100E430F7 /* Shinjuku5 BC7 BTex.png in Resources */,
+				CE2FDA961B15C3F100E430F7 /* Rainbow Road.lsm in Resources */,
+				CE2FDAA81B15C3F100E430F7 /* Thunderbord.lsm in Resources */,
+				CE2FDA6A1B15C3F100E430F7 /* Guido.lsm in Resources */,
+				CE2FDA671B15C3F100E430F7 /* Glut.lsm in Resources */,
+				CE2FDA681B15C3F100E430F7 /* Gorem_U_01_pa.lsm in Resources */,
+				CE2FDA431B15C3F100E430F7 /* Amy.lsm in Resources */,
+				CE2FDA5C1B15C3F100E430F7 /* DB5.lsm in Resources */,
+				CE2FDA491B15C3F100E430F7 /* Big Donut.lsm in Resources */,
+				CE2FDA421B15C3F100E430F7 /* 1x1x1-3.lsm in Resources */,
+				CE2FDA571B15C3F100E430F7 /* Colin.lsm in Resources */,
+				CE2FDA911B15C3F100E430F7 /* Peach.lsm in Resources */,
+				CE2FDAAA1B15C3F100E430F7 /* ToonGirl.lsm in Resources */,
+				CE2FDA4C1B15C3F100E430F7 /* BMW Z4.lsm in Resources */,
+				CE2FDA4F1B15C3F100E430F7 /* Bowser's Castle.lsm in Resources */,
+				CE2FDA461B15C3F100E430F7 /* Audi A4.lsm in Resources */,
+				CE2FDA931B15C3F100E430F7 /* Peugot.lsm in Resources */,
+				CE2FDA4A1B15C3F100E430F7 /* Blue Falcon.lsm in Resources */,
+				CE2FDAA71B15C3F100E430F7 /* Thumbs.db in Resources */,
+				CE2FDA521B15C3F100E430F7 /* Cayman.lsm in Resources */,
+				CE2FDA9F1B15C3F100E430F7 /* Shinjuku5 Btex BC7.dds in Resources */,
+				CE2FDAAF1B15C3F100E430F7 /* VertexTemp.lssl in Resources */,
+				CE2FDA471B15C3F100E430F7 /* Audi A6.lsm in Resources */,
+				CE2FDA901B15C3F100E430F7 /* Peach Blossom.lsm in Resources */,
+				CE2FDAB31B15C3F100E430F7 /* Zelda.lsm in Resources */,
+				CE2FDA971B15C3F100E430F7 /* RX7.lsm in Resources */,
+				CE2FDA731B15C3F100E430F7 /* LSDBlinnPhong.lssl in Resources */,
+				CE2FDA7B1B15C3F100E430F7 /* LSDPi.lssl in Resources */,
+				CE2FDA631B15C3F100E430F7 /* Fenix.lsm in Resources */,
+				CE2FDAB01B15C3F100E430F7 /* Viper.lsm in Resources */,
+				CE2FDA8F1B15C3F100E430F7 /* Peach Beach.lsm in Resources */,
+				CE2FDA7A1B15C3F100E430F7 /* LSDOrenNayar.lssl in Resources */,
+				CE2FDA541B15C3F100E430F7 /* Charizard.lsm in Resources */,
+				CE2FDA9A1B15C3F100E430F7 /* Shinjuku5 BC6 BTex.png in Resources */,
+				CE2FDA851B15C3F100E430F7 /* mikubest.lsm in Resources */,
+				CE2FDA721B15C3F100E430F7 /* LSDAshikhminShirley.lssl in Resources */,
+				CE2FDAAC1B15C3F100E430F7 /* TugBoat.lsm in Resources */,
+				CE2FDA861B15C3F100E430F7 /* model.nut0 BC1 ATI.dds in Resources */,
+				CE2FDA501B15C3F100E430F7 /* C-17 Globemaster.lsm in Resources */,
+				CE2FDA411B15C3F100E430F7 /* 002.png in Resources */,
+				CE2FDA791B15C3F100E430F7 /* LSDLightArgs.lssl in Resources */,
+				CE2FDAA91B15C3F100E430F7 /* tigrerra_01_pa.lsm in Resources */,
+				CE2FDA981B15C3F100E430F7 /* Saleen.lsm in Resources */,
+				CE2FDA3E1B15C3F100E430F7 /* 001.dds in Resources */,
+				CE2FDA811B15C3F100E430F7 /* Mansion Planet.lsm in Resources */,
+				CE2FDA4D1B15C3F100E430F7 /* BMW.lsm in Resources */,
+				CE2FDA921B15C3F100E430F7 /* Petey Prianha.lsm in Resources */,
+				CE2FDA4B1B15C3F100E430F7 /* BMW X6.lsm in Resources */,
+				CE2FDA641B15C3F100E430F7 /* Ferrari.lsm in Resources */,
+				CE2FDA601B15C3F100E430F7 /* Dodge.lsm in Resources */,
+				CE2FDA561B15C3F100E430F7 /* Cobra.lsm in Resources */,
+				CE2FDA831B15C3F100E430F7 /* Merc.lsm in Resources */,
+				CE2FDA621B15C3F100E430F7 /* Fang.lsm in Resources */,
+				CE2FDA6D1B15C3F100E430F7 /* Hole Planet.lsm in Resources */,
+				CE2FDAA61B15C3F100E430F7 /* Test.lsm in Resources */,
+				CE2FD9581B150C6C00E430F7 /* Images.xcassets in Resources */,
+				CE2FDA781B15C3F100E430F7 /* LSDGTerms.lssl in Resources */,
+				CE2FDA741B15C3F100E430F7 /* LSDCookTorrance.lssl in Resources */,
+				CE2FDA511B15C3F100E430F7 /* Cali.lsm in Resources */,
+				CE2FDA6B1B15C3F100E430F7 /* Hilux.lsm in Resources */,
+				CE2FDA5F1B15C3F100E430F7 /* Dodge Challenger.lsm in Resources */,
+				CE2FDA5B1B15C3F100E430F7 /* Data.rar in Resources */,
+				CE2FDA821B15C3F100E430F7 /* Mario Circuit.lsm in Resources */,
+				CE2FDAA31B15C3F100E430F7 /* Spartan.lsm in Resources */,
+				CE2FDA661B15C3F100E430F7 /* GigaBowser.lsm in Resources */,
+				CE2FD95B1B150C6C00E430F7 /* MainMenu.xib in Resources */,
+				CE2FDA941B15C3F100E430F7 /* PixelTemp.lssl in Resources */,
+				CE2FDA3F1B15C3F100E430F7 /* 001.JPG in Resources */,
+				CE2FDA651B15C3F100E430F7 /* Fiat.lsm in Resources */,
+				CE2FDA7D1B15C3F100E430F7 /* LSDPixelForwardDefaultVS.lssl in Resources */,
+				CE2FDA7C1B15C3F100E430F7 /* LSDPixelForwardDefaultPS.lssl in Resources */,
+				CE2FDA701B15C3F100E430F7 /* janken_02_idle.lsm in Resources */,
+				CE2FDAA01B15C3F100E430F7 /* Shinjuku5.dds in Resources */,
+				CE2FDA531B15C3F100E430F7 /* Char01.lsm in Resources */,
+				CE2FDA441B15C3F100E430F7 /* Ashley.lsm in Resources */,
+				CE2FDA611B15C3F100E430F7 /* Evo.lsm in Resources */,
+				CE2FDA5D1B15C3F100E430F7 /* DBR9.lsm in Resources */,
+				CE2FDAA51B15C3F100E430F7 /* Terrain.lsm in Resources */,
+				CE2FDA841B15C3F100E430F7 /* Mercedes.lsm in Resources */,
+				CE2FDA8D1B15C3F100E430F7 /* p785_11.jpg in Resources */,
+				CE2FDAAE1B15C3F100E430F7 /* UH60.lsm in Resources */,
+				CE2FDA6C1B15C3F100E430F7 /* Hmv.lsm in Resources */,
+				CE2FDA801B15C3F100E430F7 /* LSDVertexShader.lssl in Resources */,
+				CE2FDA6F1B15C3F100E430F7 /* Hunter.lsm in Resources */,
+				CE2FDA761B15C3F100E430F7 /* LSDEpic.lssl in Resources */,
+				CE2FDAA41B15C3F100E430F7 /* Spitfire.lsm in Resources */,
+				CE2FDAB11B15C3F100E430F7 /* Woman.lsm in Resources */,
+				CE2FDA881B15C3F100E430F7 /* model.nut0 BC5 ATI.dds in Resources */,
+				CE2FDA771B15C3F100E430F7 /* LSDFresnel.lssl in Resources */,
+				CE2FDA581B15C3F100E430F7 /* Corneria.lsm in Resources */,
+				CE2FDAB41B15C3F100E430F7 /* Zo6.lsm in Resources */,
+				CE2FDA9E1B15C3F100E430F7 /* Shinjuku5 Btex BC6.dds in Resources */,
+				CE2FDA951B15C3F100E430F7 /* Polaras.lsm in Resources */,
+				CE2FDA8A1B15C3F100E430F7 /* Nissan.lsm in Resources */,
+				CE2FDAA21B15C3F100E430F7 /* simple_quadbot2.lsm in Resources */,
+				CE2FDA5E1B15C3F100E430F7 /* DeDeDe.lsm in Resources */,
+				CE2FDA6E1B15C3F100E430F7 /* Hover.lsm in Resources */,
+				CE2FDA8E1B15C3F100E430F7 /* PC-21.lsm in Resources */,
+				CE2FDA711B15C3F100E430F7 /* jumpwoman.lsm in Resources */,
+				CE2FDA5A1B15C3F100E430F7 /* Cruiser.lsm in Resources */,
+				CE2FDA871B15C3F100E430F7 /* model.nut0 BC4 ATI.dds in Resources */,
+				CE2FDA691B15C3F100E430F7 /* GT.lsm in Resources */,
+				CE2FDA891B15C3F100E430F7 /* model.nut0.dds in Resources */,
+				CE2FDA481B15C3F100E430F7 /* Beam Kirby.lsm in Resources */,
+				CE2FDA7E1B15C3F100E430F7 /* LSDPixelShader.lssl in Resources */,
+				CE2FDA7F1B15C3F100E430F7 /* LSDSqr.lssl in Resources */,
+				CE2FDA451B15C3F100E430F7 /* Aston.lsm in Resources */,
+				CE2FDA8C1B15C3F100E430F7 /* P149.lsm in Resources */,
+				CE2FDA551B15C3F100E430F7 /* Chevy.lsm in Resources */,
+				CE2FDA401B15C3F100E430F7 /* 001.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE2FD9491B150C6C00E430F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2FD9BE1B15765B00E430F7 /* LSTLoadMeshTest.cpp in Sources */,
+				CE2FD9C11B15765B00E430F7 /* LSTTriangleTest.cpp in Sources */,
+				CE2FD9C01B15765B00E430F7 /* LSTTextureTest.cpp in Sources */,
+				CE2FD9BC1B15765B00E430F7 /* LSTBaseTest.cpp in Sources */,
+				CE2FD9BD1B15765B00E430F7 /* LSTBenchMark.cpp in Sources */,
+				CE2FD9BB1B15765B00E430F7 /* LSTTest.cpp in Sources */,
+				CE2FD9BF1B15765B00E430F7 /* LSTStateFactory.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE2FD9591B150C6C00E430F7 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE2FD95A1B150C6C00E430F7 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE2FD9681B150C6C00E430F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CE2FD9691B150C6C00E430F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CE2FD96B1B150C6C00E430F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"$(inherited)",
+					OPJ_STATIC,
+					FREEIMAGE_LIB,
+					LIBRAW_NODLL,
+					__ANSI__,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PROJECT_DIR}/Modules/LSStandardLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMathLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMemLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTL/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSThreadLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSCompressionLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSFileLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSImageLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSGraphicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSPhysicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSModelLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSNetLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTerrainLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSoundLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSEngine/Src\"",
+				);
+				INFOPLIST_FILE = "LSTest OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJPEG/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJXR/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibOpenJPEG/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibPNG/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibRawLite/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibTIFF4/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibWebP/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/OpenEXR/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/ZLib/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CE2FD96C1B150C6C00E430F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					OPJ_STATIC,
+					FREEIMAGE_LIB,
+					LIBRAW_NODLL,
+					__ANSI__,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PROJECT_DIR}/Modules/LSStandardLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMathLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMemLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTL/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSThreadLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSCompressionLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSFileLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSImageLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSGraphicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSPhysicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSModelLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSNetLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTerrainLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSoundLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSEngine/Src\"",
+				);
+				INFOPLIST_FILE = "LSTest OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJPEG/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJXR/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibOpenJPEG/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibPNG/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibRawLite/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibTIFF4/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibWebP/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/OpenEXR/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/ZLib/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/OSXLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE2FD9481B150C6C00E430F7 /* Build configuration list for PBXProject "LSTest OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE2FD9681B150C6C00E430F7 /* Debug */,
+				CE2FD9691B150C6C00E430F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE2FD96A1B150C6C00E430F7 /* Build configuration list for PBXNativeTarget "LSTest OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE2FD96B1B150C6C00E430F7 /* Debug */,
+				CE2FD96C1B150C6C00E430F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE2FD9451B150C6C00E430F7 /* Project object */;
+}

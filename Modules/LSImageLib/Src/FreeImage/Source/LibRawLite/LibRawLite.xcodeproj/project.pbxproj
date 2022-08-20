@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE4124231947055300D1D40E /* libLibRawLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE41240B1947055300D1D40E /* libLibRawLite.a */; };
+		CE41243D1947060C00D1D40E /* dcraw_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4124361947060C00D1D40E /* dcraw_common.cpp */; };
+		CE41243E1947060C00D1D40E /* dcraw_fileio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4124371947060C00D1D40E /* dcraw_fileio.cpp */; };
+		CE41243F1947060C00D1D40E /* demosaic_packs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4124391947060C00D1D40E /* demosaic_packs.cpp */; };
+		CE41244A1947063000D1D40E /* libraw_c_api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4124471947063000D1D40E /* libraw_c_api.cpp */; };
+		CE41244B1947063000D1D40E /* libraw_cxx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4124481947063000D1D40E /* libraw_cxx.cpp */; };
+		CE41244C1947063000D1D40E /* libraw_datastream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4124491947063000D1D40E /* libraw_datastream.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE4124211947055300D1D40E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE4124031947055300D1D40E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE41240A1947055300D1D40E;
+			remoteInfo = LibRawLite;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE4124091947055300D1D40E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE41240B1947055300D1D40E /* libLibRawLite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLibRawLite.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE41241B1947055300D1D40E /* LibRawLiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibRawLiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4124361947060C00D1D40E /* dcraw_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dcraw_common.cpp; path = internal/dcraw_common.cpp; sourceTree = SOURCE_ROOT; };
+		CE4124371947060C00D1D40E /* dcraw_fileio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 2; name = dcraw_fileio.cpp; path = internal/dcraw_fileio.cpp; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		CE4124381947060C00D1D40E /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = defines.h; path = internal/defines.h; sourceTree = SOURCE_ROOT; };
+		CE4124391947060C00D1D40E /* demosaic_packs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = demosaic_packs.cpp; path = internal/demosaic_packs.cpp; sourceTree = SOURCE_ROOT; };
+		CE41243A1947060C00D1D40E /* libraw_bytebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libraw_bytebuffer.h; path = internal/libraw_bytebuffer.h; sourceTree = SOURCE_ROOT; };
+		CE41243B1947060C00D1D40E /* libraw_internal_funcs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libraw_internal_funcs.h; path = internal/libraw_internal_funcs.h; sourceTree = SOURCE_ROOT; };
+		CE41243C1947060C00D1D40E /* var_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = var_defines.h; path = internal/var_defines.h; sourceTree = SOURCE_ROOT; };
+		CE4124401947062100D1D40E /* libraw_alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libraw_alloc.h; path = libraw/libraw_alloc.h; sourceTree = SOURCE_ROOT; };
+		CE4124411947062100D1D40E /* libraw_const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libraw_const.h; path = libraw/libraw_const.h; sourceTree = SOURCE_ROOT; };
+		CE4124421947062100D1D40E /* libraw_datastream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libraw_datastream.h; path = libraw/libraw_datastream.h; sourceTree = SOURCE_ROOT; };
+		CE4124431947062100D1D40E /* libraw_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libraw_internal.h; path = libraw/libraw_internal.h; sourceTree = SOURCE_ROOT; };
+		CE4124441947062100D1D40E /* libraw_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libraw_types.h; path = libraw/libraw_types.h; sourceTree = SOURCE_ROOT; };
+		CE4124451947062100D1D40E /* libraw_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libraw_version.h; path = libraw/libraw_version.h; sourceTree = SOURCE_ROOT; };
+		CE4124461947062100D1D40E /* libraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 2; name = libraw.h; path = libraw/libraw.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CE4124471947063000D1D40E /* libraw_c_api.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libraw_c_api.cpp; path = src/libraw_c_api.cpp; sourceTree = SOURCE_ROOT; };
+		CE4124481947063000D1D40E /* libraw_cxx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libraw_cxx.cpp; path = src/libraw_cxx.cpp; sourceTree = SOURCE_ROOT; };
+		CE4124491947063000D1D40E /* libraw_datastream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libraw_datastream.cpp; path = src/libraw_datastream.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE4124081947055300D1D40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4124181947055300D1D40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4124231947055300D1D40E /* libLibRawLite.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE4124021947055300D1D40E = {
+			isa = PBXGroup;
+			children = (
+				CE4124101947055300D1D40E /* LibRawLite */,
+				CE41240D1947055300D1D40E /* Frameworks */,
+				CE41240C1947055300D1D40E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE41240C1947055300D1D40E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE41240B1947055300D1D40E /* libLibRawLite.a */,
+				CE41241B1947055300D1D40E /* LibRawLiteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE41240D1947055300D1D40E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE4124101947055300D1D40E /* LibRawLite */ = {
+			isa = PBXGroup;
+			children = (
+				CE412434194705D200D1D40E /* internal */,
+				CE412435194705DB00D1D40E /* libraw */,
+			);
+			path = LibRawLite;
+			sourceTree = "<group>";
+		};
+		CE412434194705D200D1D40E /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				CE4124361947060C00D1D40E /* dcraw_common.cpp */,
+				CE4124371947060C00D1D40E /* dcraw_fileio.cpp */,
+				CE4124381947060C00D1D40E /* defines.h */,
+				CE4124391947060C00D1D40E /* demosaic_packs.cpp */,
+				CE41243A1947060C00D1D40E /* libraw_bytebuffer.h */,
+				CE41243B1947060C00D1D40E /* libraw_internal_funcs.h */,
+				CE41243C1947060C00D1D40E /* var_defines.h */,
+			);
+			name = internal;
+			sourceTree = "<group>";
+		};
+		CE412435194705DB00D1D40E /* libraw */ = {
+			isa = PBXGroup;
+			children = (
+				CE4124471947063000D1D40E /* libraw_c_api.cpp */,
+				CE4124481947063000D1D40E /* libraw_cxx.cpp */,
+				CE4124491947063000D1D40E /* libraw_datastream.cpp */,
+				CE4124401947062100D1D40E /* libraw_alloc.h */,
+				CE4124411947062100D1D40E /* libraw_const.h */,
+				CE4124421947062100D1D40E /* libraw_datastream.h */,
+				CE4124431947062100D1D40E /* libraw_internal.h */,
+				CE4124441947062100D1D40E /* libraw_types.h */,
+				CE4124451947062100D1D40E /* libraw_version.h */,
+				CE4124461947062100D1D40E /* libraw.h */,
+			);
+			name = libraw;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE41240A1947055300D1D40E /* LibRawLite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE41242E1947055300D1D40E /* Build configuration list for PBXNativeTarget "LibRawLite" */;
+			buildPhases = (
+				CE4124071947055300D1D40E /* Sources */,
+				CE4124081947055300D1D40E /* Frameworks */,
+				CE4124091947055300D1D40E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibRawLite;
+			productName = LibRawLite;
+			productReference = CE41240B1947055300D1D40E /* libLibRawLite.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CE41241A1947055300D1D40E /* LibRawLiteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4124311947055300D1D40E /* Build configuration list for PBXNativeTarget "LibRawLiteTests" */;
+			buildPhases = (
+				CE4124171947055300D1D40E /* Sources */,
+				CE4124181947055300D1D40E /* Frameworks */,
+				CE4124191947055300D1D40E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE4124221947055300D1D40E /* PBXTargetDependency */,
+			);
+			name = LibRawLiteTests;
+			productName = LibRawLiteTests;
+			productReference = CE41241B1947055300D1D40E /* LibRawLiteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE4124031947055300D1D40E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "L. Spiro Soft";
+			};
+			buildConfigurationList = CE4124061947055300D1D40E /* Build configuration list for PBXProject "LibRawLite" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE4124021947055300D1D40E;
+			productRefGroup = CE41240C1947055300D1D40E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE41240A1947055300D1D40E /* LibRawLite */,
+				CE41241A1947055300D1D40E /* LibRawLiteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE4124191947055300D1D40E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE4124071947055300D1D40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE41243D1947060C00D1D40E /* dcraw_common.cpp in Sources */,
+				CE41244A1947063000D1D40E /* libraw_c_api.cpp in Sources */,
+				CE41244B1947063000D1D40E /* libraw_cxx.cpp in Sources */,
+				CE41243F1947060C00D1D40E /* demosaic_packs.cpp in Sources */,
+				CE41244C1947063000D1D40E /* libraw_datastream.cpp in Sources */,
+				CE41243E1947060C00D1D40E /* dcraw_fileio.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4124171947055300D1D40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE4124221947055300D1D40E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE41240A1947055300D1D40E /* LibRawLite */;
+			targetProxy = CE4124211947055300D1D40E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CE2C08091B692FCE002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = "Debug Metal";
+		};
+		CE2C080A1B692FCE002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibRawLite.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					_LIB,
+					LIBRAW_NODLL,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ./libraw;
+			};
+			name = "Debug Metal";
+		};
+		CE2C080B1B692FCE002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibRawLite/LibRawLite-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LibRawLiteTests/LibRawLiteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Debug Metal";
+		};
+		CE2C080C1B692FD6002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Metal";
+		};
+		CE2C080D1B692FD6002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibRawLite.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					_LIB,
+					LIBRAW_NODLL,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ./libraw;
+			};
+			name = "Release Metal";
+		};
+		CE2C080E1B692FD6002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibRawLite/LibRawLite-Prefix.pch";
+				INFOPLIST_FILE = "LibRawLiteTests/LibRawLiteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Release Metal";
+		};
+		CE41242C1947055300D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE41242D1947055300D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE41242F1947055300D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibRawLite.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					_LIB,
+					LIBRAW_NODLL,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ./libraw;
+			};
+			name = Debug;
+		};
+		CE4124301947055300D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibRawLite.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					_LIB,
+					LIBRAW_NODLL,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ./libraw;
+			};
+			name = Release;
+		};
+		CE4124321947055300D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibRawLite/LibRawLite-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LibRawLiteTests/LibRawLiteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CE4124331947055300D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibRawLite/LibRawLite-Prefix.pch";
+				INFOPLIST_FILE = "LibRawLiteTests/LibRawLiteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE4124061947055300D1D40E /* Build configuration list for PBXProject "LibRawLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE41242C1947055300D1D40E /* Debug */,
+				CE2C08091B692FCE002ACFA8 /* Debug Metal */,
+				CE41242D1947055300D1D40E /* Release */,
+				CE2C080C1B692FD6002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE41242E1947055300D1D40E /* Build configuration list for PBXNativeTarget "LibRawLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE41242F1947055300D1D40E /* Debug */,
+				CE2C080A1B692FCE002ACFA8 /* Debug Metal */,
+				CE4124301947055300D1D40E /* Release */,
+				CE2C080D1B692FD6002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4124311947055300D1D40E /* Build configuration list for PBXNativeTarget "LibRawLiteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4124321947055300D1D40E /* Debug */,
+				CE2C080B1B692FCE002ACFA8 /* Debug Metal */,
+				CE4124331947055300D1D40E /* Release */,
+				CE2C080E1B692FD6002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE4124031947055300D1D40E /* Project object */;
+}

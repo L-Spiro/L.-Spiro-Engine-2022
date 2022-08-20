@@ -1,0 +1,9 @@
+uniform float[4][4]	g_mModelViewProjMatrix : WORLDVIEWPROJ;
+
+void Main( in vec2 _vInPosition : POSITION0,
+	in vec2 _vInTexCoord0 : TEXCOORD0,
+	out vec4 _vOutPosition : POSITION0,
+	out vec2 _vOutTexCoord0 : TEXCOORD0	) {
+	_vOutPosition = mul( g_mModelViewProjMatrix, vec4( _vInPosition.x, _vInPosition.y, 0.0, 1.0f ) );
+	_vOutTexCoord0 = _vInTexCoord0;
+}

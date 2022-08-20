@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:LSEngine iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibJPEG/LibJPEG.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibJXR/LibJXR.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibOpenJPEG/LibOpenJPEG.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibPNG/LibPNG.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibRawLite/LibRawLite.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibTIFF4/LibTIFF4.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibWebP/LibWebP.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/OpenEXR/OpenEXR.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/ZLib/ZLib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/FreeImageLib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/../../../../LSTest iOS.xcodeproj">
+   </FileRef>
+</Workspace>

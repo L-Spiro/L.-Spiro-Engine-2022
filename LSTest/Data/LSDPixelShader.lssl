@@ -1,0 +1,86 @@
+// == Uniforms.
+uniform float[4][4]	g_mViewMatrix : VIEW;
+uniform float[3][3]	g_mNormalMatrix : NORMALMATRIX;
+uniform float[4]	g_vDiffuseMaterial : MATDIFFUSE;
+uniform float[4]	g_vAmbientMaterial : MATAMBIENT;
+uniform float[4]	g_vEmissiveMaterial : MATEMISSIVE;
+uniform float[4]	g_vSpecularMaterial : MATSPECULAR;
+uniform float		g_fPower : MATPOWER;
+
+uniform int			g_iTotalDirLights : DIRLIGHTCOUNT;
+uniform int			g_iTotalPointLights : POINTLIGHTCOUNT;
+uniform vec4		g_vLightVectors[LSG_MAX_LIGHTS] : LIGHTVECTOR;
+uniform vec4		g_vLightHalfVectors[LSG_MAX_LIGHTS] : LIGHTHALFVECTOR;
+uniform vec4		g_vLightAmbients[LSG_MAX_LIGHTS] : LIGHTAMBIENT;
+uniform vec4		g_vLightDiffuses[LSG_MAX_LIGHTS] : LIGHTDIFFUSE;
+uniform vec4		g_vLightSpeculars[LSG_MAX_LIGHTS] : LIGHTSPECULAR;
+uniform vec4		g_vLightAttens[LSG_MAX_LIGHTS] : LIGHTATT;
+uniform vec4		g_vLightRanges[LSG_MAX_LIGHTS] : SPOTLIGHTRANGE;
+uniform vec3		g_vSpotLightDirs[LSG_MAX_LIGHTS] : SPOTLIGHTDIR;
+uniform vec4		g_vSkyColor : SKYCOLOR;
+uniform vec4		g_vGroundColor : GROUNDCOLOR;
+
+
+// == Types.
+/**
+ * A color pair.  Represents a diffuse and a specular color.
+ */
+struct LSE_COLOR_PAIR {
+	vec4 cDiffuse;
+	vec4 cSpecular;
+};
+
+
+// == Functions.
+/**
+ * Gets the diffuse and specular components from a directional light.
+ *
+ * \param _vNormalInViewSpace The normal in view space (transformed by the NORMALMATRIX).
+ * \param _vPosVector Vector from the eye to the vertex.
+ * \param _iIndex Index of the directional light.
+ * \return Returns the computed color pair.
+ */
+LSE_COLOR_PAIR GetDirLightColors( in vec3 _vNormalInViewSpace, in vec4 _vPosVector, in int _iIndex ) {
+	LSE_COLOR_PAIR cpRet;
+	vec3 vLightDir = g_vLightVectors[_iIndex].xyz;
+	float fNormalDotLight = dot( vLightDir, _vNormalInViewSpace );
+	cpRet.cDiffuse = g_vLightAmbients[_iIndex];
+	cpRet.cSpecular = vec4( 0.0, 0.0, 0.0, 0.0 );
+	if ( fNormalDotLight > 0.0 && g_fPower >= 1.0 ) {
+		cpRet.cDiffuse += fNormalDotLight * g_vLightDiffuses[_iIndex];
+		//cpRet.cSpecular = pow( max( 0.0, dot( g_vLightHalfVectors[_iIndex].xyz, _vNormalInViewSpace ) ), g_fPower ) * g_vLightSpeculars[_iIndex];
+		cpRet.cSpecular = pow( max( 0.0, dot( normalize( vLightDir + _vPosVector.xyz ), _vNormalInViewSpace ) ), g_fPower ) * g_vLightSpeculars[_iIndex];
+	}
+	return cpRet;
+}
+
+void Main( in vec4 _vInPos : POSITION,
+	in vec3 _vOutNormal : TEXCOORD,
+	in vec4 _vOutEyePos : TEXCOORD1,
+	out vec4 _vOutColor : COLOR ) {
+
+	vec3 vNormalizedNormal = normalize( _vOutNormal );
+	vec4 vViewPosToEye = -normalize( _vOutEyePos );
+
+	LSE_COLOR_PAIR cpLightColors = {
+		vec4( 0.0, 0.0, 0.0, 0.0 ),
+		vec4( 0.0, 0.0, 0.0, 0.0 ),
+	};
+	for ( int I = 0; I < g_iTotalDirLights; I++ ) {
+		LSE_COLOR_PAIR cpThis = GetDirLightColors( vNormalizedNormal, vViewPosToEye, I );
+		cpLightColors.cDiffuse += cpThis.cDiffuse;
+		cpLightColors.cSpecular += cpThis.cSpecular;
+	}
+
+	//float fFrac = dot( g_vLightDir, normalize( _vOutNormal ) );
+	//_vOutColor = g_vDiffuseMaterial * vec4( fFrac, fFrac, fFrac, 1.0f );
+
+	_vOutColor = vec4( (g_vDiffuseMaterial.xyz * cpLightColors.cDiffuse.xyz) + (g_vSpecularMaterial * cpLightColors.cSpecular).xyz, g_vDiffuseMaterial.w );
+	
+	vec3 vUp = mul( g_mViewMatrix, vec4( 0.0, 1.0, 0.0, 0.0 ) ).xyz;
+	
+	_vOutColor.xyz += mix( g_vGroundColor.xyz, g_vSkyColor.xyz, dot( vUp, vNormalizedNormal ) * 0.5f + 0.5f );
+	
+	// Temporary edge highlight like in New Super Mario Bros. Wii.
+	//_vOutColor.xyz += (1.0 - dot( vNormalizedNormal, vec3( 0.0, 0.0, 1.0 ) )) * 0.35;
+}

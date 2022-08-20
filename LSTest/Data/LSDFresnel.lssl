@@ -1,0 +1,24 @@
+#ifndef LSD_FRESNEL
+#define LSD_FRESNEL
+
+float Pow5( float _fU ) {
+	/*
+	float fU2 = _fU * _fU;	// _fU^2.
+	float fU2 *= fU2;		// _fU^4.
+	return fU2 * _fU;		// _fU^5.
+	*/
+	
+	//return pow( _fU, 5.0 );
+	
+	return exp2( _fU * 8.656170 - 8.656170 );
+}
+
+float SchlickFresnel( float _F0, float _fU ) {
+    return _F0 + (1.0 - _F0) * Pow5( 1.0 - _fU );
+}
+
+float SchlickFresnel_SG( float _F0, float _fU ) {
+	return _F0 + (1.0 - _F0) * exp2( (_fU * -5.55473 - 6.98316) * _fU );
+}
+
+#endif	// LSD_FRESNEL

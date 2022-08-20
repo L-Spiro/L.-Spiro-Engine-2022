@@ -1,0 +1,2 @@
+call LSGPreProcLexBuild.bat
+call LSGPreProcSyntaxBuild.bat

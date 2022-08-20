@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="OGL Debug|Win32">
+      <Configuration>OGL Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OGL Debug|x64">
+      <Configuration>OGL Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OGL Release|Win32">
+      <Configuration>OGL Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OGL Release|x64">
+      <Configuration>OGL Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{618D6BA7-B0D5-4845-9E5C-AE71956BECCB}</ProjectGuid>
+    <RootNamespace>LSFbxConverter</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.32203.90</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSPhysicsLib\Src;$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSModelLib\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;LSG_OPENGL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\LSFileLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSMemLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSStandardLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSThreadLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSTL.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSCompressionLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSMathLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSImageLib.lib;shlwapi.lib;libfbxsdk-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:\Programs\Autodesk\FBX\FBX SDK\2015.1\lib\vs2008\x86\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>call  LSFbxConverterPostBuild.bat "F:\Programs\Autodesk\FBX\FBX SDK\2015.1\lib\vs2008\x86\debug\libfbxsdk.dll" "$(SolutionDir)$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSPhysicsLib\Src;$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSModelLib\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;LSG_OPENGL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\LSFileLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSMemLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSStandardLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSThreadLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSTL.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSCompressionLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSMathLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSImageLib.lib;shlwapi.lib;libfbxsdk.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:\Programs\Autodesk\FBX\FBX SDK\2015.1\lib\vs2008\x64\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>call  LSFbxConverterPostBuild.bat "F:\Programs\Autodesk\FBX\FBX SDK\2015.1\lib\vs2008\x86\debug\libfbxsdk.dll" "$(SolutionDir)$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSPhysicsLib\Src;$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSModelLib\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;LSG_OPENGL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\LSFileLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSMemLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSStandardLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSThreadLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSTL.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSCompressionLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSMathLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSImageLib.lib;shlwapi.lib;libfbxsdk-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:\Programs\Autodesk\FBX\FBX SDK\2015.1\lib\vs2008\x86\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>call  LSFbxConverterPostBuild.bat "F:\Programs\Autodesk\FBX\FBX SDK\2015.1\lib\vs2008\x86\release\libfbxsdk.dll" "$(SolutionDir)$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSPhysicsLib\Src;$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSModelLib\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;LSG_OPENGL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\LSFileLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSMemLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSStandardLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSThreadLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSTL.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSCompressionLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSMathLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\LSImageLib.lib;shlwapi.lib;libfbxsdk.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:\Programs\Autodesk\FBX\FBX SDK\2015.1\lib\vs2008\x64\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>call  LSFbxConverterPostBuild.bat "F:\Programs\Autodesk\FBX\FBX SDK\2015.1\lib\vs2008\x64\release\libfbxsdk.dll" "$(SolutionDir)$(Platform)\$(Configuration)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="Modules\LSCompressionLib\LSCompressionLib.vcxproj">
+      <Project>{a8427b7a-989f-407e-ba37-ef709db6327c}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSFileLib\LSFileLib.vcxproj">
+      <Project>{2b9fcf88-efdf-4f8a-bb80-c20c674fbabc}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSImageLib\LSImageLib.vcxproj">
+      <Project>{644b6920-3c18-41ef-ad73-7fc42fae4147}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSImageLib\Src\FreeImage\Source\FreeImageLib\FreeImageLib.2008.vcxproj">
+      <Project>{9e219df2-315d-478e-8a07-8960c377ce1e}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSImageLib\Src\FreeImage\Source\LibJPEG\LibJPEG.2008.vcxproj">
+      <Project>{5e1d4e5f-e10c-4ba3-b663-f33014fd21d9}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSImageLib\Src\FreeImage\Source\LibJXR\LibJXR.2008.vcxproj">
+      <Project>{244455e0-5f25-4451-9540-f317883e52a8}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSImageLib\Src\FreeImage\Source\LibOpenJPEG\LibOpenJPEG.2008.vcxproj">
+      <Project>{e3536c28-a7f1-4b53-8e52-7d2232f9e098}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSImageLib\Src\FreeImage\Source\LibPNG\LibPNG.2008.vcxproj">
+      <Project>{7db10b50-ce00-4d7a-b322-6824f05d2fcb}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSImageLib\Src\FreeImage\Source\LibRawLite\LibRawLite.2008.vcxproj">
+      <Project>{07f662c1-1323-42ab-b6af-fbfd34a7437a}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSImageLib\Src\FreeImage\Source\LibTIFF4\LibTIFF4.2008.vcxproj">
+      <Project>{ec085cbd-e9c3-477f-9a97-cb9d5da30e27}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSImageLib\Src\FreeImage\Source\LibWebP\LibWebP.2008.vcxproj">
+      <Project>{097d9f6c-fd0e-4cbc-9676-009012aaeca8}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSImageLib\Src\FreeImage\Source\OpenEXR\OpenEXR.2008.vcxproj">
+      <Project>{17a4874b-0606-4687-90b6-f91f8cb3b8af}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSImageLib\Src\FreeImage\Source\ZLib\ZLib.2008.vcxproj">
+      <Project>{33134f61-c1ad-4b6f-9cea-503a9f140c52}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSMathLib\LSMathLib.vcxproj">
+      <Project>{b9558fbd-f6dd-49d7-8e3b-5e32a1f6b62f}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSMemLib\LSMemLib.vcxproj">
+      <Project>{ac490b7a-804a-43e5-bd36-1a36e5f99535}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSModelLib\LSModelLib.vcxproj">
+      <Project>{18ab3002-5fb3-48a3-8ede-7fe071b0af0f}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSStandardLib\LSStandardLib.vcxproj">
+      <Project>{6307f094-4285-4523-982a-2df4a2a7b0aa}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSThreadLib\LSThreadLib.vcxproj">
+      <Project>{e98f2547-10c7-4952-aa71-f72a4369a7a5}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Modules\LSTL\LSTL.vcxproj">
+      <Project>{a4882463-794c-4e75-b57a-32cc28824b19}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LSFbxConverter\Src\LSXFbxConverter.cpp" />
+    <ClCompile Include="LSFbxConverter\Src\Misc\LSXMisc.cpp" />
+    <ClCompile Include="LSFbxConverter\Src\Scene\LSXAnimation.cpp" />
+    <ClCompile Include="LSFbxConverter\Src\Scene\LSXAnimationLayer.cpp" />
+    <ClCompile Include="LSFbxConverter\Src\Scene\LSXAnimationStack.cpp" />
+    <ClCompile Include="LSFbxConverter\Src\Scene\LSXAnimationTrack.cpp" />
+    <ClCompile Include="LSFbxConverter\Src\Scene\LSXMaterial.cpp" />
+    <ClCompile Include="LSFbxConverter\Src\Scene\LSXMesh.cpp" />
+    <ClCompile Include="LSFbxConverter\Src\Scene\LSXMeshInstance.cpp" />
+    <ClCompile Include="LSFbxConverter\Src\Scene\LSXScene.cpp" />
+    <ClCompile Include="LSFbxConverter\Src\Scene\LSXSkeleton.cpp" />
+    <ClCompile Include="LSFbxConverter\Src\Scene\LSXTexture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LSFbxConverter\Src\LSXFbxConverter.h" />
+    <ClInclude Include="LSFbxConverter\Src\Misc\LSXMisc.h" />
+    <ClInclude Include="LSFbxConverter\Src\Scene\LSXAnimation.h" />
+    <ClInclude Include="LSFbxConverter\Src\Scene\LSXAnimationLayer.h" />
+    <ClInclude Include="LSFbxConverter\Src\Scene\LSXAnimationStack.h" />
+    <ClInclude Include="LSFbxConverter\Src\Scene\LSXAnimationTrack.h" />
+    <ClInclude Include="LSFbxConverter\Src\Scene\LSXMaterial.h" />
+    <ClInclude Include="LSFbxConverter\Src\Scene\LSXMesh.h" />
+    <ClInclude Include="LSFbxConverter\Src\Scene\LSXMeshInstance.h" />
+    <ClInclude Include="LSFbxConverter\Src\Scene\LSXScene.h" />
+    <ClInclude Include="LSFbxConverter\Src\Scene\LSXSkeleton.h" />
+    <ClInclude Include="LSFbxConverter\Src\Scene\LSXTexture.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

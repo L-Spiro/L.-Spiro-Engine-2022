@@ -1,0 +1,1127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\DirectX11">
+      <UniqueIdentifier>{a7eb1eba-c4ba-49d0-8938-9c642e50bbff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX9">
+      <UniqueIdentifier>{e5f2b342-510f-4b11-828e-c2b6e6b3e99d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGL">
+      <UniqueIdentifier>{05e5896d-d44a-43f3-a889-e33665a66b54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLES">
+      <UniqueIdentifier>{c1699676-8a0d-41b4-afb9-cd7cfc17b54b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Gfx">
+      <UniqueIdentifier>{177f7a07-147b-4b50-a23e-b6ed0c15de6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PreProc">
+      <UniqueIdentifier>{4eb4fee1-1e12-4ec5-9098-5f1af853b9fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PreProcGen">
+      <UniqueIdentifier>{e782512b-96d1-430c-b93a-0b7f2f01ab17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ShaderLangGen">
+      <UniqueIdentifier>{fc18bbee-3487-4b80-872b-08b2056fb10b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ShaderLanguage">
+      <UniqueIdentifier>{25736dfb-2dfb-4a77-8a6a-e021d407b9c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX9Shaders">
+      <UniqueIdentifier>{166953ab-5b93-40a4-ad99-f9c5e26b37c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX11Shaders">
+      <UniqueIdentifier>{0d1231ed-4c2b-43fc-b8ff-2a6acb82ee7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VertexBuffer">
+      <UniqueIdentifier>{7e6ebabc-c565-46f3-8bbf-5fea94afbe61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX11VertexBuffer">
+      <UniqueIdentifier>{1dda7ce5-14b4-498b-8844-423adaad5ccd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX9VertexBuffer">
+      <UniqueIdentifier>{9996d42f-ea91-4e5d-947f-90204cf2d488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX9IndexBuffer">
+      <UniqueIdentifier>{ec5b5683-4d89-4725-8dbc-cd2ec8d35398}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX11IndexBuffer">
+      <UniqueIdentifier>{e7181439-7305-4e0d-8d84-a077ac7fbe9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IndexBuffer">
+      <UniqueIdentifier>{05136429-eeb4-4155-9fb1-666e3d5e4acf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLShaders">
+      <UniqueIdentifier>{9c3dd723-5162-4aa1-a573-db4b4c97932d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLVertexBuffer">
+      <UniqueIdentifier>{6209cfa6-dc03-4c7b-8223-aa860e259223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLIndexBuffer">
+      <UniqueIdentifier>{c2c00759-20fc-40dc-8f70-7aeeef7aedca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLESIndexBuffer">
+      <UniqueIdentifier>{b8874f26-524f-4923-885f-9616cf1f3895}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLESShaders">
+      <UniqueIdentifier>{de4494f2-b3c1-4cd3-9754-b855f26759ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLESVertexBuffer">
+      <UniqueIdentifier>{37143755-e78f-4571-9437-8d3ad6c90101}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RenderTarget">
+      <UniqueIdentifier>{9fd56850-68e8-4b93-ad15-736d620b1c41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Texture">
+      <UniqueIdentifier>{17372d08-371d-4ef4-bb64-68574094df10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX9Texture">
+      <UniqueIdentifier>{16818107-2f20-4476-aaa5-a098cc44bec7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX11Texture">
+      <UniqueIdentifier>{71a1c356-5837-49bd-a71f-e1c934e235c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLTexture">
+      <UniqueIdentifier>{16fab674-2649-4c64-81e1-4fd50ae57629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLESTexture">
+      <UniqueIdentifier>{64451068-dc86-435d-bf51-8c0bcab2c5fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sampler">
+      <UniqueIdentifier>{ffb4df5e-fbe3-4d1d-817a-ce7f5e3e8756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLFramebuffer">
+      <UniqueIdentifier>{626310ab-df0b-4d76-9f1e-96f4263d091f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGLESFramebuffer">
+      <UniqueIdentifier>{f84f8872-f96b-4e48-b424-efbcd98eb514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Vulkan">
+      <UniqueIdentifier>{84e75200-2481-4915-a531-e98336e76d18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanCommandBuffer">
+      <UniqueIdentifier>{aad00ab5-c93c-4ac8-b73a-98b615126572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanIndexBuffer">
+      <UniqueIdentifier>{ed2eec8b-c98c-48bb-9143-e8444badf3ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanShaders">
+      <UniqueIdentifier>{c57e30e0-766a-4daf-bbc8-1a9d601f51a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanShaders\GLSL-SPIR-V">
+      <UniqueIdentifier>{e6d22b5c-b550-4830-9b40-193d2af7a68f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanShaders\GLSL-SPIR-V\glslang">
+      <UniqueIdentifier>{f7069ea3-e18d-44fb-9d24-fa09a5515010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanShaders\GLSL-SPIR-V\glslang\Include">
+      <UniqueIdentifier>{548e9324-dc18-4a8a-a4b0-415264a0e2cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanShaders\GLSL-SPIR-V\glslang\Public">
+      <UniqueIdentifier>{22bac7ff-f839-47c8-be45-77a8d31a2f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent">
+      <UniqueIdentifier>{a3106b5a-e496-444c-b92d-4866c17e494c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor">
+      <UniqueIdentifier>{49247a91-080a-4a26-b136-998ecd092cfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanShaders\GLSL-SPIR-V\glslang\GenericCodeGen">
+      <UniqueIdentifier>{06ff39fc-d6ae-4967-a4a2-88d5eb13afc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanShaders\GLSL-SPIR-V\SPIRV">
+      <UniqueIdentifier>{8ee332d7-c80f-4e13-ba9e-f753ae5b0f7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanTexture">
+      <UniqueIdentifier>{2aa10343-6ced-42cd-9926-48fdd891c0b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\VulkanVertexBuffer">
+      <UniqueIdentifier>{860c8532-0f1b-4979-b973-8e25974fec9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\DirectX11">
+      <UniqueIdentifier>{b38ff359-e541-4a7d-bae2-ede304df45c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX9">
+      <UniqueIdentifier>{cef433f2-b68a-40e6-9e2a-3ff93cc5cf3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGL">
+      <UniqueIdentifier>{d7dfaa8b-c3cf-447b-b241-210a19f77e7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGLES">
+      <UniqueIdentifier>{fed67aca-1300-4f13-b3b7-82fe8861ab19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Gfx">
+      <UniqueIdentifier>{924981be-d51b-458a-aae4-0616c20f9ac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PreProc">
+      <UniqueIdentifier>{c4c41803-8f0a-4f4b-aadc-bdc7b750bf69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PreProcGen">
+      <UniqueIdentifier>{8da89ec5-0179-4a7a-a556-2185d3e9de60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ShaderLangGen">
+      <UniqueIdentifier>{e6360841-f562-4529-a486-20012a21018b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ShaderLanguage">
+      <UniqueIdentifier>{74a7e83e-ea76-44e5-8cea-a032729e8224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX9Shaders">
+      <UniqueIdentifier>{81c24cc3-0ac2-4a5f-bea0-fffe197c91c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX11Shaders">
+      <UniqueIdentifier>{3b162478-5710-4418-bf61-93055933e9d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VertexBuffer">
+      <UniqueIdentifier>{0a7f48f3-8d67-4c3c-acc7-5abeccee0edb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX11VertexBuffer">
+      <UniqueIdentifier>{04d0e78d-eb23-435a-a96d-b1959b1cdfaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX9VertexBuffer">
+      <UniqueIdentifier>{84e9b0e6-373d-45d4-9120-a974d5c9b0a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX9IndexBuffer">
+      <UniqueIdentifier>{19f5f6ea-b35e-4692-a80e-9e33531a19a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX11IndexBuffer">
+      <UniqueIdentifier>{edc0c165-6f79-4023-b12f-038e4832e811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IndexBuffer">
+      <UniqueIdentifier>{f2d360e1-70e5-451d-8e45-5ba10acb5dfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGLShaders">
+      <UniqueIdentifier>{fe22fae1-f1e4-4111-ba3d-9f408a4c1843}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGLVertexBuffer">
+      <UniqueIdentifier>{5f7c6ed4-038c-41fa-b0cb-3403b0fc0182}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGLIndexBuffer">
+      <UniqueIdentifier>{e12c5300-b59a-4350-941d-f11cafa5bf60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGLESIndexBuffer">
+      <UniqueIdentifier>{de3d9108-95a9-4911-a192-278d5f738494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGLESShaders">
+      <UniqueIdentifier>{ab5996df-64cc-4294-b51e-bcf51768f8ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGLESVertexBuffer">
+      <UniqueIdentifier>{526b22a8-1c6f-48c1-bb04-2c9ed3e1af5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RenderTarget">
+      <UniqueIdentifier>{6e31871b-a61d-4ced-8f87-2d6c2e21bab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Texture">
+      <UniqueIdentifier>{fabbc67e-e6cc-454d-97d9-d7f53dc9f25a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX9Texture">
+      <UniqueIdentifier>{8270d9f4-a2f9-4d6e-8441-7304c60a0047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX11Texture">
+      <UniqueIdentifier>{905730bc-7bb4-4ad7-a12d-61147e3b47fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGLTexture">
+      <UniqueIdentifier>{725f2d66-56e0-4c0c-9f49-766a66652fd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGLESTexture">
+      <UniqueIdentifier>{bbeb6340-14db-427d-b81f-40307012f772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sampler">
+      <UniqueIdentifier>{bb6bb088-5c9b-4e4b-8261-9da4c54b7c37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGLFramebuffer">
+      <UniqueIdentifier>{b7342aff-9332-4b5b-a1d7-32f74ff9db63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OpenGLESFramebuffer">
+      <UniqueIdentifier>{835648bd-b941-4034-aa87-7028955f66aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vulkan">
+      <UniqueIdentifier>{6a25fa88-3519-49fb-b179-7effc11b40f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanCommandBuffer">
+      <UniqueIdentifier>{d51ebc39-25ea-4bc1-951d-f7bedf59fc33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanIndexBuffer">
+      <UniqueIdentifier>{458a3ded-3a61-4bca-8c73-0545cbc723d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanShaders">
+      <UniqueIdentifier>{d41e2098-2e62-4277-a97f-5c823f2e2f9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanShaders\GLSL-SPIR-V">
+      <UniqueIdentifier>{791bfe94-cc5f-49b7-8f63-6aa59f86c402}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanShaders\GLSL-SPIR-V\glslang">
+      <UniqueIdentifier>{1adaf03a-d5cd-44b4-9aad-965763024ee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include">
+      <UniqueIdentifier>{a6395037-08c2-4e5a-bb1e-ed11ebf9caa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Public">
+      <UniqueIdentifier>{16a82c26-f56f-44b4-b652-34e06b641f9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent">
+      <UniqueIdentifier>{4750df16-4c3c-4c69-8ac5-6c23959b74fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor">
+      <UniqueIdentifier>{404bfa11-0665-42d8-86fa-fe1d54f5f5f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanShaders\GLSL-SPIR-V\glslang\GenericCodeGen">
+      <UniqueIdentifier>{26ef3850-7691-4e2a-bf95-5f88194b5c9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanShaders\GLSL-SPIR-V\SPIRV">
+      <UniqueIdentifier>{e2836b6e-c2bd-4c72-938d-ba4f20df5103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanTexture">
+      <UniqueIdentifier>{aa9c5f6e-8ef9-4590-bada-b41adf9b7180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\VulkanVertexBuffer">
+      <UniqueIdentifier>{2f79c6b0-13a3-46dc-b181-6554d06e4678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Framebuffer">
+      <UniqueIdentifier>{9844cb26-423d-4cd1-bbd8-842373d8726d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framebuffer">
+      <UniqueIdentifier>{cb87fe84-367f-41d1-819d-9842e48ff35c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX9Framebuffer">
+      <UniqueIdentifier>{41ed367f-5562-4be0-9454-97be175d9f7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX9Framebuffer">
+      <UniqueIdentifier>{a5e41f99-0aba-4ede-b092-d210a9c59af9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DirectX11Framebuffer">
+      <UniqueIdentifier>{c2daf709-02da-42d6-96db-2bc0517bffb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DirectX11Framebuffer">
+      <UniqueIdentifier>{31cdfbba-3f4d-44e1-83ef-b7de29a2707d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\LSGGraphicsLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11\LSGDirectX11.cpp">
+      <Filter>Source Files\DirectX11</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9\LSGDirectX9.cpp">
+      <Filter>Source Files\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9\LSGDirectX9LosableResource.cpp">
+      <Filter>Source Files\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9\LSGDirectX9LosableResourceManager.cpp">
+      <Filter>Source Files\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGL\LSGOpenGl.cpp">
+      <Filter>Source Files\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLES\LSGOpenGlEs.cpp">
+      <Filter>Source Files\OpenGLES</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Gfx\LSGGfx.cpp">
+      <Filter>Source Files\Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Gfx\LSGGfxBase.cpp">
+      <Filter>Source Files\Gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PreProc\LSGPreProc.cpp">
+      <Filter>Source Files\PreProc</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PreProc\LSGPreProcContainer.cpp">
+      <Filter>Source Files\PreProc</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PreProc\LSGPreProcLexer.cpp">
+      <Filter>Source Files\PreProc</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PreProcGen\LSGPreProcLexBase.cpp">
+      <Filter>Source Files\PreProcGen</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PreProcGen\LSGPreProcParser.cpp">
+      <Filter>Source Files\PreProcGen</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ShaderLangGen\LSGShaderLexBase.cpp">
+      <Filter>Source Files\ShaderLangGen</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ShaderLangGen\LSGShaderParser.cpp">
+      <Filter>Source Files\ShaderLangGen</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ShaderLanguage\LSGCompiledShaderBase.cpp">
+      <Filter>Source Files\ShaderLanguage</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ShaderLanguage\LSGShader.cpp">
+      <Filter>Source Files\ShaderLanguage</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderBase.cpp">
+      <Filter>Source Files\ShaderLanguage</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderLanguageParser.cpp">
+      <Filter>Source Files\ShaderLanguage</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderLexer.cpp">
+      <Filter>Source Files\ShaderLanguage</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderParserWrapper.cpp">
+      <Filter>Source Files\ShaderLanguage</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderScope.cpp">
+      <Filter>Source Files\ShaderLanguage</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderScopeStack.cpp">
+      <Filter>Source Files\ShaderLanguage</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderTranslationProcessorBase.cpp">
+      <Filter>Source Files\ShaderLanguage</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9CompiledShader.cpp">
+      <Filter>Source Files\DirectX9Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9CompiledShaderManager.cpp">
+      <Filter>Source Files\DirectX9Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9PixelShader.cpp">
+      <Filter>Source Files\DirectX9Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9Shader.cpp">
+      <Filter>Source Files\DirectX9Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9ShaderManager.cpp">
+      <Filter>Source Files\DirectX9Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9ShaderTranslator.cpp">
+      <Filter>Source Files\DirectX9Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9VertexShader.cpp">
+      <Filter>Source Files\DirectX9Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11CBuffer.cpp">
+      <Filter>Source Files\DirectX11Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11CompiledShader.cpp">
+      <Filter>Source Files\DirectX11Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11CompiledShaderManager.cpp">
+      <Filter>Source Files\DirectX11Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11PixelShader.cpp">
+      <Filter>Source Files\DirectX11Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11Shader.cpp">
+      <Filter>Source Files\DirectX11Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11ShaderManager.cpp">
+      <Filter>Source Files\DirectX11Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11ShaderTranslator.cpp">
+      <Filter>Source Files\DirectX11Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11VertexShader.cpp">
+      <Filter>Source Files\DirectX11Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VertexBuffer\LSGVertexBuffer.cpp">
+      <Filter>Source Files\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VertexBuffer\LSGVertexBufferBase.cpp">
+      <Filter>Source Files\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11VertexBuffer\LSGDirectX11VertexBuffer.cpp">
+      <Filter>Source Files\DirectX11VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9VertexBuffer\LSGDirectX9VertexBuffer.cpp">
+      <Filter>Source Files\DirectX9VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9IndexBuffer\LSGDirectX9IndexBuffer.cpp">
+      <Filter>Source Files\DirectX9IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11IndexBuffer\LSGDirectX11IndexBuffer.cpp">
+      <Filter>Source Files\DirectX11IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\IndexBuffer\LSGIndexBuffer.cpp">
+      <Filter>Source Files\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\IndexBuffer\LSGIndexBufferBase.cpp">
+      <Filter>Source Files\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlCompiledShader.cpp">
+      <Filter>Source Files\OpenGLShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlCompiledShaderManager.cpp">
+      <Filter>Source Files\OpenGLShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlShader.cpp">
+      <Filter>Source Files\OpenGLShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlShaderManager.cpp">
+      <Filter>Source Files\OpenGLShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlShaderProgramManager.cpp">
+      <Filter>Source Files\OpenGLShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlShaderTranslator.cpp">
+      <Filter>Source Files\OpenGLShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLVertexBuffer\LSGOpenGlVertexBuffer.cpp">
+      <Filter>Source Files\OpenGLVertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGlIndexBuffer\LSGOpenGlIndexBuffer.cpp">
+      <Filter>Source Files\OpenGLIndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLESIndexBuffer\LSGOpenGlEsIndexBuffer.cpp">
+      <Filter>Source Files\OpenGLESIndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsCompiledShader.cpp">
+      <Filter>Source Files\OpenGLESShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsCompiledShaderManager.cpp">
+      <Filter>Source Files\OpenGLESShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsShader.cpp">
+      <Filter>Source Files\OpenGLESShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsShaderManager.cpp">
+      <Filter>Source Files\OpenGLESShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsShaderProgramManager.cpp">
+      <Filter>Source Files\OpenGLESShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsShaderTranslator.cpp">
+      <Filter>Source Files\OpenGLESShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLESVertexBuffer\LSGOpenGlEsVertexBuffer.cpp">
+      <Filter>Source Files\OpenGLESVertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\RenderTarget\LSGRenderTargetInterface.cpp">
+      <Filter>Source Files\RenderTarget</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Texture\LSGTexture2d.cpp">
+      <Filter>Source Files\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Texture\LSGTexture2dBase.cpp">
+      <Filter>Source Files\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9Texture\LSGDirectX9Texture2d.cpp">
+      <Filter>Source Files\DirectX9Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11Texture\LSGDirectX11Texture2d.cpp">
+      <Filter>Source Files\DirectX11Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLTexture\LSGOpenGlTexture2d.cpp">
+      <Filter>Source Files\OpenGLTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGlESTexture\LSGOpenGlEsTexture2d.cpp">
+      <Filter>Source Files\OpenGLESTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Sampler\LSGSampler.cpp">
+      <Filter>Source Files\Sampler</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLFramebuffer\LSGOpenGlFramebuffer.cpp">
+      <Filter>Source Files\OpenGLFramebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLESFramebuffer\LSGOpenGlEsFramebuffer.cpp">
+      <Filter>Source Files\OpenGLESFramebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Vulkan\LSGVulkan.cpp">
+      <Filter>Source Files\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanCommandBuffer\LSGVulkanCommandBuffer.cpp">
+      <Filter>Source Files\VulkanCommandBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanIndexBuffer\LSGVulkanIndexBuffer.cpp">
+      <Filter>Source Files\VulkanIndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Constant.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\glslang_tab.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\InfoSink.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Initialize.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Intermediate.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\intermOut.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\IntermTraverse.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\limits.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\linkValidate.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\parseConst.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\ParseHelper.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\PoolAlloc.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\reflection.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\RemoveTree.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Scan.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\ShaderLang.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\SymbolTable.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Versions.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\Pp.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpAtom.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpContext.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpMemory.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpScanner.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpSymbols.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpTokens.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\GenericCodeGen\CodeGen.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\GenericCodeGen</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\GenericCodeGen\Link.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\glslang\GenericCodeGen</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanTexture\LSGVulkanTexture2d.cpp">
+      <Filter>Source Files\VulkanTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanVertexBuffer\LSGVulkanVertexBuffer.cpp">
+      <Filter>Source Files\VulkanVertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\disassemble.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\doc.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\GlslangToSpv.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\InReadableOrder.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\SpvBuilder.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\SPVRemapper.cpp">
+      <Filter>Source Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanCompiledShader.cpp">
+      <Filter>Source Files\VulkanShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanCompiledShaderManager.cpp">
+      <Filter>Source Files\VulkanShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanShader.cpp">
+      <Filter>Source Files\VulkanShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanShaderManager.cpp">
+      <Filter>Source Files\VulkanShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanShaderProgramManager.cpp">
+      <Filter>Source Files\VulkanShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanShaderTranslator.cpp">
+      <Filter>Source Files\VulkanShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framebuffer\LSGFramebufferBase.cpp">
+      <Filter>Source Files\Framebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX9Framebuffer\LSGDirectX9FramebufferBase.cpp">
+      <Filter>Source Files\DirectX9Framebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framebuffer\LSGFramebuffer.cpp">
+      <Filter>Source Files\Framebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DirectX11Framebuffer\LSGDirectX11FramebufferBase.cpp">
+      <Filter>Source Files\DirectX11Framebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OpenGLFramebuffer\LSGOpenGlFramebufferBase.cpp">
+      <Filter>Source Files\OpenGLFramebuffer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\LSGGraphicsLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11\LSGDirectX11.h">
+      <Filter>Header Files\DirectX11</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9\LSGDirectX9.h">
+      <Filter>Header Files\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9\LSGDirectX9LosableResource.h">
+      <Filter>Header Files\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9\LSGDirectX9LosableResourceManager.h">
+      <Filter>Header Files\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGL\LSGOpenGl.h">
+      <Filter>Header Files\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLES\LSGOpenGlEs.h">
+      <Filter>Header Files\OpenGLES</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gfx\LSGCreateStatesDecl.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gfx\LSGCreateStatesDef.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gfx\LSGCreateStatesMembersDecl.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gfx\LSGCreateStatesMembersDef.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gfx\LSGDescFuncDecl.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gfx\LSGDescFuncDef.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gfx\LSGDescStructs.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gfx\LSGGfx.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gfx\LSGGfxBase.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gfx\LSGGfxState.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gfx\LSGStateRefDecl.h">
+      <Filter>Header Files\Gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PreProc\LSGPreProc.h">
+      <Filter>Header Files\PreProc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PreProc\LSGPreProcContainer.h">
+      <Filter>Header Files\PreProc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PreProc\LSGPreProcLexer.h">
+      <Filter>Header Files\PreProc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PreProc\LSGPreProcSyntaxNodes.h">
+      <Filter>Header Files\PreProc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PreProcGen\LSGPreProcLexBase.h">
+      <Filter>Header Files\PreProcGen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PreProcGen\LSGPreProcParser.h">
+      <Filter>Header Files\PreProcGen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PreProcGen\LSGPreProcParserLocation.h">
+      <Filter>Header Files\PreProcGen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PreProcGen\LSGPreProcParserPosition.h">
+      <Filter>Header Files\PreProcGen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PreProcGen\LSGPreProcParserStack.h">
+      <Filter>Header Files\PreProcGen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLangGen\LSGShaderLexBase.h">
+      <Filter>Header Files\ShaderLangGen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLangGen\LSGShaderParser.h">
+      <Filter>Header Files\ShaderLangGen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLangGen\LSGShaderParserLocation.h">
+      <Filter>Header Files\ShaderLangGen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLangGen\LSGShaderParserPosition.h">
+      <Filter>Header Files\ShaderLangGen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLangGen\LSGShaderParserStack.h">
+      <Filter>Header Files\ShaderLangGen</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLanguage\LSGCompiledShaderBase.h">
+      <Filter>Header Files\ShaderLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLanguage\LSGShader.h">
+      <Filter>Header Files\ShaderLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderBase.h">
+      <Filter>Header Files\ShaderLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderLanguageParser.h">
+      <Filter>Header Files\ShaderLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderLexer.h">
+      <Filter>Header Files\ShaderLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderParserWrapper.h">
+      <Filter>Header Files\ShaderLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderScope.h">
+      <Filter>Header Files\ShaderLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderScopeStack.h">
+      <Filter>Header Files\ShaderLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderSyntaxNodes.h">
+      <Filter>Header Files\ShaderLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderTranslationProcessorBase.h">
+      <Filter>Header Files\ShaderLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9CompiledShader.h">
+      <Filter>Header Files\DirectX9Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9CompiledShaderManager.h">
+      <Filter>Header Files\DirectX9Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9PixelShader.h">
+      <Filter>Header Files\DirectX9Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9Shader.h">
+      <Filter>Header Files\DirectX9Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9ShaderManager.h">
+      <Filter>Header Files\DirectX9Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9ShaderTranslator.h">
+      <Filter>Header Files\DirectX9Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9VertexShader.h">
+      <Filter>Header Files\DirectX9Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11CBuffer.h">
+      <Filter>Header Files\DirectX11Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11CompiledShader.h">
+      <Filter>Header Files\DirectX11Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11CompiledShaderManager.h">
+      <Filter>Header Files\DirectX11Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11PixelShader.h">
+      <Filter>Header Files\DirectX11Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11Shader.h">
+      <Filter>Header Files\DirectX11Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11ShaderManager.h">
+      <Filter>Header Files\DirectX11Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11ShaderTranslator.h">
+      <Filter>Header Files\DirectX11Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11VertexShader.h">
+      <Filter>Header Files\DirectX11Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VertexBuffer\LSGVertexBuffer.h">
+      <Filter>Header Files\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VertexBuffer\LSGVertexBufferBase.h">
+      <Filter>Header Files\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VertexBuffer\LSGVertexBufferCommonDecl.h">
+      <Filter>Header Files\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VertexBuffer\LSGVertexBufferCommonImpl.h">
+      <Filter>Header Files\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11VertexBuffer\LSGDirectX11VertexBuffer.h">
+      <Filter>Header Files\DirectX11VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9VertexBuffer\LSGDirectX9VertexBuffer.h">
+      <Filter>Header Files\DirectX9VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9IndexBuffer\LSGDirectX9IndexBuffer.h">
+      <Filter>Header Files\DirectX9IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11IndexBuffer\LSGDirectX11IndexBuffer.h">
+      <Filter>Header Files\DirectX11IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\IndexBuffer\LSGIndexBuffer.h">
+      <Filter>Header Files\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\IndexBuffer\LSGIndexBufferBase.h">
+      <Filter>Header Files\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlCompiledShader.h">
+      <Filter>Header Files\OpenGLShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlCompiledShaderManager.h">
+      <Filter>Header Files\OpenGLShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlShader.h">
+      <Filter>Header Files\OpenGLShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlShaderManager.h">
+      <Filter>Header Files\OpenGLShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlShaderProgramManager.h">
+      <Filter>Header Files\OpenGLShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlShaderTranslator.h">
+      <Filter>Header Files\OpenGLShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLVertexBuffer\LSGOpenGlVertexBuffer.h">
+      <Filter>Header Files\OpenGLVertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGlIndexBuffer\LSGOpenGlIndexBuffer.h">
+      <Filter>Header Files\OpenGLIndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLESIndexBuffer\LSGOpenGlEsIndexBuffer.h">
+      <Filter>Header Files\OpenGLESIndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsCompiledShader.h">
+      <Filter>Header Files\OpenGLESShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsCompiledShaderManager.h">
+      <Filter>Header Files\OpenGLESShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsShader.h">
+      <Filter>Header Files\OpenGLESShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsShaderManager.h">
+      <Filter>Header Files\OpenGLESShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsShaderProgramManager.h">
+      <Filter>Header Files\OpenGLESShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsShaderTranslator.h">
+      <Filter>Header Files\OpenGLESShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLESVertexBuffer\LSGOpenGlEsVertexBuffer.h">
+      <Filter>Header Files\OpenGLESVertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\RenderTarget\LSGRenderTargetInterface.h">
+      <Filter>Header Files\RenderTarget</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Texture\LSGTexture2d.h">
+      <Filter>Header Files\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Texture\LSGTexture2dBase.h">
+      <Filter>Header Files\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9Texture\LSGDirectX9Texture2d.h">
+      <Filter>Header Files\DirectX9Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9Texture\LSGDirectX9TextureConstants.h">
+      <Filter>Header Files\DirectX9Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11Texture\LSGDirectX11Texture2d.h">
+      <Filter>Header Files\DirectX11Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11Texture\LSGDirectX11TextureConstants.h">
+      <Filter>Header Files\DirectX11Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLTexture\LSGOpenGlTexture2d.h">
+      <Filter>Header Files\OpenGLTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLTexture\LSGOpenGlTextureConstants.h">
+      <Filter>Header Files\OpenGLTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGlESTexture\LSGOpenGlEsTexture2d.h">
+      <Filter>Header Files\OpenGLESTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGlESTexture\LSGOpenGlEsTextureConstants.h">
+      <Filter>Header Files\OpenGLESTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Sampler\LSGSampler.h">
+      <Filter>Header Files\Sampler</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLFramebuffer\LSGOpenGlFramebuffer.h">
+      <Filter>Header Files\OpenGLFramebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLESFramebuffer\LSGOpenGlEsFramebuffer.h">
+      <Filter>Header Files\OpenGLESFramebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vulkan\LSGVulkan.h">
+      <Filter>Header Files\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanCommandBuffer\LSGVulkanCommandBuffer.h">
+      <Filter>Header Files\VulkanCommandBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanIndexBuffer\LSGVulkanIndexBuffer.h">
+      <Filter>Header Files\VulkanIndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\arrays.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\BaseTypes.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\Common.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\ConstantUnion.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\InfoSink.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\InitializeGlobals.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\intermediate.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\PoolAlloc.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\ResourceLimits.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\revision.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\ShHandle.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\Types.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Public\ShaderLang.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\gl_types.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\glslang_tab.cpp.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Initialize.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\localintermediate.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\ParseHelper.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\reflection.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\RemoveTree.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Scan.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\ScanContext.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\SymbolTable.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Versions.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpContext.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpTokens.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanTexture\LSGVulkanTexture2d.h">
+      <Filter>Header Files\VulkanTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanTexture\LSGVulkanTextureConstants.h">
+      <Filter>Header Files\VulkanTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanVertexBuffer\LSGVulkanVertexBuffer.h">
+      <Filter>Header Files\VulkanVertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\disassemble.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\doc.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\GLSL.std.450.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\GlslangToSpv.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\spirv.hpp">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\SpvBuilder.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\spvIR.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\SPVRemapper.h">
+      <Filter>Header Files\VulkanShaders\GLSL-SPIR-V\SPIRV</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanShaderTranslator.h">
+      <Filter>Header Files\VulkanShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanCompiledShader.h">
+      <Filter>Header Files\VulkanShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanCompiledShaderManager.h">
+      <Filter>Header Files\VulkanShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanShader.h">
+      <Filter>Header Files\VulkanShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanShaderManager.h">
+      <Filter>Header Files\VulkanShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanShaderProgramManager.h">
+      <Filter>Header Files\VulkanShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\VertexBuffer\LSGNBufferVertexBuffer.h">
+      <Filter>Header Files\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framebuffer\LSGFramebufferBase.h">
+      <Filter>Header Files\Framebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX9Framebuffer\LSGDirectX9FramebufferBase.h">
+      <Filter>Header Files\DirectX9Framebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framebuffer\LSGFramebuffer.h">
+      <Filter>Header Files\Framebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\DirectX11Framebuffer\LSGDirectX11FramebufferBase.h">
+      <Filter>Header Files\DirectX11Framebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OpenGLFramebuffer\LSGOpenGlFramebufferBase.h">
+      <Filter>Header Files\OpenGLFramebuffer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

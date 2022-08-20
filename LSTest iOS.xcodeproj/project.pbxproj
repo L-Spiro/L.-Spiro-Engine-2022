@@ -1,0 +1,1293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE0A47AA1E1C4F2C0013AD38 /* libFreeImageLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0A47A91E1C4F2C0013AD38 /* libFreeImageLib.a */; };
+		CE0A47AB1E1C4FB80013AD38 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7332411B8AEE5C00D305C2 /* Metal.framework */; };
+		CE23CEE21AF116AC0086370C /* libLSCompressionLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CED51AF116AC0086370C /* libLSCompressionLib.a */; };
+		CE23CEE31AF116AC0086370C /* libLSEngine iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CED61AF116AC0086370C /* libLSEngine iOS.a */; };
+		CE23CEE41AF116AC0086370C /* libLSFileLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CED71AF116AC0086370C /* libLSFileLib.a */; };
+		CE23CEE51AF116AC0086370C /* libLSGraphicsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CED81AF116AC0086370C /* libLSGraphicsLib.a */; };
+		CE23CEE61AF116AC0086370C /* libLSImageLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CED91AF116AC0086370C /* libLSImageLib.a */; };
+		CE23CEE71AF116AC0086370C /* libLSMathLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEDA1AF116AC0086370C /* libLSMathLib.a */; };
+		CE23CEE81AF116AC0086370C /* libLSMemLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEDB1AF116AC0086370C /* libLSMemLib.a */; };
+		CE23CEE91AF116AC0086370C /* libLSNetLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEDC1AF116AC0086370C /* libLSNetLib.a */; };
+		CE23CEEA1AF116AC0086370C /* libLSPhysicsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEDD1AF116AC0086370C /* libLSPhysicsLib.a */; };
+		CE23CEEB1AF116AC0086370C /* libLSSoundLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEDE1AF116AC0086370C /* libLSSoundLib.a */; };
+		CE23CEEC1AF116AC0086370C /* libLSStandardLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEDF1AF116AC0086370C /* libLSStandardLib.a */; };
+		CE23CEED1AF116AC0086370C /* libLSThreadLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEE01AF116AC0086370C /* libLSThreadLib.a */; };
+		CE23CEEE1AF116AC0086370C /* libLSTL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEE11AF116AC0086370C /* libLSTL.a */; };
+		CE23CF041AF11EF30086370C /* libLibJPEG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEC21AF116510086370C /* libLibJPEG.a */; };
+		CE23CF051AF11EF30086370C /* libLibJXR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEC31AF116510086370C /* libLibJXR.a */; };
+		CE23CF061AF11EF30086370C /* libLibOpenJPEG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEC41AF116510086370C /* libLibOpenJPEG.a */; };
+		CE23CF071AF11EF30086370C /* libLibPNG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEC51AF116510086370C /* libLibPNG.a */; };
+		CE23CF081AF11EF30086370C /* libLibRawLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEC61AF116510086370C /* libLibRawLite.a */; };
+		CE23CF091AF11EF30086370C /* libLibTIFF4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEC71AF116510086370C /* libLibTIFF4.a */; };
+		CE23CF0A1AF11EF30086370C /* libLibWebP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEC81AF116510086370C /* libLibWebP.a */; };
+		CE23CF0B1AF11EF30086370C /* libOpenEXR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEC91AF116510086370C /* libOpenEXR.a */; };
+		CE23CF0C1AF11EF30086370C /* libZLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CECA1AF116510086370C /* libZLib.a */; };
+		CE91EC7A19BF793700986C4B /* libLSModelLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE91EC7919BF793700986C4B /* libLSModelLib.a */; };
+		CE954ACF18EC630800D4E2E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE954ACE18EC630800D4E2E8 /* UIKit.framework */; };
+		CE954AD118EC630800D4E2E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE954AD018EC630800D4E2E8 /* Foundation.framework */; };
+		CE954AD318EC630800D4E2E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE954AD218EC630800D4E2E8 /* CoreGraphics.framework */; };
+		CE954AD918EC630800D4E2E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE954AD718EC630800D4E2E8 /* InfoPlist.strings */; };
+		CE954AE118EC630800D4E2E8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE954AE018EC630800D4E2E8 /* Default.png */; };
+		CE954AE318EC630800D4E2E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE954AE218EC630800D4E2E8 /* Default@2x.png */; };
+		CE954AE518EC630800D4E2E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE954AE418EC630800D4E2E8 /* Default-568h@2x.png */; };
+		CE954B0818EC676800D4E2E8 /* Main.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE954B0718EC676800D4E2E8 /* Main.mm */; };
+		CE954B0B18EC6E7900D4E2E8 /* LSMyAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE954B0A18EC6E7900D4E2E8 /* LSMyAppDelegate.mm */; };
+		CE954B0F18EC6F9900D4E2E8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE954B0E18EC6F9900D4E2E8 /* OpenGLES.framework */; };
+		CE954B1118EC6FE000D4E2E8 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE954B1018EC6FE000D4E2E8 /* OpenAL.framework */; };
+		CE954B1318EC700E00D4E2E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE954B1218EC700E00D4E2E8 /* QuartzCore.framework */; };
+		CEC892671DB576E300DCDF74 /* libLSSpriteLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC892661DB576E300DCDF74 /* libLSSpriteLib.a */; };
+		CEC8926A1DB57AA100DCDF74 /* LSTSpriteTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEC892681DB57AA100DCDF74 /* LSTSpriteTest.cpp */; };
+		CEC894F11DB5813E00DCDF74 /* 001.dds in Resources */ = {isa = PBXBuildFile; fileRef = CEC894881DB5813E00DCDF74 /* 001.dds */; };
+		CEC894F21DB5813E00DCDF74 /* 001.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CEC894891DB5813E00DCDF74 /* 001.JPG */; };
+		CEC894F31DB5813E00DCDF74 /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC8948A1DB5813E00DCDF74 /* 001.png */; };
+		CEC894F41DB5813E00DCDF74 /* 1x1x1-3.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC8948B1DB5813E00DCDF74 /* 1x1x1-3.lsm */; };
+		CEC894F51DB5813E00DCDF74 /* 002.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC8948C1DB5813E00DCDF74 /* 002.png */; };
+		CEC894F61DB5813E00DCDF74 /* Amy.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC8948D1DB5813E00DCDF74 /* Amy.lsm */; };
+		CEC894F71DB5813E00DCDF74 /* Ashley.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC8948E1DB5813E00DCDF74 /* Ashley.lsm */; };
+		CEC894F81DB5813E00DCDF74 /* Aston.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC8948F1DB5813E00DCDF74 /* Aston.lsm */; };
+		CEC894F91DB5813E00DCDF74 /* Beam Kirby.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894901DB5813E00DCDF74 /* Beam Kirby.lsm */; };
+		CEC894FA1DB5813E00DCDF74 /* Big Donut.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894911DB5813E00DCDF74 /* Big Donut.lsm */; };
+		CEC894FB1DB5813E00DCDF74 /* Blue Falcon.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894921DB5813E00DCDF74 /* Blue Falcon.lsm */; };
+		CEC894FC1DB5813E00DCDF74 /* Bobomb Battlefield.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894931DB5813E00DCDF74 /* Bobomb Battlefield.lsm */; };
+		CEC894FD1DB5813E00DCDF74 /* Bowser's Castle.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894941DB5813E00DCDF74 /* Bowser's Castle.lsm */; };
+		CEC894FE1DB5813E00DCDF74 /* Cali.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894951DB5813E00DCDF74 /* Cali.lsm */; };
+		CEC894FF1DB5813E00DCDF74 /* Cayman.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894961DB5813E00DCDF74 /* Cayman.lsm */; };
+		CEC895001DB5813E00DCDF74 /* Char01.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894971DB5813E00DCDF74 /* Char01.lsm */; };
+		CEC895011DB5813E00DCDF74 /* Charizard.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894981DB5813E00DCDF74 /* Charizard.lsm */; };
+		CEC895021DB5813E00DCDF74 /* Chevy.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894991DB5813E00DCDF74 /* Chevy.lsm */; };
+		CEC895031DB5813E00DCDF74 /* Corneria.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC8949A1DB5813E00DCDF74 /* Corneria.lsm */; };
+		CEC895041DB5813E00DCDF74 /* Corvette.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC8949B1DB5813E00DCDF74 /* Corvette.lsm */; };
+		CEC895051DB5813E00DCDF74 /* Cruiser.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC8949C1DB5813E00DCDF74 /* Cruiser.lsm */; };
+		CEC895061DB5813E00DCDF74 /* Data.rar in Resources */ = {isa = PBXBuildFile; fileRef = CEC8949D1DB5813E00DCDF74 /* Data.rar */; };
+		CEC895071DB5813E00DCDF74 /* DB5.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC8949E1DB5813E00DCDF74 /* DB5.lsm */; };
+		CEC895081DB5813E00DCDF74 /* DeDeDe.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC8949F1DB5813E00DCDF74 /* DeDeDe.lsm */; };
+		CEC895091DB5813E00DCDF74 /* Dodge Challenger.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894A01DB5813E00DCDF74 /* Dodge Challenger.lsm */; };
+		CEC8950A1DB5813E00DCDF74 /* Dodge.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894A11DB5813E00DCDF74 /* Dodge.lsm */; };
+		CEC8950B1DB5813E00DCDF74 /* enemies.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC894A21DB5813E00DCDF74 /* enemies.png */; };
+		CEC8950C1DB5813E00DCDF74 /* Evo.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894A31DB5813E00DCDF74 /* Evo.lsm */; };
+		CEC8950D1DB5813E00DCDF74 /* Ferrari.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894A41DB5813E00DCDF74 /* Ferrari.lsm */; };
+		CEC8950E1DB5813E00DCDF74 /* gamma-1.0-or-2.2.dds in Resources */ = {isa = PBXBuildFile; fileRef = CEC894A51DB5813E00DCDF74 /* gamma-1.0-or-2.2.dds */; };
+		CEC8950F1DB5813E00DCDF74 /* gamma-1.0-or-2.2.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC894A61DB5813E00DCDF74 /* gamma-1.0-or-2.2.png */; };
+		CEC895101DB5813E00DCDF74 /* GigaBowser.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894A71DB5813E00DCDF74 /* GigaBowser.lsm */; };
+		CEC895111DB5813E00DCDF74 /* Glut.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894A81DB5813E00DCDF74 /* Glut.lsm */; };
+		CEC895121DB5813E00DCDF74 /* Gorem_U_01_pa.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894A91DB5813E00DCDF74 /* Gorem_U_01_pa.lsm */; };
+		CEC895131DB5813E00DCDF74 /* GT.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894AA1DB5813E00DCDF74 /* GT.lsm */; };
+		CEC895141DB5813E00DCDF74 /* Guido.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894AB1DB5813E00DCDF74 /* Guido.lsm */; };
+		CEC895151DB5813E00DCDF74 /* Hole Planet.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894AC1DB5813E00DCDF74 /* Hole Planet.lsm */; };
+		CEC895161DB5813E00DCDF74 /* Hunter.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894AD1DB5813E00DCDF74 /* Hunter.lsm */; };
+		CEC895171DB5813E00DCDF74 /* janken_02_idle.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894AE1DB5813E00DCDF74 /* janken_02_idle.lsm */; };
+		CEC895181DB5813E00DCDF74 /* jumpwoman.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894AF1DB5813E00DCDF74 /* jumpwoman.lsm */; };
+		CEC895191DB5813E00DCDF74 /* LSDAshikhminShirley.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894B01DB5813E00DCDF74 /* LSDAshikhminShirley.lssl */; };
+		CEC8951A1DB5813E00DCDF74 /* LSDBlinnPhong.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894B11DB5813E00DCDF74 /* LSDBlinnPhong.lssl */; };
+		CEC8951B1DB5813E00DCDF74 /* LSDCookTorrance.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894B21DB5813E00DCDF74 /* LSDCookTorrance.lssl */; };
+		CEC8951C1DB5813E00DCDF74 /* LSDDTerms.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894B31DB5813E00DCDF74 /* LSDDTerms.lssl */; };
+		CEC8951D1DB5813E00DCDF74 /* LSDForwardDefaultPS.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894B41DB5813E00DCDF74 /* LSDForwardDefaultPS.lssl */; };
+		CEC8951E1DB5813E00DCDF74 /* LSDForwardDefaultVS.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894B51DB5813E00DCDF74 /* LSDForwardDefaultVS.lssl */; };
+		CEC8951F1DB5813E00DCDF74 /* LSDFresnel.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894B61DB5813E00DCDF74 /* LSDFresnel.lssl */; };
+		CEC895201DB5813E00DCDF74 /* LSDGgx.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894B71DB5813E00DCDF74 /* LSDGgx.lssl */; };
+		CEC895211DB5813E00DCDF74 /* LSDGTerms.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894B81DB5813E00DCDF74 /* LSDGTerms.lssl */; };
+		CEC895221DB5813E00DCDF74 /* LSDLightArgs.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894B91DB5813E00DCDF74 /* LSDLightArgs.lssl */; };
+		CEC895231DB5813E00DCDF74 /* LSDOrenNayar.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894BA1DB5813E00DCDF74 /* LSDOrenNayar.lssl */; };
+		CEC895241DB5813E00DCDF74 /* LSDPi.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894BB1DB5813E00DCDF74 /* LSDPi.lssl */; };
+		CEC895251DB5813E00DCDF74 /* LSDPixelShader.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894BC1DB5813E00DCDF74 /* LSDPixelShader.lssl */; };
+		CEC895261DB5813E00DCDF74 /* LSDSqr.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894BD1DB5813E00DCDF74 /* LSDSqr.lssl */; };
+		CEC895271DB5813E00DCDF74 /* LSDVertexShader.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894BE1DB5813E00DCDF74 /* LSDVertexShader.lssl */; };
+		CEC895281DB5813E00DCDF74 /* LSRSpriteDefaultPS.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894BF1DB5813E00DCDF74 /* LSRSpriteDefaultPS.lssl */; };
+		CEC895291DB5813E00DCDF74 /* LSRSpriteDefaultVS.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894C01DB5813E00DCDF74 /* LSRSpriteDefaultVS.lssl */; };
+		CEC8952A1DB5813E00DCDF74 /* LSRSpriteStaticLayerChunkPS.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894C11DB5813E00DCDF74 /* LSRSpriteStaticLayerChunkPS.lssl */; };
+		CEC8952B1DB5813E00DCDF74 /* LSRSpriteStaticLayerChunkVS.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894C21DB5813E00DCDF74 /* LSRSpriteStaticLayerChunkVS.lssl */; };
+		CEC8952C1DB5813E00DCDF74 /* Mansion Planet.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894C31DB5813E00DCDF74 /* Mansion Planet.lsm */; };
+		CEC8952D1DB5813E00DCDF74 /* Mario Circuit.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894C41DB5813E00DCDF74 /* Mario Circuit.lsm */; };
+		CEC8952E1DB5813E00DCDF74 /* Mercedes.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894C51DB5813E00DCDF74 /* Mercedes.lsm */; };
+		CEC8952F1DB5813E00DCDF74 /* mikubest.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894C61DB5813E00DCDF74 /* mikubest.lsm */; };
+		CEC895301DB5813E00DCDF74 /* model.nut0 BC1 ATI.dds in Resources */ = {isa = PBXBuildFile; fileRef = CEC894C71DB5813E00DCDF74 /* model.nut0 BC1 ATI.dds */; };
+		CEC895311DB5813E00DCDF74 /* model.nut0 BC4 ATI.dds in Resources */ = {isa = PBXBuildFile; fileRef = CEC894C81DB5813E00DCDF74 /* model.nut0 BC4 ATI.dds */; };
+		CEC895321DB5813E00DCDF74 /* model.nut0 BC5 ATI.dds in Resources */ = {isa = PBXBuildFile; fileRef = CEC894C91DB5813E00DCDF74 /* model.nut0 BC5 ATI.dds */; };
+		CEC895331DB5813E00DCDF74 /* model.nut0.dds in Resources */ = {isa = PBXBuildFile; fileRef = CEC894CA1DB5813E00DCDF74 /* model.nut0.dds */; };
+		CEC895341DB5813E00DCDF74 /* Nissan.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894CB1DB5813E00DCDF74 /* Nissan.lsm */; };
+		CEC895351DB5813E00DCDF74 /* Noire.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894CC1DB5813E00DCDF74 /* Noire.lsm */; };
+		CEC895361DB5813E00DCDF74 /* p785_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEC894CD1DB5813E00DCDF74 /* p785_11.jpg */; };
+		CEC895371DB5813E00DCDF74 /* Peach Beach.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894CE1DB5813E00DCDF74 /* Peach Beach.lsm */; };
+		CEC895381DB5813E00DCDF74 /* Peach Blossom.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894CF1DB5813E00DCDF74 /* Peach Blossom.lsm */; };
+		CEC895391DB5813E00DCDF74 /* Peach.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894D01DB5813E00DCDF74 /* Peach.lsm */; };
+		CEC8953A1DB5813E00DCDF74 /* Petey Prianha.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894D11DB5813E00DCDF74 /* Petey Prianha.lsm */; };
+		CEC8953B1DB5813E00DCDF74 /* PixelTemp.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894D21DB5813E00DCDF74 /* PixelTemp.lssl */; };
+		CEC8953C1DB5813E00DCDF74 /* Rainbow Road.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894D31DB5813E00DCDF74 /* Rainbow Road.lsm */; };
+		CEC8953D1DB5813E00DCDF74 /* Samus.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894D41DB5813E00DCDF74 /* Samus.lsm */; };
+		CEC8953E1DB5813E00DCDF74 /* Shinjuku5 BC6 BTex.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC894D51DB5813E00DCDF74 /* Shinjuku5 BC6 BTex.png */; };
+		CEC8953F1DB5813E00DCDF74 /* Shinjuku5 BC6.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC894D61DB5813E00DCDF74 /* Shinjuku5 BC6.png */; };
+		CEC895401DB5813E00DCDF74 /* Shinjuku5 BC7 BTex.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC894D71DB5813E00DCDF74 /* Shinjuku5 BC7 BTex.png */; };
+		CEC895411DB5813E00DCDF74 /* Shinjuku5 BC7.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC894D81DB5813E00DCDF74 /* Shinjuku5 BC7.png */; };
+		CEC895421DB5813E00DCDF74 /* Shinjuku5 Btex BC6.dds in Resources */ = {isa = PBXBuildFile; fileRef = CEC894D91DB5813E00DCDF74 /* Shinjuku5 Btex BC6.dds */; };
+		CEC895431DB5813E00DCDF74 /* Shinjuku5 Btex BC7.dds in Resources */ = {isa = PBXBuildFile; fileRef = CEC894DA1DB5813E00DCDF74 /* Shinjuku5 Btex BC7.dds */; };
+		CEC895441DB5813E00DCDF74 /* Shinjuku5.dds in Resources */ = {isa = PBXBuildFile; fileRef = CEC894DB1DB5813E00DCDF74 /* Shinjuku5.dds */; };
+		CEC895451DB5813E00DCDF74 /* Shinjuku5.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC894DC1DB5813E00DCDF74 /* Shinjuku5.png */; };
+		CEC895461DB5813E00DCDF74 /* SMW Ground 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC894DD1DB5813E00DCDF74 /* SMW Ground 2.png */; };
+		CEC895471DB5813E00DCDF74 /* SMW Ground Tiles.bmp in Resources */ = {isa = PBXBuildFile; fileRef = CEC894DE1DB5813E00DCDF74 /* SMW Ground Tiles.bmp */; };
+		CEC895481DB5813E00DCDF74 /* SMW Ground Tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC894DF1DB5813E00DCDF74 /* SMW Ground Tiles.png */; };
+		CEC895491DB5813E00DCDF74 /* SMW Ground.gif in Resources */ = {isa = PBXBuildFile; fileRef = CEC894E01DB5813E00DCDF74 /* SMW Ground.gif */; };
+		CEC8954A1DB5813E00DCDF74 /* SMW Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC894E11DB5813E00DCDF74 /* SMW Ground.png */; };
+		CEC8954B1DB5813E00DCDF74 /* smw_bowser_defeated.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEC894E21DB5813E00DCDF74 /* smw_bowser_defeated.wav */; };
+		CEC8954C1DB5813E00DCDF74 /* Spartan.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894E31DB5813E00DCDF74 /* Spartan.lsm */; };
+		CEC8954D1DB5813E00DCDF74 /* Terrain.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894E41DB5813E00DCDF74 /* Terrain.lsm */; };
+		CEC8954E1DB5813E00DCDF74 /* Test.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894E51DB5813E00DCDF74 /* Test.lsm */; };
+		CEC8954F1DB5813E00DCDF74 /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = CEC894E61DB5813E00DCDF74 /* Thumbs.db */; };
+		CEC895501DB5813E00DCDF74 /* tigrerra_01_pa.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894E71DB5813E00DCDF74 /* tigrerra_01_pa.lsm */; };
+		CEC895511DB5813E00DCDF74 /* ToonGirl.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894E81DB5813E00DCDF74 /* ToonGirl.lsm */; };
+		CEC895521DB5813E00DCDF74 /* TugBoat.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894E91DB5813E00DCDF74 /* TugBoat.lsm */; };
+		CEC895531DB5813E00DCDF74 /* UAZ.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894EA1DB5813E00DCDF74 /* UAZ.lsm */; };
+		CEC895541DB5813E00DCDF74 /* USA1_Depth.iff in Resources */ = {isa = PBXBuildFile; fileRef = CEC894EB1DB5813E00DCDF74 /* USA1_Depth.iff */; };
+		CEC895551DB5813E00DCDF74 /* VertexTemp.lssl in Resources */ = {isa = PBXBuildFile; fileRef = CEC894EC1DB5813E00DCDF74 /* VertexTemp.lssl */; };
+		CEC895561DB5813E00DCDF74 /* Viper.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894ED1DB5813E00DCDF74 /* Viper.lsm */; };
+		CEC895571DB5813E00DCDF74 /* Yoshi's Island.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894EE1DB5813E00DCDF74 /* Yoshi's Island.lsm */; };
+		CEC895581DB5813E00DCDF74 /* Yuko1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC894EF1DB5813E00DCDF74 /* Yuko1.png */; };
+		CEC895591DB5813E00DCDF74 /* Zelda.lsm in Resources */ = {isa = PBXBuildFile; fileRef = CEC894F01DB5813E00DCDF74 /* Zelda.lsm */; };
+		CED7C98719D9EA520075AAB7 /* LSTBaseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED7C97A19D9EA520075AAB7 /* LSTBaseTest.cpp */; };
+		CED7C98819D9EA520075AAB7 /* LSTBenchMark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED7C97C19D9EA520075AAB7 /* LSTBenchMark.cpp */; };
+		CED7C98919D9EA520075AAB7 /* LSTLoadMeshTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED7C97E19D9EA520075AAB7 /* LSTLoadMeshTest.cpp */; };
+		CED7C98A19D9EA520075AAB7 /* LSTStateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED7C98019D9EA520075AAB7 /* LSTStateFactory.cpp */; };
+		CED7C98B19D9EA520075AAB7 /* LSTTextureTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED7C98319D9EA520075AAB7 /* LSTTextureTest.cpp */; };
+		CED7C98C19D9EA520075AAB7 /* LSTTriangleTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED7C98519D9EA520075AAB7 /* LSTTriangleTest.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE0A47A91E1C4F2C0013AD38 /* libFreeImageLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreeImageLib.a; path = "Modules/LSImageLib/Src/FreeImage/iOSLibs/Debug-iphoneos/libFreeImageLib.a"; sourceTree = "<group>"; };
+		CE23CEC11AF116510086370C /* libFreeImageLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreeImageLib.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libFreeImageLib.a"; sourceTree = "<group>"; };
+		CE23CEC21AF116510086370C /* libLibJPEG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibJPEG.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibJPEG.a"; sourceTree = "<group>"; };
+		CE23CEC31AF116510086370C /* libLibJXR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibJXR.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibJXR.a"; sourceTree = "<group>"; };
+		CE23CEC41AF116510086370C /* libLibOpenJPEG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibOpenJPEG.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibOpenJPEG.a"; sourceTree = "<group>"; };
+		CE23CEC51AF116510086370C /* libLibPNG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibPNG.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibPNG.a"; sourceTree = "<group>"; };
+		CE23CEC61AF116510086370C /* libLibRawLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibRawLite.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibRawLite.a"; sourceTree = "<group>"; };
+		CE23CEC71AF116510086370C /* libLibTIFF4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibTIFF4.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibTIFF4.a"; sourceTree = "<group>"; };
+		CE23CEC81AF116510086370C /* libLibWebP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibWebP.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibWebP.a"; sourceTree = "<group>"; };
+		CE23CEC91AF116510086370C /* libOpenEXR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOpenEXR.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libOpenEXR.a"; sourceTree = "<group>"; };
+		CE23CECA1AF116510086370C /* libZLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libZLib.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libZLib.a"; sourceTree = "<group>"; };
+		CE23CED51AF116AC0086370C /* libLSCompressionLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSCompressionLib.a; path = "iOSLibs/Release-iphoneos/libLSCompressionLib.a"; sourceTree = "<group>"; };
+		CE23CED61AF116AC0086370C /* libLSEngine iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLSEngine iOS.a"; path = "iOSLibs/Release-iphoneos/libLSEngine iOS.a"; sourceTree = "<group>"; };
+		CE23CED71AF116AC0086370C /* libLSFileLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSFileLib.a; path = "iOSLibs/Release-iphoneos/libLSFileLib.a"; sourceTree = "<group>"; };
+		CE23CED81AF116AC0086370C /* libLSGraphicsLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSGraphicsLib.a; path = "iOSLibs/Release-iphoneos/libLSGraphicsLib.a"; sourceTree = "<group>"; };
+		CE23CED91AF116AC0086370C /* libLSImageLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSImageLib.a; path = "iOSLibs/Debug-iphoneos/libLSImageLib.a"; sourceTree = "<group>"; };
+		CE23CEDA1AF116AC0086370C /* libLSMathLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSMathLib.a; path = "iOSLibs/Release-iphoneos/libLSMathLib.a"; sourceTree = "<group>"; };
+		CE23CEDB1AF116AC0086370C /* libLSMemLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSMemLib.a; path = "iOSLibs/Release-iphoneos/libLSMemLib.a"; sourceTree = "<group>"; };
+		CE23CEDC1AF116AC0086370C /* libLSNetLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSNetLib.a; path = "iOSLibs/Release-iphoneos/libLSNetLib.a"; sourceTree = "<group>"; };
+		CE23CEDD1AF116AC0086370C /* libLSPhysicsLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSPhysicsLib.a; path = "iOSLibs/Release-iphoneos/libLSPhysicsLib.a"; sourceTree = "<group>"; };
+		CE23CEDE1AF116AC0086370C /* libLSSoundLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSSoundLib.a; path = "iOSLibs/Release-iphoneos/libLSSoundLib.a"; sourceTree = "<group>"; };
+		CE23CEDF1AF116AC0086370C /* libLSStandardLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSStandardLib.a; path = "iOSLibs/Release-iphoneos/libLSStandardLib.a"; sourceTree = "<group>"; };
+		CE23CEE01AF116AC0086370C /* libLSThreadLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSThreadLib.a; path = "iOSLibs/Release-iphoneos/libLSThreadLib.a"; sourceTree = "<group>"; };
+		CE23CEE11AF116AC0086370C /* libLSTL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSTL.a; path = "iOSLibs/Release-iphoneos/libLSTL.a"; sourceTree = "<group>"; };
+		CE41286F19472FE800D1D40E /* libFreeImageLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreeImageLib.a; path = "Modules/LSImageLib/Src/FreeImage/build/Debug-iphoneos/libFreeImageLib.a"; sourceTree = "<group>"; };
+		CE41287019472FE800D1D40E /* libLibJPEG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibJPEG.a; path = "Modules/LSImageLib/Src/FreeImage/Source/LibJPEG/build/Debug-iphoneos/libLibJPEG.a"; sourceTree = "<group>"; };
+		CE41287119472FE800D1D40E /* libLibJXR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibJXR.a; path = "Modules/LSImageLib/Src/FreeImage/Source/LibJXR/build/Debug-iphoneos/libLibJXR.a"; sourceTree = "<group>"; };
+		CE41287219472FE800D1D40E /* libLibOpenJPEG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibOpenJPEG.a; path = "Modules/LSImageLib/Src/FreeImage/Source/LibOpenJPEG/build/Debug-iphoneos/libLibOpenJPEG.a"; sourceTree = "<group>"; };
+		CE41287319472FE800D1D40E /* libLibPNG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibPNG.a; path = "Modules/LSImageLib/Src/FreeImage/Source/LibPNG/build/Debug-iphoneos/libLibPNG.a"; sourceTree = "<group>"; };
+		CE41287419472FE800D1D40E /* libLibRawLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibRawLite.a; path = "Modules/LSImageLib/Src/FreeImage/Source/LibRawLite/build/Debug-iphoneos/libLibRawLite.a"; sourceTree = "<group>"; };
+		CE41287519472FE800D1D40E /* libLibTIFF4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibTIFF4.a; path = "Modules/LSImageLib/Src/FreeImage/Source/LibTIFF4/build/Debug-iphoneos/libLibTIFF4.a"; sourceTree = "<group>"; };
+		CE41287619472FE800D1D40E /* libLibWebP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibWebP.a; path = "Modules/LSImageLib/Src/FreeImage/Source/LibWebP/build/Debug-iphoneos/libLibWebP.a"; sourceTree = "<group>"; };
+		CE41287719472FE800D1D40E /* libOpenEXR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOpenEXR.a; path = "Modules/LSImageLib/Src/FreeImage/Source/OpenEXR/build/Debug-iphoneos/libOpenEXR.a"; sourceTree = "<group>"; };
+		CE41287819472FE800D1D40E /* libZLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libZLib.a; path = "Modules/LSImageLib/Src/FreeImage/Source/ZLib/build/Debug-iphoneos/libZLib.a"; sourceTree = "<group>"; };
+		CE4F457D19BF443600EB7232 /* libLSModelLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSModelLib.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLSModelLib.a"; sourceTree = "<group>"; };
+		CE7332411B8AEE5C00D305C2 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		CE91EC7919BF793700986C4B /* libLSModelLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSModelLib.a; path = "../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Debug-iphoneos/libLSModelLib.a"; sourceTree = "<group>"; };
+		CE954ACB18EC630800D4E2E8 /* LSTest iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LSTest iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE954ACE18EC630800D4E2E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE954AD018EC630800D4E2E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE954AD218EC630800D4E2E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE954AD618EC630800D4E2E8 /* LSTest iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LSTest iOS-Info.plist"; sourceTree = "<group>"; };
+		CE954AD818EC630800D4E2E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE954ADC18EC630800D4E2E8 /* LSTest iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSTest iOS-Prefix.pch"; sourceTree = "<group>"; };
+		CE954AE018EC630800D4E2E8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CE954AE218EC630800D4E2E8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CE954AE418EC630800D4E2E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CE954AEB18EC640700D4E2E8 /* libLSCompressionLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSCompressionLib.a; path = "iOSLibs/Release-iphoneos/libLSCompressionLib.a"; sourceTree = "<group>"; };
+		CE954AEC18EC640700D4E2E8 /* libLSEngine iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libLSEngine iOS.a"; path = "iOSLibs/Release-iphoneos/libLSEngine iOS.a"; sourceTree = "<group>"; };
+		CE954AED18EC640700D4E2E8 /* libLSFileLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSFileLib.a; path = "iOSLibs/Release-iphoneos/libLSFileLib.a"; sourceTree = "<group>"; };
+		CE954AEE18EC640700D4E2E8 /* libLSGraphicsLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSGraphicsLib.a; path = "iOSLibs/Release-iphoneos/libLSGraphicsLib.a"; sourceTree = "<group>"; };
+		CE954AEF18EC640700D4E2E8 /* libLSImageLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSImageLib.a; path = "iOSLibs/Release-iphoneos/libLSImageLib.a"; sourceTree = "<group>"; };
+		CE954AF018EC640700D4E2E8 /* libLSMathLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSMathLib.a; path = "iOSLibs/Release-iphoneos/libLSMathLib.a"; sourceTree = "<group>"; };
+		CE954AF118EC640700D4E2E8 /* libLSMemLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSMemLib.a; path = "iOSLibs/Release-iphoneos/libLSMemLib.a"; sourceTree = "<group>"; };
+		CE954AF218EC640700D4E2E8 /* libLSNetLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSNetLib.a; path = "iOSLibs/Release-iphoneos/libLSNetLib.a"; sourceTree = "<group>"; };
+		CE954AF318EC640700D4E2E8 /* libLSPhysicsLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSPhysicsLib.a; path = "iOSLibs/Release-iphoneos/libLSPhysicsLib.a"; sourceTree = "<group>"; };
+		CE954AF418EC640700D4E2E8 /* libLSSoundLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSSoundLib.a; path = "iOSLibs/Release-iphoneos/libLSSoundLib.a"; sourceTree = "<group>"; };
+		CE954AF518EC640700D4E2E8 /* libLSStandardLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSStandardLib.a; path = "iOSLibs/Release-iphoneos/libLSStandardLib.a"; sourceTree = "<group>"; };
+		CE954AF618EC640700D4E2E8 /* libLSThreadLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSThreadLib.a; path = "iOSLibs/Release-iphoneos/libLSThreadLib.a"; sourceTree = "<group>"; };
+		CE954AF718EC640700D4E2E8 /* libLSTL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSTL.a; path = "iOSLibs/Release-iphoneos/libLSTL.a"; sourceTree = "<group>"; };
+		CE954B0718EC676800D4E2E8 /* Main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Main.mm; sourceTree = "<group>"; };
+		CE954B0918EC6E7900D4E2E8 /* LSMyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSMyAppDelegate.h; sourceTree = "<group>"; };
+		CE954B0A18EC6E7900D4E2E8 /* LSMyAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LSMyAppDelegate.mm; sourceTree = "<group>"; };
+		CE954B0E18EC6F9900D4E2E8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		CE954B1018EC6FE000D4E2E8 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		CE954B1218EC700E00D4E2E8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CEC892661DB576E300DCDF74 /* libLSSpriteLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLSSpriteLib.a; path = "iOSLibs/Debug-iphoneos/libLSSpriteLib.a"; sourceTree = "<group>"; };
+		CEC892681DB57AA100DCDF74 /* LSTSpriteTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTSpriteTest.cpp; sourceTree = "<group>"; };
+		CEC892691DB57AA100DCDF74 /* LSTSpriteTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTSpriteTest.h; sourceTree = "<group>"; };
+		CEC894881DB5813E00DCDF74 /* 001.dds */ = {isa = PBXFileReference; lastKnownFileType = file; name = 001.dds; path = LSTest/Data/001.dds; sourceTree = SOURCE_ROOT; };
+		CEC894891DB5813E00DCDF74 /* 001.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 001.JPG; path = LSTest/Data/001.JPG; sourceTree = SOURCE_ROOT; };
+		CEC8948A1DB5813E00DCDF74 /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 001.png; path = LSTest/Data/001.png; sourceTree = SOURCE_ROOT; };
+		CEC8948B1DB5813E00DCDF74 /* 1x1x1-3.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1x1x1-3.lsm"; path = "LSTest/Data/1x1x1-3.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC8948C1DB5813E00DCDF74 /* 002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 002.png; path = LSTest/Data/002.png; sourceTree = SOURCE_ROOT; };
+		CEC8948D1DB5813E00DCDF74 /* Amy.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Amy.lsm; path = LSTest/Data/Amy.lsm; sourceTree = SOURCE_ROOT; };
+		CEC8948E1DB5813E00DCDF74 /* Ashley.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ashley.lsm; path = LSTest/Data/Ashley.lsm; sourceTree = SOURCE_ROOT; };
+		CEC8948F1DB5813E00DCDF74 /* Aston.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Aston.lsm; path = LSTest/Data/Aston.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894901DB5813E00DCDF74 /* Beam Kirby.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Beam Kirby.lsm"; path = "LSTest/Data/Beam Kirby.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894911DB5813E00DCDF74 /* Big Donut.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Big Donut.lsm"; path = "LSTest/Data/Big Donut.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894921DB5813E00DCDF74 /* Blue Falcon.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Blue Falcon.lsm"; path = "LSTest/Data/Blue Falcon.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894931DB5813E00DCDF74 /* Bobomb Battlefield.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bobomb Battlefield.lsm"; path = "LSTest/Data/Bobomb Battlefield.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894941DB5813E00DCDF74 /* Bowser's Castle.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bowser's Castle.lsm"; path = "LSTest/Data/Bowser's Castle.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894951DB5813E00DCDF74 /* Cali.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Cali.lsm; path = LSTest/Data/Cali.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894961DB5813E00DCDF74 /* Cayman.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Cayman.lsm; path = LSTest/Data/Cayman.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894971DB5813E00DCDF74 /* Char01.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Char01.lsm; path = LSTest/Data/Char01.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894981DB5813E00DCDF74 /* Charizard.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Charizard.lsm; path = LSTest/Data/Charizard.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894991DB5813E00DCDF74 /* Chevy.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Chevy.lsm; path = LSTest/Data/Chevy.lsm; sourceTree = SOURCE_ROOT; };
+		CEC8949A1DB5813E00DCDF74 /* Corneria.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Corneria.lsm; path = LSTest/Data/Corneria.lsm; sourceTree = SOURCE_ROOT; };
+		CEC8949B1DB5813E00DCDF74 /* Corvette.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Corvette.lsm; path = LSTest/Data/Corvette.lsm; sourceTree = SOURCE_ROOT; };
+		CEC8949C1DB5813E00DCDF74 /* Cruiser.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Cruiser.lsm; path = LSTest/Data/Cruiser.lsm; sourceTree = SOURCE_ROOT; };
+		CEC8949D1DB5813E00DCDF74 /* Data.rar */ = {isa = PBXFileReference; lastKnownFileType = file; name = Data.rar; path = LSTest/Data/Data.rar; sourceTree = SOURCE_ROOT; };
+		CEC8949E1DB5813E00DCDF74 /* DB5.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = DB5.lsm; path = LSTest/Data/DB5.lsm; sourceTree = SOURCE_ROOT; };
+		CEC8949F1DB5813E00DCDF74 /* DeDeDe.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = DeDeDe.lsm; path = LSTest/Data/DeDeDe.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894A01DB5813E00DCDF74 /* Dodge Challenger.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Dodge Challenger.lsm"; path = "LSTest/Data/Dodge Challenger.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894A11DB5813E00DCDF74 /* Dodge.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Dodge.lsm; path = LSTest/Data/Dodge.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894A21DB5813E00DCDF74 /* enemies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemies.png; path = LSTest/Data/enemies.png; sourceTree = SOURCE_ROOT; };
+		CEC894A31DB5813E00DCDF74 /* Evo.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Evo.lsm; path = LSTest/Data/Evo.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894A41DB5813E00DCDF74 /* Ferrari.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ferrari.lsm; path = LSTest/Data/Ferrari.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894A51DB5813E00DCDF74 /* gamma-1.0-or-2.2.dds */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gamma-1.0-or-2.2.dds"; path = "LSTest/Data/gamma-1.0-or-2.2.dds"; sourceTree = SOURCE_ROOT; };
+		CEC894A61DB5813E00DCDF74 /* gamma-1.0-or-2.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gamma-1.0-or-2.2.png"; path = "LSTest/Data/gamma-1.0-or-2.2.png"; sourceTree = SOURCE_ROOT; };
+		CEC894A71DB5813E00DCDF74 /* GigaBowser.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = GigaBowser.lsm; path = LSTest/Data/GigaBowser.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894A81DB5813E00DCDF74 /* Glut.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Glut.lsm; path = LSTest/Data/Glut.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894A91DB5813E00DCDF74 /* Gorem_U_01_pa.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gorem_U_01_pa.lsm; path = LSTest/Data/Gorem_U_01_pa.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894AA1DB5813E00DCDF74 /* GT.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = GT.lsm; path = LSTest/Data/GT.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894AB1DB5813E00DCDF74 /* Guido.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Guido.lsm; path = LSTest/Data/Guido.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894AC1DB5813E00DCDF74 /* Hole Planet.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Hole Planet.lsm"; path = "LSTest/Data/Hole Planet.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894AD1DB5813E00DCDF74 /* Hunter.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Hunter.lsm; path = LSTest/Data/Hunter.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894AE1DB5813E00DCDF74 /* janken_02_idle.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = janken_02_idle.lsm; path = LSTest/Data/janken_02_idle.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894AF1DB5813E00DCDF74 /* jumpwoman.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = jumpwoman.lsm; path = LSTest/Data/jumpwoman.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894B01DB5813E00DCDF74 /* LSDAshikhminShirley.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDAshikhminShirley.lssl; path = LSTest/Data/LSDAshikhminShirley.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894B11DB5813E00DCDF74 /* LSDBlinnPhong.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDBlinnPhong.lssl; path = LSTest/Data/LSDBlinnPhong.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894B21DB5813E00DCDF74 /* LSDCookTorrance.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDCookTorrance.lssl; path = LSTest/Data/LSDCookTorrance.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894B31DB5813E00DCDF74 /* LSDDTerms.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDDTerms.lssl; path = LSTest/Data/LSDDTerms.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894B41DB5813E00DCDF74 /* LSDForwardDefaultPS.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDForwardDefaultPS.lssl; path = LSTest/Data/LSDForwardDefaultPS.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894B51DB5813E00DCDF74 /* LSDForwardDefaultVS.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDForwardDefaultVS.lssl; path = LSTest/Data/LSDForwardDefaultVS.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894B61DB5813E00DCDF74 /* LSDFresnel.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDFresnel.lssl; path = LSTest/Data/LSDFresnel.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894B71DB5813E00DCDF74 /* LSDGgx.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDGgx.lssl; path = LSTest/Data/LSDGgx.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894B81DB5813E00DCDF74 /* LSDGTerms.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDGTerms.lssl; path = LSTest/Data/LSDGTerms.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894B91DB5813E00DCDF74 /* LSDLightArgs.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDLightArgs.lssl; path = LSTest/Data/LSDLightArgs.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894BA1DB5813E00DCDF74 /* LSDOrenNayar.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDOrenNayar.lssl; path = LSTest/Data/LSDOrenNayar.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894BB1DB5813E00DCDF74 /* LSDPi.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDPi.lssl; path = LSTest/Data/LSDPi.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894BC1DB5813E00DCDF74 /* LSDPixelShader.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDPixelShader.lssl; path = LSTest/Data/LSDPixelShader.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894BD1DB5813E00DCDF74 /* LSDSqr.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDSqr.lssl; path = LSTest/Data/LSDSqr.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894BE1DB5813E00DCDF74 /* LSDVertexShader.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSDVertexShader.lssl; path = LSTest/Data/LSDVertexShader.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894BF1DB5813E00DCDF74 /* LSRSpriteDefaultPS.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSRSpriteDefaultPS.lssl; path = LSTest/Data/LSRSpriteDefaultPS.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894C01DB5813E00DCDF74 /* LSRSpriteDefaultVS.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSRSpriteDefaultVS.lssl; path = LSTest/Data/LSRSpriteDefaultVS.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894C11DB5813E00DCDF74 /* LSRSpriteStaticLayerChunkPS.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSRSpriteStaticLayerChunkPS.lssl; path = LSTest/Data/LSRSpriteStaticLayerChunkPS.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894C21DB5813E00DCDF74 /* LSRSpriteStaticLayerChunkVS.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LSRSpriteStaticLayerChunkVS.lssl; path = LSTest/Data/LSRSpriteStaticLayerChunkVS.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894C31DB5813E00DCDF74 /* Mansion Planet.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mansion Planet.lsm"; path = "LSTest/Data/Mansion Planet.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894C41DB5813E00DCDF74 /* Mario Circuit.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mario Circuit.lsm"; path = "LSTest/Data/Mario Circuit.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894C51DB5813E00DCDF74 /* Mercedes.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Mercedes.lsm; path = LSTest/Data/Mercedes.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894C61DB5813E00DCDF74 /* mikubest.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = mikubest.lsm; path = LSTest/Data/mikubest.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894C71DB5813E00DCDF74 /* model.nut0 BC1 ATI.dds */ = {isa = PBXFileReference; lastKnownFileType = file; name = "model.nut0 BC1 ATI.dds"; path = "LSTest/Data/model.nut0 BC1 ATI.dds"; sourceTree = SOURCE_ROOT; };
+		CEC894C81DB5813E00DCDF74 /* model.nut0 BC4 ATI.dds */ = {isa = PBXFileReference; lastKnownFileType = file; name = "model.nut0 BC4 ATI.dds"; path = "LSTest/Data/model.nut0 BC4 ATI.dds"; sourceTree = SOURCE_ROOT; };
+		CEC894C91DB5813E00DCDF74 /* model.nut0 BC5 ATI.dds */ = {isa = PBXFileReference; lastKnownFileType = file; name = "model.nut0 BC5 ATI.dds"; path = "LSTest/Data/model.nut0 BC5 ATI.dds"; sourceTree = SOURCE_ROOT; };
+		CEC894CA1DB5813E00DCDF74 /* model.nut0.dds */ = {isa = PBXFileReference; lastKnownFileType = file; name = model.nut0.dds; path = LSTest/Data/model.nut0.dds; sourceTree = SOURCE_ROOT; };
+		CEC894CB1DB5813E00DCDF74 /* Nissan.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Nissan.lsm; path = LSTest/Data/Nissan.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894CC1DB5813E00DCDF74 /* Noire.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Noire.lsm; path = LSTest/Data/Noire.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894CD1DB5813E00DCDF74 /* p785_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = p785_11.jpg; path = LSTest/Data/p785_11.jpg; sourceTree = SOURCE_ROOT; };
+		CEC894CE1DB5813E00DCDF74 /* Peach Beach.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Peach Beach.lsm"; path = "LSTest/Data/Peach Beach.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894CF1DB5813E00DCDF74 /* Peach Blossom.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Peach Blossom.lsm"; path = "LSTest/Data/Peach Blossom.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894D01DB5813E00DCDF74 /* Peach.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Peach.lsm; path = LSTest/Data/Peach.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894D11DB5813E00DCDF74 /* Petey Prianha.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Petey Prianha.lsm"; path = "LSTest/Data/Petey Prianha.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894D21DB5813E00DCDF74 /* PixelTemp.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PixelTemp.lssl; path = LSTest/Data/PixelTemp.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894D31DB5813E00DCDF74 /* Rainbow Road.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rainbow Road.lsm"; path = "LSTest/Data/Rainbow Road.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894D41DB5813E00DCDF74 /* Samus.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Samus.lsm; path = LSTest/Data/Samus.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894D51DB5813E00DCDF74 /* Shinjuku5 BC6 BTex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Shinjuku5 BC6 BTex.png"; path = "LSTest/Data/Shinjuku5 BC6 BTex.png"; sourceTree = SOURCE_ROOT; };
+		CEC894D61DB5813E00DCDF74 /* Shinjuku5 BC6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Shinjuku5 BC6.png"; path = "LSTest/Data/Shinjuku5 BC6.png"; sourceTree = SOURCE_ROOT; };
+		CEC894D71DB5813E00DCDF74 /* Shinjuku5 BC7 BTex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Shinjuku5 BC7 BTex.png"; path = "LSTest/Data/Shinjuku5 BC7 BTex.png"; sourceTree = SOURCE_ROOT; };
+		CEC894D81DB5813E00DCDF74 /* Shinjuku5 BC7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Shinjuku5 BC7.png"; path = "LSTest/Data/Shinjuku5 BC7.png"; sourceTree = SOURCE_ROOT; };
+		CEC894D91DB5813E00DCDF74 /* Shinjuku5 Btex BC6.dds */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Shinjuku5 Btex BC6.dds"; path = "LSTest/Data/Shinjuku5 Btex BC6.dds"; sourceTree = SOURCE_ROOT; };
+		CEC894DA1DB5813E00DCDF74 /* Shinjuku5 Btex BC7.dds */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Shinjuku5 Btex BC7.dds"; path = "LSTest/Data/Shinjuku5 Btex BC7.dds"; sourceTree = SOURCE_ROOT; };
+		CEC894DB1DB5813E00DCDF74 /* Shinjuku5.dds */ = {isa = PBXFileReference; lastKnownFileType = file; name = Shinjuku5.dds; path = LSTest/Data/Shinjuku5.dds; sourceTree = SOURCE_ROOT; };
+		CEC894DC1DB5813E00DCDF74 /* Shinjuku5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shinjuku5.png; path = LSTest/Data/Shinjuku5.png; sourceTree = SOURCE_ROOT; };
+		CEC894DD1DB5813E00DCDF74 /* SMW Ground 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMW Ground 2.png"; path = "LSTest/Data/SMW Ground 2.png"; sourceTree = SOURCE_ROOT; };
+		CEC894DE1DB5813E00DCDF74 /* SMW Ground Tiles.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "SMW Ground Tiles.bmp"; path = "LSTest/Data/SMW Ground Tiles.bmp"; sourceTree = SOURCE_ROOT; };
+		CEC894DF1DB5813E00DCDF74 /* SMW Ground Tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMW Ground Tiles.png"; path = "LSTest/Data/SMW Ground Tiles.png"; sourceTree = SOURCE_ROOT; };
+		CEC894E01DB5813E00DCDF74 /* SMW Ground.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "SMW Ground.gif"; path = "LSTest/Data/SMW Ground.gif"; sourceTree = SOURCE_ROOT; };
+		CEC894E11DB5813E00DCDF74 /* SMW Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMW Ground.png"; path = "LSTest/Data/SMW Ground.png"; sourceTree = SOURCE_ROOT; };
+		CEC894E21DB5813E00DCDF74 /* smw_bowser_defeated.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = smw_bowser_defeated.wav; path = LSTest/Data/smw_bowser_defeated.wav; sourceTree = SOURCE_ROOT; };
+		CEC894E31DB5813E00DCDF74 /* Spartan.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Spartan.lsm; path = LSTest/Data/Spartan.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894E41DB5813E00DCDF74 /* Terrain.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Terrain.lsm; path = LSTest/Data/Terrain.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894E51DB5813E00DCDF74 /* Test.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Test.lsm; path = LSTest/Data/Test.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894E61DB5813E00DCDF74 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Thumbs.db; path = LSTest/Data/Thumbs.db; sourceTree = SOURCE_ROOT; };
+		CEC894E71DB5813E00DCDF74 /* tigrerra_01_pa.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = tigrerra_01_pa.lsm; path = LSTest/Data/tigrerra_01_pa.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894E81DB5813E00DCDF74 /* ToonGirl.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = ToonGirl.lsm; path = LSTest/Data/ToonGirl.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894E91DB5813E00DCDF74 /* TugBoat.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = TugBoat.lsm; path = LSTest/Data/TugBoat.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894EA1DB5813E00DCDF74 /* UAZ.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = UAZ.lsm; path = LSTest/Data/UAZ.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894EB1DB5813E00DCDF74 /* USA1_Depth.iff */ = {isa = PBXFileReference; lastKnownFileType = file; name = USA1_Depth.iff; path = LSTest/Data/USA1_Depth.iff; sourceTree = SOURCE_ROOT; };
+		CEC894EC1DB5813E00DCDF74 /* VertexTemp.lssl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VertexTemp.lssl; path = LSTest/Data/VertexTemp.lssl; sourceTree = SOURCE_ROOT; };
+		CEC894ED1DB5813E00DCDF74 /* Viper.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Viper.lsm; path = LSTest/Data/Viper.lsm; sourceTree = SOURCE_ROOT; };
+		CEC894EE1DB5813E00DCDF74 /* Yoshi's Island.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Yoshi's Island.lsm"; path = "LSTest/Data/Yoshi's Island.lsm"; sourceTree = SOURCE_ROOT; };
+		CEC894EF1DB5813E00DCDF74 /* Yuko1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Yuko1.png; path = LSTest/Data/Yuko1.png; sourceTree = SOURCE_ROOT; };
+		CEC894F01DB5813E00DCDF74 /* Zelda.lsm */ = {isa = PBXFileReference; lastKnownFileType = file; name = Zelda.lsm; path = LSTest/Data/Zelda.lsm; sourceTree = SOURCE_ROOT; };
+		CED7C97A19D9EA520075AAB7 /* LSTBaseTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTBaseTest.cpp; sourceTree = "<group>"; };
+		CED7C97B19D9EA520075AAB7 /* LSTBaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTBaseTest.h; sourceTree = "<group>"; };
+		CED7C97C19D9EA520075AAB7 /* LSTBenchMark.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = LSTBenchMark.cpp; sourceTree = "<group>"; };
+		CED7C97D19D9EA520075AAB7 /* LSTBenchMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTBenchMark.h; sourceTree = "<group>"; };
+		CED7C97E19D9EA520075AAB7 /* LSTLoadMeshTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTLoadMeshTest.cpp; sourceTree = "<group>"; };
+		CED7C97F19D9EA520075AAB7 /* LSTLoadMeshTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTLoadMeshTest.h; sourceTree = "<group>"; };
+		CED7C98019D9EA520075AAB7 /* LSTStateFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTStateFactory.cpp; sourceTree = "<group>"; };
+		CED7C98119D9EA520075AAB7 /* LSTStateFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTStateFactory.h; sourceTree = "<group>"; };
+		CED7C98219D9EA520075AAB7 /* LSTStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTStates.h; sourceTree = "<group>"; };
+		CED7C98319D9EA520075AAB7 /* LSTTextureTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTTextureTest.cpp; sourceTree = "<group>"; };
+		CED7C98419D9EA520075AAB7 /* LSTTextureTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTTextureTest.h; sourceTree = "<group>"; };
+		CED7C98519D9EA520075AAB7 /* LSTTriangleTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LSTTriangleTest.cpp; sourceTree = "<group>"; };
+		CED7C98619D9EA520075AAB7 /* LSTTriangleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTTriangleTest.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE954AC818EC630800D4E2E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0A47AB1E1C4FB80013AD38 /* Metal.framework in Frameworks */,
+				CE0A47AA1E1C4F2C0013AD38 /* libFreeImageLib.a in Frameworks */,
+				CEC892671DB576E300DCDF74 /* libLSSpriteLib.a in Frameworks */,
+				CE23CF041AF11EF30086370C /* libLibJPEG.a in Frameworks */,
+				CE23CF051AF11EF30086370C /* libLibJXR.a in Frameworks */,
+				CE23CF061AF11EF30086370C /* libLibOpenJPEG.a in Frameworks */,
+				CE23CF071AF11EF30086370C /* libLibPNG.a in Frameworks */,
+				CE23CF081AF11EF30086370C /* libLibRawLite.a in Frameworks */,
+				CE23CF091AF11EF30086370C /* libLibTIFF4.a in Frameworks */,
+				CE23CF0A1AF11EF30086370C /* libLibWebP.a in Frameworks */,
+				CE23CF0B1AF11EF30086370C /* libOpenEXR.a in Frameworks */,
+				CE23CF0C1AF11EF30086370C /* libZLib.a in Frameworks */,
+				CE23CEE21AF116AC0086370C /* libLSCompressionLib.a in Frameworks */,
+				CE23CEE31AF116AC0086370C /* libLSEngine iOS.a in Frameworks */,
+				CE23CEE41AF116AC0086370C /* libLSFileLib.a in Frameworks */,
+				CE23CEE51AF116AC0086370C /* libLSGraphicsLib.a in Frameworks */,
+				CE23CEE61AF116AC0086370C /* libLSImageLib.a in Frameworks */,
+				CE23CEE71AF116AC0086370C /* libLSMathLib.a in Frameworks */,
+				CE23CEE81AF116AC0086370C /* libLSMemLib.a in Frameworks */,
+				CE23CEE91AF116AC0086370C /* libLSNetLib.a in Frameworks */,
+				CE23CEEA1AF116AC0086370C /* libLSPhysicsLib.a in Frameworks */,
+				CE23CEEB1AF116AC0086370C /* libLSSoundLib.a in Frameworks */,
+				CE23CEEC1AF116AC0086370C /* libLSStandardLib.a in Frameworks */,
+				CE23CEED1AF116AC0086370C /* libLSThreadLib.a in Frameworks */,
+				CE23CEEE1AF116AC0086370C /* libLSTL.a in Frameworks */,
+				CE91EC7A19BF793700986C4B /* libLSModelLib.a in Frameworks */,
+				CE954B1318EC700E00D4E2E8 /* QuartzCore.framework in Frameworks */,
+				CE954B1118EC6FE000D4E2E8 /* OpenAL.framework in Frameworks */,
+				CE954B0F18EC6F9900D4E2E8 /* OpenGLES.framework in Frameworks */,
+				CE954ACF18EC630800D4E2E8 /* UIKit.framework in Frameworks */,
+				CE954AD118EC630800D4E2E8 /* Foundation.framework in Frameworks */,
+				CE954AD318EC630800D4E2E8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE91EC6519BF5D4D00986C4B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CEC894881DB5813E00DCDF74 /* 001.dds */,
+				CEC894891DB5813E00DCDF74 /* 001.JPG */,
+				CEC8948A1DB5813E00DCDF74 /* 001.png */,
+				CEC8948B1DB5813E00DCDF74 /* 1x1x1-3.lsm */,
+				CEC8948C1DB5813E00DCDF74 /* 002.png */,
+				CEC8948D1DB5813E00DCDF74 /* Amy.lsm */,
+				CEC8948E1DB5813E00DCDF74 /* Ashley.lsm */,
+				CEC8948F1DB5813E00DCDF74 /* Aston.lsm */,
+				CEC894901DB5813E00DCDF74 /* Beam Kirby.lsm */,
+				CEC894911DB5813E00DCDF74 /* Big Donut.lsm */,
+				CEC894921DB5813E00DCDF74 /* Blue Falcon.lsm */,
+				CEC894931DB5813E00DCDF74 /* Bobomb Battlefield.lsm */,
+				CEC894941DB5813E00DCDF74 /* Bowser's Castle.lsm */,
+				CEC894951DB5813E00DCDF74 /* Cali.lsm */,
+				CEC894961DB5813E00DCDF74 /* Cayman.lsm */,
+				CEC894971DB5813E00DCDF74 /* Char01.lsm */,
+				CEC894981DB5813E00DCDF74 /* Charizard.lsm */,
+				CEC894991DB5813E00DCDF74 /* Chevy.lsm */,
+				CEC8949A1DB5813E00DCDF74 /* Corneria.lsm */,
+				CEC8949B1DB5813E00DCDF74 /* Corvette.lsm */,
+				CEC8949C1DB5813E00DCDF74 /* Cruiser.lsm */,
+				CEC8949D1DB5813E00DCDF74 /* Data.rar */,
+				CEC8949E1DB5813E00DCDF74 /* DB5.lsm */,
+				CEC8949F1DB5813E00DCDF74 /* DeDeDe.lsm */,
+				CEC894A01DB5813E00DCDF74 /* Dodge Challenger.lsm */,
+				CEC894A11DB5813E00DCDF74 /* Dodge.lsm */,
+				CEC894A21DB5813E00DCDF74 /* enemies.png */,
+				CEC894A31DB5813E00DCDF74 /* Evo.lsm */,
+				CEC894A41DB5813E00DCDF74 /* Ferrari.lsm */,
+				CEC894A51DB5813E00DCDF74 /* gamma-1.0-or-2.2.dds */,
+				CEC894A61DB5813E00DCDF74 /* gamma-1.0-or-2.2.png */,
+				CEC894A71DB5813E00DCDF74 /* GigaBowser.lsm */,
+				CEC894A81DB5813E00DCDF74 /* Glut.lsm */,
+				CEC894A91DB5813E00DCDF74 /* Gorem_U_01_pa.lsm */,
+				CEC894AA1DB5813E00DCDF74 /* GT.lsm */,
+				CEC894AB1DB5813E00DCDF74 /* Guido.lsm */,
+				CEC894AC1DB5813E00DCDF74 /* Hole Planet.lsm */,
+				CEC894AD1DB5813E00DCDF74 /* Hunter.lsm */,
+				CEC894AE1DB5813E00DCDF74 /* janken_02_idle.lsm */,
+				CEC894AF1DB5813E00DCDF74 /* jumpwoman.lsm */,
+				CEC894B01DB5813E00DCDF74 /* LSDAshikhminShirley.lssl */,
+				CEC894B11DB5813E00DCDF74 /* LSDBlinnPhong.lssl */,
+				CEC894B21DB5813E00DCDF74 /* LSDCookTorrance.lssl */,
+				CEC894B31DB5813E00DCDF74 /* LSDDTerms.lssl */,
+				CEC894B41DB5813E00DCDF74 /* LSDForwardDefaultPS.lssl */,
+				CEC894B51DB5813E00DCDF74 /* LSDForwardDefaultVS.lssl */,
+				CEC894B61DB5813E00DCDF74 /* LSDFresnel.lssl */,
+				CEC894B71DB5813E00DCDF74 /* LSDGgx.lssl */,
+				CEC894B81DB5813E00DCDF74 /* LSDGTerms.lssl */,
+				CEC894B91DB5813E00DCDF74 /* LSDLightArgs.lssl */,
+				CEC894BA1DB5813E00DCDF74 /* LSDOrenNayar.lssl */,
+				CEC894BB1DB5813E00DCDF74 /* LSDPi.lssl */,
+				CEC894BC1DB5813E00DCDF74 /* LSDPixelShader.lssl */,
+				CEC894BD1DB5813E00DCDF74 /* LSDSqr.lssl */,
+				CEC894BE1DB5813E00DCDF74 /* LSDVertexShader.lssl */,
+				CEC894BF1DB5813E00DCDF74 /* LSRSpriteDefaultPS.lssl */,
+				CEC894C01DB5813E00DCDF74 /* LSRSpriteDefaultVS.lssl */,
+				CEC894C11DB5813E00DCDF74 /* LSRSpriteStaticLayerChunkPS.lssl */,
+				CEC894C21DB5813E00DCDF74 /* LSRSpriteStaticLayerChunkVS.lssl */,
+				CEC894C31DB5813E00DCDF74 /* Mansion Planet.lsm */,
+				CEC894C41DB5813E00DCDF74 /* Mario Circuit.lsm */,
+				CEC894C51DB5813E00DCDF74 /* Mercedes.lsm */,
+				CEC894C61DB5813E00DCDF74 /* mikubest.lsm */,
+				CEC894C71DB5813E00DCDF74 /* model.nut0 BC1 ATI.dds */,
+				CEC894C81DB5813E00DCDF74 /* model.nut0 BC4 ATI.dds */,
+				CEC894C91DB5813E00DCDF74 /* model.nut0 BC5 ATI.dds */,
+				CEC894CA1DB5813E00DCDF74 /* model.nut0.dds */,
+				CEC894CB1DB5813E00DCDF74 /* Nissan.lsm */,
+				CEC894CC1DB5813E00DCDF74 /* Noire.lsm */,
+				CEC894CD1DB5813E00DCDF74 /* p785_11.jpg */,
+				CEC894CE1DB5813E00DCDF74 /* Peach Beach.lsm */,
+				CEC894CF1DB5813E00DCDF74 /* Peach Blossom.lsm */,
+				CEC894D01DB5813E00DCDF74 /* Peach.lsm */,
+				CEC894D11DB5813E00DCDF74 /* Petey Prianha.lsm */,
+				CEC894D21DB5813E00DCDF74 /* PixelTemp.lssl */,
+				CEC894D31DB5813E00DCDF74 /* Rainbow Road.lsm */,
+				CEC894D41DB5813E00DCDF74 /* Samus.lsm */,
+				CEC894D51DB5813E00DCDF74 /* Shinjuku5 BC6 BTex.png */,
+				CEC894D61DB5813E00DCDF74 /* Shinjuku5 BC6.png */,
+				CEC894D71DB5813E00DCDF74 /* Shinjuku5 BC7 BTex.png */,
+				CEC894D81DB5813E00DCDF74 /* Shinjuku5 BC7.png */,
+				CEC894D91DB5813E00DCDF74 /* Shinjuku5 Btex BC6.dds */,
+				CEC894DA1DB5813E00DCDF74 /* Shinjuku5 Btex BC7.dds */,
+				CEC894DB1DB5813E00DCDF74 /* Shinjuku5.dds */,
+				CEC894DC1DB5813E00DCDF74 /* Shinjuku5.png */,
+				CEC894DD1DB5813E00DCDF74 /* SMW Ground 2.png */,
+				CEC894DE1DB5813E00DCDF74 /* SMW Ground Tiles.bmp */,
+				CEC894DF1DB5813E00DCDF74 /* SMW Ground Tiles.png */,
+				CEC894E01DB5813E00DCDF74 /* SMW Ground.gif */,
+				CEC894E11DB5813E00DCDF74 /* SMW Ground.png */,
+				CEC894E21DB5813E00DCDF74 /* smw_bowser_defeated.wav */,
+				CEC894E31DB5813E00DCDF74 /* Spartan.lsm */,
+				CEC894E41DB5813E00DCDF74 /* Terrain.lsm */,
+				CEC894E51DB5813E00DCDF74 /* Test.lsm */,
+				CEC894E61DB5813E00DCDF74 /* Thumbs.db */,
+				CEC894E71DB5813E00DCDF74 /* tigrerra_01_pa.lsm */,
+				CEC894E81DB5813E00DCDF74 /* ToonGirl.lsm */,
+				CEC894E91DB5813E00DCDF74 /* TugBoat.lsm */,
+				CEC894EA1DB5813E00DCDF74 /* UAZ.lsm */,
+				CEC894EB1DB5813E00DCDF74 /* USA1_Depth.iff */,
+				CEC894EC1DB5813E00DCDF74 /* VertexTemp.lssl */,
+				CEC894ED1DB5813E00DCDF74 /* Viper.lsm */,
+				CEC894EE1DB5813E00DCDF74 /* Yoshi's Island.lsm */,
+				CEC894EF1DB5813E00DCDF74 /* Yuko1.png */,
+				CEC894F01DB5813E00DCDF74 /* Zelda.lsm */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		CE954AC218EC630800D4E2E8 = {
+			isa = PBXGroup;
+			children = (
+				CE954AD418EC630800D4E2E8 /* LSTest iOS */,
+				CE954ACD18EC630800D4E2E8 /* Frameworks */,
+				CE954ACC18EC630800D4E2E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE954ACC18EC630800D4E2E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE954ACB18EC630800D4E2E8 /* LSTest iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE954ACD18EC630800D4E2E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE0A47A91E1C4F2C0013AD38 /* libFreeImageLib.a */,
+				CE954AD218EC630800D4E2E8 /* CoreGraphics.framework */,
+				CE954AD018EC630800D4E2E8 /* Foundation.framework */,
+				CE23CEC11AF116510086370C /* libFreeImageLib.a */,
+				CE41286F19472FE800D1D40E /* libFreeImageLib.a */,
+				CE23CEC21AF116510086370C /* libLibJPEG.a */,
+				CE41287019472FE800D1D40E /* libLibJPEG.a */,
+				CE23CEC31AF116510086370C /* libLibJXR.a */,
+				CE41287119472FE800D1D40E /* libLibJXR.a */,
+				CE23CEC41AF116510086370C /* libLibOpenJPEG.a */,
+				CE41287219472FE800D1D40E /* libLibOpenJPEG.a */,
+				CE23CEC51AF116510086370C /* libLibPNG.a */,
+				CE41287319472FE800D1D40E /* libLibPNG.a */,
+				CE23CEC61AF116510086370C /* libLibRawLite.a */,
+				CE41287419472FE800D1D40E /* libLibRawLite.a */,
+				CE23CEC71AF116510086370C /* libLibTIFF4.a */,
+				CE41287519472FE800D1D40E /* libLibTIFF4.a */,
+				CE23CEC81AF116510086370C /* libLibWebP.a */,
+				CE41287619472FE800D1D40E /* libLibWebP.a */,
+				CE23CED51AF116AC0086370C /* libLSCompressionLib.a */,
+				CE23CED61AF116AC0086370C /* libLSEngine iOS.a */,
+				CE954AEC18EC640700D4E2E8 /* libLSEngine iOS.a */,
+				CE23CED71AF116AC0086370C /* libLSFileLib.a */,
+				CE23CED81AF116AC0086370C /* libLSGraphicsLib.a */,
+				CE23CED91AF116AC0086370C /* libLSImageLib.a */,
+				CE954AEF18EC640700D4E2E8 /* libLSImageLib.a */,
+				CE23CEDA1AF116AC0086370C /* libLSMathLib.a */,
+				CE91EC7919BF793700986C4B /* libLSModelLib.a */,
+				CE4F457D19BF443600EB7232 /* libLSModelLib.a */,
+				CE23CEDC1AF116AC0086370C /* libLSNetLib.a */,
+				CE23CEDE1AF116AC0086370C /* libLSSoundLib.a */,
+				CEC892661DB576E300DCDF74 /* libLSSpriteLib.a */,
+				CE23CEDF1AF116AC0086370C /* libLSStandardLib.a */,
+				CE23CEE11AF116AC0086370C /* libLSTL.a */,
+				CE23CEC91AF116510086370C /* libOpenEXR.a */,
+				CE41287719472FE800D1D40E /* libOpenEXR.a */,
+				CE23CECA1AF116510086370C /* libZLib.a */,
+				CE41287819472FE800D1D40E /* libZLib.a */,
+				CE7332411B8AEE5C00D305C2 /* Metal.framework */,
+				CE954B1018EC6FE000D4E2E8 /* OpenAL.framework */,
+				CE954B0E18EC6F9900D4E2E8 /* OpenGLES.framework */,
+				CE954B1218EC700E00D4E2E8 /* QuartzCore.framework */,
+				CE954ACE18EC630800D4E2E8 /* UIKit.framework */,
+				CE954AEB18EC640700D4E2E8 /* libLSCompressionLib.a */,
+				CE954AED18EC640700D4E2E8 /* libLSFileLib.a */,
+				CE954AEE18EC640700D4E2E8 /* libLSGraphicsLib.a */,
+				CE954AF018EC640700D4E2E8 /* libLSMathLib.a */,
+				CE954AF118EC640700D4E2E8 /* libLSMemLib.a */,
+				CE954AF218EC640700D4E2E8 /* libLSNetLib.a */,
+				CE954AF318EC640700D4E2E8 /* libLSPhysicsLib.a */,
+				CE954AF418EC640700D4E2E8 /* libLSSoundLib.a */,
+				CE954AF518EC640700D4E2E8 /* libLSStandardLib.a */,
+				CE954AF618EC640700D4E2E8 /* libLSThreadLib.a */,
+				CE954AF718EC640700D4E2E8 /* libLSTL.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE954AD418EC630800D4E2E8 /* LSTest iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CE954B1618EFE39600D4E2E8 /* States */,
+				CE954B0918EC6E7900D4E2E8 /* LSMyAppDelegate.h */,
+				CE954B0A18EC6E7900D4E2E8 /* LSMyAppDelegate.mm */,
+				CE954AD518EC630800D4E2E8 /* Supporting Files */,
+			);
+			path = "LSTest iOS";
+			sourceTree = "<group>";
+		};
+		CE954AD518EC630800D4E2E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE91EC6519BF5D4D00986C4B /* Data */,
+				CE954AD618EC630800D4E2E8 /* LSTest iOS-Info.plist */,
+				CE954AD718EC630800D4E2E8 /* InfoPlist.strings */,
+				CE954ADC18EC630800D4E2E8 /* LSTest iOS-Prefix.pch */,
+				CE954B0718EC676800D4E2E8 /* Main.mm */,
+				CE954AE018EC630800D4E2E8 /* Default.png */,
+				CE954AE218EC630800D4E2E8 /* Default@2x.png */,
+				CE954AE418EC630800D4E2E8 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE954B1618EFE39600D4E2E8 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				CED7C97A19D9EA520075AAB7 /* LSTBaseTest.cpp */,
+				CED7C97B19D9EA520075AAB7 /* LSTBaseTest.h */,
+				CED7C97C19D9EA520075AAB7 /* LSTBenchMark.cpp */,
+				CED7C97D19D9EA520075AAB7 /* LSTBenchMark.h */,
+				CED7C97E19D9EA520075AAB7 /* LSTLoadMeshTest.cpp */,
+				CED7C97F19D9EA520075AAB7 /* LSTLoadMeshTest.h */,
+				CEC892681DB57AA100DCDF74 /* LSTSpriteTest.cpp */,
+				CEC892691DB57AA100DCDF74 /* LSTSpriteTest.h */,
+				CED7C98019D9EA520075AAB7 /* LSTStateFactory.cpp */,
+				CED7C98119D9EA520075AAB7 /* LSTStateFactory.h */,
+				CED7C98219D9EA520075AAB7 /* LSTStates.h */,
+				CED7C98319D9EA520075AAB7 /* LSTTextureTest.cpp */,
+				CED7C98419D9EA520075AAB7 /* LSTTextureTest.h */,
+				CED7C98519D9EA520075AAB7 /* LSTTriangleTest.cpp */,
+				CED7C98619D9EA520075AAB7 /* LSTTriangleTest.h */,
+			);
+			name = States;
+			path = LSTest/Src/States;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE954ACA18EC630800D4E2E8 /* LSTest iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE954AE818EC630800D4E2E8 /* Build configuration list for PBXNativeTarget "LSTest iOS" */;
+			buildPhases = (
+				CE954AC718EC630800D4E2E8 /* Sources */,
+				CE954AC818EC630800D4E2E8 /* Frameworks */,
+				CE954AC918EC630800D4E2E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LSTest iOS";
+			productName = "LSTest iOS";
+			productReference = CE954ACB18EC630800D4E2E8 /* LSTest iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE954AC318EC630800D4E2E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "L. Spiro Soft";
+				TargetAttributes = {
+					CE954ACA18EC630800D4E2E8 = {
+						DevelopmentTeam = MC4R97Q259;
+					};
+				};
+			};
+			buildConfigurationList = CE954AC618EC630800D4E2E8 /* Build configuration list for PBXProject "LSTest iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE954AC218EC630800D4E2E8;
+			productRefGroup = CE954ACC18EC630800D4E2E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE954ACA18EC630800D4E2E8 /* LSTest iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE954AC918EC630800D4E2E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC8951E1DB5813E00DCDF74 /* LSDForwardDefaultVS.lssl in Resources */,
+				CEC8951A1DB5813E00DCDF74 /* LSDBlinnPhong.lssl in Resources */,
+				CEC895401DB5813E00DCDF74 /* Shinjuku5 BC7 BTex.png in Resources */,
+				CEC895491DB5813E00DCDF74 /* SMW Ground.gif in Resources */,
+				CEC8953C1DB5813E00DCDF74 /* Rainbow Road.lsm in Resources */,
+				CEC895131DB5813E00DCDF74 /* GT.lsm in Resources */,
+				CEC895051DB5813E00DCDF74 /* Cruiser.lsm in Resources */,
+				CEC895541DB5813E00DCDF74 /* USA1_Depth.iff in Resources */,
+				CEC895061DB5813E00DCDF74 /* Data.rar in Resources */,
+				CEC895461DB5813E00DCDF74 /* SMW Ground 2.png in Resources */,
+				CEC8953D1DB5813E00DCDF74 /* Samus.lsm in Resources */,
+				CEC895211DB5813E00DCDF74 /* LSDGTerms.lssl in Resources */,
+				CEC8952E1DB5813E00DCDF74 /* Mercedes.lsm in Resources */,
+				CEC8951B1DB5813E00DCDF74 /* LSDCookTorrance.lssl in Resources */,
+				CEC895231DB5813E00DCDF74 /* LSDOrenNayar.lssl in Resources */,
+				CEC895271DB5813E00DCDF74 /* LSDVertexShader.lssl in Resources */,
+				CEC8950A1DB5813E00DCDF74 /* Dodge.lsm in Resources */,
+				CEC895381DB5813E00DCDF74 /* Peach Blossom.lsm in Resources */,
+				CEC894F41DB5813E00DCDF74 /* 1x1x1-3.lsm in Resources */,
+				CEC895251DB5813E00DCDF74 /* LSDPixelShader.lssl in Resources */,
+				CEC895181DB5813E00DCDF74 /* jumpwoman.lsm in Resources */,
+				CEC895551DB5813E00DCDF74 /* VertexTemp.lssl in Resources */,
+				CEC894FC1DB5813E00DCDF74 /* Bobomb Battlefield.lsm in Resources */,
+				CEC8950F1DB5813E00DCDF74 /* gamma-1.0-or-2.2.png in Resources */,
+				CEC895341DB5813E00DCDF74 /* Nissan.lsm in Resources */,
+				CEC895581DB5813E00DCDF74 /* Yuko1.png in Resources */,
+				CEC894FA1DB5813E00DCDF74 /* Big Donut.lsm in Resources */,
+				CEC895001DB5813E00DCDF74 /* Char01.lsm in Resources */,
+				CEC894F11DB5813E00DCDF74 /* 001.dds in Resources */,
+				CEC895471DB5813E00DCDF74 /* SMW Ground Tiles.bmp in Resources */,
+				CEC895511DB5813E00DCDF74 /* ToonGirl.lsm in Resources */,
+				CEC894F61DB5813E00DCDF74 /* Amy.lsm in Resources */,
+				CEC8954D1DB5813E00DCDF74 /* Terrain.lsm in Resources */,
+				CEC8950E1DB5813E00DCDF74 /* gamma-1.0-or-2.2.dds in Resources */,
+				CEC895111DB5813E00DCDF74 /* Glut.lsm in Resources */,
+				CEC8954C1DB5813E00DCDF74 /* Spartan.lsm in Resources */,
+				CEC895411DB5813E00DCDF74 /* Shinjuku5 BC7.png in Resources */,
+				CEC894FB1DB5813E00DCDF74 /* Blue Falcon.lsm in Resources */,
+				CEC895011DB5813E00DCDF74 /* Charizard.lsm in Resources */,
+				CEC8950C1DB5813E00DCDF74 /* Evo.lsm in Resources */,
+				CEC895021DB5813E00DCDF74 /* Chevy.lsm in Resources */,
+				CE954AD918EC630800D4E2E8 /* InfoPlist.strings in Resources */,
+				CEC894F71DB5813E00DCDF74 /* Ashley.lsm in Resources */,
+				CEC895361DB5813E00DCDF74 /* p785_11.jpg in Resources */,
+				CEC894F51DB5813E00DCDF74 /* 002.png in Resources */,
+				CEC895101DB5813E00DCDF74 /* GigaBowser.lsm in Resources */,
+				CE954AE118EC630800D4E2E8 /* Default.png in Resources */,
+				CEC895121DB5813E00DCDF74 /* Gorem_U_01_pa.lsm in Resources */,
+				CEC895081DB5813E00DCDF74 /* DeDeDe.lsm in Resources */,
+				CEC895481DB5813E00DCDF74 /* SMW Ground Tiles.png in Resources */,
+				CEC894F31DB5813E00DCDF74 /* 001.png in Resources */,
+				CEC895571DB5813E00DCDF74 /* Yoshi's Island.lsm in Resources */,
+				CEC8951C1DB5813E00DCDF74 /* LSDDTerms.lssl in Resources */,
+				CEC894FF1DB5813E00DCDF74 /* Cayman.lsm in Resources */,
+				CEC8954A1DB5813E00DCDF74 /* SMW Ground.png in Resources */,
+				CEC8953E1DB5813E00DCDF74 /* Shinjuku5 BC6 BTex.png in Resources */,
+				CEC895391DB5813E00DCDF74 /* Peach.lsm in Resources */,
+				CEC895281DB5813E00DCDF74 /* LSRSpriteDefaultPS.lssl in Resources */,
+				CEC895301DB5813E00DCDF74 /* model.nut0 BC1 ATI.dds in Resources */,
+				CEC894F81DB5813E00DCDF74 /* Aston.lsm in Resources */,
+				CEC8952C1DB5813E00DCDF74 /* Mansion Planet.lsm in Resources */,
+				CEC895521DB5813E00DCDF74 /* TugBoat.lsm in Resources */,
+				CEC8953B1DB5813E00DCDF74 /* PixelTemp.lssl in Resources */,
+				CEC895241DB5813E00DCDF74 /* LSDPi.lssl in Resources */,
+				CEC895141DB5813E00DCDF74 /* Guido.lsm in Resources */,
+				CEC895071DB5813E00DCDF74 /* DB5.lsm in Resources */,
+				CEC8954E1DB5813E00DCDF74 /* Test.lsm in Resources */,
+				CEC895031DB5813E00DCDF74 /* Corneria.lsm in Resources */,
+				CEC8954B1DB5813E00DCDF74 /* smw_bowser_defeated.wav in Resources */,
+				CEC894F21DB5813E00DCDF74 /* 001.JPG in Resources */,
+				CEC895501DB5813E00DCDF74 /* tigrerra_01_pa.lsm in Resources */,
+				CEC895171DB5813E00DCDF74 /* janken_02_idle.lsm in Resources */,
+				CEC895091DB5813E00DCDF74 /* Dodge Challenger.lsm in Resources */,
+				CEC895221DB5813E00DCDF74 /* LSDLightArgs.lssl in Resources */,
+				CEC895531DB5813E00DCDF74 /* UAZ.lsm in Resources */,
+				CEC895041DB5813E00DCDF74 /* Corvette.lsm in Resources */,
+				CEC895371DB5813E00DCDF74 /* Peach Beach.lsm in Resources */,
+				CEC894F91DB5813E00DCDF74 /* Beam Kirby.lsm in Resources */,
+				CEC895161DB5813E00DCDF74 /* Hunter.lsm in Resources */,
+				CE954AE318EC630800D4E2E8 /* Default@2x.png in Resources */,
+				CEC895151DB5813E00DCDF74 /* Hole Planet.lsm in Resources */,
+				CEC8951F1DB5813E00DCDF74 /* LSDFresnel.lssl in Resources */,
+				CEC895201DB5813E00DCDF74 /* LSDGgx.lssl in Resources */,
+				CEC895321DB5813E00DCDF74 /* model.nut0 BC5 ATI.dds in Resources */,
+				CEC8952D1DB5813E00DCDF74 /* Mario Circuit.lsm in Resources */,
+				CEC895311DB5813E00DCDF74 /* model.nut0 BC4 ATI.dds in Resources */,
+				CEC8952A1DB5813E00DCDF74 /* LSRSpriteStaticLayerChunkPS.lssl in Resources */,
+				CEC8952B1DB5813E00DCDF74 /* LSRSpriteStaticLayerChunkVS.lssl in Resources */,
+				CEC8953A1DB5813E00DCDF74 /* Petey Prianha.lsm in Resources */,
+				CEC895351DB5813E00DCDF74 /* Noire.lsm in Resources */,
+				CEC895331DB5813E00DCDF74 /* model.nut0.dds in Resources */,
+				CEC894FE1DB5813E00DCDF74 /* Cali.lsm in Resources */,
+				CEC895591DB5813E00DCDF74 /* Zelda.lsm in Resources */,
+				CEC8950B1DB5813E00DCDF74 /* enemies.png in Resources */,
+				CEC8951D1DB5813E00DCDF74 /* LSDForwardDefaultPS.lssl in Resources */,
+				CEC894FD1DB5813E00DCDF74 /* Bowser's Castle.lsm in Resources */,
+				CEC895561DB5813E00DCDF74 /* Viper.lsm in Resources */,
+				CEC8954F1DB5813E00DCDF74 /* Thumbs.db in Resources */,
+				CEC8950D1DB5813E00DCDF74 /* Ferrari.lsm in Resources */,
+				CEC895191DB5813E00DCDF74 /* LSDAshikhminShirley.lssl in Resources */,
+				CEC895451DB5813E00DCDF74 /* Shinjuku5.png in Resources */,
+				CEC895261DB5813E00DCDF74 /* LSDSqr.lssl in Resources */,
+				CE954AE518EC630800D4E2E8 /* Default-568h@2x.png in Resources */,
+				CEC8952F1DB5813E00DCDF74 /* mikubest.lsm in Resources */,
+				CEC895431DB5813E00DCDF74 /* Shinjuku5 Btex BC7.dds in Resources */,
+				CEC895441DB5813E00DCDF74 /* Shinjuku5.dds in Resources */,
+				CEC895421DB5813E00DCDF74 /* Shinjuku5 Btex BC6.dds in Resources */,
+				CEC8953F1DB5813E00DCDF74 /* Shinjuku5 BC6.png in Resources */,
+				CEC895291DB5813E00DCDF74 /* LSRSpriteDefaultVS.lssl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE954AC718EC630800D4E2E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED7C98919D9EA520075AAB7 /* LSTLoadMeshTest.cpp in Sources */,
+				CE954B0818EC676800D4E2E8 /* Main.mm in Sources */,
+				CED7C98A19D9EA520075AAB7 /* LSTStateFactory.cpp in Sources */,
+				CED7C98B19D9EA520075AAB7 /* LSTTextureTest.cpp in Sources */,
+				CE954B0B18EC6E7900D4E2E8 /* LSMyAppDelegate.mm in Sources */,
+				CED7C98C19D9EA520075AAB7 /* LSTTriangleTest.cpp in Sources */,
+				CED7C98719D9EA520075AAB7 /* LSTBaseTest.cpp in Sources */,
+				CED7C98819D9EA520075AAB7 /* LSTBenchMark.cpp in Sources */,
+				CEC8926A1DB57AA100DCDF74 /* LSTSpriteTest.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE954AD718EC630800D4E2E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE954AD818EC630800D4E2E8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE7F8FA31B69062A002561EF /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Modules/LSStandardLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMathLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMemLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTL/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSThreadLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSCompressionLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSFileLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSImageLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSGraphicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSPhysicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSModelLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSNetLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTerrainLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSoundLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSEngine/Src\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug Metal";
+		};
+		CE7F8FA41B69062A002561EF /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LSTest iOS/LSTest iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"$(inherited)",
+					OPJ_STATIC,
+					FREEIMAGE_LIB,
+					LIBRAW_NODLL,
+					__ANSI__,
+					LSE_METAL,
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Modules/LSStandardLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMathLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMemLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTL/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSThreadLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSCompressionLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSFileLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSImageLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSGraphicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSPhysicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSModelLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSNetLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTerrainLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSoundLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSEngine/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSpriteLib/Src\"",
+				);
+				INFOPLIST_FILE = "LSTest iOS/LSTest iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJPEG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJXR/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibOpenJPEG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibPNG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibRawLite/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibTIFF4/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibWebP/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/OpenEXR/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/ZLib/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/iOSLibs/Debug-iphoneos",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/iOSLibs/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "./Modules/LSImageLib/Src/FreeImage/Source/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Debug Metal";
+		};
+		CE7F8FA51B690634002561EF /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Modules/LSStandardLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMathLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMemLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTL/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSThreadLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSCompressionLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSFileLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSImageLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSGraphicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSPhysicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSModelLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSNetLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTerrainLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSoundLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSEngine/Src\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Metal";
+		};
+		CE7F8FA61B690634002561EF /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LSTest iOS/LSTest iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					OPJ_STATIC,
+					FREEIMAGE_LIB,
+					LIBRAW_NODLL,
+					__ANSI__,
+					LSE_METAL,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Modules/LSStandardLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMathLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMemLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTL/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSThreadLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSCompressionLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSFileLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSImageLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSGraphicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSPhysicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSModelLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSNetLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTerrainLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSoundLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSEngine/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSpriteLib/Src\"",
+				);
+				INFOPLIST_FILE = "LSTest iOS/LSTest iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJPEG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJXR/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibOpenJPEG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibPNG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibRawLite/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibTIFF4/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibWebP/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/OpenEXR/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/ZLib/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/iOSLibs/Release-iphoneos",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/iOSLibs/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "./Modules/LSImageLib/Src/FreeImage/Source/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Release Metal";
+		};
+		CE954AE618EC630800D4E2E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Modules/LSStandardLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMathLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMemLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTL/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSThreadLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSCompressionLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSFileLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSImageLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSGraphicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSPhysicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSModelLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSNetLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTerrainLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSoundLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSEngine/Src\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE954AE718EC630800D4E2E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Modules/LSStandardLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMathLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMemLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTL/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSThreadLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSCompressionLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSFileLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSImageLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSGraphicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSPhysicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSModelLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSNetLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTerrainLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSoundLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSEngine/Src\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE954AE918EC630800D4E2E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LSTest iOS/LSTest iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"$(inherited)",
+					OPJ_STATIC,
+					FREEIMAGE_LIB,
+					LIBRAW_NODLL,
+					__ANSI__,
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Modules/LSStandardLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMathLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMemLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTL/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSThreadLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSCompressionLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSFileLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSImageLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSGraphicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSPhysicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSModelLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSNetLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTerrainLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSoundLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSEngine/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSpriteLib/Src\"",
+				);
+				INFOPLIST_FILE = "LSTest iOS/LSTest iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJPEG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJXR/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibOpenJPEG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibPNG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibRawLite/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibTIFF4/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibWebP/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/OpenEXR/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/ZLib/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/iOSLibs/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "./Modules/LSImageLib/Src/FreeImage/Source/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CE954AEA18EC630800D4E2E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LSTest iOS/LSTest iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					OPJ_STATIC,
+					FREEIMAGE_LIB,
+					LIBRAW_NODLL,
+					__ANSI__,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Modules/LSStandardLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMathLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSMemLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTL/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSThreadLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSCompressionLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSFileLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSImageLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSGraphicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSPhysicsLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSModelLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSNetLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSTerrainLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSoundLib/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSEngine/Src\"",
+					"\"${PROJECT_DIR}/Modules/LSSpriteLib/Src\"",
+				);
+				INFOPLIST_FILE = "LSTest iOS/LSTest iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJPEG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibJXR/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibOpenJPEG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibPNG/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibRawLite/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibTIFF4/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/LibWebP/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/OpenEXR/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/Source/ZLib/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/iOSLibs/Release-iphoneos",
+					"$(PROJECT_DIR)/Modules/LSImageLib/Src/FreeImage/iOSLibs/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "./Modules/LSImageLib/Src/FreeImage/Source/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE954AC618EC630800D4E2E8 /* Build configuration list for PBXProject "LSTest iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE954AE618EC630800D4E2E8 /* Debug */,
+				CE7F8FA31B69062A002561EF /* Debug Metal */,
+				CE954AE718EC630800D4E2E8 /* Release */,
+				CE7F8FA51B690634002561EF /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE954AE818EC630800D4E2E8 /* Build configuration list for PBXNativeTarget "LSTest iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE954AE918EC630800D4E2E8 /* Debug */,
+				CE7F8FA41B69062A002561EF /* Debug Metal */,
+				CE954AEA18EC630800D4E2E8 /* Release */,
+				CE7F8FA61B690634002561EF /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE954AC318EC630800D4E2E8 /* Project object */;
+}

@@ -1,0 +1,1071 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE23CEF81AF1193E0086370C /* libLibJPEG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEEF1AF1193E0086370C /* libLibJPEG.a */; };
+		CE23CEF91AF1193E0086370C /* libLibJXR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEF01AF1193E0086370C /* libLibJXR.a */; };
+		CE23CEFA1AF1193E0086370C /* libLibOpenJPEG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEF11AF1193E0086370C /* libLibOpenJPEG.a */; };
+		CE23CEFB1AF1193E0086370C /* libLibPNG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEF21AF1193E0086370C /* libLibPNG.a */; };
+		CE23CEFC1AF1193E0086370C /* libLibRawLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEF31AF1193E0086370C /* libLibRawLite.a */; };
+		CE23CEFD1AF1193E0086370C /* libLibTIFF4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEF41AF1193E0086370C /* libLibTIFF4.a */; };
+		CE23CEFE1AF1193E0086370C /* libLibWebP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEF51AF1193E0086370C /* libLibWebP.a */; };
+		CE23CEFF1AF1193E0086370C /* libOpenEXR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEF61AF1193E0086370C /* libOpenEXR.a */; };
+		CE23CF001AF1193E0086370C /* libZLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE23CEF71AF1193E0086370C /* libZLib.a */; };
+		CE41277E194726D500D1D40E /* libFreeImageLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE412766194726D500D1D40E /* libFreeImageLib.a */; };
+		CE4127B81947284500D1D40E /* Conversion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127A61947284500D1D40E /* Conversion.cpp */; };
+		CE4127B91947284500D1D40E /* Conversion4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127A71947284500D1D40E /* Conversion4.cpp */; };
+		CE4127BA1947284500D1D40E /* Conversion8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127A81947284500D1D40E /* Conversion8.cpp */; };
+		CE4127BB1947284500D1D40E /* Conversion16_555.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127A91947284500D1D40E /* Conversion16_555.cpp */; };
+		CE4127BC1947284500D1D40E /* Conversion16_565.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127AA1947284500D1D40E /* Conversion16_565.cpp */; };
+		CE4127BD1947284500D1D40E /* Conversion24.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127AB1947284500D1D40E /* Conversion24.cpp */; };
+		CE4127BE1947284500D1D40E /* Conversion32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127AC1947284500D1D40E /* Conversion32.cpp */; };
+		CE4127BF1947284500D1D40E /* ConversionFloat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127AD1947284500D1D40E /* ConversionFloat.cpp */; };
+		CE4127C01947284500D1D40E /* ConversionRGB16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127AE1947284500D1D40E /* ConversionRGB16.cpp */; };
+		CE4127C11947284500D1D40E /* ConversionRGBF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127AF1947284500D1D40E /* ConversionRGBF.cpp */; };
+		CE4127C21947284500D1D40E /* ConversionType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127B01947284500D1D40E /* ConversionType.cpp */; };
+		CE4127C31947284500D1D40E /* ConversionUINT16.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127B11947284500D1D40E /* ConversionUINT16.cpp */; };
+		CE4127C41947284500D1D40E /* Halftoning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127B21947284500D1D40E /* Halftoning.cpp */; };
+		CE4127C51947284500D1D40E /* tmoColorConvert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127B31947284500D1D40E /* tmoColorConvert.cpp */; };
+		CE4127C61947284500D1D40E /* tmoDrago03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127B41947284500D1D40E /* tmoDrago03.cpp */; };
+		CE4127C71947284500D1D40E /* tmoFattal02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127B51947284500D1D40E /* tmoFattal02.cpp */; };
+		CE4127C81947284500D1D40E /* tmoReinhard05.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127B61947284500D1D40E /* tmoReinhard05.cpp */; };
+		CE4127C91947284500D1D40E /* ToneMapping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127B71947284500D1D40E /* ToneMapping.cpp */; };
+		CE4127CD194728B200D1D40E /* Deprecated.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127CB194728B200D1D40E /* Deprecated.cpp */; };
+		CE4127CE194728B200D1D40E /* DeprecationMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127CC194728B200D1D40E /* DeprecationMgr.cpp */; };
+		CE4127D7194728DF00D1D40E /* Exif.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127D0194728DF00D1D40E /* Exif.cpp */; };
+		CE4127D8194728DF00D1D40E /* FIRational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127D1194728DF00D1D40E /* FIRational.cpp */; };
+		CE4127D9194728DF00D1D40E /* FreeImageTag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127D2194728DF00D1D40E /* FreeImageTag.cpp */; };
+		CE4127DA194728DF00D1D40E /* IPTC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127D3194728DF00D1D40E /* IPTC.cpp */; };
+		CE4127DB194728DF00D1D40E /* TagConversion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127D4194728DF00D1D40E /* TagConversion.cpp */; };
+		CE4127DC194728DF00D1D40E /* TagLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127D5194728DF00D1D40E /* TagLib.cpp */; };
+		CE4127DD194728DF00D1D40E /* XTIFF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127D6194728DF00D1D40E /* XTIFF.cpp */; };
+		CE4127E21947291100D1D40E /* CacheFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127DF1947291100D1D40E /* CacheFile.cpp */; };
+		CE4127E31947291100D1D40E /* MultiPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127E01947291100D1D40E /* MultiPage.cpp */; };
+		CE4127E41947291100D1D40E /* ZLibInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127E11947291100D1D40E /* ZLibInterface.cpp */; };
+		CE4127E91947294B00D1D40E /* J2KHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127E61947294A00D1D40E /* J2KHelper.cpp */; };
+		CE4127EA1947294B00D1D40E /* MNGHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127E71947294A00D1D40E /* MNGHelper.cpp */; };
+		CE4127EB1947294B00D1D40E /* Plugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127E81947294B00D1D40E /* Plugin.cpp */; };
+		CE41280E1947296800D1D40E /* PluginBMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127EC1947296800D1D40E /* PluginBMP.cpp */; };
+		CE41280F1947296800D1D40E /* PluginCUT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127ED1947296800D1D40E /* PluginCUT.cpp */; };
+		CE4128101947296800D1D40E /* PluginDDS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127EE1947296800D1D40E /* PluginDDS.cpp */; };
+		CE4128111947296800D1D40E /* PluginEXR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127EF1947296800D1D40E /* PluginEXR.cpp */; };
+		CE4128121947296800D1D40E /* PluginG3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127F01947296800D1D40E /* PluginG3.cpp */; };
+		CE4128131947296800D1D40E /* PluginGIF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127F11947296800D1D40E /* PluginGIF.cpp */; };
+		CE4128141947296800D1D40E /* PluginHDR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127F21947296800D1D40E /* PluginHDR.cpp */; };
+		CE4128151947296800D1D40E /* PluginICO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127F31947296800D1D40E /* PluginICO.cpp */; };
+		CE4128161947296800D1D40E /* PluginIFF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127F41947296800D1D40E /* PluginIFF.cpp */; };
+		CE4128171947296800D1D40E /* PluginJ2K.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127F51947296800D1D40E /* PluginJ2K.cpp */; };
+		CE4128181947296800D1D40E /* PluginJNG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127F61947296800D1D40E /* PluginJNG.cpp */; };
+		CE4128191947296800D1D40E /* PluginJP2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127F71947296800D1D40E /* PluginJP2.cpp */; };
+		CE41281A1947296800D1D40E /* PluginJPEG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127F81947296800D1D40E /* PluginJPEG.cpp */; };
+		CE41281B1947296800D1D40E /* PluginJXR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127F91947296800D1D40E /* PluginJXR.cpp */; };
+		CE41281C1947296800D1D40E /* PluginKOALA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127FA1947296800D1D40E /* PluginKOALA.cpp */; };
+		CE41281D1947296800D1D40E /* PluginMNG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127FB1947296800D1D40E /* PluginMNG.cpp */; };
+		CE41281E1947296800D1D40E /* PluginPCD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127FC1947296800D1D40E /* PluginPCD.cpp */; };
+		CE41281F1947296800D1D40E /* PluginPCX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127FD1947296800D1D40E /* PluginPCX.cpp */; };
+		CE4128201947296800D1D40E /* PluginPFM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127FE1947296800D1D40E /* PluginPFM.cpp */; };
+		CE4128211947296800D1D40E /* PluginPICT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4127FF1947296800D1D40E /* PluginPICT.cpp */; };
+		CE4128221947296800D1D40E /* PluginPNG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128001947296800D1D40E /* PluginPNG.cpp */; };
+		CE4128231947296800D1D40E /* PluginPNM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128011947296800D1D40E /* PluginPNM.cpp */; };
+		CE4128241947296800D1D40E /* PluginPSD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128021947296800D1D40E /* PluginPSD.cpp */; };
+		CE4128251947296800D1D40E /* PluginRAS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128031947296800D1D40E /* PluginRAS.cpp */; };
+		CE4128261947296800D1D40E /* PluginRAW.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128041947296800D1D40E /* PluginRAW.cpp */; };
+		CE4128271947296800D1D40E /* PluginSGI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128051947296800D1D40E /* PluginSGI.cpp */; };
+		CE4128281947296800D1D40E /* PluginTARGA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128061947296800D1D40E /* PluginTARGA.cpp */; };
+		CE4128291947296800D1D40E /* PluginTIFF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128071947296800D1D40E /* PluginTIFF.cpp */; };
+		CE41282A1947296800D1D40E /* PluginWBMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128081947296800D1D40E /* PluginWBMP.cpp */; };
+		CE41282B1947296800D1D40E /* PluginWebP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128091947296800D1D40E /* PluginWebP.cpp */; };
+		CE41282C1947296800D1D40E /* PluginXBM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41280A1947296800D1D40E /* PluginXBM.cpp */; };
+		CE41282D1947296800D1D40E /* PluginXPM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41280B1947296800D1D40E /* PluginXPM.cpp */; };
+		CE41282E1947296800D1D40E /* PSDParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41280C1947296800D1D40E /* PSDParser.cpp */; };
+		CE41282F1947296800D1D40E /* TIFFLogLuv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41280D1947296800D1D40E /* TIFFLogLuv.cpp */; };
+		CE4128331947299A00D1D40E /* NNQuantizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128311947299900D1D40E /* NNQuantizer.cpp */; };
+		CE4128341947299A00D1D40E /* WuQuantizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4128321947299A00D1D40E /* WuQuantizer.cpp */; };
+		CE41283C194729CC00D1D40E /* BitmapAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE412835194729CC00D1D40E /* BitmapAccess.cpp */; };
+		CE41283D194729CC00D1D40E /* ColorLookup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE412836194729CC00D1D40E /* ColorLookup.cpp */; };
+		CE41283E194729CC00D1D40E /* FreeImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE412837194729CC00D1D40E /* FreeImage.cpp */; };
+		CE41283F194729CC00D1D40E /* FreeImageIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE412838194729CC00D1D40E /* FreeImageIO.cpp */; };
+		CE412840194729CC00D1D40E /* GetType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE412839194729CC00D1D40E /* GetType.cpp */; };
+		CE412841194729CC00D1D40E /* MemoryIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41283A194729CC00D1D40E /* MemoryIO.cpp */; };
+		CE412842194729CC00D1D40E /* PixelAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41283B194729CC00D1D40E /* PixelAccess.cpp */; };
+		CE41285119472A1000D1D40E /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41284519472A1000D1D40E /* Background.cpp */; };
+		CE41285219472A1000D1D40E /* BSplineRotate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41284619472A1000D1D40E /* BSplineRotate.cpp */; };
+		CE41285319472A1000D1D40E /* Channels.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41284719472A1000D1D40E /* Channels.cpp */; };
+		CE41285419472A1000D1D40E /* ClassicRotate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41284819472A1000D1D40E /* ClassicRotate.cpp */; };
+		CE41285519472A1000D1D40E /* Colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41284919472A1000D1D40E /* Colors.cpp */; };
+		CE41285619472A1000D1D40E /* CopyPaste.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41284A19472A1000D1D40E /* CopyPaste.cpp */; };
+		CE41285719472A1000D1D40E /* Display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41284B19472A1000D1D40E /* Display.cpp */; };
+		CE41285819472A1000D1D40E /* Flip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41284C19472A1000D1D40E /* Flip.cpp */; };
+		CE41285919472A1000D1D40E /* JPEGTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41284D19472A1000D1D40E /* JPEGTransform.cpp */; };
+		CE41285A19472A1000D1D40E /* MultigridPoissonSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41284E19472A1000D1D40E /* MultigridPoissonSolver.cpp */; };
+		CE41285B19472A1000D1D40E /* Rescale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41284F19472A1000D1D40E /* Rescale.cpp */; };
+		CE41285C19472A1000D1D40E /* Resize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41285019472A1000D1D40E /* Resize.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE41277C194726D500D1D40E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE41275E194726D500D1D40E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE412765194726D500D1D40E;
+			remoteInfo = FreeImageLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE412764194726D500D1D40E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE23CEEF1AF1193E0086370C /* libLibJPEG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibJPEG.a; path = "../../../../../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibJPEG.a"; sourceTree = "<group>"; };
+		CE23CEF01AF1193E0086370C /* libLibJXR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibJXR.a; path = "../../../../../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibJXR.a"; sourceTree = "<group>"; };
+		CE23CEF11AF1193E0086370C /* libLibOpenJPEG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibOpenJPEG.a; path = "../../../../../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibOpenJPEG.a"; sourceTree = "<group>"; };
+		CE23CEF21AF1193E0086370C /* libLibPNG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibPNG.a; path = "../../../../../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibPNG.a"; sourceTree = "<group>"; };
+		CE23CEF31AF1193E0086370C /* libLibRawLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibRawLite.a; path = "../../../../../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibRawLite.a"; sourceTree = "<group>"; };
+		CE23CEF41AF1193E0086370C /* libLibTIFF4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibTIFF4.a; path = "../../../../../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibTIFF4.a"; sourceTree = "<group>"; };
+		CE23CEF51AF1193E0086370C /* libLibWebP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibWebP.a; path = "../../../../../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libLibWebP.a"; sourceTree = "<group>"; };
+		CE23CEF61AF1193E0086370C /* libOpenEXR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOpenEXR.a; path = "../../../../../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libOpenEXR.a"; sourceTree = "<group>"; };
+		CE23CEF71AF1193E0086370C /* libZLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libZLib.a; path = "../../../../../../Users/user/Library/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos/libZLib.a"; sourceTree = "<group>"; };
+		CE412766194726D500D1D40E /* libFreeImageLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFreeImageLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE412776194726D500D1D40E /* FreeImageLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeImageLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE412799194727B700D1D40E /* CacheFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CacheFile.h; path = Source/CacheFile.h; sourceTree = SOURCE_ROOT; };
+		CE41279A194727B700D1D40E /* FreeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FreeImage.h; path = Source/FreeImage.h; sourceTree = SOURCE_ROOT; };
+		CE41279B194727B700D1D40E /* FreeImageIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FreeImageIO.h; path = Source/FreeImageIO.h; sourceTree = SOURCE_ROOT; };
+		CE41279C194727B700D1D40E /* Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Plugin.h; path = Source/Plugin.h; sourceTree = SOURCE_ROOT; };
+		CE41279D194727B700D1D40E /* Quantizers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quantizers.h; path = Source/Quantizers.h; sourceTree = SOURCE_ROOT; };
+		CE41279E194727B700D1D40E /* ToneMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToneMapping.h; path = Source/ToneMapping.h; sourceTree = SOURCE_ROOT; };
+		CE41279F194727B700D1D40E /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = Source/Utilities.h; sourceTree = SOURCE_ROOT; };
+		CE4127A0194727B700D1D40E /* DeprecationMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeprecationMgr.h; path = Source/DeprecationManager/DeprecationMgr.h; sourceTree = SOURCE_ROOT; };
+		CE4127A1194727B700D1D40E /* PSDParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDParser.h; path = Source/FreeImage/PSDParser.h; sourceTree = SOURCE_ROOT; };
+		CE4127A2194727B700D1D40E /* FIRational.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FIRational.h; path = Source/Metadata/FIRational.h; sourceTree = SOURCE_ROOT; };
+		CE4127A3194727B700D1D40E /* FreeImageTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FreeImageTag.h; path = Source/Metadata/FreeImageTag.h; sourceTree = SOURCE_ROOT; };
+		CE4127A61947284500D1D40E /* Conversion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Conversion.cpp; path = Source/FreeImage/Conversion.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127A71947284500D1D40E /* Conversion4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Conversion4.cpp; path = Source/FreeImage/Conversion4.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127A81947284500D1D40E /* Conversion8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Conversion8.cpp; path = Source/FreeImage/Conversion8.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127A91947284500D1D40E /* Conversion16_555.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Conversion16_555.cpp; path = Source/FreeImage/Conversion16_555.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127AA1947284500D1D40E /* Conversion16_565.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Conversion16_565.cpp; path = Source/FreeImage/Conversion16_565.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127AB1947284500D1D40E /* Conversion24.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Conversion24.cpp; path = Source/FreeImage/Conversion24.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127AC1947284500D1D40E /* Conversion32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Conversion32.cpp; path = Source/FreeImage/Conversion32.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127AD1947284500D1D40E /* ConversionFloat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConversionFloat.cpp; path = Source/FreeImage/ConversionFloat.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127AE1947284500D1D40E /* ConversionRGB16.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConversionRGB16.cpp; path = Source/FreeImage/ConversionRGB16.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127AF1947284500D1D40E /* ConversionRGBF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConversionRGBF.cpp; path = Source/FreeImage/ConversionRGBF.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127B01947284500D1D40E /* ConversionType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConversionType.cpp; path = Source/FreeImage/ConversionType.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127B11947284500D1D40E /* ConversionUINT16.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConversionUINT16.cpp; path = Source/FreeImage/ConversionUINT16.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127B21947284500D1D40E /* Halftoning.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Halftoning.cpp; path = Source/FreeImage/Halftoning.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127B31947284500D1D40E /* tmoColorConvert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tmoColorConvert.cpp; path = Source/FreeImage/tmoColorConvert.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127B41947284500D1D40E /* tmoDrago03.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tmoDrago03.cpp; path = Source/FreeImage/tmoDrago03.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127B51947284500D1D40E /* tmoFattal02.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tmoFattal02.cpp; path = Source/FreeImage/tmoFattal02.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127B61947284500D1D40E /* tmoReinhard05.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tmoReinhard05.cpp; path = Source/FreeImage/tmoReinhard05.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127B71947284500D1D40E /* ToneMapping.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ToneMapping.cpp; path = Source/FreeImage/ToneMapping.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127CB194728B200D1D40E /* Deprecated.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Deprecated.cpp; path = Source/DeprecationManager/Deprecated.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127CC194728B200D1D40E /* DeprecationMgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DeprecationMgr.cpp; path = Source/DeprecationManager/DeprecationMgr.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127D0194728DF00D1D40E /* Exif.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Exif.cpp; path = Source/Metadata/Exif.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127D1194728DF00D1D40E /* FIRational.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FIRational.cpp; path = Source/Metadata/FIRational.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127D2194728DF00D1D40E /* FreeImageTag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FreeImageTag.cpp; path = Source/Metadata/FreeImageTag.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127D3194728DF00D1D40E /* IPTC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPTC.cpp; path = Source/Metadata/IPTC.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127D4194728DF00D1D40E /* TagConversion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TagConversion.cpp; path = Source/Metadata/TagConversion.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127D5194728DF00D1D40E /* TagLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TagLib.cpp; path = Source/Metadata/TagLib.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127D6194728DF00D1D40E /* XTIFF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XTIFF.cpp; path = Source/Metadata/XTIFF.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127DF1947291100D1D40E /* CacheFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CacheFile.cpp; path = Source/FreeImage/CacheFile.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127E01947291100D1D40E /* MultiPage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MultiPage.cpp; path = Source/FreeImage/MultiPage.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127E11947291100D1D40E /* ZLibInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ZLibInterface.cpp; path = Source/FreeImage/ZLibInterface.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127E61947294A00D1D40E /* J2KHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = J2KHelper.cpp; path = Source/FreeImage/J2KHelper.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127E71947294A00D1D40E /* MNGHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MNGHelper.cpp; path = Source/FreeImage/MNGHelper.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127E81947294B00D1D40E /* Plugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Plugin.cpp; path = Source/FreeImage/Plugin.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127EC1947296800D1D40E /* PluginBMP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginBMP.cpp; path = Source/FreeImage/PluginBMP.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127ED1947296800D1D40E /* PluginCUT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginCUT.cpp; path = Source/FreeImage/PluginCUT.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127EE1947296800D1D40E /* PluginDDS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginDDS.cpp; path = Source/FreeImage/PluginDDS.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127EF1947296800D1D40E /* PluginEXR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginEXR.cpp; path = Source/FreeImage/PluginEXR.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127F01947296800D1D40E /* PluginG3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginG3.cpp; path = Source/FreeImage/PluginG3.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127F11947296800D1D40E /* PluginGIF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginGIF.cpp; path = Source/FreeImage/PluginGIF.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127F21947296800D1D40E /* PluginHDR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginHDR.cpp; path = Source/FreeImage/PluginHDR.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127F31947296800D1D40E /* PluginICO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginICO.cpp; path = Source/FreeImage/PluginICO.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127F41947296800D1D40E /* PluginIFF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginIFF.cpp; path = Source/FreeImage/PluginIFF.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127F51947296800D1D40E /* PluginJ2K.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginJ2K.cpp; path = Source/FreeImage/PluginJ2K.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127F61947296800D1D40E /* PluginJNG.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginJNG.cpp; path = Source/FreeImage/PluginJNG.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127F71947296800D1D40E /* PluginJP2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginJP2.cpp; path = Source/FreeImage/PluginJP2.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127F81947296800D1D40E /* PluginJPEG.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginJPEG.cpp; path = Source/FreeImage/PluginJPEG.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127F91947296800D1D40E /* PluginJXR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginJXR.cpp; path = Source/FreeImage/PluginJXR.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127FA1947296800D1D40E /* PluginKOALA.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginKOALA.cpp; path = Source/FreeImage/PluginKOALA.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127FB1947296800D1D40E /* PluginMNG.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginMNG.cpp; path = Source/FreeImage/PluginMNG.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127FC1947296800D1D40E /* PluginPCD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginPCD.cpp; path = Source/FreeImage/PluginPCD.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127FD1947296800D1D40E /* PluginPCX.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginPCX.cpp; path = Source/FreeImage/PluginPCX.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127FE1947296800D1D40E /* PluginPFM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginPFM.cpp; path = Source/FreeImage/PluginPFM.cpp; sourceTree = SOURCE_ROOT; };
+		CE4127FF1947296800D1D40E /* PluginPICT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginPICT.cpp; path = Source/FreeImage/PluginPICT.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128001947296800D1D40E /* PluginPNG.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginPNG.cpp; path = Source/FreeImage/PluginPNG.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128011947296800D1D40E /* PluginPNM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginPNM.cpp; path = Source/FreeImage/PluginPNM.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128021947296800D1D40E /* PluginPSD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginPSD.cpp; path = Source/FreeImage/PluginPSD.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128031947296800D1D40E /* PluginRAS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginRAS.cpp; path = Source/FreeImage/PluginRAS.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128041947296800D1D40E /* PluginRAW.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginRAW.cpp; path = Source/FreeImage/PluginRAW.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128051947296800D1D40E /* PluginSGI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginSGI.cpp; path = Source/FreeImage/PluginSGI.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128061947296800D1D40E /* PluginTARGA.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginTARGA.cpp; path = Source/FreeImage/PluginTARGA.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128071947296800D1D40E /* PluginTIFF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginTIFF.cpp; path = Source/FreeImage/PluginTIFF.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128081947296800D1D40E /* PluginWBMP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginWBMP.cpp; path = Source/FreeImage/PluginWBMP.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128091947296800D1D40E /* PluginWebP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginWebP.cpp; path = Source/FreeImage/PluginWebP.cpp; sourceTree = SOURCE_ROOT; };
+		CE41280A1947296800D1D40E /* PluginXBM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginXBM.cpp; path = Source/FreeImage/PluginXBM.cpp; sourceTree = SOURCE_ROOT; };
+		CE41280B1947296800D1D40E /* PluginXPM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginXPM.cpp; path = Source/FreeImage/PluginXPM.cpp; sourceTree = SOURCE_ROOT; };
+		CE41280C1947296800D1D40E /* PSDParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PSDParser.cpp; path = Source/FreeImage/PSDParser.cpp; sourceTree = SOURCE_ROOT; };
+		CE41280D1947296800D1D40E /* TIFFLogLuv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TIFFLogLuv.cpp; path = Source/FreeImage/TIFFLogLuv.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128311947299900D1D40E /* NNQuantizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NNQuantizer.cpp; path = Source/FreeImage/NNQuantizer.cpp; sourceTree = SOURCE_ROOT; };
+		CE4128321947299A00D1D40E /* WuQuantizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WuQuantizer.cpp; path = Source/FreeImage/WuQuantizer.cpp; sourceTree = SOURCE_ROOT; };
+		CE412835194729CC00D1D40E /* BitmapAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BitmapAccess.cpp; path = Source/FreeImage/BitmapAccess.cpp; sourceTree = SOURCE_ROOT; };
+		CE412836194729CC00D1D40E /* ColorLookup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ColorLookup.cpp; path = Source/FreeImage/ColorLookup.cpp; sourceTree = SOURCE_ROOT; };
+		CE412837194729CC00D1D40E /* FreeImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FreeImage.cpp; path = Source/FreeImage/FreeImage.cpp; sourceTree = SOURCE_ROOT; };
+		CE412838194729CC00D1D40E /* FreeImageIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FreeImageIO.cpp; path = Source/FreeImage/FreeImageIO.cpp; sourceTree = SOURCE_ROOT; };
+		CE412839194729CC00D1D40E /* GetType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GetType.cpp; path = Source/FreeImage/GetType.cpp; sourceTree = SOURCE_ROOT; };
+		CE41283A194729CC00D1D40E /* MemoryIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MemoryIO.cpp; path = Source/FreeImage/MemoryIO.cpp; sourceTree = SOURCE_ROOT; };
+		CE41283B194729CC00D1D40E /* PixelAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PixelAccess.cpp; path = Source/FreeImage/PixelAccess.cpp; sourceTree = SOURCE_ROOT; };
+		CE41284419472A1000D1D40E /* Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resize.h; path = Source/FreeImageToolkit/Resize.h; sourceTree = SOURCE_ROOT; };
+		CE41284519472A1000D1D40E /* Background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Background.cpp; path = Source/FreeImageToolkit/Background.cpp; sourceTree = SOURCE_ROOT; };
+		CE41284619472A1000D1D40E /* BSplineRotate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BSplineRotate.cpp; path = Source/FreeImageToolkit/BSplineRotate.cpp; sourceTree = SOURCE_ROOT; };
+		CE41284719472A1000D1D40E /* Channels.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Channels.cpp; path = Source/FreeImageToolkit/Channels.cpp; sourceTree = SOURCE_ROOT; };
+		CE41284819472A1000D1D40E /* ClassicRotate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClassicRotate.cpp; path = Source/FreeImageToolkit/ClassicRotate.cpp; sourceTree = SOURCE_ROOT; };
+		CE41284919472A1000D1D40E /* Colors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Colors.cpp; path = Source/FreeImageToolkit/Colors.cpp; sourceTree = SOURCE_ROOT; };
+		CE41284A19472A1000D1D40E /* CopyPaste.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CopyPaste.cpp; path = Source/FreeImageToolkit/CopyPaste.cpp; sourceTree = SOURCE_ROOT; };
+		CE41284B19472A1000D1D40E /* Display.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Display.cpp; path = Source/FreeImageToolkit/Display.cpp; sourceTree = SOURCE_ROOT; };
+		CE41284C19472A1000D1D40E /* Flip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Flip.cpp; path = Source/FreeImageToolkit/Flip.cpp; sourceTree = SOURCE_ROOT; };
+		CE41284D19472A1000D1D40E /* JPEGTransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JPEGTransform.cpp; path = Source/FreeImageToolkit/JPEGTransform.cpp; sourceTree = SOURCE_ROOT; };
+		CE41284E19472A1000D1D40E /* MultigridPoissonSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MultigridPoissonSolver.cpp; path = Source/FreeImageToolkit/MultigridPoissonSolver.cpp; sourceTree = SOURCE_ROOT; };
+		CE41284F19472A1000D1D40E /* Rescale.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Rescale.cpp; path = Source/FreeImageToolkit/Rescale.cpp; sourceTree = SOURCE_ROOT; };
+		CE41285019472A1000D1D40E /* Resize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Resize.cpp; path = Source/FreeImageToolkit/Resize.cpp; sourceTree = SOURCE_ROOT; };
+		CE41285D19472FB600D1D40E /* libLibJPEG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibJPEG.a; path = "Source/LibJPEG/build/Debug-iphoneos/libLibJPEG.a"; sourceTree = "<group>"; };
+		CE41285E19472FB600D1D40E /* libLibJXR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibJXR.a; path = "Source/LibJXR/build/Debug-iphoneos/libLibJXR.a"; sourceTree = "<group>"; };
+		CE41285F19472FB600D1D40E /* libLibOpenJPEG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibOpenJPEG.a; path = "Source/LibOpenJPEG/build/Debug-iphoneos/libLibOpenJPEG.a"; sourceTree = "<group>"; };
+		CE41286019472FB600D1D40E /* libLibPNG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibPNG.a; path = "Source/LibPNG/build/Debug-iphoneos/libLibPNG.a"; sourceTree = "<group>"; };
+		CE41286119472FB600D1D40E /* libLibRawLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibRawLite.a; path = "Source/LibRawLite/build/Debug-iphoneos/libLibRawLite.a"; sourceTree = "<group>"; };
+		CE41286219472FB600D1D40E /* libLibTIFF4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibTIFF4.a; path = "Source/LibTIFF4/build/Debug-iphoneos/libLibTIFF4.a"; sourceTree = "<group>"; };
+		CE41286319472FB600D1D40E /* libLibWebP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibWebP.a; path = "Source/LibWebP/build/Debug-iphoneos/libLibWebP.a"; sourceTree = "<group>"; };
+		CE41286419472FB600D1D40E /* libOpenEXR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOpenEXR.a; path = "Source/OpenEXR/build/Debug-iphoneos/libOpenEXR.a"; sourceTree = "<group>"; };
+		CE41286519472FB600D1D40E /* libZLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libZLib.a; path = "Source/ZLib/build/Debug-iphoneos/libZLib.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE412763194726D500D1D40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE23CEF81AF1193E0086370C /* libLibJPEG.a in Frameworks */,
+				CE23CEF91AF1193E0086370C /* libLibJXR.a in Frameworks */,
+				CE23CEFA1AF1193E0086370C /* libLibOpenJPEG.a in Frameworks */,
+				CE23CEFB1AF1193E0086370C /* libLibPNG.a in Frameworks */,
+				CE23CEFC1AF1193E0086370C /* libLibRawLite.a in Frameworks */,
+				CE23CEFD1AF1193E0086370C /* libLibTIFF4.a in Frameworks */,
+				CE23CEFE1AF1193E0086370C /* libLibWebP.a in Frameworks */,
+				CE23CEFF1AF1193E0086370C /* libOpenEXR.a in Frameworks */,
+				CE23CF001AF1193E0086370C /* libZLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE412773194726D500D1D40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE41277E194726D500D1D40E /* libFreeImageLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE41275D194726D500D1D40E = {
+			isa = PBXGroup;
+			children = (
+				CE41276B194726D500D1D40E /* FreeImageLib */,
+				CE412768194726D500D1D40E /* Frameworks */,
+				CE412767194726D500D1D40E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE412767194726D500D1D40E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE412766194726D500D1D40E /* libFreeImageLib.a */,
+				CE412776194726D500D1D40E /* FreeImageLibTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE412768194726D500D1D40E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE23CEEF1AF1193E0086370C /* libLibJPEG.a */,
+				CE23CEF01AF1193E0086370C /* libLibJXR.a */,
+				CE23CEF11AF1193E0086370C /* libLibOpenJPEG.a */,
+				CE23CEF21AF1193E0086370C /* libLibPNG.a */,
+				CE23CEF31AF1193E0086370C /* libLibRawLite.a */,
+				CE23CEF41AF1193E0086370C /* libLibTIFF4.a */,
+				CE23CEF51AF1193E0086370C /* libLibWebP.a */,
+				CE23CEF61AF1193E0086370C /* libOpenEXR.a */,
+				CE23CEF71AF1193E0086370C /* libZLib.a */,
+				CE41285D19472FB600D1D40E /* libLibJPEG.a */,
+				CE41285E19472FB600D1D40E /* libLibJXR.a */,
+				CE41285F19472FB600D1D40E /* libLibOpenJPEG.a */,
+				CE41286019472FB600D1D40E /* libLibPNG.a */,
+				CE41286119472FB600D1D40E /* libLibRawLite.a */,
+				CE41286219472FB600D1D40E /* libLibTIFF4.a */,
+				CE41286319472FB600D1D40E /* libLibWebP.a */,
+				CE41286419472FB600D1D40E /* libOpenEXR.a */,
+				CE41286519472FB600D1D40E /* libZLib.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE41276B194726D500D1D40E /* FreeImageLib */ = {
+			isa = PBXGroup;
+			children = (
+				CE412843194729DD00D1D40E /* Toolkit Files */,
+				CE412835194729CC00D1D40E /* BitmapAccess.cpp */,
+				CE412836194729CC00D1D40E /* ColorLookup.cpp */,
+				CE412837194729CC00D1D40E /* FreeImage.cpp */,
+				CE412838194729CC00D1D40E /* FreeImageIO.cpp */,
+				CE412839194729CC00D1D40E /* GetType.cpp */,
+				CE41283A194729CC00D1D40E /* MemoryIO.cpp */,
+				CE41283B194729CC00D1D40E /* PixelAccess.cpp */,
+				CE4128301947297600D1D40E /* Quantizers */,
+				CE4127E51947291800D1D40E /* Plugins */,
+				CE4127DE194728E600D1D40E /* MultiPaging */,
+				CE4127CF194728BF00D1D40E /* Metadata */,
+				CE4127CA1947289B00D1D40E /* DeprecationMgr */,
+				CE4127A51947280300D1D40E /* Conversion */,
+				CE4127A4194727F300D1D40E /* Headers */,
+			);
+			path = FreeImageLib;
+			sourceTree = "<group>";
+		};
+		CE4127A4194727F300D1D40E /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				CE412799194727B700D1D40E /* CacheFile.h */,
+				CE41279A194727B700D1D40E /* FreeImage.h */,
+				CE41279B194727B700D1D40E /* FreeImageIO.h */,
+				CE41279C194727B700D1D40E /* Plugin.h */,
+				CE41279D194727B700D1D40E /* Quantizers.h */,
+				CE41279E194727B700D1D40E /* ToneMapping.h */,
+				CE41279F194727B700D1D40E /* Utilities.h */,
+				CE4127A0194727B700D1D40E /* DeprecationMgr.h */,
+				CE4127A1194727B700D1D40E /* PSDParser.h */,
+				CE4127A2194727B700D1D40E /* FIRational.h */,
+				CE4127A3194727B700D1D40E /* FreeImageTag.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		CE4127A51947280300D1D40E /* Conversion */ = {
+			isa = PBXGroup;
+			children = (
+				CE4127A61947284500D1D40E /* Conversion.cpp */,
+				CE4127A71947284500D1D40E /* Conversion4.cpp */,
+				CE4127A81947284500D1D40E /* Conversion8.cpp */,
+				CE4127A91947284500D1D40E /* Conversion16_555.cpp */,
+				CE4127AA1947284500D1D40E /* Conversion16_565.cpp */,
+				CE4127AB1947284500D1D40E /* Conversion24.cpp */,
+				CE4127AC1947284500D1D40E /* Conversion32.cpp */,
+				CE4127AD1947284500D1D40E /* ConversionFloat.cpp */,
+				CE4127AE1947284500D1D40E /* ConversionRGB16.cpp */,
+				CE4127AF1947284500D1D40E /* ConversionRGBF.cpp */,
+				CE4127B01947284500D1D40E /* ConversionType.cpp */,
+				CE4127B11947284500D1D40E /* ConversionUINT16.cpp */,
+				CE4127B21947284500D1D40E /* Halftoning.cpp */,
+				CE4127B31947284500D1D40E /* tmoColorConvert.cpp */,
+				CE4127B41947284500D1D40E /* tmoDrago03.cpp */,
+				CE4127B51947284500D1D40E /* tmoFattal02.cpp */,
+				CE4127B61947284500D1D40E /* tmoReinhard05.cpp */,
+				CE4127B71947284500D1D40E /* ToneMapping.cpp */,
+			);
+			name = Conversion;
+			sourceTree = "<group>";
+		};
+		CE4127CA1947289B00D1D40E /* DeprecationMgr */ = {
+			isa = PBXGroup;
+			children = (
+				CE4127CB194728B200D1D40E /* Deprecated.cpp */,
+				CE4127CC194728B200D1D40E /* DeprecationMgr.cpp */,
+			);
+			name = DeprecationMgr;
+			sourceTree = "<group>";
+		};
+		CE4127CF194728BF00D1D40E /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				CE4127D0194728DF00D1D40E /* Exif.cpp */,
+				CE4127D1194728DF00D1D40E /* FIRational.cpp */,
+				CE4127D2194728DF00D1D40E /* FreeImageTag.cpp */,
+				CE4127D3194728DF00D1D40E /* IPTC.cpp */,
+				CE4127D4194728DF00D1D40E /* TagConversion.cpp */,
+				CE4127D5194728DF00D1D40E /* TagLib.cpp */,
+				CE4127D6194728DF00D1D40E /* XTIFF.cpp */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
+		CE4127DE194728E600D1D40E /* MultiPaging */ = {
+			isa = PBXGroup;
+			children = (
+				CE4127DF1947291100D1D40E /* CacheFile.cpp */,
+				CE4127E01947291100D1D40E /* MultiPage.cpp */,
+				CE4127E11947291100D1D40E /* ZLibInterface.cpp */,
+			);
+			name = MultiPaging;
+			sourceTree = "<group>";
+		};
+		CE4127E51947291800D1D40E /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				CE4127E61947294A00D1D40E /* J2KHelper.cpp */,
+				CE4127E71947294A00D1D40E /* MNGHelper.cpp */,
+				CE4127E81947294B00D1D40E /* Plugin.cpp */,
+				CE4127EC1947296800D1D40E /* PluginBMP.cpp */,
+				CE4127ED1947296800D1D40E /* PluginCUT.cpp */,
+				CE4127EE1947296800D1D40E /* PluginDDS.cpp */,
+				CE4127EF1947296800D1D40E /* PluginEXR.cpp */,
+				CE4127F01947296800D1D40E /* PluginG3.cpp */,
+				CE4127F11947296800D1D40E /* PluginGIF.cpp */,
+				CE4127F21947296800D1D40E /* PluginHDR.cpp */,
+				CE4127F31947296800D1D40E /* PluginICO.cpp */,
+				CE4127F41947296800D1D40E /* PluginIFF.cpp */,
+				CE4127F51947296800D1D40E /* PluginJ2K.cpp */,
+				CE4127F61947296800D1D40E /* PluginJNG.cpp */,
+				CE4127F71947296800D1D40E /* PluginJP2.cpp */,
+				CE4127F81947296800D1D40E /* PluginJPEG.cpp */,
+				CE4127F91947296800D1D40E /* PluginJXR.cpp */,
+				CE4127FA1947296800D1D40E /* PluginKOALA.cpp */,
+				CE4127FB1947296800D1D40E /* PluginMNG.cpp */,
+				CE4127FC1947296800D1D40E /* PluginPCD.cpp */,
+				CE4127FD1947296800D1D40E /* PluginPCX.cpp */,
+				CE4127FE1947296800D1D40E /* PluginPFM.cpp */,
+				CE4127FF1947296800D1D40E /* PluginPICT.cpp */,
+				CE4128001947296800D1D40E /* PluginPNG.cpp */,
+				CE4128011947296800D1D40E /* PluginPNM.cpp */,
+				CE4128021947296800D1D40E /* PluginPSD.cpp */,
+				CE4128031947296800D1D40E /* PluginRAS.cpp */,
+				CE4128041947296800D1D40E /* PluginRAW.cpp */,
+				CE4128051947296800D1D40E /* PluginSGI.cpp */,
+				CE4128061947296800D1D40E /* PluginTARGA.cpp */,
+				CE4128071947296800D1D40E /* PluginTIFF.cpp */,
+				CE4128081947296800D1D40E /* PluginWBMP.cpp */,
+				CE4128091947296800D1D40E /* PluginWebP.cpp */,
+				CE41280A1947296800D1D40E /* PluginXBM.cpp */,
+				CE41280B1947296800D1D40E /* PluginXPM.cpp */,
+				CE41280C1947296800D1D40E /* PSDParser.cpp */,
+				CE41280D1947296800D1D40E /* TIFFLogLuv.cpp */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
+		CE4128301947297600D1D40E /* Quantizers */ = {
+			isa = PBXGroup;
+			children = (
+				CE4128311947299900D1D40E /* NNQuantizer.cpp */,
+				CE4128321947299A00D1D40E /* WuQuantizer.cpp */,
+			);
+			name = Quantizers;
+			sourceTree = "<group>";
+		};
+		CE412843194729DD00D1D40E /* Toolkit Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE41284419472A1000D1D40E /* Resize.h */,
+				CE41284519472A1000D1D40E /* Background.cpp */,
+				CE41284619472A1000D1D40E /* BSplineRotate.cpp */,
+				CE41284719472A1000D1D40E /* Channels.cpp */,
+				CE41284819472A1000D1D40E /* ClassicRotate.cpp */,
+				CE41284919472A1000D1D40E /* Colors.cpp */,
+				CE41284A19472A1000D1D40E /* CopyPaste.cpp */,
+				CE41284B19472A1000D1D40E /* Display.cpp */,
+				CE41284C19472A1000D1D40E /* Flip.cpp */,
+				CE41284D19472A1000D1D40E /* JPEGTransform.cpp */,
+				CE41284E19472A1000D1D40E /* MultigridPoissonSolver.cpp */,
+				CE41284F19472A1000D1D40E /* Rescale.cpp */,
+				CE41285019472A1000D1D40E /* Resize.cpp */,
+			);
+			name = "Toolkit Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE412765194726D500D1D40E /* FreeImageLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE412789194726D500D1D40E /* Build configuration list for PBXNativeTarget "FreeImageLib" */;
+			buildPhases = (
+				CE412762194726D500D1D40E /* Sources */,
+				CE412763194726D500D1D40E /* Frameworks */,
+				CE412764194726D500D1D40E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreeImageLib;
+			productName = FreeImageLib;
+			productReference = CE412766194726D500D1D40E /* libFreeImageLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CE412775194726D500D1D40E /* FreeImageLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE41278C194726D500D1D40E /* Build configuration list for PBXNativeTarget "FreeImageLibTests" */;
+			buildPhases = (
+				CE412772194726D500D1D40E /* Sources */,
+				CE412773194726D500D1D40E /* Frameworks */,
+				CE412774194726D500D1D40E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE41277D194726D500D1D40E /* PBXTargetDependency */,
+			);
+			name = FreeImageLibTests;
+			productName = FreeImageLibTests;
+			productReference = CE412776194726D500D1D40E /* FreeImageLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE41275E194726D500D1D40E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "L. Spiro Soft";
+			};
+			buildConfigurationList = CE412761194726D500D1D40E /* Build configuration list for PBXProject "FreeImageLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE41275D194726D500D1D40E;
+			productRefGroup = CE412767194726D500D1D40E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE412765194726D500D1D40E /* FreeImageLib */,
+				CE412775194726D500D1D40E /* FreeImageLibTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE412774194726D500D1D40E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE412762194726D500D1D40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4127EA1947294B00D1D40E /* MNGHelper.cpp in Sources */,
+				CE41283D194729CC00D1D40E /* ColorLookup.cpp in Sources */,
+				CE4127CD194728B200D1D40E /* Deprecated.cpp in Sources */,
+				CE4127BF1947284500D1D40E /* ConversionFloat.cpp in Sources */,
+				CE4128261947296800D1D40E /* PluginRAW.cpp in Sources */,
+				CE4128141947296800D1D40E /* PluginHDR.cpp in Sources */,
+				CE4127BB1947284500D1D40E /* Conversion16_555.cpp in Sources */,
+				CE4128101947296800D1D40E /* PluginDDS.cpp in Sources */,
+				CE41280F1947296800D1D40E /* PluginCUT.cpp in Sources */,
+				CE4127C41947284500D1D40E /* Halftoning.cpp in Sources */,
+				CE41285619472A1000D1D40E /* CopyPaste.cpp in Sources */,
+				CE41281D1947296800D1D40E /* PluginMNG.cpp in Sources */,
+				CE4127C31947284500D1D40E /* ConversionUINT16.cpp in Sources */,
+				CE4127BD1947284500D1D40E /* Conversion24.cpp in Sources */,
+				CE4127C61947284500D1D40E /* tmoDrago03.cpp in Sources */,
+				CE4127DD194728DF00D1D40E /* XTIFF.cpp in Sources */,
+				CE4127BC1947284500D1D40E /* Conversion16_565.cpp in Sources */,
+				CE4128331947299A00D1D40E /* NNQuantizer.cpp in Sources */,
+				CE4127C51947284500D1D40E /* tmoColorConvert.cpp in Sources */,
+				CE4127DA194728DF00D1D40E /* IPTC.cpp in Sources */,
+				CE412841194729CC00D1D40E /* MemoryIO.cpp in Sources */,
+				CE4128211947296800D1D40E /* PluginPICT.cpp in Sources */,
+				CE41282F1947296800D1D40E /* TIFFLogLuv.cpp in Sources */,
+				CE41282E1947296800D1D40E /* PSDParser.cpp in Sources */,
+				CE41285819472A1000D1D40E /* Flip.cpp in Sources */,
+				CE4127D9194728DF00D1D40E /* FreeImageTag.cpp in Sources */,
+				CE41285219472A1000D1D40E /* BSplineRotate.cpp in Sources */,
+				CE4128161947296800D1D40E /* PluginIFF.cpp in Sources */,
+				CE41285919472A1000D1D40E /* JPEGTransform.cpp in Sources */,
+				CE41282C1947296800D1D40E /* PluginXBM.cpp in Sources */,
+				CE4127B91947284500D1D40E /* Conversion4.cpp in Sources */,
+				CE4128241947296800D1D40E /* PluginPSD.cpp in Sources */,
+				CE4128281947296800D1D40E /* PluginTARGA.cpp in Sources */,
+				CE41285519472A1000D1D40E /* Colors.cpp in Sources */,
+				CE4128131947296800D1D40E /* PluginGIF.cpp in Sources */,
+				CE4128271947296800D1D40E /* PluginSGI.cpp in Sources */,
+				CE412840194729CC00D1D40E /* GetType.cpp in Sources */,
+				CE41285C19472A1000D1D40E /* Resize.cpp in Sources */,
+				CE41285719472A1000D1D40E /* Display.cpp in Sources */,
+				CE4127BE1947284500D1D40E /* Conversion32.cpp in Sources */,
+				CE41282A1947296800D1D40E /* PluginWBMP.cpp in Sources */,
+				CE41285419472A1000D1D40E /* ClassicRotate.cpp in Sources */,
+				CE4128221947296800D1D40E /* PluginPNG.cpp in Sources */,
+				CE4128231947296800D1D40E /* PluginPNM.cpp in Sources */,
+				CE4127E21947291100D1D40E /* CacheFile.cpp in Sources */,
+				CE41283C194729CC00D1D40E /* BitmapAccess.cpp in Sources */,
+				CE41285B19472A1000D1D40E /* Rescale.cpp in Sources */,
+				CE41280E1947296800D1D40E /* PluginBMP.cpp in Sources */,
+				CE4128191947296800D1D40E /* PluginJP2.cpp in Sources */,
+				CE4128251947296800D1D40E /* PluginRAS.cpp in Sources */,
+				CE4127DB194728DF00D1D40E /* TagConversion.cpp in Sources */,
+				CE4128121947296800D1D40E /* PluginG3.cpp in Sources */,
+				CE4127C91947284500D1D40E /* ToneMapping.cpp in Sources */,
+				CE4128151947296800D1D40E /* PluginICO.cpp in Sources */,
+				CE41281F1947296800D1D40E /* PluginPCX.cpp in Sources */,
+				CE4127D7194728DF00D1D40E /* Exif.cpp in Sources */,
+				CE4128111947296800D1D40E /* PluginEXR.cpp in Sources */,
+				CE41283F194729CC00D1D40E /* FreeImageIO.cpp in Sources */,
+				CE4127DC194728DF00D1D40E /* TagLib.cpp in Sources */,
+				CE4128201947296800D1D40E /* PluginPFM.cpp in Sources */,
+				CE41282D1947296800D1D40E /* PluginXPM.cpp in Sources */,
+				CE4127C11947284500D1D40E /* ConversionRGBF.cpp in Sources */,
+				CE4127D8194728DF00D1D40E /* FIRational.cpp in Sources */,
+				CE4127C01947284500D1D40E /* ConversionRGB16.cpp in Sources */,
+				CE41281B1947296800D1D40E /* PluginJXR.cpp in Sources */,
+				CE4128181947296800D1D40E /* PluginJNG.cpp in Sources */,
+				CE41285A19472A1000D1D40E /* MultigridPoissonSolver.cpp in Sources */,
+				CE41281E1947296800D1D40E /* PluginPCD.cpp in Sources */,
+				CE4127B81947284500D1D40E /* Conversion.cpp in Sources */,
+				CE4127EB1947294B00D1D40E /* Plugin.cpp in Sources */,
+				CE4128341947299A00D1D40E /* WuQuantizer.cpp in Sources */,
+				CE4127C81947284500D1D40E /* tmoReinhard05.cpp in Sources */,
+				CE41283E194729CC00D1D40E /* FreeImage.cpp in Sources */,
+				CE4127C21947284500D1D40E /* ConversionType.cpp in Sources */,
+				CE412842194729CC00D1D40E /* PixelAccess.cpp in Sources */,
+				CE41281C1947296800D1D40E /* PluginKOALA.cpp in Sources */,
+				CE4127C71947284500D1D40E /* tmoFattal02.cpp in Sources */,
+				CE4128171947296800D1D40E /* PluginJ2K.cpp in Sources */,
+				CE41282B1947296800D1D40E /* PluginWebP.cpp in Sources */,
+				CE4127E41947291100D1D40E /* ZLibInterface.cpp in Sources */,
+				CE4127E91947294B00D1D40E /* J2KHelper.cpp in Sources */,
+				CE41281A1947296800D1D40E /* PluginJPEG.cpp in Sources */,
+				CE4128291947296800D1D40E /* PluginTIFF.cpp in Sources */,
+				CE4127E31947291100D1D40E /* MultiPage.cpp in Sources */,
+				CE4127BA1947284500D1D40E /* Conversion8.cpp in Sources */,
+				CE4127CE194728B200D1D40E /* DeprecationMgr.cpp in Sources */,
+				CE41285319472A1000D1D40E /* Channels.cpp in Sources */,
+				CE41285119472A1000D1D40E /* Background.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE412772194726D500D1D40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE41277D194726D500D1D40E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE412765194726D500D1D40E /* FreeImageLib */;
+			targetProxy = CE41277C194726D500D1D40E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CE2C08271B69302D002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = "Debug Metal";
+		};
+		CE2C08281B69302D002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/FreeImageLib.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					_LIB,
+					OPJ_STATIC,
+					FREEIMAGE_LIB,
+					LIBRAW_NODLL,
+					__ANSI__,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Source/LibJPEG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibJXR/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibOpenJPEG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibPNG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibRawLite/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibTIFF4/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibWebP/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/OpenEXR/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/ZLib/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./Source/** ./Source/ZLib ./Source/DeprecationManager ./Source/OpenEXR/Half ./Source/OpenEXR/Iex ./Source/OpenEXR/IlmImf ./Source/OpenEXR/Imath ./Source/OpenEXR/IlmThread ./Source/LibJXR/jxrgluelib ./Source/LibJXR/image/sys";
+			};
+			name = "Debug Metal";
+		};
+		CE2C08291B69302D002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreeImageLib/FreeImageLib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FreeImageLibTests/FreeImageLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Debug Metal";
+		};
+		CE2C082A1B693035002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Metal";
+		};
+		CE2C082B1B693035002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/FreeImageLib.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					_LIB,
+					OPJ_STATIC,
+					FREEIMAGE_LIB,
+					LIBRAW_NODLL,
+					__ANSI__,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Source/LibJPEG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibJXR/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibOpenJPEG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibPNG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibRawLite/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibTIFF4/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibWebP/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/OpenEXR/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/ZLib/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./Source/** ./Source/ZLib ./Source/DeprecationManager ./Source/OpenEXR/Half ./Source/OpenEXR/Iex ./Source/OpenEXR/IlmImf ./Source/OpenEXR/Imath ./Source/OpenEXR/IlmThread ./Source/LibJXR/jxrgluelib ./Source/LibJXR/image/sys";
+			};
+			name = "Release Metal";
+		};
+		CE2C082C1B693035002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreeImageLib/FreeImageLib-Prefix.pch";
+				INFOPLIST_FILE = "FreeImageLibTests/FreeImageLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Release Metal";
+		};
+		CE412787194726D500D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE412788194726D500D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE41278A194726D500D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/FreeImageLib.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					_LIB,
+					OPJ_STATIC,
+					FREEIMAGE_LIB,
+					LIBRAW_NODLL,
+					__ANSI__,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Source/LibJPEG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibJXR/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibOpenJPEG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibPNG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibRawLite/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibTIFF4/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibWebP/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/OpenEXR/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/ZLib/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./Source/** ./Source/ZLib ./Source/DeprecationManager ./Source/OpenEXR/Half ./Source/OpenEXR/Iex ./Source/OpenEXR/IlmImf ./Source/OpenEXR/Imath ./Source/OpenEXR/IlmThread ./Source/LibJXR/jxrgluelib ./Source/LibJXR/image/sys";
+			};
+			name = Debug;
+		};
+		CE41278B194726D500D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/FreeImageLib.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					_LIB,
+					OPJ_STATIC,
+					FREEIMAGE_LIB,
+					LIBRAW_NODLL,
+					__ANSI__,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Source/LibJPEG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibJXR/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibOpenJPEG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibPNG/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibRawLite/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibTIFF4/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/LibWebP/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/OpenEXR/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/ZLib/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/LSTest_iOS-exbyidixfzdxfwhgyjlvcjnxuqfu/Build/Products/Release-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./Source/** ./Source/ZLib ./Source/DeprecationManager ./Source/OpenEXR/Half ./Source/OpenEXR/Iex ./Source/OpenEXR/IlmImf ./Source/OpenEXR/Imath ./Source/OpenEXR/IlmThread ./Source/LibJXR/jxrgluelib ./Source/LibJXR/image/sys";
+			};
+			name = Release;
+		};
+		CE41278D194726D500D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreeImageLib/FreeImageLib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FreeImageLibTests/FreeImageLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CE41278E194726D500D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreeImageLib/FreeImageLib-Prefix.pch";
+				INFOPLIST_FILE = "FreeImageLibTests/FreeImageLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE412761194726D500D1D40E /* Build configuration list for PBXProject "FreeImageLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE412787194726D500D1D40E /* Debug */,
+				CE2C08271B69302D002ACFA8 /* Debug Metal */,
+				CE412788194726D500D1D40E /* Release */,
+				CE2C082A1B693035002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE412789194726D500D1D40E /* Build configuration list for PBXNativeTarget "FreeImageLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE41278A194726D500D1D40E /* Debug */,
+				CE2C08281B69302D002ACFA8 /* Debug Metal */,
+				CE41278B194726D500D1D40E /* Release */,
+				CE2C082B1B693035002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE41278C194726D500D1D40E /* Build configuration list for PBXNativeTarget "FreeImageLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE41278D194726D500D1D40E /* Debug */,
+				CE2C08291B69302D002ACFA8 /* Debug Metal */,
+				CE41278E194726D500D1D40E /* Release */,
+				CE2C082C1B693035002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE41275E194726D500D1D40E /* Project object */;
+}

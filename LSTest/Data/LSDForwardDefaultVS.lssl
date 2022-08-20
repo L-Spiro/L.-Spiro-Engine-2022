@@ -1,0 +1,69 @@
+// == Uniforms.
+uniform float[4][4]	g_mModelViewProjMatrix : WORLDVIEWPROJ;
+uniform float[4][4]	g_mModelViewMatrix : WORLDVIEW;
+uniform float[3][3]	g_mNormalMatrix : NORMALMATRIX;
+
+#ifdef LSE_VERTEX_LIGHTING
+uniform float		g_fPower : MATPOWER;
+uniform vec4		g_vRoughness : ROUGHNESS;
+uniform vec4		g_vAshikFactors : ASHIKFACTORS;
+
+uniform vec4		g_vDirLightDirs[LSE_MAX_LIGHTS] : DIRLIGHTDIRS;
+uniform vec4		g_vDirLightColors[LSE_MAX_LIGHTS] : DIRLIGHTDIFFUSES;
+
+uniform vec4		g_vPointLightPos[LSE_MAX_LIGHTS] : POINTLIGHTPOS;
+uniform vec4		g_vPointLightColors[LSE_MAX_LIGHTS] : POINTLIGHTDIFFUSES;
+uniform float		g_vPointLightSizes[LSE_MAX_LIGHTS] : POINTLIGHTSIZES;
+
+
+#include "LSDAshikhminShirley.lssl"
+#include "LSDBlinnPhong.lssl"
+#include "LSDCookTorrance.lssl"
+#include "LSDFresnel.lssl"
+#include "LSDGgx.lssl"
+#include "LSDLightArgs.lssl"
+#include "LSDOrenNayar.lssl"
+#endif	// #ifdef LSE_VERTEX_LIGHTING
+
+void Main( lse_MainVsInputs,
+	lse_MainVsOutputs,
+	out vec4 _vOutViewPos : LSE_TEXCOORD_USER0 ) {	
+	_vOutPosition = mul( g_mModelViewProjMatrix, vec4( _vInPosition, 1.0f ) );
+	_vOutViewPos = mul( g_mModelViewMatrix, vec4( _vInPosition, 1.0f ) );
+#ifdef LSE_NORMALS
+#ifdef LSE_VERTEX_LIGHTING
+	vec3
+#endif	// #ifdef LSE_VERTEX_LIGHTING
+	_vOutNormal = mul( g_mNormalMatrix, _vInNormal );
+#endif // #ifdef LSE_NORMALS
+
+#ifdef LSE_COLORS
+	_vOutColor = _vInColor;
+#endif	// #ifdef LSE_COLORS
+
+
+#ifdef LSE_VERTEX_LIGHTING
+	_vOutDiffuseLight = vec4( 0.0, 0.0, 0.0, 0.0 );
+	_vOutSpecularLight = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	_vOutNormal = normalize( _vOutNormal );
+	DEF_LIGHT_ARGS laArgs;
+	DefaultLightParms( laArgs, _vOutViewPos.xyz, _vOutNormal, g_fPower, g_vRoughness, g_vAshikFactors );
+
+	LSE_ACCUMULATE_POINT_LIGHTS( laArgs, g_vPointLightPos, g_vPointLightColors, g_vPointLightSizes, _vOutViewPos, _vOutNormal, _vOutDiffuseLight, _vOutSpecularLight, GgxShadingPoint );
+	LSE_ACCUMULATE_DIR_LIGHTS( laArgs, g_vDirLightDirs, g_vDirLightColors, _vOutNormal, _vOutDiffuseLight, _vOutSpecularLight, GgxShadingDir );
+
+	_vOutDiffuseLight.w = laArgs.fViewFresnel;
+#else
+#ifdef LSE_TANGENT
+	_vOutTangent = normalize( mul( g_mNormalMatrix, _vInTangent ) );
+#endif	// #ifdef LSE_TANGENT
+#ifdef LSE_BINORMAL
+	_vOutBinormal = normalize( mul( g_mNormalMatrix, _vInBinormal ) );
+#endif	// #ifdef LSE_BINORMAL
+#endif	// #ifdef LSE_VERTEX_LIGHTING
+
+
+	// Copy all non-custom texture coordinates directly.
+	LSE_TEXCOORD_COPY
+}

@@ -1,0 +1,8 @@
+#ifndef LSD_SQR
+#define LSD_SQR
+
+float Sqr( float _fF ) {
+	return _fF * _fF;
+}
+
+#endif	// #ifndef LSD_SQR

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\BoundingBoxes">
+      <UniqueIdentifier>{4bc35df7-92b6-4f5d-a0ec-8eb60e70d122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Intersections">
+      <UniqueIdentifier>{89565b0b-c8fc-417b-b0d7-ff74bc2326b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Misc">
+      <UniqueIdentifier>{8995041a-8f19-47bd-986d-d0a068b0d629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Polygon">
+      <UniqueIdentifier>{00c39c4a-d7a3-42d0-aa36-35886b62d4e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SpatialPartitions">
+      <UniqueIdentifier>{e44ed965-f449-4204-9479-a3976f3cd9e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\BoundingBoxes">
+      <UniqueIdentifier>{6f477b04-a6cb-494a-9e42-669fca52e970}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Intersections">
+      <UniqueIdentifier>{ceee51dd-5de0-4ff8-b41a-7787960e3c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Misc">
+      <UniqueIdentifier>{93bb30a3-ac2c-4684-a6d4-664d2a8720a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Polygon">
+      <UniqueIdentifier>{ce8ac074-26ec-42de-9e14-6483a6e1976f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SpatialPartitions">
+      <UniqueIdentifier>{9cf29082-0acb-4e00-b574-b24400cd9c95}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\LSPPhysicsLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\BoundingBoxes\LSPAabb.cpp">
+      <Filter>Source Files\BoundingBoxes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\BoundingBoxes\LSPAabb2d.cpp">
+      <Filter>Source Files\BoundingBoxes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\BoundingBoxes\LSPCappedKDop.cpp">
+      <Filter>Source Files\BoundingBoxes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\BoundingBoxes\LSPKDop.cpp">
+      <Filter>Source Files\BoundingBoxes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\BoundingBoxes\LSPObb.cpp">
+      <Filter>Source Files\BoundingBoxes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\BoundingBoxes\LSPObb2d.cpp">
+      <Filter>Source Files\BoundingBoxes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Intersections\LSPClassify.cpp">
+      <Filter>Source Files\Intersections</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Intersections\LSPIntersect.cpp">
+      <Filter>Source Files\Intersections</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Intersections\LSPTest.cpp">
+      <Filter>Source Files\Intersections</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Misc\LSPPhysUtils.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SpatialPartitions\LSPQuadTree.cpp">
+      <Filter>Source Files\SpatialPartitions</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SpatialPartitions\LSPQuadTreeNode.cpp">
+      <Filter>Source Files\SpatialPartitions</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SpatialPartitions\LSPQuadTreeObject.cpp">
+      <Filter>Source Files\SpatialPartitions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\LSPPhysicsLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\BoundingBoxes\LSPAabb.h">
+      <Filter>Header Files\BoundingBoxes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\BoundingBoxes\LSPAabb2d.h">
+      <Filter>Header Files\BoundingBoxes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\BoundingBoxes\LSPCappedKDop.h">
+      <Filter>Header Files\BoundingBoxes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\BoundingBoxes\LSPKDop.h">
+      <Filter>Header Files\BoundingBoxes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\BoundingBoxes\LSPObb.h">
+      <Filter>Header Files\BoundingBoxes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\BoundingBoxes\LSPObb2d.h">
+      <Filter>Header Files\BoundingBoxes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Intersections\LSPClassify.h">
+      <Filter>Header Files\Intersections</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Intersections\LSPIntersect.h">
+      <Filter>Header Files\Intersections</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Intersections\LSPTest.h">
+      <Filter>Header Files\Intersections</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Misc\LSPPhysUtils.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Polygon\LSPPolygon3Base.h">
+      <Filter>Header Files\Polygon</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SpatialPartitions\LSPQuadTree.h">
+      <Filter>Header Files\SpatialPartitions</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SpatialPartitions\LSPQuadTreeNode.h">
+      <Filter>Header Files\SpatialPartitions</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SpatialPartitions\LSPQuadTreeObject.h">
+      <Filter>Header Files\SpatialPartitions</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SpatialPartitions\LSPSolidLeafBspBase.h">
+      <Filter>Header Files\SpatialPartitions</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

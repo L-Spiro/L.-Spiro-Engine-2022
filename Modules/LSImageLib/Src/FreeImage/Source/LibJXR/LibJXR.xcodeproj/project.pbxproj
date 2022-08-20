@@ -1,0 +1,727 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE4122C61946FC8B00D1D40E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4122C51946FC8B00D1D40E /* Foundation.framework */; };
+		CE4122D41946FC8B00D1D40E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4122D31946FC8B00D1D40E /* XCTest.framework */; };
+		CE4122D51946FC8B00D1D40E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4122C51946FC8B00D1D40E /* Foundation.framework */; };
+		CE4122D71946FC8B00D1D40E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4122D61946FC8B00D1D40E /* UIKit.framework */; };
+		CE4122DA1946FC8B00D1D40E /* libLibJXR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4122C21946FC8B00D1D40E /* libLibJXR.a */; };
+		CE41231D1946FD4000D1D40E /* decode.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4122F51946FD4000D1D40E /* decode.c */; };
+		CE41231E1946FD4000D1D40E /* JXRTranscode.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4122F71946FD4000D1D40E /* JXRTranscode.c */; };
+		CE41231F1946FD4000D1D40E /* postprocess.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4122F81946FD4000D1D40E /* postprocess.c */; };
+		CE4123201946FD4000D1D40E /* segdec.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4122F91946FD4000D1D40E /* segdec.c */; };
+		CE4123211946FD4000D1D40E /* strdec.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4122FA1946FD4000D1D40E /* strdec.c */; };
+		CE4123221946FD4000D1D40E /* strdec_x86.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4122FB1946FD4000D1D40E /* strdec_x86.c */; };
+		CE4123231946FD4000D1D40E /* strInvTransform.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4122FC1946FD4000D1D40E /* strInvTransform.c */; };
+		CE4123241946FD4000D1D40E /* strPredQuantDec.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4122FD1946FD4000D1D40E /* strPredQuantDec.c */; };
+		CE4123251946FD4000D1D40E /* encode.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4122FF1946FD4000D1D40E /* encode.c */; };
+		CE4123261946FD4000D1D40E /* segenc.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4123011946FD4000D1D40E /* segenc.c */; };
+		CE4123271946FD4000D1D40E /* strenc.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4123021946FD4000D1D40E /* strenc.c */; };
+		CE4123281946FD4000D1D40E /* strenc_x86.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4123031946FD4000D1D40E /* strenc_x86.c */; };
+		CE4123291946FD4000D1D40E /* strFwdTransform.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4123041946FD4000D1D40E /* strFwdTransform.c */; };
+		CE41232A1946FD4000D1D40E /* strPredQuantEnc.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4123051946FD4000D1D40E /* strPredQuantEnc.c */; };
+		CE41232B1946FD4000D1D40E /* adapthuff.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4123071946FD4000D1D40E /* adapthuff.c */; };
+		CE41232C1946FD4000D1D40E /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41230A1946FD4000D1D40E /* image.c */; };
+		CE41232D1946FD4000D1D40E /* perfTimerANSI.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41230C1946FD4000D1D40E /* perfTimerANSI.c */; };
+		CE41232E1946FD4000D1D40E /* strcodec.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41230D1946FD4000D1D40E /* strcodec.c */; };
+		CE41232F1946FD4000D1D40E /* strPredQuant.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41230F1946FD4000D1D40E /* strPredQuant.c */; };
+		CE4123301946FD4000D1D40E /* strTransform.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4123101946FD4000D1D40E /* strTransform.c */; };
+		CE4123311946FD4000D1D40E /* JXRGlue.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4123171946FD4000D1D40E /* JXRGlue.c */; };
+		CE4123321946FD4000D1D40E /* JXRGlueJxr.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4123191946FD4000D1D40E /* JXRGlueJxr.c */; };
+		CE4123331946FD4000D1D40E /* JXRGluePFC.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41231A1946FD4000D1D40E /* JXRGluePFC.c */; };
+		CE4123341946FD4000D1D40E /* JXRMeta.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41231B1946FD4000D1D40E /* JXRMeta.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE4122D81946FC8B00D1D40E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE4122BA1946FC8B00D1D40E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE4122C11946FC8B00D1D40E;
+			remoteInfo = LibJXR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE4122C01946FC8B00D1D40E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE4122C21946FC8B00D1D40E /* libLibJXR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLibJXR.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4122C51946FC8B00D1D40E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE4122D21946FC8B00D1D40E /* LibJXRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibJXRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4122D31946FC8B00D1D40E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CE4122D61946FC8B00D1D40E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		CE4122ED1946FD4000D1D40E /* guiddef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guiddef.h; sourceTree = "<group>"; };
+		CE4122EE1946FD4000D1D40E /* wmsal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wmsal.h; sourceTree = "<group>"; };
+		CE4122EF1946FD4000D1D40E /* wmspecstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wmspecstring.h; sourceTree = "<group>"; };
+		CE4122F01946FD4000D1D40E /* wmspecstrings_adt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wmspecstrings_adt.h; sourceTree = "<group>"; };
+		CE4122F11946FD4000D1D40E /* wmspecstrings_strict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wmspecstrings_strict.h; sourceTree = "<group>"; };
+		CE4122F21946FD4000D1D40E /* wmspecstrings_undef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wmspecstrings_undef.h; sourceTree = "<group>"; };
+		CE4122F51946FD4000D1D40E /* decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decode.c; sourceTree = "<group>"; };
+		CE4122F61946FD4000D1D40E /* decode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decode.h; sourceTree = "<group>"; };
+		CE4122F71946FD4000D1D40E /* JXRTranscode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = JXRTranscode.c; sourceTree = "<group>"; };
+		CE4122F81946FD4000D1D40E /* postprocess.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = postprocess.c; sourceTree = "<group>"; };
+		CE4122F91946FD4000D1D40E /* segdec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = segdec.c; sourceTree = "<group>"; };
+		CE4122FA1946FD4000D1D40E /* strdec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strdec.c; sourceTree = "<group>"; };
+		CE4122FB1946FD4000D1D40E /* strdec_x86.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strdec_x86.c; sourceTree = "<group>"; };
+		CE4122FC1946FD4000D1D40E /* strInvTransform.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strInvTransform.c; sourceTree = "<group>"; };
+		CE4122FD1946FD4000D1D40E /* strPredQuantDec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strPredQuantDec.c; sourceTree = "<group>"; };
+		CE4122FF1946FD4000D1D40E /* encode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = encode.c; sourceTree = "<group>"; };
+		CE4123001946FD4000D1D40E /* encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = encode.h; sourceTree = "<group>"; };
+		CE4123011946FD4000D1D40E /* segenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = segenc.c; sourceTree = "<group>"; };
+		CE4123021946FD4000D1D40E /* strenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strenc.c; sourceTree = "<group>"; };
+		CE4123031946FD4000D1D40E /* strenc_x86.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strenc_x86.c; sourceTree = "<group>"; };
+		CE4123041946FD4000D1D40E /* strFwdTransform.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strFwdTransform.c; sourceTree = "<group>"; };
+		CE4123051946FD4000D1D40E /* strPredQuantEnc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strPredQuantEnc.c; sourceTree = "<group>"; };
+		CE4123071946FD4000D1D40E /* adapthuff.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = adapthuff.c; sourceTree = "<group>"; };
+		CE4123081946FD4000D1D40E /* ansi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ansi.h; sourceTree = "<group>"; };
+		CE4123091946FD4000D1D40E /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		CE41230A1946FD4000D1D40E /* image.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image.c; sourceTree = "<group>"; };
+		CE41230B1946FD4000D1D40E /* perfTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = perfTimer.h; sourceTree = "<group>"; };
+		CE41230C1946FD4000D1D40E /* perfTimerANSI.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = perfTimerANSI.c; sourceTree = "<group>"; };
+		CE41230D1946FD4000D1D40E /* strcodec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strcodec.c; sourceTree = "<group>"; };
+		CE41230E1946FD4000D1D40E /* strcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strcodec.h; sourceTree = "<group>"; };
+		CE41230F1946FD4000D1D40E /* strPredQuant.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strPredQuant.c; sourceTree = "<group>"; };
+		CE4123101946FD4000D1D40E /* strTransform.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strTransform.c; sourceTree = "<group>"; };
+		CE4123111946FD4000D1D40E /* strTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strTransform.h; sourceTree = "<group>"; };
+		CE4123121946FD4000D1D40E /* windowsmediaphoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = windowsmediaphoto.h; sourceTree = "<group>"; };
+		CE4123131946FD4000D1D40E /* xplatform_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xplatform_image.h; sourceTree = "<group>"; };
+		CE4123151946FD4000D1D40E /* x86.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x86.h; sourceTree = "<group>"; };
+		CE4123171946FD4000D1D40E /* JXRGlue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = JXRGlue.c; sourceTree = "<group>"; };
+		CE4123181946FD4000D1D40E /* JXRGlue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXRGlue.h; sourceTree = "<group>"; };
+		CE4123191946FD4000D1D40E /* JXRGlueJxr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = JXRGlueJxr.c; sourceTree = "<group>"; };
+		CE41231A1946FD4000D1D40E /* JXRGluePFC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = JXRGluePFC.c; sourceTree = "<group>"; };
+		CE41231B1946FD4000D1D40E /* JXRMeta.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = JXRMeta.c; sourceTree = "<group>"; };
+		CE41231C1946FD4000D1D40E /* JXRMeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXRMeta.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE4122BF1946FC8B00D1D40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4122C61946FC8B00D1D40E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4122CF1946FC8B00D1D40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4122DA1946FC8B00D1D40E /* libLibJXR.a in Frameworks */,
+				CE4122D41946FC8B00D1D40E /* XCTest.framework in Frameworks */,
+				CE4122D71946FC8B00D1D40E /* UIKit.framework in Frameworks */,
+				CE4122D51946FC8B00D1D40E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE4122B91946FC8B00D1D40E = {
+			isa = PBXGroup;
+			children = (
+				CE4122C71946FC8B00D1D40E /* LibJXR */,
+				CE4122C41946FC8B00D1D40E /* Frameworks */,
+				CE4122C31946FC8B00D1D40E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE4122C31946FC8B00D1D40E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE4122C21946FC8B00D1D40E /* libLibJXR.a */,
+				CE4122D21946FC8B00D1D40E /* LibJXRTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE4122C41946FC8B00D1D40E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE4122C51946FC8B00D1D40E /* Foundation.framework */,
+				CE4122D31946FC8B00D1D40E /* XCTest.framework */,
+				CE4122D61946FC8B00D1D40E /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE4122C71946FC8B00D1D40E /* LibJXR */ = {
+			isa = PBXGroup;
+			children = (
+				CE4122EB1946FD4000D1D40E /* common */,
+				CE4122F31946FD4000D1D40E /* image */,
+				CE4123161946FD4000D1D40E /* jxrgluelib */,
+			);
+			path = LibJXR;
+			sourceTree = "<group>";
+		};
+		CE4122EB1946FD4000D1D40E /* common */ = {
+			isa = PBXGroup;
+			children = (
+				CE4122EC1946FD4000D1D40E /* include */,
+			);
+			path = common;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE4122EC1946FD4000D1D40E /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CE4122ED1946FD4000D1D40E /* guiddef.h */,
+				CE4122EE1946FD4000D1D40E /* wmsal.h */,
+				CE4122EF1946FD4000D1D40E /* wmspecstring.h */,
+				CE4122F01946FD4000D1D40E /* wmspecstrings_adt.h */,
+				CE4122F11946FD4000D1D40E /* wmspecstrings_strict.h */,
+				CE4122F21946FD4000D1D40E /* wmspecstrings_undef.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		CE4122F31946FD4000D1D40E /* image */ = {
+			isa = PBXGroup;
+			children = (
+				CE4122F41946FD4000D1D40E /* decode */,
+				CE4122FE1946FD4000D1D40E /* encode */,
+				CE4123061946FD4000D1D40E /* sys */,
+				CE4123141946FD4000D1D40E /* x86 */,
+			);
+			path = image;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE4122F41946FD4000D1D40E /* decode */ = {
+			isa = PBXGroup;
+			children = (
+				CE4122F51946FD4000D1D40E /* decode.c */,
+				CE4122F61946FD4000D1D40E /* decode.h */,
+				CE4122F71946FD4000D1D40E /* JXRTranscode.c */,
+				CE4122F81946FD4000D1D40E /* postprocess.c */,
+				CE4122F91946FD4000D1D40E /* segdec.c */,
+				CE4122FA1946FD4000D1D40E /* strdec.c */,
+				CE4122FB1946FD4000D1D40E /* strdec_x86.c */,
+				CE4122FC1946FD4000D1D40E /* strInvTransform.c */,
+				CE4122FD1946FD4000D1D40E /* strPredQuantDec.c */,
+			);
+			path = decode;
+			sourceTree = "<group>";
+		};
+		CE4122FE1946FD4000D1D40E /* encode */ = {
+			isa = PBXGroup;
+			children = (
+				CE4122FF1946FD4000D1D40E /* encode.c */,
+				CE4123001946FD4000D1D40E /* encode.h */,
+				CE4123011946FD4000D1D40E /* segenc.c */,
+				CE4123021946FD4000D1D40E /* strenc.c */,
+				CE4123031946FD4000D1D40E /* strenc_x86.c */,
+				CE4123041946FD4000D1D40E /* strFwdTransform.c */,
+				CE4123051946FD4000D1D40E /* strPredQuantEnc.c */,
+			);
+			path = encode;
+			sourceTree = "<group>";
+		};
+		CE4123061946FD4000D1D40E /* sys */ = {
+			isa = PBXGroup;
+			children = (
+				CE4123071946FD4000D1D40E /* adapthuff.c */,
+				CE4123081946FD4000D1D40E /* ansi.h */,
+				CE4123091946FD4000D1D40E /* common.h */,
+				CE41230A1946FD4000D1D40E /* image.c */,
+				CE41230B1946FD4000D1D40E /* perfTimer.h */,
+				CE41230C1946FD4000D1D40E /* perfTimerANSI.c */,
+				CE41230D1946FD4000D1D40E /* strcodec.c */,
+				CE41230E1946FD4000D1D40E /* strcodec.h */,
+				CE41230F1946FD4000D1D40E /* strPredQuant.c */,
+				CE4123101946FD4000D1D40E /* strTransform.c */,
+				CE4123111946FD4000D1D40E /* strTransform.h */,
+				CE4123121946FD4000D1D40E /* windowsmediaphoto.h */,
+				CE4123131946FD4000D1D40E /* xplatform_image.h */,
+			);
+			path = sys;
+			sourceTree = "<group>";
+		};
+		CE4123141946FD4000D1D40E /* x86 */ = {
+			isa = PBXGroup;
+			children = (
+				CE4123151946FD4000D1D40E /* x86.h */,
+			);
+			path = x86;
+			sourceTree = "<group>";
+		};
+		CE4123161946FD4000D1D40E /* jxrgluelib */ = {
+			isa = PBXGroup;
+			children = (
+				CE4123171946FD4000D1D40E /* JXRGlue.c */,
+				CE4123181946FD4000D1D40E /* JXRGlue.h */,
+				CE4123191946FD4000D1D40E /* JXRGlueJxr.c */,
+				CE41231A1946FD4000D1D40E /* JXRGluePFC.c */,
+				CE41231B1946FD4000D1D40E /* JXRMeta.c */,
+				CE41231C1946FD4000D1D40E /* JXRMeta.h */,
+			);
+			path = jxrgluelib;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE4122C11946FC8B00D1D40E /* LibJXR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4122E51946FC8B00D1D40E /* Build configuration list for PBXNativeTarget "LibJXR" */;
+			buildPhases = (
+				CE4122BE1946FC8B00D1D40E /* Sources */,
+				CE4122BF1946FC8B00D1D40E /* Frameworks */,
+				CE4122C01946FC8B00D1D40E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibJXR;
+			productName = LibJXR;
+			productReference = CE4122C21946FC8B00D1D40E /* libLibJXR.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CE4122D11946FC8B00D1D40E /* LibJXRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4122E81946FC8B00D1D40E /* Build configuration list for PBXNativeTarget "LibJXRTests" */;
+			buildPhases = (
+				CE4122CE1946FC8B00D1D40E /* Sources */,
+				CE4122CF1946FC8B00D1D40E /* Frameworks */,
+				CE4122D01946FC8B00D1D40E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE4122D91946FC8B00D1D40E /* PBXTargetDependency */,
+			);
+			name = LibJXRTests;
+			productName = LibJXRTests;
+			productReference = CE4122D21946FC8B00D1D40E /* LibJXRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE4122BA1946FC8B00D1D40E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "L. Spiro Soft";
+			};
+			buildConfigurationList = CE4122BD1946FC8B00D1D40E /* Build configuration list for PBXProject "LibJXR" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE4122B91946FC8B00D1D40E;
+			productRefGroup = CE4122C31946FC8B00D1D40E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE4122C11946FC8B00D1D40E /* LibJXR */,
+				CE4122D11946FC8B00D1D40E /* LibJXRTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE4122D01946FC8B00D1D40E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE4122BE1946FC8B00D1D40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4123201946FD4000D1D40E /* segdec.c in Sources */,
+				CE4123331946FD4000D1D40E /* JXRGluePFC.c in Sources */,
+				CE4123271946FD4000D1D40E /* strenc.c in Sources */,
+				CE41231E1946FD4000D1D40E /* JXRTranscode.c in Sources */,
+				CE41232D1946FD4000D1D40E /* perfTimerANSI.c in Sources */,
+				CE4123341946FD4000D1D40E /* JXRMeta.c in Sources */,
+				CE41232A1946FD4000D1D40E /* strPredQuantEnc.c in Sources */,
+				CE4123261946FD4000D1D40E /* segenc.c in Sources */,
+				CE41231F1946FD4000D1D40E /* postprocess.c in Sources */,
+				CE4123281946FD4000D1D40E /* strenc_x86.c in Sources */,
+				CE4123311946FD4000D1D40E /* JXRGlue.c in Sources */,
+				CE4123241946FD4000D1D40E /* strPredQuantDec.c in Sources */,
+				CE41232F1946FD4000D1D40E /* strPredQuant.c in Sources */,
+				CE4123251946FD4000D1D40E /* encode.c in Sources */,
+				CE41232B1946FD4000D1D40E /* adapthuff.c in Sources */,
+				CE4123211946FD4000D1D40E /* strdec.c in Sources */,
+				CE41232E1946FD4000D1D40E /* strcodec.c in Sources */,
+				CE41232C1946FD4000D1D40E /* image.c in Sources */,
+				CE4123291946FD4000D1D40E /* strFwdTransform.c in Sources */,
+				CE4123301946FD4000D1D40E /* strTransform.c in Sources */,
+				CE41231D1946FD4000D1D40E /* decode.c in Sources */,
+				CE4123221946FD4000D1D40E /* strdec_x86.c in Sources */,
+				CE4123321946FD4000D1D40E /* JXRGlueJxr.c in Sources */,
+				CE4123231946FD4000D1D40E /* strInvTransform.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4122CE1946FC8B00D1D40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE4122D91946FC8B00D1D40E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE4122C11946FC8B00D1D40E /* LibJXR */;
+			targetProxy = CE4122D81946FC8B00D1D40E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CE2C082D1B6934FB002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = "Debug Metal";
+		};
+		CE2C082E1B6934FB002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibJXR.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					DISABLE_PERF_MEASUREMENT,
+					_LIB,
+					__ANSI__,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./jxrgluelib ./image/sys";
+			};
+			name = "Debug Metal";
+		};
+		CE2C082F1B6934FB002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibJXR/LibJXR-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LibJXRTests/LibJXRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Debug Metal";
+		};
+		CE2C08301B693503002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Metal";
+		};
+		CE2C08311B693503002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibJXR.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					DISABLE_PERF_MEASUREMENT,
+					_LIB,
+					__ANSI__,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./jxrgluelib ./image/sys";
+			};
+			name = "Release Metal";
+		};
+		CE2C08321B693503002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibJXR/LibJXR-Prefix.pch";
+				INFOPLIST_FILE = "LibJXRTests/LibJXRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Release Metal";
+		};
+		CE4122E31946FC8B00D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE4122E41946FC8B00D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE4122E61946FC8B00D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibJXR.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					DISABLE_PERF_MEASUREMENT,
+					_LIB,
+					__ANSI__,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./jxrgluelib ./image/sys";
+			};
+			name = Debug;
+		};
+		CE4122E71946FC8B00D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibJXR.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					DISABLE_PERF_MEASUREMENT,
+					_LIB,
+					__ANSI__,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./jxrgluelib ./image/sys";
+			};
+			name = Release;
+		};
+		CE4122E91946FC8B00D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibJXR/LibJXR-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LibJXRTests/LibJXRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CE4122EA1946FC8B00D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibJXR/LibJXR-Prefix.pch";
+				INFOPLIST_FILE = "LibJXRTests/LibJXRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE4122BD1946FC8B00D1D40E /* Build configuration list for PBXProject "LibJXR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4122E31946FC8B00D1D40E /* Debug */,
+				CE2C082D1B6934FB002ACFA8 /* Debug Metal */,
+				CE4122E41946FC8B00D1D40E /* Release */,
+				CE2C08301B693503002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4122E51946FC8B00D1D40E /* Build configuration list for PBXNativeTarget "LibJXR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4122E61946FC8B00D1D40E /* Debug */,
+				CE2C082E1B6934FB002ACFA8 /* Debug Metal */,
+				CE4122E71946FC8B00D1D40E /* Release */,
+				CE2C08311B693503002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4122E81946FC8B00D1D40E /* Build configuration list for PBXNativeTarget "LibJXRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4122E91946FC8B00D1D40E /* Debug */,
+				CE2C082F1B6934FB002ACFA8 /* Debug Metal */,
+				CE4122EA1946FC8B00D1D40E /* Release */,
+				CE2C08321B693503002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE4122BA1946FC8B00D1D40E /* Project object */;
+}

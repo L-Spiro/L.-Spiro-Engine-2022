@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Allocators">
+      <UniqueIdentifier>{ede894f7-13c0-4772-9674-e5a58f480a90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OSHeap">
+      <UniqueIdentifier>{db647d6a-9294-4b14-9139-37a915cb0637}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Allocators">
+      <UniqueIdentifier>{59d7bd0b-42e1-4631-a9f3-c82d7bcb90ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OSHeap">
+      <UniqueIdentifier>{bddbc3dd-cc20-42bd-8478-646e075513ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\LSAMemLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Allocators\LSASmallAllocator.cpp">
+      <Filter>Source Files\Allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Allocators\LSAStackAllocator.cpp">
+      <Filter>Source Files\Allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Allocators\LSAStdAllocator.cpp">
+      <Filter>Source Files\Allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Allocators\LSAStdAllocatorHeap.cpp">
+      <Filter>Source Files\Allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OSHeap\LSAOsHeap.cpp">
+      <Filter>Source Files\OSHeap</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\LSAMemLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Allocators\LSAFixedExternAllocator.h">
+      <Filter>Header Files\Allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Allocators\LSASmallAllocator.h">
+      <Filter>Header Files\Allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Allocators\LSAStackAllocator.h">
+      <Filter>Header Files\Allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Allocators\LSAStdAllocator.h">
+      <Filter>Header Files\Allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Allocators\LSAStdAllocatorHeap.h">
+      <Filter>Header Files\Allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OSHeap\LSAOsHeap.h">
+      <Filter>Header Files\OSHeap</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

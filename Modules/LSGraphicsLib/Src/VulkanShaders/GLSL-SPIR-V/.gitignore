@@ -1,0 +1,9 @@
+*.o
+*.a
+*.so
+*.exe
+tags
+build/
+Test/localResults/
+Test/multiThread.out
+Test/singleThread.out

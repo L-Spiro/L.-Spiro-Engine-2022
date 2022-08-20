@@ -1,0 +1,116 @@
+#ifndef LSD_LIGHT_ARGS
+#define LSD_LIGHT_ARGS
+
+#include "LSDFresnel.lssl"
+#include "LSDSqr.lssl"
+
+struct DEF_LIGHT_ARGS {
+	vec3			vLightDir;
+	vec3			vLightPos;
+	vec4			vLightDiffuse;
+	vec3			vLightHalfVector;
+	vec3			vView;
+	vec3			vNormal;
+	float			fLdotN;
+	float			fLdotV;
+	float			fVdotN;
+	float			fNdotH;
+	float			fLdotH;
+	float			fVdotH;
+	float			fViewFresnel;
+	float			fDistance;
+	float			fSize;
+	
+	float			fShininess;
+	float			fRoughness;
+	float			fRoughness2;
+	float			fSpecReflectance;
+	vec4			vAshikFactors;
+};
+
+void SetLightArgsDir( inout DEF_LIGHT_ARGS _dlaArgs, in vec3 _vLightDir, in vec4 _vLightColor, in vec3 _vNormal ) {
+	_dlaArgs.vLightDir = _vLightDir;
+	_dlaArgs.vLightDiffuse = _vLightColor;
+	
+	_dlaArgs.fLdotN = saturate( dot( _dlaArgs.vLightDir, _vNormal ) );
+	_dlaArgs.fLdotV = saturate( dot( _dlaArgs.vLightDir, _dlaArgs.vView ) );
+	_dlaArgs.vLightHalfVector = normalize( _dlaArgs.vLightDir + _dlaArgs.vView );
+	_dlaArgs.fLdotH = _dlaArgs.fVdotH = saturate( dot( _dlaArgs.vLightDir, _dlaArgs.vLightHalfVector ) );
+	_dlaArgs.fNdotH = saturate( dot( _vNormal, _dlaArgs.vLightHalfVector ) );
+	//_dlaArgs.fVdotH = saturate( dot( _dlaArgs.vView, _dlaArgs.vLightHalfVector ) );
+}
+
+void SetLightArgsPoint( inout DEF_LIGHT_ARGS _dlaArgs, in vec3 _vLightPos, in vec4 _vLightColor, in float _fLightSize, in vec3 _vPos, in vec3 _vNormal ) {
+	vec3 vDir = _vLightPos - _vPos;
+	vec3 vDirNorm = normalize( vDir );
+	SetLightArgsDir( _dlaArgs, vDirNorm, _vLightColor, _vNormal );
+	
+	_dlaArgs.fDistance = length( vDir );
+	_dlaArgs.vLightPos = _vLightPos;
+	_dlaArgs.fSize = _fLightSize;
+}
+
+float Falloff( in float _fDistance, in float _fSize ) {
+#if 0
+	float fFalloff = 0;
+	//if ( _fDistance < _fSize ) {
+		float fDistOverRadius = _fDistance / _fSize;
+		float fDistOverRadius2 = Sqr( fDistOverRadius );
+		float fDistOverRadius4 = Sqr( fDistOverRadius2 );
+		fFalloff = Sqr( saturate( 1.0 - fDistOverRadius4 ) );
+		fFalloff /= Sqr( _fDistance ) + 1.0;
+	//}
+#elif 1
+	float fFalloff = max( 1.0 / Sqr( _fDistance ) - 1.0 / Sqr( _fSize ), 0.0 );
+#else
+	float fFalloff = 1.0 / Sqr( _fDistance );
+#endif
+	return fFalloff;
+}
+
+void LambertDiffuse( in DEF_LIGHT_ARGS _dlaArgs, out vec4 _vDiffuse ) {
+	_vDiffuse = _dlaArgs.fLdotN * _dlaArgs.vLightDiffuse;
+}
+
+void BurleyDiffuse( in DEF_LIGHT_ARGS _dlaArgs, out vec4 _vDiffuse ) {
+	float fF = (2.0 * Sqr( _dlaArgs.fLdotH ) * _dlaArgs.fRoughness) - 0.5;
+	float fL = (1.0 + fF * Pow5( 1.0 - _dlaArgs.fLdotN ));
+	float fV = (1.0 + fF * Pow5( 1.0 - _dlaArgs.fVdotN ));
+	_vDiffuse = (fL * fV) * _dlaArgs.fLdotN * _dlaArgs.vLightDiffuse;
+}
+
+void DefaultLightParms( inout DEF_LIGHT_ARGS _dlaArgs, vec3 _vViewPos, vec3 _vNormal, float _fPower, vec4 _vRoughnessFactors, vec4 _vAshikFactors ) {
+	_dlaArgs.vLightPos = vec3( 0.0, 0.0, 0.0 );
+	_dlaArgs.fDistance = 0.0;
+	_dlaArgs.fSize = 0.0;
+	_dlaArgs.vView = -normalize( _vViewPos );
+#ifdef LSE_NORMALS
+	_dlaArgs.vNormal = _vNormal;
+#else
+	_dlaArgs.vNormal = vec3( 0.0, 0.0, 1.0 );
+#endif	// #ifdef LSE_NORMALS
+	_dlaArgs.fVdotN = saturate( dot( _dlaArgs.vView, _dlaArgs.vNormal ) );
+	_dlaArgs.fViewFresnel = SchlickFresnel_SG( 0.0, _dlaArgs.fVdotN );
+	//_dlaArgs.fViewFresnel = (1.0 - _dlaArgs.fVdotN);// + SchlickFresnel_SG( 0.0, _dlaArgs.fVdotN );
+	_dlaArgs.fShininess = _fPower;
+	_dlaArgs.fRoughness = _vRoughnessFactors.x;
+	_dlaArgs.fRoughness2 = _vRoughnessFactors.z;
+	
+	_dlaArgs.fSpecReflectance = _vRoughnessFactors.y;
+	_dlaArgs.vAshikFactors = _vAshikFactors;
+	
+	
+#if defined( LSE_DX11 ) || defined( LSE_OGL )
+	// Misc.
+	_dlaArgs.vLightDir = vec3( 0.0, 1.0, 0.0 );
+	_dlaArgs.vLightDiffuse = vec4( 0.0, 0.0, 0.0, 0.0 );
+	_dlaArgs.vLightHalfVector = vec3( 1.0, 0.0, 0.0 );
+	_dlaArgs.fLdotN = 0.0;
+	_dlaArgs.fLdotV = 0.0;
+	_dlaArgs.fNdotH = 0.0;
+	_dlaArgs.fLdotH = 0.0;
+	_dlaArgs.fVdotH = 0.0;
+#endif	// #if defined( LSE_DX11 ) || defined( LSE_OGL )
+}
+
+#endif	// #ifndef LSD_LIGHT_ARGS

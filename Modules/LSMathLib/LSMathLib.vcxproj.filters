@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Capsule">
+      <UniqueIdentifier>{8989dc57-6f23-42ce-9f62-9473dc325bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cylinder">
+      <UniqueIdentifier>{e8c92e56-b8bf-4528-9fca-746798350500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Fixed">
+      <UniqueIdentifier>{f27e4039-7350-42c4-a2a9-d5e5bf729c2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Float16">
+      <UniqueIdentifier>{cc62db32-dd61-4b37-9d72-103c5b9e469e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Frustum">
+      <UniqueIdentifier>{2f2b36db-061d-415c-8c69-53620e34e157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Helpers">
+      <UniqueIdentifier>{775fc791-1dee-4b43-9997-08f2e02e78d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Line">
+      <UniqueIdentifier>{157bef59-3ee9-4292-b185-185843b4d7b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Matrix">
+      <UniqueIdentifier>{05ab3327-c9bd-49b3-a874-df702f717fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Orientation">
+      <UniqueIdentifier>{b92134c6-be99-4a72-b664-25d7047ef418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Plane">
+      <UniqueIdentifier>{a32901b0-298d-4235-8a0c-ae5c513cba65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Polygon">
+      <UniqueIdentifier>{c873bab5-8061-418f-8c45-d830a9dc8c77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Quaternion">
+      <UniqueIdentifier>{4d7be0cb-3733-4254-8779-a00ee238a038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rand">
+      <UniqueIdentifier>{d24249b0-cc6f-46b2-b203-13f98d49e017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rect">
+      <UniqueIdentifier>{bb1c35d7-990d-4643-a3fa-3c5a3aba27e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sphere">
+      <UniqueIdentifier>{f2a7df0b-2ae5-4b92-82be-8599ebc5ed2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Triangle">
+      <UniqueIdentifier>{346638df-bba7-45f5-affb-6865f6fa56c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Vector">
+      <UniqueIdentifier>{6a186617-c0da-4c8f-b3ae-de7db96daa76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Capsule">
+      <UniqueIdentifier>{5baa762f-c69d-4bce-bf8f-f462f1514321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cylinder">
+      <UniqueIdentifier>{b6871f81-e877-45ed-a521-2698b41e1923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Fixed">
+      <UniqueIdentifier>{71a1454c-3e10-451f-bda1-4d2f6fee1ba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Float16">
+      <UniqueIdentifier>{31a3e299-07f4-4daa-b7d4-ceabd6207d86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Frustum">
+      <UniqueIdentifier>{50c70c68-a758-4175-96cb-3d1e996a5c7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Helpers">
+      <UniqueIdentifier>{2a588175-573b-4cac-9c5d-b1f4004a9da4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Line">
+      <UniqueIdentifier>{36cc38aa-dd37-44c1-97ae-72020672fcf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Matrix">
+      <UniqueIdentifier>{5b25d22f-d9f7-4aa7-89f0-7cf88e16e214}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Orientation">
+      <UniqueIdentifier>{8f98ae43-88ee-4dec-bd83-a1d31820ca3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Plane">
+      <UniqueIdentifier>{d80b33d5-3e0b-4b13-82a8-752a0097b1d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Polygon">
+      <UniqueIdentifier>{9cfe204e-c6b0-470a-a82e-2c6993f056aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Quaternion">
+      <UniqueIdentifier>{6cbbe68c-c2af-49e3-9be5-9af9e865049e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rand">
+      <UniqueIdentifier>{9ed30248-4452-4233-bb94-ee2510fdfb70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rect">
+      <UniqueIdentifier>{961b234f-afb8-4739-a843-f0d7d000802c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sphere">
+      <UniqueIdentifier>{48049a39-9775-4d61-8e58-958c924e29d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Triangle">
+      <UniqueIdentifier>{90685299-fb72-4818-ab7b-7c227a3bb873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vector">
+      <UniqueIdentifier>{96487b36-95d8-442f-be2e-17c399de510d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FloatX">
+      <UniqueIdentifier>{b2af3ffd-cd4f-4746-be61-b34c54a5c1ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FloatX">
+      <UniqueIdentifier>{a4e163c8-49e5-47d3-ae00-5df6d7f2523d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\LSMMathLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Capsule\LSMCapsule3.cpp">
+      <Filter>Source Files\Capsule</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Cylinder\LSMCylinder3.cpp">
+      <Filter>Source Files\Cylinder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Fixed\LSMFixed.cpp">
+      <Filter>Source Files\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Float16\LSMFloat16.cpp">
+      <Filter>Source Files\Float16</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Frustum\LSMFrustum.cpp">
+      <Filter>Source Files\Frustum</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Helpers\LSMHelpers.cpp">
+      <Filter>Source Files\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Line\LSMLine3.cpp">
+      <Filter>Source Files\Line</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Line\LSMLineSeg3.cpp">
+      <Filter>Source Files\Line</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Line\LSMRay3.cpp">
+      <Filter>Source Files\Line</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Matrix\LSMMatrix2x2.cpp">
+      <Filter>Source Files\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Matrix\LSMMatrix3x3.cpp">
+      <Filter>Source Files\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Matrix\LSMMatrix3x3Base.cpp">
+      <Filter>Source Files\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Matrix\LSMMatrix4x4.cpp">
+      <Filter>Source Files\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Matrix\LSMMatrix4x4_ARM.cpp">
+      <Filter>Source Files\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Matrix\LSMMatrix4x4_SSE3.cpp">
+      <Filter>Source Files\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Matrix\LSMMatrix4x4Base.cpp">
+      <Filter>Source Files\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Orientation\LSMEulerOrientation.cpp">
+      <Filter>Source Files\Orientation</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Orientation\LSMOrientation.cpp">
+      <Filter>Source Files\Orientation</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Orientation\LSMOrientation2d.cpp">
+      <Filter>Source Files\Orientation</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Plane\LSMPlane3.cpp">
+      <Filter>Source Files\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Plane\LSMPlane3Base.cpp">
+      <Filter>Source Files\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Quaternion\LSMQuaternion.cpp">
+      <Filter>Source Files\Quaternion</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Rand\LSMRand.cpp">
+      <Filter>Source Files\Rand</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Rect\LSMRect2.cpp">
+      <Filter>Source Files\Rect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Rect\LSMRect3.cpp">
+      <Filter>Source Files\Rect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Sphere\LSMSphere.cpp">
+      <Filter>Source Files\Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Triangle\LSMTriangle3.cpp">
+      <Filter>Source Files\Triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Triangle\LSMTriangle3Ex.cpp">
+      <Filter>Source Files\Triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Vector\LSMVector2.cpp">
+      <Filter>Source Files\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Vector\LSMVector2Base.cpp">
+      <Filter>Source Files\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Vector\LSMVector3.cpp">
+      <Filter>Source Files\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Vector\LSMVector3Base.cpp">
+      <Filter>Source Files\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Vector\LSMVector4.cpp">
+      <Filter>Source Files\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Vector\LSMVector4Base.cpp">
+      <Filter>Source Files\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Triangle\LSMTriangle3I.cpp">
+      <Filter>Header Files\Triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\FloatX\LSMFloatX.cpp">
+      <Filter>Source Files\FloatX</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\Triangle\LSMTriangle3.h">
+      <Filter>Source Files\Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LSMConstants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LSMMathLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Capsule\LSMCapsule3.h">
+      <Filter>Header Files\Capsule</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Cylinder\LSMCylinder3.h">
+      <Filter>Header Files\Cylinder</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Fixed\LSMFixed.h">
+      <Filter>Header Files\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Float16\LSMFloat16.h">
+      <Filter>Header Files\Float16</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Frustum\LSMFrustum.h">
+      <Filter>Header Files\Frustum</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Helpers\LSMHelpers.h">
+      <Filter>Header Files\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Line\LSMLine3.h">
+      <Filter>Header Files\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Line\LSMLineSeg3.h">
+      <Filter>Header Files\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Line\LSMLineSeg3Base.h">
+      <Filter>Header Files\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Line\LSMRay3.h">
+      <Filter>Header Files\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Line\LSMRay3Base.h">
+      <Filter>Header Files\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Matrix\LSMMatrix2x2.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Matrix\LSMMatrix2x2Base.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Matrix\LSMMatrix3x3.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Matrix\LSMMatrix3x3Base.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Matrix\LSMMatrix4x4.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Matrix\LSMMatrix4x4_ARM.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Matrix\LSMMatrix4x4_SSE3.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Matrix\LSMMatrix4x4Base.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Orientation\LSMEulerOrientation.h">
+      <Filter>Header Files\Orientation</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Orientation\LSMOrientation.h">
+      <Filter>Header Files\Orientation</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Orientation\LSMOrientation2d.h">
+      <Filter>Header Files\Orientation</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Plane\LSMPlane3.h">
+      <Filter>Header Files\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Plane\LSMPlane3Base.h">
+      <Filter>Header Files\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Quaternion\LSMQuaternion.h">
+      <Filter>Header Files\Quaternion</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Rand\LSMRand.h">
+      <Filter>Header Files\Rand</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Rect\LSMRect2.h">
+      <Filter>Header Files\Rect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Rect\LSMRect3.h">
+      <Filter>Header Files\Rect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Sphere\LSMSphere.h">
+      <Filter>Header Files\Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Triangle\LSMTriangle3Ex.h">
+      <Filter>Header Files\Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Triangle\LSMTriangle3I.h">
+      <Filter>Header Files\Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSMF16Vector2.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSMVector2.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSMVector2Base.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSMVector3.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSMVector3Base.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSMVector4.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSMVector4Base.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\FloatX\LSMFloatX.h">
+      <Filter>Header Files\FloatX</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

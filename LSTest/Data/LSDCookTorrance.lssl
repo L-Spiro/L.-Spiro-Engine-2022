@@ -1,0 +1,57 @@
+#ifndef LSD_COOK_TORRANCE
+#define LSD_COOK_TORRANCE
+
+#include "LSDDTerms.lssl"
+#include "LSDFresnel.lssl"
+#include "LSDGTerms.lssl"
+#include "LSDLightArgs.lssl"
+#include "LSDPi.lssl"
+#include "LSDSqr.lssl"
+
+float CookTorranceSpecular( in DEF_LIGHT_ARGS _dlaArgs, out vec4 _vSpecular ) {
+#ifdef LSE_SPECULAR
+	float fD = BeckmannD( _dlaArgs.fNdotH, _dlaArgs.fRoughness2 );				// Original.
+	float fG = CookTorranceG( _dlaArgs.fVdotN, _dlaArgs.fLdotN, _dlaArgs.fVdotH, _dlaArgs.fNdotH );
+	float fF = SchlickFresnel( _dlaArgs.fSpecReflectance, _dlaArgs.fVdotH );
+
+	float fS = fD * fG * fF;
+	fS = max( fS / (4.0 * _dlaArgs.fVdotN * _dlaArgs.fLdotN), 0.0 );
+	_vSpecular = _dlaArgs.fLdotN * fS * _dlaArgs.vLightDiffuse;
+	
+	return saturate( (1.0 - SchlickFresnel( _dlaArgs.fSpecReflectance, _dlaArgs.fLdotN )) );
+#else
+	_vSpecular = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	return 1.0;
+#endif	// #ifdef LSE_SPECULAR
+}
+
+void CookTorranceDiffuse( in DEF_LIGHT_ARGS _dlaArgs, out vec4 _vDiffuse ) {
+	LambertDiffuse( _dlaArgs, _vDiffuse );
+}
+
+void CookTorranceDir( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	// Diffuse normalization (division by PI) done once outside of the BRDF's.
+	vec4 vDiffuse;
+	vec4 vSpecular;
+	float fDFactor = CookTorranceSpecular( _dlaArgs, vSpecular );
+	CookTorranceDiffuse( _dlaArgs, vDiffuse );
+	vDiffuse *= fDFactor;
+	
+	_vDiffuse += vDiffuse;
+	_vSpecular += vSpecular;
+}
+
+void CookTorrancePoint( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	vec4 vDiffuseContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+	vec4 vSpecularContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+	
+	CookTorranceDir( _dlaArgs, vDiffuseContrib, vSpecularContrib );
+	float fFalloff = Falloff( _dlaArgs.fDistance, _dlaArgs.fSize );
+	
+	
+	_vDiffuse += vDiffuseContrib * fFalloff;
+	_vSpecular += vSpecularContrib * fFalloff;
+}
+
+#endif	// #ifndef LSD_COOK_TORRANCE

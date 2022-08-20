@@ -1,0 +1,1 @@
+copy /B *.lsm "../../LSTest/Data/" /Y

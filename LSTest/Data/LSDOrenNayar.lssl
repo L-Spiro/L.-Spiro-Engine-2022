@@ -1,0 +1,130 @@
+#ifndef LSD_OREN_NAYAR
+#define LSD_OREN_NAYAR
+
+#include "LSDAshikhminShirley.lssl"
+#include "LSDBlinnPhong.lssl"
+#include "LSDGgx.lssl"
+#include "LSDLightArgs.lssl"
+
+float OrenNayarSpecular( inout DEF_LIGHT_ARGS _dlaArgs, out vec4 _vSpecular ) {
+	_vSpecular = vec4( 0.0, 0.0, 0.0, 0.0 );
+	
+	return 1.0;
+}
+
+void OrenNayarDiffuse( in DEF_LIGHT_ARGS _dlaArgs, out vec4 _vDiffuse ) {
+	float fS = _dlaArgs.fShininess;
+	float fF = _dlaArgs.fLdotN * (1.0 - (1.0 / (2.0 + 0.65 * fS)));
+	float fG = (1.0 / (2.22222222 + 0.1 * fS)) * (_dlaArgs.fLdotV - _dlaArgs.fVdotN * _dlaArgs.fLdotN);
+	fG *= (_dlaArgs.fLdotV - _dlaArgs.fVdotN * _dlaArgs.fLdotN >= 0.0) ?
+		min( 1.0, _dlaArgs.fLdotN / _dlaArgs.fVdotN ) :
+		_dlaArgs.fLdotN;
+
+	_vDiffuse = (max( fF + fG, 0.0 ) * _dlaArgs.vLightDiffuse);
+}
+
+// *********************
+// Oren-Nayar.
+// *********************
+void OrenNayarDir( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	// Diffuse normalization (division by PI) done once outside of the BRDF's.
+	vec4 vDiffuse;
+	OrenNayarDiffuse( _dlaArgs, vDiffuse );
+
+	_vDiffuse += vDiffuse;
+}
+
+void OrenNayarPoint( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	vec4 vDiffuseContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+	vec4 vSpecularContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	OrenNayarDir( _dlaArgs, vDiffuseContrib, vSpecularContrib );
+	float fFalloff = Falloff( _dlaArgs.fDistance, _dlaArgs.fSize );
+
+
+	_vDiffuse += vDiffuseContrib * fFalloff;
+}
+
+// *********************
+// Oren-Nayar/Blinn-Phong.
+// *********************
+void OrenNayarBlinnPhongDir( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	// Diffuse normalization (division by PI) done once outside of the BRDF's.
+	vec4 vDiffuse;
+	vec4 vSpecular;
+	float fDFactor = BlinnPhongSpecular( _dlaArgs, vSpecular );
+	OrenNayarDiffuse( _dlaArgs, vDiffuse );
+	vDiffuse *= fDFactor;
+
+	_vDiffuse += vDiffuse;
+	_vSpecular += vSpecular;
+}
+
+void OrenNayarBlinnPhongPoint( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	vec4 vDiffuseContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+	vec4 vSpecularContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	OrenNayarBlinnPhongDir( _dlaArgs, vDiffuseContrib, vSpecularContrib );
+	float fFalloff = Falloff( _dlaArgs.fDistance, _dlaArgs.fSize );
+
+
+	_vDiffuse += vDiffuseContrib * fFalloff;
+	_vSpecular += vSpecularContrib * fFalloff;
+}
+
+// *********************
+// Oren-Nayar/Epic Shading.
+// *********************
+void OrenNayarEpicShadingDir( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	// Diffuse normalization (division by PI) done once outside of the BRDF's.
+	vec4 vDiffuse;
+	vec4 vSpecular;
+	float fDFactor = EpicShadingSpecular( _dlaArgs, vSpecular );
+	OrenNayarDiffuse( _dlaArgs, vDiffuse );
+	vDiffuse *= fDFactor;
+
+	_vDiffuse += vDiffuse;
+	_vSpecular += vSpecular;
+}
+
+void OrenNayarEpicShadingPoint( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	vec4 vDiffuseContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+	vec4 vSpecularContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	OrenNayarEpicShadingDir( _dlaArgs, vDiffuseContrib, vSpecularContrib );
+	float fFalloff = Falloff( _dlaArgs.fDistance, _dlaArgs.fSize );
+
+
+	_vDiffuse += vDiffuseContrib * fFalloff;
+	_vSpecular += vSpecularContrib * fFalloff;
+}
+
+
+// *********************
+// Oren-Nayar/Ashikhmin-Shirley Shading.
+// *********************
+void OrenNayarAshikhminShirleyDir( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	// Diffuse normalization (division by PI) done once outside of the BRDF's.
+	vec4 vDiffuse;
+	vec4 vSpecular;
+	float fDFactor = AshikhminShirleySpecular( _dlaArgs, vSpecular );
+	OrenNayarDiffuse( _dlaArgs, vDiffuse );
+	vDiffuse *= fDFactor;
+
+	_vDiffuse += vDiffuse;
+	_vSpecular += vSpecular;
+}
+
+void OrenNayarAshikhminShirleyPoint( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	vec4 vDiffuseContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+	vec4 vSpecularContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	OrenNayarAshikhminShirleyDir( _dlaArgs, vDiffuseContrib, vSpecularContrib );
+	float fFalloff = Falloff( _dlaArgs.fDistance, _dlaArgs.fSize );
+
+
+	_vDiffuse += vDiffuseContrib * fFalloff;
+	_vSpecular += vSpecularContrib * fFalloff;
+}
+
+#endif	// #ifndef LSD_OREN_NAYAR

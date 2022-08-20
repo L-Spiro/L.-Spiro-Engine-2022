@@ -1,0 +1,6 @@
+#ifndef LSD_PI
+#define LSD_PI
+
+#define PI	3.1415926535897932384626433832795
+
+#endif	// #ifndef LSD_PI

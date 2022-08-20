@@ -1,0 +1,56 @@
+#ifndef LSD_BLINN_PHONG
+#define LSD_BLINN_PHONG
+
+#include "LSDFresnel.lssl"
+#include "LSDLightArgs.lssl"
+#include "LSDPi.lssl"
+#include "LSDSqr.lssl"
+
+float BlinnPhongSpecular( in DEF_LIGHT_ARGS _dlaArgs, out vec4 _vSpecular ) {
+#ifdef LSE_SPECULAR
+	float fS = 0.0397436 * _dlaArgs.fShininess + 0.0856832;
+	
+	float fSpec = SchlickFresnel( _dlaArgs.fSpecReflectance, _dlaArgs.fVdotH ) * pow( _dlaArgs.fNdotH, _dlaArgs.fShininess );
+	fSpec /= max( _dlaArgs.fLdotN, _dlaArgs.fVdotN );
+	_vSpecular = max( fSpec * fS, 0.0 ) * _dlaArgs.vLightDiffuse * _dlaArgs.fLdotN;
+	
+	float fD = saturate( (1.0 - SchlickFresnel( _dlaArgs.fSpecReflectance, _dlaArgs.fLdotN )) );
+	//float fD = 1.0 - _dlaArgs.fSpecReflectance;
+	return fD;
+#else
+	_vSpecular = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	return 1.0;
+#endif	// #ifdef LSE_SPECULAR
+}
+
+void BlinnPhongDiffuse( in DEF_LIGHT_ARGS _dlaArgs, out vec4 _vDiffuse ) {
+	LambertDiffuse( _dlaArgs, _vDiffuse );
+	//BurleyDiffuse( _dlaArgs, _vDiffuse );
+}
+
+void BlinnPhongDir( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	// Diffuse normalization (division by PI) done once outside of the BRDF's.
+	vec4 vDiffuse;
+	vec4 vSpecular;
+	float fDFactor = BlinnPhongSpecular( _dlaArgs, vSpecular );
+	BlinnPhongDiffuse( _dlaArgs, vDiffuse );
+	vDiffuse *= fDFactor;
+	
+	_vDiffuse += vDiffuse;
+	_vSpecular += vSpecular;
+}
+
+void BlinnPhongPoint( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	vec4 vDiffuseContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+	vec4 vSpecularContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	BlinnPhongDir( _dlaArgs, vDiffuseContrib, vSpecularContrib );
+	float fFalloff = Falloff( _dlaArgs.fDistance, _dlaArgs.fSize );
+
+
+	_vDiffuse += vDiffuseContrib * fFalloff;
+	_vSpecular += vSpecularContrib * fFalloff;
+}
+
+#endif	// #ifndef LSD_BLINN_PHONG

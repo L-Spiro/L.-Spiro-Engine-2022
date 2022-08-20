@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE412356194702E100D1D40E /* libLibOpenJPEG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE41233E194702E100D1D40E /* libLibOpenJPEG.a */; };
+		CE412396194703FA00D1D40E /* bio.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412383194703FA00D1D40E /* bio.c */; };
+		CE412397194703FA00D1D40E /* cio.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412384194703FA00D1D40E /* cio.c */; };
+		CE412398194703FA00D1D40E /* dwt.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412385194703FA00D1D40E /* dwt.c */; };
+		CE412399194703FA00D1D40E /* event.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412386194703FA00D1D40E /* event.c */; };
+		CE41239A194703FA00D1D40E /* function_list.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412387194703FA00D1D40E /* function_list.c */; };
+		CE41239B194703FA00D1D40E /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412388194703FA00D1D40E /* image.c */; };
+		CE41239C194703FA00D1D40E /* invert.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412389194703FA00D1D40E /* invert.c */; };
+		CE41239D194703FA00D1D40E /* j2k.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41238A194703FA00D1D40E /* j2k.c */; };
+		CE41239E194703FA00D1D40E /* jp2.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41238B194703FA00D1D40E /* jp2.c */; };
+		CE41239F194703FA00D1D40E /* mct.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41238C194703FA00D1D40E /* mct.c */; };
+		CE4123A0194703FA00D1D40E /* mqc.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41238D194703FA00D1D40E /* mqc.c */; };
+		CE4123A1194703FA00D1D40E /* openjpeg.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41238E194703FA00D1D40E /* openjpeg.c */; };
+		CE4123A2194703FA00D1D40E /* opj_clock.c in Sources */ = {isa = PBXBuildFile; fileRef = CE41238F194703FA00D1D40E /* opj_clock.c */; };
+		CE4123A3194703FA00D1D40E /* pi.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412390194703FA00D1D40E /* pi.c */; };
+		CE4123A4194703FA00D1D40E /* raw.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412391194703FA00D1D40E /* raw.c */; };
+		CE4123A5194703FA00D1D40E /* t1.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412392194703FA00D1D40E /* t1.c */; };
+		CE4123A6194703FA00D1D40E /* t2.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412393194703FA00D1D40E /* t2.c */; };
+		CE4123A7194703FA00D1D40E /* tcd.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412394194703FA00D1D40E /* tcd.c */; };
+		CE4123A8194703FA00D1D40E /* tgt.c in Sources */ = {isa = PBXBuildFile; fileRef = CE412395194703FA00D1D40E /* tgt.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE412354194702E100D1D40E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE412336194702E100D1D40E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE41233D194702E100D1D40E;
+			remoteInfo = LibOpenJPEG;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE41233C194702E100D1D40E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE41233E194702E100D1D40E /* libLibOpenJPEG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLibOpenJPEG.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE41234E194702E100D1D40E /* LibOpenJPEGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibOpenJPEGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4123671947035900D1D40E /* bio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bio.h; sourceTree = SOURCE_ROOT; };
+		CE4123681947035900D1D40E /* cio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cio.h; sourceTree = SOURCE_ROOT; };
+		CE412369194703B500D1D40E /* dwt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dwt.h; sourceTree = SOURCE_ROOT; };
+		CE41236A194703B500D1D40E /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = SOURCE_ROOT; };
+		CE41236B194703B500D1D40E /* function_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = function_list.h; sourceTree = SOURCE_ROOT; };
+		CE41236C194703B500D1D40E /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image.h; sourceTree = SOURCE_ROOT; };
+		CE41236D194703B500D1D40E /* indexbox_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = indexbox_manager.h; sourceTree = SOURCE_ROOT; };
+		CE41236E194703B500D1D40E /* invert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = invert.h; sourceTree = SOURCE_ROOT; };
+		CE41236F194703B500D1D40E /* j2k.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = j2k.h; sourceTree = SOURCE_ROOT; };
+		CE412370194703B500D1D40E /* jp2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp2.h; sourceTree = SOURCE_ROOT; };
+		CE412371194703B500D1D40E /* mct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mct.h; sourceTree = SOURCE_ROOT; };
+		CE412372194703B500D1D40E /* mqc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mqc.h; sourceTree = SOURCE_ROOT; };
+		CE412373194703B500D1D40E /* openjpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openjpeg.h; sourceTree = SOURCE_ROOT; };
+		CE412374194703B500D1D40E /* opj_clock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opj_clock.h; sourceTree = SOURCE_ROOT; };
+		CE412375194703B500D1D40E /* opj_config_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opj_config_private.h; sourceTree = SOURCE_ROOT; };
+		CE412376194703B500D1D40E /* opj_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opj_config.h; sourceTree = SOURCE_ROOT; };
+		CE412377194703B500D1D40E /* opj_includes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opj_includes.h; sourceTree = SOURCE_ROOT; };
+		CE412378194703B500D1D40E /* opj_intmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opj_intmath.h; sourceTree = SOURCE_ROOT; };
+		CE412379194703B500D1D40E /* opj_inttypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opj_inttypes.h; sourceTree = SOURCE_ROOT; };
+		CE41237A194703B500D1D40E /* opj_malloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opj_malloc.h; sourceTree = SOURCE_ROOT; };
+		CE41237B194703B500D1D40E /* opj_stdint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opj_stdint.h; sourceTree = SOURCE_ROOT; };
+		CE41237C194703B500D1D40E /* pi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pi.h; sourceTree = SOURCE_ROOT; };
+		CE41237D194703B500D1D40E /* raw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = raw.h; sourceTree = SOURCE_ROOT; };
+		CE41237E194703B500D1D40E /* t1_luts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = t1_luts.h; sourceTree = SOURCE_ROOT; };
+		CE41237F194703B500D1D40E /* t1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = t1.h; sourceTree = SOURCE_ROOT; };
+		CE412380194703B500D1D40E /* t2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = t2.h; sourceTree = SOURCE_ROOT; };
+		CE412381194703B500D1D40E /* tcd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tcd.h; sourceTree = SOURCE_ROOT; };
+		CE412382194703B500D1D40E /* tgt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tgt.h; sourceTree = SOURCE_ROOT; };
+		CE412383194703FA00D1D40E /* bio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bio.c; sourceTree = SOURCE_ROOT; };
+		CE412384194703FA00D1D40E /* cio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cio.c; sourceTree = SOURCE_ROOT; };
+		CE412385194703FA00D1D40E /* dwt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dwt.c; sourceTree = SOURCE_ROOT; };
+		CE412386194703FA00D1D40E /* event.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = event.c; sourceTree = SOURCE_ROOT; };
+		CE412387194703FA00D1D40E /* function_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = function_list.c; sourceTree = SOURCE_ROOT; };
+		CE412388194703FA00D1D40E /* image.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image.c; sourceTree = SOURCE_ROOT; };
+		CE412389194703FA00D1D40E /* invert.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = invert.c; sourceTree = SOURCE_ROOT; };
+		CE41238A194703FA00D1D40E /* j2k.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = j2k.c; sourceTree = SOURCE_ROOT; };
+		CE41238B194703FA00D1D40E /* jp2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jp2.c; sourceTree = SOURCE_ROOT; };
+		CE41238C194703FA00D1D40E /* mct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mct.c; sourceTree = SOURCE_ROOT; };
+		CE41238D194703FA00D1D40E /* mqc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mqc.c; sourceTree = SOURCE_ROOT; };
+		CE41238E194703FA00D1D40E /* openjpeg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = openjpeg.c; sourceTree = SOURCE_ROOT; };
+		CE41238F194703FA00D1D40E /* opj_clock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opj_clock.c; sourceTree = SOURCE_ROOT; };
+		CE412390194703FA00D1D40E /* pi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pi.c; sourceTree = SOURCE_ROOT; };
+		CE412391194703FA00D1D40E /* raw.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = raw.c; sourceTree = SOURCE_ROOT; };
+		CE412392194703FA00D1D40E /* t1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t1.c; sourceTree = SOURCE_ROOT; };
+		CE412393194703FA00D1D40E /* t2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = t2.c; sourceTree = SOURCE_ROOT; };
+		CE412394194703FA00D1D40E /* tcd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tcd.c; sourceTree = SOURCE_ROOT; };
+		CE412395194703FA00D1D40E /* tgt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tgt.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE41233B194702E100D1D40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE41234B194702E100D1D40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE412356194702E100D1D40E /* libLibOpenJPEG.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE412335194702E100D1D40E = {
+			isa = PBXGroup;
+			children = (
+				CE412343194702E100D1D40E /* LibOpenJPEG */,
+				CE412340194702E100D1D40E /* Frameworks */,
+				CE41233F194702E100D1D40E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE41233F194702E100D1D40E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE41233E194702E100D1D40E /* libLibOpenJPEG.a */,
+				CE41234E194702E100D1D40E /* LibOpenJPEGTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE412340194702E100D1D40E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE412343194702E100D1D40E /* LibOpenJPEG */ = {
+			isa = PBXGroup;
+			children = (
+				CE412383194703FA00D1D40E /* bio.c */,
+				CE412384194703FA00D1D40E /* cio.c */,
+				CE412385194703FA00D1D40E /* dwt.c */,
+				CE412386194703FA00D1D40E /* event.c */,
+				CE412387194703FA00D1D40E /* function_list.c */,
+				CE412388194703FA00D1D40E /* image.c */,
+				CE412389194703FA00D1D40E /* invert.c */,
+				CE41238A194703FA00D1D40E /* j2k.c */,
+				CE41238B194703FA00D1D40E /* jp2.c */,
+				CE41238C194703FA00D1D40E /* mct.c */,
+				CE41238D194703FA00D1D40E /* mqc.c */,
+				CE41238E194703FA00D1D40E /* openjpeg.c */,
+				CE41238F194703FA00D1D40E /* opj_clock.c */,
+				CE412390194703FA00D1D40E /* pi.c */,
+				CE412391194703FA00D1D40E /* raw.c */,
+				CE412392194703FA00D1D40E /* t1.c */,
+				CE412393194703FA00D1D40E /* t2.c */,
+				CE412394194703FA00D1D40E /* tcd.c */,
+				CE412395194703FA00D1D40E /* tgt.c */,
+				CE4123671947035900D1D40E /* bio.h */,
+				CE4123681947035900D1D40E /* cio.h */,
+				CE412369194703B500D1D40E /* dwt.h */,
+				CE41236A194703B500D1D40E /* event.h */,
+				CE41236B194703B500D1D40E /* function_list.h */,
+				CE41236C194703B500D1D40E /* image.h */,
+				CE41236D194703B500D1D40E /* indexbox_manager.h */,
+				CE41236E194703B500D1D40E /* invert.h */,
+				CE41236F194703B500D1D40E /* j2k.h */,
+				CE412370194703B500D1D40E /* jp2.h */,
+				CE412371194703B500D1D40E /* mct.h */,
+				CE412372194703B500D1D40E /* mqc.h */,
+				CE412373194703B500D1D40E /* openjpeg.h */,
+				CE412374194703B500D1D40E /* opj_clock.h */,
+				CE412375194703B500D1D40E /* opj_config_private.h */,
+				CE412376194703B500D1D40E /* opj_config.h */,
+				CE412377194703B500D1D40E /* opj_includes.h */,
+				CE412378194703B500D1D40E /* opj_intmath.h */,
+				CE412379194703B500D1D40E /* opj_inttypes.h */,
+				CE41237A194703B500D1D40E /* opj_malloc.h */,
+				CE41237B194703B500D1D40E /* opj_stdint.h */,
+				CE41237C194703B500D1D40E /* pi.h */,
+				CE41237D194703B500D1D40E /* raw.h */,
+				CE41237E194703B500D1D40E /* t1_luts.h */,
+				CE41237F194703B500D1D40E /* t1.h */,
+				CE412380194703B500D1D40E /* t2.h */,
+				CE412381194703B500D1D40E /* tcd.h */,
+				CE412382194703B500D1D40E /* tgt.h */,
+			);
+			path = LibOpenJPEG;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE41233D194702E100D1D40E /* LibOpenJPEG */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE412361194702E100D1D40E /* Build configuration list for PBXNativeTarget "LibOpenJPEG" */;
+			buildPhases = (
+				CE41233A194702E100D1D40E /* Sources */,
+				CE41233B194702E100D1D40E /* Frameworks */,
+				CE41233C194702E100D1D40E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibOpenJPEG;
+			productName = LibOpenJPEG;
+			productReference = CE41233E194702E100D1D40E /* libLibOpenJPEG.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CE41234D194702E100D1D40E /* LibOpenJPEGTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE412364194702E100D1D40E /* Build configuration list for PBXNativeTarget "LibOpenJPEGTests" */;
+			buildPhases = (
+				CE41234A194702E100D1D40E /* Sources */,
+				CE41234B194702E100D1D40E /* Frameworks */,
+				CE41234C194702E100D1D40E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE412355194702E100D1D40E /* PBXTargetDependency */,
+			);
+			name = LibOpenJPEGTests;
+			productName = LibOpenJPEGTests;
+			productReference = CE41234E194702E100D1D40E /* LibOpenJPEGTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE412336194702E100D1D40E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "L. Spiro Soft";
+			};
+			buildConfigurationList = CE412339194702E100D1D40E /* Build configuration list for PBXProject "LibOpenJPEG" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE412335194702E100D1D40E;
+			productRefGroup = CE41233F194702E100D1D40E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE41233D194702E100D1D40E /* LibOpenJPEG */,
+				CE41234D194702E100D1D40E /* LibOpenJPEGTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE41234C194702E100D1D40E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE41233A194702E100D1D40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4123A6194703FA00D1D40E /* t2.c in Sources */,
+				CE4123A0194703FA00D1D40E /* mqc.c in Sources */,
+				CE412398194703FA00D1D40E /* dwt.c in Sources */,
+				CE4123A7194703FA00D1D40E /* tcd.c in Sources */,
+				CE412396194703FA00D1D40E /* bio.c in Sources */,
+				CE4123A1194703FA00D1D40E /* openjpeg.c in Sources */,
+				CE4123A3194703FA00D1D40E /* pi.c in Sources */,
+				CE412399194703FA00D1D40E /* event.c in Sources */,
+				CE4123A4194703FA00D1D40E /* raw.c in Sources */,
+				CE41239B194703FA00D1D40E /* image.c in Sources */,
+				CE41239C194703FA00D1D40E /* invert.c in Sources */,
+				CE41239D194703FA00D1D40E /* j2k.c in Sources */,
+				CE4123A5194703FA00D1D40E /* t1.c in Sources */,
+				CE41239E194703FA00D1D40E /* jp2.c in Sources */,
+				CE412397194703FA00D1D40E /* cio.c in Sources */,
+				CE4123A2194703FA00D1D40E /* opj_clock.c in Sources */,
+				CE4123A8194703FA00D1D40E /* tgt.c in Sources */,
+				CE41239F194703FA00D1D40E /* mct.c in Sources */,
+				CE41239A194703FA00D1D40E /* function_list.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE41234A194702E100D1D40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE412355194702E100D1D40E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE41233D194702E100D1D40E /* LibOpenJPEG */;
+			targetProxy = CE412354194702E100D1D40E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CE2C07FD1B692F9F002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = "Debug Metal";
+		};
+		CE2C07FE1B692F9F002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibOpenJPEG.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					_LIB,
+					OPJ_STATIC,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = "Debug Metal";
+		};
+		CE2C07FF1B692F9F002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibOpenJPEG/LibOpenJPEG-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LibOpenJPEGTests/LibOpenJPEGTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Debug Metal";
+		};
+		CE2C08001B692FA8002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Metal";
+		};
+		CE2C08011B692FA8002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibOpenJPEG.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					_LIB,
+					OPJ_STATIC,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = "Release Metal";
+		};
+		CE2C08021B692FA8002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibOpenJPEG/LibOpenJPEG-Prefix.pch";
+				INFOPLIST_FILE = "LibOpenJPEGTests/LibOpenJPEGTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Release Metal";
+		};
+		CE41235F194702E100D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE412360194702E100D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE412362194702E100D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibOpenJPEG.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					_LIB,
+					OPJ_STATIC,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CE412363194702E100D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/LibOpenJPEG.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					_LIB,
+					OPJ_STATIC,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CE412365194702E100D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibOpenJPEG/LibOpenJPEG-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LibOpenJPEGTests/LibOpenJPEGTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CE412366194702E100D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibOpenJPEG/LibOpenJPEG-Prefix.pch";
+				INFOPLIST_FILE = "LibOpenJPEGTests/LibOpenJPEGTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE412339194702E100D1D40E /* Build configuration list for PBXProject "LibOpenJPEG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE41235F194702E100D1D40E /* Debug */,
+				CE2C07FD1B692F9F002ACFA8 /* Debug Metal */,
+				CE412360194702E100D1D40E /* Release */,
+				CE2C08001B692FA8002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE412361194702E100D1D40E /* Build configuration list for PBXNativeTarget "LibOpenJPEG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE412362194702E100D1D40E /* Debug */,
+				CE2C07FE1B692F9F002ACFA8 /* Debug Metal */,
+				CE412363194702E100D1D40E /* Release */,
+				CE2C08011B692FA8002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE412364194702E100D1D40E /* Build configuration list for PBXNativeTarget "LibOpenJPEGTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE412365194702E100D1D40E /* Debug */,
+				CE2C07FF1B692F9F002ACFA8 /* Debug Metal */,
+				CE412366194702E100D1D40E /* Release */,
+				CE2C08021B692FA8002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE412336194702E100D1D40E /* Project object */;
+}

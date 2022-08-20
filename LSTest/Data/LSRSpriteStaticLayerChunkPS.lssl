@@ -1,0 +1,8 @@
+uniform Texture2d g_tTex2d0 : TEXUNIT0;
+uniform Sampler g_sSampler0 : TEXUNIT0;
+
+void Main( out vec4 _vOutColor : COLOR,
+	in vec4 _vInPosition : POSITION0,
+	in vec2 _vInTexCoord0 : TEXCOORD0 ) {
+	_vOutColor = tex2d( g_tTex2d0, g_sSampler0, _vInTexCoord0 );
+}

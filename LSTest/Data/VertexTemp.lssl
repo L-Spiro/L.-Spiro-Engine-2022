@@ -1,0 +1,7 @@
+// == Uniforms.
+uniform float[4][4]	g_mModelViewProjMatrix : WORLDVIEWPROJ;
+
+void Main( in vec3 _vInPos : POSITION,
+	out vec4 _vOutPos : POSITION ) {
+	_vOutPos = mul( g_mModelViewProjMatrix, vec4( _vInPos, 1.0f ) );
+}

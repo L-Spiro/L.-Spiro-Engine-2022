@@ -1,0 +1,58 @@
+#ifndef LSD_GGX
+#define LSD_GGX
+
+#include "LSDDTerms.lssl"
+#include "LSDFresnel.lssl"
+#include "LSDGTerms.lssl"
+#include "LSDLightArgs.lssl"
+#include "LSDPi.lssl"
+#include "LSDSqr.lssl"
+
+float GgxShadingSpecular( in DEF_LIGHT_ARGS _dlaArgs, out vec4 _vSpecular ) {
+#ifdef LSE_SPECULAR
+	float fD = TrowbridgeReitzD( _dlaArgs.fNdotH, _dlaArgs.fRoughness2 );
+	float fG = SmithG_GGX( _dlaArgs.fLdotN, _dlaArgs.fVdotN, _dlaArgs.fRoughness2 );
+	float fF = SchlickFresnel_SG( _dlaArgs.fSpecReflectance, _dlaArgs.fVdotH );
+
+	float fS = fD * fG * fF;
+	fS = max( fS / (4.0 * _dlaArgs.fVdotN * _dlaArgs.fLdotN), 0.0 );
+	_vSpecular = _dlaArgs.fLdotN * fS * _dlaArgs.vLightDiffuse;
+	
+	return saturate( (1.0 - SchlickFresnel_SG( _dlaArgs.fSpecReflectance, _dlaArgs.fLdotN )) );
+#else
+	_vSpecular = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	return 1.0;
+#endif	// #ifdef LSE_SPECULAR
+}
+
+void GgxShadingDiffuse( in DEF_LIGHT_ARGS _dlaArgs, out vec4 _vDiffuse ) {
+	//LambertDiffuse( _dlaArgs, _vDiffuse );
+	BurleyDiffuse( _dlaArgs, _vDiffuse );
+}
+
+void GgxShadingDir( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	// Diffuse normalization (division by PI) done once outside of the BRDF's.
+	vec4 vDiffuse;
+	vec4 vSpecular;
+	float fDFactor = GgxShadingSpecular( _dlaArgs, vSpecular );
+	GgxShadingDiffuse( _dlaArgs, vDiffuse );
+	vDiffuse *= fDFactor;
+	
+	_vDiffuse += vDiffuse;
+	_vSpecular += vSpecular;
+}
+
+void GgxShadingPoint( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	vec4 vDiffuseContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+	vec4 vSpecularContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+	
+	GgxShadingDir( _dlaArgs, vDiffuseContrib, vSpecularContrib );
+	float fFalloff = Falloff( _dlaArgs.fDistance, _dlaArgs.fSize );
+	
+	
+	_vDiffuse += vDiffuseContrib * fFalloff;
+	_vSpecular += vSpecularContrib * fFalloff;
+}
+
+#endif	// #ifndef LSD_GGX

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\PosixSocks">
+      <UniqueIdentifier>{bda24259-cdfc-4550-bd24-b16eac54f15c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WinSock">
+      <UniqueIdentifier>{f3ab8dd1-318b-4568-9be4-19be7ab73c1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\PosixSocks">
+      <UniqueIdentifier>{623e94ea-767c-463d-a05c-fee4edd63a8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WinSock">
+      <UniqueIdentifier>{5bc89e7f-3107-4a69-bc95-4ab2f43eee5b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\LSNNetLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PosixSocks\LSNPosixSock.cpp">
+      <Filter>Source Files\PosixSocks</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WinSock\LSNWinSock.cpp">
+      <Filter>Source Files\WinSock</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\LSNNetLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PosixSocks\LSNPosixSock.h">
+      <Filter>Header Files\PosixSocks</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\WinSock\LSNWinSock.h">
+      <Filter>Header Files\WinSock</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

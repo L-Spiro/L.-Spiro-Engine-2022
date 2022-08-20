@@ -1,0 +1,67 @@
+#ifndef LSD_ASHIKHMIN_SHIRLEY
+#define LSD_ASHIKHMIN_SHIRLEY
+
+#include "LSDFresnel.lssl"
+#include "LSDLightArgs.lssl"
+#include "LSDPi.lssl"
+#include "LSDSqr.lssl"
+
+float AshikhminShirleySpecular( inout DEF_LIGHT_ARGS _dlaArgs, out vec4 _vSpecular ) {
+#ifdef LSE_SPECULAR
+	const vec3 vEpsilon = vec3( 1.0, 0.0, 0.0 );
+	vec3 vTangent = normalize( cross( _dlaArgs.vNormal, vEpsilon ) );
+    vec3 vBiTangent = normalize( cross( _dlaArgs.vNormal, vTangent ) );
+	float HdotX = dot( _dlaArgs.vLightHalfVector, vTangent );
+    float HdotY = dot( _dlaArgs.vLightHalfVector, vBiTangent );
+	
+	// _dlaArgs.vAshikFactors.w = Rs.
+	float fF = SchlickFresnel( _dlaArgs.vAshikFactors.w, _dlaArgs.fVdotH );
+	// _dlaArgs.vAshikFactors.y = sqrt((Nu+1)*(Nv+1)).
+	float fNormS = _dlaArgs.vAshikFactors.y * (1.0 / (8.0 * PI));
+	float fN = (_dlaArgs.vAshikFactors.x * Sqr( HdotX ) + _dlaArgs.vAshikFactors.y * Sqr( HdotY )) / (1.0 - Sqr( _dlaArgs.fNdotH ));
+	float fDenom = max( (_dlaArgs.fVdotH * max( _dlaArgs.fVdotN, _dlaArgs.fLdotN )), LSE_EPSILON );
+	float fFinal = max( fNormS * fF * pow( _dlaArgs.fNdotH, fN ) / fDenom, 0.0 );
+	
+	_vSpecular = (fFinal * _dlaArgs.fLdotN) * _dlaArgs.vLightDiffuse;
+	
+	// According to the paper, (28.0 / (23.0 * PI)) is a magic number designed to ensure energy conservation.
+	return (1.0 - _dlaArgs.vAshikFactors.w) *			// Constant ratio of specular to diffuse.
+		(28.0 / 23.0) *									// (23.0 * PI) changed to just 23.0 because diffuse is divided by PI later.
+		(1.0 - Pow5( 1.0 - _dlaArgs.fLdotN * 0.5 ));	// Light lost from diffuse by increased specular at glancing angles.
+#else
+	_vSpecular = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	return 1.0;
+#endif	// #ifdef LSE_SPECULAR
+}
+
+void AshikhminShirleyDiffuse( in DEF_LIGHT_ARGS _dlaArgs, out vec4 _vDiffuse ) {
+	float fFactorV = 1.0 - Pow5( 1.0 - _dlaArgs.fVdotN * 0.5 );
+	_vDiffuse = (fFactorV * _dlaArgs.fLdotN) * _dlaArgs.vLightDiffuse;
+}
+
+void AshikhminShirleyDir( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	// Diffuse normalization (division by PI) done once outside of the BRDF's.
+	vec4 vDiffuse;
+	vec4 vSpecular;
+	float fDFactor = AshikhminShirleySpecular( _dlaArgs, vSpecular );
+	AshikhminShirleyDiffuse( _dlaArgs, vDiffuse );
+	vDiffuse *= fDFactor;
+	
+	_vDiffuse += vDiffuse;
+	_vSpecular += vSpecular;
+}
+
+void AshikhminShirleyPoint( in DEF_LIGHT_ARGS _dlaArgs, inout vec4 _vDiffuse, inout vec4 _vSpecular ) {
+	vec4 vDiffuseContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+	vec4 vSpecularContrib = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	AshikhminShirleyDir( _dlaArgs, vDiffuseContrib, vSpecularContrib );
+	float fFalloff = Falloff( _dlaArgs.fDistance, _dlaArgs.fSize );
+
+
+	_vDiffuse += vDiffuseContrib * fFalloff;
+	_vSpecular += vSpecularContrib * fFalloff;
+}
+
+#endif	// #ifndef LSD_ASHIKHMIN_SHIRLEY

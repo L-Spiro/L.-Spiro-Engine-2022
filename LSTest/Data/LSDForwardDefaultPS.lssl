@@ -1,0 +1,161 @@
+uniform vec4		g_vDiffuseMaterial : MATDIFFUSE;
+uniform vec4		g_vEmissiveMaterial : MATEMISSIVE;
+uniform vec4		g_vSpecularMaterial : MATSPECULAR;
+uniform float		g_fReflectivity : REFLECTIVITY;
+#ifndef LSE_VERTEX_LIGHTING
+uniform float		g_fPower : MATPOWER;
+uniform vec4		g_vRoughness : ROUGHNESS;
+uniform vec4		g_vAshikFactors : ASHIKFACTORS;
+
+uniform vec4		g_vDirLightDirs[LSE_MAX_LIGHTS] : DIRLIGHTDIRS;
+uniform vec4		g_vDirLightColors[LSE_MAX_LIGHTS] : DIRLIGHTDIFFUSES;
+
+uniform vec4		g_vPointLightPos[LSE_MAX_LIGHTS] : POINTLIGHTPOS;
+uniform vec4		g_vPointLightColors[LSE_MAX_LIGHTS] : POINTLIGHTDIFFUSES;
+uniform float		g_vPointLightSizes[LSE_MAX_LIGHTS] : POINTLIGHTSIZES;
+#endif	// #ifndef LSE_VERTEX_LIGHTING
+LSE_TEX_UNIFORMS
+
+#include "LSDAshikhminShirley.lssl"
+#include "LSDBlinnPhong.lssl"
+#include "LSDCookTorrance.lssl"
+#include "LSDFresnel.lssl"
+#include "LSDGgx.lssl"
+#include "LSDLightArgs.lssl"
+#include "LSDOrenNayar.lssl"
+
+#define LSE_PREMULTIPLY_ALPHA
+#define LSE_LINEAR2SRGB( VAL )		(VAL) <= 0.0031308 ? (VAL) * 12.92 : 1.055 * pow( (VAL), 1.0f / 2.4 ) - 0.055
+
+void Main( out vec4 _vOutColor : COLOR,
+	lse_MainPsInputs,
+	in vec4 _vInViewPos : LSE_TEXCOORD_USER0,
+	in bool _bIsFrontFace : ISFRONTFACE	) {
+	LSE_TEX_STORES	// Ensures each texture is read only once.
+	
+
+
+#ifdef LSE_VERTEX_LIGHTING
+	vec4 vDiffuse = _vInDiffuseLight;
+	vec4 vSpecular = _vInSpecularLight;
+	float fViewFresnel = _vInDiffuseLight.w;
+#else
+#ifdef LSE_NORMALS
+	vec3 vNormal = normalize( _vInNormal.xyz );
+#else
+	vec3 vNormal = vec3( 0.0, 0.0, -1.0 );
+#endif	// #ifdef LSE_NORMALS
+
+#ifdef LSE_TEXCOORD_NORMAL_MAP
+	vec3 vNormalTex = LSE_NORMAL_MAP_TEX_LOCAL.rgb;
+	vNormalTex.xy = vNormalTex.xy * 2.0f - 1.0f;
+	#ifdef LSE_TANGENT
+		vec3 vTanOff = vNormalTex.x * _vInTangent;
+	#else
+		const vec3 vTanOff = vec3( 1.0, 0.0, 0.0 );
+	#endif	// #ifdef LSE_TANGENT
+	
+	#ifdef LSE_BITANGENT
+		vec3 vBiTanOff = vNormalTex.y * _vInBinormal;
+	#else
+		vec3 vBiTanOff = cross( vNormal, _vInTangent );
+	#endif	// #ifdef LSE_BITANGENT
+	
+	vNormal = normalize( vNormal + vTanOff + vBiTanOff );
+#endif	// #ifdef LSE_TEXCOORD_NORMAL_MAP
+
+#ifdef LSE_NORMALS
+	if ( !_bIsFrontFace ) {
+		vNormal = -vNormal;
+		//vNormal = _bIsFrontFace ? vNormal : -vNormal;
+	}
+#endif	// #ifdef LSE_NORMALS
+
+
+	vec4 vDiffuse = vec4( 0.0, 0.0, 0.0, 0.0 );
+	vec4 vSpecular = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+	DEF_LIGHT_ARGS laArgs;
+#if defined( LSE_TEXCOORD_SPECULAR ) && 0
+	float fShininess = LSE_SPECULAR_TEX_LOCAL.x * 127.0;
+	float fRoughness2 = 2.0 / max( fShininess, LSE_EPSILON );
+	float fRoughness = sqrt( fRoughness2 );
+#else
+	float fShininess = g_fPower;
+	float fRoughness = g_vRoughness.x;
+	float fRoughness2 = g_vRoughness.z;
+#endif // #ifdef LSE_TEXCOORD_SPECULAR
+	DefaultLightParms( laArgs, _vInViewPos.xyz, vNormal, g_fPower, vec4( fRoughness, g_vRoughness.y, fRoughness2, g_vRoughness.w ), g_vAshikFactors );
+	float fViewFresnel = laArgs.fViewFresnel;
+
+	LSE_ACCUMULATE_POINT_LIGHTS( laArgs, g_vPointLightPos, g_vPointLightColors, g_vPointLightSizes, _vInViewPos, vNormal, vDiffuse, vSpecular, GgxShadingPoint );
+	LSE_ACCUMULATE_DIR_LIGHTS( laArgs, g_vDirLightDirs, g_vDirLightColors, vNormal, vDiffuse, vSpecular, GgxShadingDir );
+	
+	
+#endif	// #ifdef LSE_VERTEX_LIGHTING
+	
+#if defined( LSE_ALPHA ) || defined( LSE_OGLES )
+	vDiffuse.a = 1.0;
+#ifdef LSE_OGLES
+	vDiffuse.rgb *= 1.0 - LSE_EPSILON;	// iOS compiler bug.  Without this useless side-effect, the iOS compiler eliminates important code in this area.
+#endif	// #ifdef LSE_OGLES
+#endif	// #if defined( LSE_ALPHA ) || defined( LSE_OGLES )
+	vDiffuse *= g_vDiffuseMaterial;
+
+	
+#ifdef LSE_COLORS
+	vDiffuse *= _vInColor;
+#endif	// #ifdef LSE_COLORS
+
+#ifdef LSE_TEXCOORD_DIFFUSE
+	vDiffuse *= LSE_DIFFUSE_TEX_LOCAL;
+#endif	// #ifdef LSE_TEXCOORD_DIFFUSE
+
+#ifdef LSE_TEXCOORD_SPECULAR
+	vSpecular *= LSE_SPECULAR_TEX_LOCAL;
+#endif	// #ifdef LSE_TEXCOORD_SPECULAR
+
+	vSpecular *= g_vSpecularMaterial;
+	
+
+	//vDiffuse.rgb += g_vEmissiveMaterial.rgb;
+	
+#ifdef LSE_ALPHA
+#if defined( LSE_DIFFUSE_TEX_LOCAL ) && !defined( LSE_OGLES )
+	if ( vDiffuse.a < 0.175 ) {
+		discard;
+	}
+#endif	// #if defined( LSE_DIFFUSE_TEX_LOCAL ) && !defined( LSE_OGLES )
+#ifdef LSE_PREMULTIPLY_ALPHA
+	float fNewAlpha = saturate( vDiffuse.a + vDiffuse.a * fViewFresnel );
+	vDiffuse.rgb *= fNewAlpha / vDiffuse.a;
+	vDiffuse.a = fNewAlpha;
+	vSpecular.rgb *= vDiffuse.a;
+#else
+	vDiffuse.a += vDiffuse.a * fViewFresnel;
+	vDiffuse.a = saturate( vDiffuse.a );
+#endif	// LSE_PREMULTIPLY_ALPHA
+#endif	// #ifdef LSE_ALPHA
+
+
+	// Diffuse normalization.  For BRDF's that do not normalize, multiply their outgoing
+	//	diffuse by PI.
+	_vOutColor = vec4( (vDiffuse.rgb * (1.0 / PI)) + vSpecular.rgb, vDiffuse.a );
+
+
+
+#if defined( LSE_OGLES )
+	//_vOutColor.rgb = pow( _vOutColor.rgb, vec3( 1.0 / 2.2, 1.0 / 2.2, 1.0 / 2.2 ) );
+	_vOutColor.r = LSE_LINEAR2SRGB( _vOutColor.r );
+	_vOutColor.g = LSE_LINEAR2SRGB( _vOutColor.g );
+	_vOutColor.b = LSE_LINEAR2SRGB( _vOutColor.b );
+#else
+	_vOutColor.r = LSE_LINEAR2SRGB( _vOutColor.r );
+	_vOutColor.g = LSE_LINEAR2SRGB( _vOutColor.g );
+	_vOutColor.b = LSE_LINEAR2SRGB( _vOutColor.b );
+#endif	// #if defined( LSE_OGLES )
+
+#ifdef LSE_ALPHA
+	//_vOutColor = vec4( fViewFresnel, 1.0, 1.0, 1.0 );
+#endif	// #ifdef LSE_ALPHA
+}

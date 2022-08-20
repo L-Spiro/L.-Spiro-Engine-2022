@@ -1,0 +1,6 @@
+uniform sampler2d g_sSampler : TEXUNIT0;
+
+void Main( in vec4 _vInPos : POSITION,
+	out vec4 _vOutColor : COLOR ) {
+	_vOutColor = vec4( 1.0f, 0.0f, 0.0f, 1.0f );
+}

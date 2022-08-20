@@ -1,0 +1,12 @@
+LSE_TEX_UNIFORMS	// Declare all the textures and samplers needed in globals g_tTex2d{X} and g_sSampler{X}.
+
+void Main( out vec4 _vOutColor : COLOR,
+	lse_MainPsInputs ) {
+	LSE_TEX_STORES	// Read all the textures and store to values vTex{X} where X is 0-n.
+	
+	_vOutColor = vTex0;
+	
+#if defined( LSE_ALPHA )
+	if ( _vOutColor.a == 0 ) { discard; }
+#endif	// #if defined( LSE_ALPHA )
+}

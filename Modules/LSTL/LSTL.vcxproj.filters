@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Algorithm">
+      <UniqueIdentifier>{fa25aaaf-4a01-4a88-82f9-4f6ddccc0ce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Allocator">
+      <UniqueIdentifier>{5573bb37-13dc-478d-a14e-165c60490b49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LinkedList">
+      <UniqueIdentifier>{b99f48be-4a5e-48ae-8796-75cbd877dbf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Map">
+      <UniqueIdentifier>{1a677575-040f-4358-a64f-d07d4c52a662}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MultiMap">
+      <UniqueIdentifier>{3e071736-8024-4c5d-9a12-c5dcd309071a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ResourceMan">
+      <UniqueIdentifier>{4f559b1d-287e-4996-8745-fd82a0e5dc37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Set">
+      <UniqueIdentifier>{57949a16-650e-4f75-a3da-6f07b23a2395}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SharedPtr">
+      <UniqueIdentifier>{688ed2fa-69d4-4f9d-9e4d-41b3a785b2f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\String">
+      <UniqueIdentifier>{e6478e2e-d2e2-4e26-9c07-21432abf3681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Vector">
+      <UniqueIdentifier>{4b1760d5-37c4-4a54-b20c-dc3f840c1cec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OwnedOrBorrowed">
+      <UniqueIdentifier>{27f48e7f-2ac6-4b04-95ef-74347d743e3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RingBuffer">
+      <UniqueIdentifier>{1f2bb372-c3b5-46b3-b3b0-b0e50334be58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MemOps">
+      <UniqueIdentifier>{5969ec9d-f002-4d01-a544-275680890993}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Algorithm">
+      <UniqueIdentifier>{f262d862-c76c-4a27-a69e-aa17b1ea2634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Allocator">
+      <UniqueIdentifier>{e635671d-84c8-4097-abc7-0a6cebaa16c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\LinkedList">
+      <UniqueIdentifier>{db573030-190f-4510-b5dc-daa6e0c89bbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Map">
+      <UniqueIdentifier>{d4651360-1e96-46f4-ba51-6644000aa2c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MultiMap">
+      <UniqueIdentifier>{5a3b80bd-cfd6-483b-936b-97429ff051c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ResourceMan">
+      <UniqueIdentifier>{272f3dd5-787b-4ebb-bd79-87e6846f9be2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Set">
+      <UniqueIdentifier>{943df536-4661-431d-981b-f4cca010db07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SharedPtr">
+      <UniqueIdentifier>{16fea8d2-6d5a-44b8-9e0d-42f3d453d72c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\String">
+      <UniqueIdentifier>{5fa78724-3376-4967-a879-a7a011678a93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vector">
+      <UniqueIdentifier>{b4171eb7-93b3-4ac4-9ea6-df4b90efb9c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OwnedOrBorrowed">
+      <UniqueIdentifier>{8bdfaa45-99b3-4f66-b6e4-b5c7164f9813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RingBuffer">
+      <UniqueIdentifier>{2a01bbd0-1ba9-4313-8f82-7b57a2ae6b97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MemOps">
+      <UniqueIdentifier>{a051fb89-44a9-4848-9532-a2c2d2f074f8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\LSTLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Algorithm\LSTLAlgorithm.cpp">
+      <Filter>Source Files\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Allocator\LSTLAllocator.cpp">
+      <Filter>Source Files\Allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\LinkedList\LSTLLinkedList.cpp">
+      <Filter>Source Files\LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\LinkedList\LSTLLinkedListBase.cpp">
+      <Filter>Source Files\LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Map\LSTLMap.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Map\LSTLMapBase.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MultiMap\LSTLMultiMap.cpp">
+      <Filter>Source Files\MultiMap</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MultiMap\LSTLMultiMapBase.cpp">
+      <Filter>Source Files\MultiMap</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Set\LSTLSet.cpp">
+      <Filter>Source Files\Set</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Set\LSTLSetBase.cpp">
+      <Filter>Source Files\Set</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SharedPtr\LSTLSharedPtr.cpp">
+      <Filter>Source Files\SharedPtr</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\String\LSTLString.cpp">
+      <Filter>Source Files\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\String\LSTLWString.cpp">
+      <Filter>Source Files\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Vector\LSTLVectorBase.cpp">
+      <Filter>Source Files\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OwnedOrBorrowed\LSTLOwnerOrBorrowedPointerBase.cpp">
+      <Filter>Source Files\OwnedOrBorrowed</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\LSTLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Algorithm\LSTLAlgorithm.h">
+      <Filter>Header Files\Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Allocator\LSTLAllocator.h">
+      <Filter>Header Files\Allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LinkedList\LSTLLinkedList.h">
+      <Filter>Header Files\LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LinkedList\LSTLLinkedListBase.h">
+      <Filter>Header Files\LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LinkedList\LSTLSingleLinkedList.h">
+      <Filter>Header Files\LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Map\LSTLLinearMap.h">
+      <Filter>Header Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Map\LSTLMap.h">
+      <Filter>Header Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Map\LSTLMapBase.h">
+      <Filter>Header Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Map\LSTLMapTemplateBase.h">
+      <Filter>Header Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Map\LSTLStaticMap.h">
+      <Filter>Header Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\MultiMap\LSTLMultiMap.h">
+      <Filter>Header Files\MultiMap</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\MultiMap\LSTLMultiMapBase.h">
+      <Filter>Header Files\MultiMap</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ResourceMan\LSTLResourceManCrtp.h">
+      <Filter>Header Files\ResourceMan</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Set\LSTLFixedSet.h">
+      <Filter>Header Files\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Set\LSTLSet.h">
+      <Filter>Header Files\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Set\LSTLSetBase.h">
+      <Filter>Header Files\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SharedPtr\LSTLSharedPtr.h">
+      <Filter>Header Files\SharedPtr</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\String\LSTLString.h">
+      <Filter>Header Files\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\String\LSTLStringBase.h">
+      <Filter>Header Files\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\String\LSTLStringList.h">
+      <Filter>Header Files\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\String\LSTLStringListBase.h">
+      <Filter>Header Files\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\String\LSTLWString.h">
+      <Filter>Header Files\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\String\LSTLWStringList.h">
+      <Filter>Header Files\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSTLStaticVector.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSTLSVectorCrtp.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSTLSVectorPoD.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSTLVector.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSTLVectorBase.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector\LSTLVectorPoD.h">
+      <Filter>Header Files\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OwnedOrBorrowed\LSTLOwnedOrBorrowedPointer.h">
+      <Filter>Header Files\OwnedOrBorrowed</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\OwnedOrBorrowed\LSTLOwnerOrBorrowedPointerBase.h">
+      <Filter>Header Files\OwnedOrBorrowed</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\RingBuffer\LSTLRingBufferPoD.h">
+      <Filter>Header Files\RingBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\MemOps\LSTLMemCmpF.h">
+      <Filter>Header Files\MemOps</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

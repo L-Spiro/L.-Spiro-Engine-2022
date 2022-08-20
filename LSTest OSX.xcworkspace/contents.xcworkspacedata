@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:LSEngine OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibJPEG/LibJPEG OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibJXR/LibJXR OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibOpenJPEG/LibOpenJPEG OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibPNG/LibPNG OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibRawLite/LibRawLite OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibTIFF4/LibTIFF4 OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/LibWebP/LibWebP OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/OpenEXR/OpenEXR OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/Source/ZLib/ZLib OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/LSImageLib/Src/FreeImage/FreeImageLib OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:LSTest OSX.xcodeproj">
+   </FileRef>
+</Workspace>

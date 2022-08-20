@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Crc">
+      <UniqueIdentifier>{d8c914dc-1aca-4280-93d5-87d99556de62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LargeInteger">
+      <UniqueIdentifier>{9789ec7e-7bbb-497d-af08-0b97dcc8af91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Search">
+      <UniqueIdentifier>{2f49326a-8f5e-4f98-a597-4ebc778845ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Streams">
+      <UniqueIdentifier>{8ea99ba0-52a5-4d71-a9f2-cc8617c9f89f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Time">
+      <UniqueIdentifier>{49f747be-954e-4bd0-99e6-ba887130c43a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Windows">
+      <UniqueIdentifier>{684ad313-3dd2-4838-9900-4b6048398bd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Events">
+      <UniqueIdentifier>{7c811f60-5b15-40be-ab45-fad6baa8a3c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Atomic">
+      <UniqueIdentifier>{97a9b6eb-0891-4328-a58c-7b27a0a55968}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RingBuffer">
+      <UniqueIdentifier>{c7b73438-eb16-4254-9445-0750f647af3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Crc">
+      <UniqueIdentifier>{d46314dc-934c-4eb4-bfe1-adb2c5999fca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\LargeInteger">
+      <UniqueIdentifier>{7c7b678e-562b-4e66-8219-d46ceb98c1bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Search">
+      <UniqueIdentifier>{7b9636c0-e8d9-415e-842a-a754a7a6ff05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Streams">
+      <UniqueIdentifier>{d711993e-bcfe-4450-b1c2-60f3416e7aa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Time">
+      <UniqueIdentifier>{2d8e8904-063b-4720-a119-11dc2cf3a68e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Windows">
+      <UniqueIdentifier>{dc60671d-ba5d-42e5-8ba1-3f7459be5b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Events">
+      <UniqueIdentifier>{c735ed2a-7990-4cc3-94d9-ca6c084b710e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Atomic">
+      <UniqueIdentifier>{0611f11b-ca34-42d6-bcd8-b8a5330cf1ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\RingBuffer">
+      <UniqueIdentifier>{898acef5-e157-4255-974d-75f1da83e7b8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\LSSTDStandardLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Crc\LSSTDCrc.cpp">
+      <Filter>Source Files\Crc</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\LargeInteger\LSSTDLargeInteger.cpp">
+      <Filter>Source Files\LargeInteger</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Search\LSSTDIndexSorter.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Search\LSSTDSearch.cpp">
+      <Filter>Source Files\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Streams\LSSTDBitStream.cpp">
+      <Filter>Source Files\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Streams\LSSTDExternalByteStream.cpp">
+      <Filter>Source Files\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Streams\LSSTDStream.cpp">
+      <Filter>Source Files\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Time\LSSTDTime.cpp">
+      <Filter>Source Files\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Windows\LSSTDWindows.cpp">
+      <Filter>Source Files\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Events\LSSTDPosixEvent.cpp">
+      <Filter>Source Files\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Events\LSSTDWindowsEvent.cpp">
+      <Filter>Source Files\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Atomic\LSSTDGccAtomic.cpp">
+      <Filter>Source Files\Atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Atomic\LSSTDWindowsAtomic.cpp">
+      <Filter>Source Files\Atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\RingBuffer\LSSTDRingBufferCounter.cpp">
+      <Filter>Source Files\RingBuffer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\LSSTDStandardLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Crc\LSSTDCrc.h">
+      <Filter>Header Files\Crc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LargeInteger\LSSTD128BitInteger.h">
+      <Filter>Header Files\LargeInteger</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LargeInteger\LSSTDLargeInteger.h">
+      <Filter>Header Files\LargeInteger</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Search\LSSTDIndexSorter.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Search\LSSTDSearch.h">
+      <Filter>Header Files\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Streams\LSSTDBitStream.h">
+      <Filter>Header Files\Streams</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Streams\LSSTDExternalByteStream.h">
+      <Filter>Header Files\Streams</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Streams\LSSTDStream.h">
+      <Filter>Header Files\Streams</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Time\LSSTDTime.h">
+      <Filter>Header Files\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Windows\LSSTDWindows.h">
+      <Filter>Header Files\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Events\LSSTDEvent.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Events\LSSTDPosixEvent.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Events\LSSTDWindowsEvent.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Atomic\LSSTDAtomic.h">
+      <Filter>Header Files\Atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Atomic\LSSTDGccAtomic.h">
+      <Filter>Header Files\Atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Atomic\LSSTDWindowsAtomic.h">
+      <Filter>Header Files\Atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\RingBuffer\LSSTDRingBufferCounter.h">
+      <Filter>Header Files\RingBuffer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

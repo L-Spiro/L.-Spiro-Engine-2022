@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LSSpriteEditorClass</class>
+ <widget class="QMainWindow" name="LSSpriteEditorClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>901</width>
+    <height>784</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>L. Spiro Sprite Editor</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:reflect, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(183, 183, 191, 255), stop:0.125 rgba(191, 191, 191, 255), stop:1 rgba(255, 255, 255, 255));</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QWidget" name="spriteEditWidget" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="CScrollWidget" name="scrollArea">
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>715</width>
+            <height>704</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0" rowspan="2">
+            <widget class="CMainOpenGlWidget" name="mainOpenGLWidget">
+             <property name="mouseTracking">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QWidget" name="rightBarWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>0</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QToolBox" name="toolBox_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>140</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="imagePage_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>140</width>
+               <height>324</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>List of all the loaded images.</string>
+             </property>
+             <attribute name="label">
+              <string>Images</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_7">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="CScrollWidget" name="imagesScroll">
+                <property name="autoFillBackground">
+                 <bool>true</bool>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                </property>
+                <widget class="QWidget" name="imagesScroll_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>140</width>
+                   <height>324</height>
+                  </rect>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolBox" name="toolBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>140</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="naviPage">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>140</width>
+               <height>298</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Navigation</string>
+             </attribute>
+             <widget class="QDoubleSpinBox" name="naviSpinBox">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>139</y>
+                <width>120</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::RightToLeft</enum>
+              </property>
+              <property name="frame">
+               <bool>true</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="buttonSymbols">
+               <enum>QAbstractSpinBox::UpDownArrows</enum>
+              </property>
+              <property name="accelerated">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <double>1.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>16777215.000000000000000</double>
+              </property>
+             </widget>
+             <widget class="QSlider" name="naviSlider">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>120</y>
+                <width>120</width>
+                <height>19</height>
+               </rect>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>16777215</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="invertedAppearance">
+               <bool>false</bool>
+              </property>
+              <property name="invertedControls">
+               <bool>false</bool>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::NoTicks</enum>
+              </property>
+             </widget>
+             <widget class="CNaviOpenGlWidget" name="naviOpenGLWidget">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>120</width>
+                <height>120</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>120</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>120</height>
+               </size>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>140</width>
+               <height>298</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Page 2</string>
+             </attribute>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>901</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_New"/>
+    <addaction name="action_Open"/>
+    <addaction name="action_Save"/>
+    <addaction name="actionSave_As"/>
+    <addaction name="separator"/>
+    <addaction name="actionAdd_Image"/>
+   </widget>
+   <widget class="QMenu" name="menu_Edit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="action_Undo"/>
+    <addaction name="action_Redo"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Edit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>Tools</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(223, 223, 223);</string>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftToolBarArea|Qt::RightToolBarArea</set>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionZoom_In"/>
+   <addaction name="actionZoom_Out"/>
+   <addaction name="separator"/>
+   <addaction name="actionDraw_Normal"/>
+   <addaction name="actionDraw_Fixed"/>
+   <addaction name="actionDraw_Wand"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Menu Bar</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(223, 223, 223);</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_New"/>
+   <addaction name="action_Open"/>
+   <addaction name="action_Save"/>
+   <addaction name="actionSave_As"/>
+   <addaction name="separator"/>
+   <addaction name="action_Undo"/>
+   <addaction name="action_Redo"/>
+  </widget>
+  <action name="action_New">
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/addfile24.png</normaloff>:/LSSpriteEditor/Resources/addfile24.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New Project…</string>
+   </property>
+   <property name="toolTip">
+    <string>New Project…</string>
+   </property>
+   <property name="statusTip">
+    <string>Create a new sprite project.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_Open">
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/folder24.png</normaloff>:/LSSpriteEditor/Resources/folder24.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open Project…</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Project…</string>
+   </property>
+   <property name="statusTip">
+    <string>Open a sprite project.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/floppy24.png</normaloff>:/LSSpriteEditor/Resources/floppy24.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save Project…</string>
+   </property>
+   <property name="toolTip">
+    <string>Save Project…</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the current sprite project.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/saveas24.png</normaloff>:/LSSpriteEditor/Resources/saveas24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Project &amp;As…</string>
+   </property>
+   <property name="toolTip">
+    <string>Save Project As…</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the current sprite project as a new file.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionZoom_In">
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/zoomin24.png</normaloff>:/LSSpriteEditor/Resources/zoomin24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom &amp;In</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom In</string>
+   </property>
+   <property name="statusTip">
+    <string>Increases the zoom level.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+[</string>
+   </property>
+  </action>
+  <action name="actionZoom_Out">
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/zoomout24.png</normaloff>:/LSSpriteEditor/Resources/zoomout24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom &amp;Out</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom Out</string>
+   </property>
+   <property name="statusTip">
+    <string>Decreases the zoom level.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+]</string>
+   </property>
+  </action>
+  <action name="action_Undo">
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/undo24.png</normaloff>:/LSSpriteEditor/Resources/undo24.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Undo</string>
+   </property>
+   <property name="statusTip">
+    <string>Undo the last action.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="action_Redo">
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/redo24.png</normaloff>:/LSSpriteEditor/Resources/redo24.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Redo</string>
+   </property>
+   <property name="statusTip">
+    <string>Redo the last action.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionAdd_Image">
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/pictures24.png</normaloff>:/LSSpriteEditor/Resources/pictures24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add &amp;Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="action_Draw_Sprites">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/edit24.png</normaloff>:/LSSpriteEditor/Resources/edit24.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Draw Sprites</string>
+   </property>
+   <property name="toolTip">
+    <string>Draw Sprites</string>
+   </property>
+  </action>
+  <action name="actionDraw_Normal">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/DrawNormal.png</normaloff>:/LSSpriteEditor/Resources/DrawNormal.png</iconset>
+   </property>
+   <property name="text">
+    <string>Draw &amp;Normal</string>
+   </property>
+   <property name="toolTip">
+    <string>Create Sprite Rectangles Manually</string>
+   </property>
+   <property name="statusTip">
+    <string>Manually draw the border around a sprite.</string>
+   </property>
+  </action>
+  <action name="actionDraw_Fixed">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/DrawFixed.png</normaloff>:/LSSpriteEditor/Resources/DrawFixed.png</iconset>
+   </property>
+   <property name="text">
+    <string>Draw &amp;Fixed</string>
+   </property>
+   <property name="toolTip">
+    <string>Draw with a Fixed-Width Rectangle</string>
+   </property>
+   <property name="statusTip">
+    <string>Position a fixed-width border around a sprite.</string>
+   </property>
+  </action>
+  <action name="actionDraw_Wand">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="LSSESpriteEditor.qrc">
+     <normaloff>:/LSSpriteEditor/Resources/DrawWand.png</normaloff>:/LSSpriteEditor/Resources/DrawWand.png</iconset>
+   </property>
+   <property name="text">
+    <string>Draw &amp;Wand</string>
+   </property>
+   <property name="toolTip">
+    <string>Automatically Find Sprite</string>
+   </property>
+   <property name="statusTip">
+    <string>Click anywhere on a sprite in the image and this tool tries to find the borders automatically.</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CMainOpenGlWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>Src/Widgets/LSSEMainOpenGlWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CScrollWidget</class>
+   <extends>QScrollArea</extends>
+   <header>Src/Widgets/LSSEScrollWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CNaviOpenGlWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>Src/Widgets/LSSENaviOpenGlWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="LSSESpriteEditor.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionAdd_Image</sender>
+   <signal>triggered()</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>AddImage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSave_As</sender>
+   <signal>triggered()</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>SaveAs()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_New</sender>
+   <signal>triggered()</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>NewProject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Open</sender>
+   <signal>triggered()</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>Open()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Save</sender>
+   <signal>triggered()</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>Save()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionZoom_In</sender>
+   <signal>triggered()</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>ZoomIn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionZoom_Out</sender>
+   <signal>triggered()</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>ZoomOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>naviSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>SlideZoom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>840</x>
+     <y>239</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>naviSpinBox</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>SpinZoom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>840</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionDraw_Normal</sender>
+   <signal>triggered()</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>DrawModeNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionDraw_Fixed</sender>
+   <signal>triggered()</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>DrawModeFixed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionDraw_Wand</sender>
+   <signal>triggered()</signal>
+   <receiver>LSSpriteEditorClass</receiver>
+   <slot>DrawModeWand()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>AddImage()</slot>
+  <slot>NewProject()</slot>
+  <slot>Open()</slot>
+  <slot>Save()</slot>
+  <slot>SaveAs()</slot>
+  <slot>ZoomIn()</slot>
+  <slot>ZoomOut()</slot>
+  <slot>SlideZoom()</slot>
+  <slot>SpinZoom()</slot>
+  <slot>DrawModeNormal()</slot>
+  <slot>DrawModeFixed()</slot>
+  <slot>DrawModeWand()</slot>
+ </slots>
+</ui>

@@ -396,3 +396,23 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+ispc X.exe
+ispc64.exe
+LSFbxConverter/Test/09_gorem_u_4.tga
+LSFbxConverter/Test/09_gorem_u_3.tga
+LSFbxConverter/Test/09_gorem_u_2.tga
+LSFbxConverter/Test/09_gorem_u_1.tga
+LSFbxConverter/Test/05_tigrerra_u_3.tga
+LSFbxConverter/Test/05_tigrerra_u_2.tga
+LSFbxConverter/Test/05_tigrerra_u_1.tga
+LSTest/Data/Thumbs.db
+LSSpriteEditor/Resources/Thumbs.db
+LSTest/Thumbs.db
+LSFbxConverter/Test/Biohazard 5.lsm
+LSFbxConverter/Test/F14.lsm
+LSFbxConverter/Test/QuadBot.lsm
+LSFbxConverter/Test/Toad Harbor.lsm
+LSTest/Data/Biohazard 5.lsm
+LSTest/Data/F14.lsm
+LSTest/Data/QuadBot.lsm
+LSTest/Data/Toad Harbor.lsm

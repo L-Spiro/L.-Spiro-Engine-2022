@@ -1,0 +1,1 @@
+"$(ProjectDir)Src\Ispc\LSIFixIspc.bat" "$(ProjectDir)Src\Ispc\LSUtility.exe" "$(ProjectDir)Src\Ispc\kernel_ispc.h" "$(ProjectDir)Src\Ispc\kernel_ispc_inc.h"

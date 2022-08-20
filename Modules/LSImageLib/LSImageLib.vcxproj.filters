@@ -1,0 +1,798 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Bmp">
+      <UniqueIdentifier>{36a1e5e9-9a4c-45ad-80c1-501d9b973679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dds">
+      <UniqueIdentifier>{57a0b3ee-d52d-4c83-8105-8864221fcd09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Gif">
+      <UniqueIdentifier>{7277c632-ff07-4511-93ab-12c5512e33fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Image">
+      <UniqueIdentifier>{6da3796f-50d6-4c8a-8b1e-5d4851291d0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ImagePack">
+      <UniqueIdentifier>{39fe3ee7-37ac-4749-8df3-810a705757d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Jpeg">
+      <UniqueIdentifier>{d2d70acd-2121-48ea-af8e-1cdfabc58664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LZW">
+      <UniqueIdentifier>{ef1c8e37-aa42-4218-807d-0add060397a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Misc">
+      <UniqueIdentifier>{8302b49b-6082-4b02-b70a-02cafff6c50d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Png">
+      <UniqueIdentifier>{2e0f309a-ed8c-4631-865a-1bf64075deff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resampler">
+      <UniqueIdentifier>{70664748-b54c-479a-872b-222ba2728a69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tga">
+      <UniqueIdentifier>{0cb7d8ca-921b-4fcf-af67-ba39feb3c9d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Squish">
+      <UniqueIdentifier>{5397385f-e8b3-43f0-bbc3-04db91acd08f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ispc">
+      <UniqueIdentifier>{c9e8f400-d958-4173-af4a-4e9f9065dda6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Bmp">
+      <UniqueIdentifier>{fda3ae6e-f30f-43c0-909a-3029a1fd89ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Dds">
+      <UniqueIdentifier>{6c5f2d80-d7b8-4d93-9370-6e76e2d96934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Gif">
+      <UniqueIdentifier>{ae4f3f6c-c7a6-4717-b91a-e693505326c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Image">
+      <UniqueIdentifier>{b42aa3cd-537d-4cf3-841f-74657081e0b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ImagePack">
+      <UniqueIdentifier>{6ccec67e-83d8-44d0-b2ed-3b513afb43ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Jpeg">
+      <UniqueIdentifier>{49e62d36-9cb7-4fbe-9e30-ed6ec43bebd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\LZW">
+      <UniqueIdentifier>{c9b5f4b3-1a86-418f-91d4-5cc95042298c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Misc">
+      <UniqueIdentifier>{de2e2f60-258e-4d0d-b376-edd8d25884bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Png">
+      <UniqueIdentifier>{7f6145a0-00f8-40f9-a14b-a5e7bb1d257c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resampler">
+      <UniqueIdentifier>{94e42ec2-e127-4313-89b0-f09048ad1b73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tga">
+      <UniqueIdentifier>{d67992ca-6e37-4893-a170-bf7cbca653f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Squish">
+      <UniqueIdentifier>{3248d272-e0dd-401d-934c-a502a6537675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Ispc">
+      <UniqueIdentifier>{6464de0b-c06a-474e-9d3e-470f84fce0cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Astc">
+      <UniqueIdentifier>{6b57ea66-f41b-4920-b895-b3a681e78094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Astc">
+      <UniqueIdentifier>{8101d0a2-5d6d-4879-b24a-a997222bf5d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Ktx">
+      <UniqueIdentifier>{62d63648-3129-4ee5-b209-8d19d87ea8b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ktx">
+      <UniqueIdentifier>{70a9deeb-129e-407e-91a7-70984a6331cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\KTX-Software">
+      <UniqueIdentifier>{02b9e28e-835d-4a67-9b35-4b3a3a287b2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\KTX-Software">
+      <UniqueIdentifier>{7297cdbf-064c-4007-bbf3-38fb27868c4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\KTX-Software\include">
+      <UniqueIdentifier>{add98142-c937-469f-982f-faa3c04b4863}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\KTX-Software\lib">
+      <UniqueIdentifier>{496a7839-4280-4b3b-b5f5-4ea6f0af2d9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\KTX-Software\lib">
+      <UniqueIdentifier>{8a0e5c41-8b3f-4503-9a63-5b60b47b2334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\KTX-Software\utils">
+      <UniqueIdentifier>{672decbd-f0cb-4c28-952b-00c811173b2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Kernel">
+      <UniqueIdentifier>{6c2acc33-a9e8-43c6-a4c6-768782f1ba3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Kernel">
+      <UniqueIdentifier>{02640060-f5bf-43c1-9f0e-8bca5adffda9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\detex">
+      <UniqueIdentifier>{252d54b3-9fbf-409c-8e80-eb520b914cc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\detex">
+      <UniqueIdentifier>{e5c97cf4-1867-412d-b9f0-ad28f2502b97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Etc">
+      <UniqueIdentifier>{15eb1c5b-f587-47d4-91ba-010ce79c1728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Etc">
+      <UniqueIdentifier>{cac97e77-ac6c-4525-b8cf-6174d37558c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ETCPACK">
+      <UniqueIdentifier>{283af797-60f1-486b-8e41-8771d39708c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ETCPACK">
+      <UniqueIdentifier>{37a20385-ea4e-419b-896f-de7b0fcf9451}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pvrtc">
+      <UniqueIdentifier>{31506462-ba86-4405-8fbf-d97f44cfe5a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Pvrtc">
+      <UniqueIdentifier>{a72377c8-5eb2-4575-a255-5dc5ba795124}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PVRTexTool">
+      <UniqueIdentifier>{d22407a6-b930-4652-8517-696207e1717d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PVRTexTool">
+      <UniqueIdentifier>{f5717425-a80b-4b82-9568-ce6432afcdec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Qoi">
+      <UniqueIdentifier>{d2d06daf-1d45-4800-bf8c-313607d77b44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Qoi">
+      <UniqueIdentifier>{529e6e00-6cf9-412c-9e3a-87fedea2f0eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\astc-encoder">
+      <UniqueIdentifier>{1621ef34-db15-4176-a1f3-793d2442dd4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\astc-encoder">
+      <UniqueIdentifier>{b8bb77cd-616b-495d-a08a-f31e1d74887f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\KTX-Software\lib\basisu">
+      <UniqueIdentifier>{33c5ef83-4dfb-4819-bcdb-3e7b6a262469}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\KTX-Software\lib\basisu\zstd">
+      <UniqueIdentifier>{9931baa7-6769-4d69-afaa-5ceb455541ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\KTX-Software\lib\basisu">
+      <UniqueIdentifier>{1d1877d1-2ef0-4f5c-9de9-9f548190e687}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\KTX-Software\lib\basisu\zstd">
+      <UniqueIdentifier>{bf56c11d-7743-48d8-8e36-02ba5a98dc7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\KTX-Software\lib\dfdutils">
+      <UniqueIdentifier>{96b1e433-4b9a-40de-ad82-7e83721e5a53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\KTX-Software\lib\dfdutils">
+      <UniqueIdentifier>{f673714f-2ab7-4426-97d0-33dd44a3d0d5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\LSIImageLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Bmp\LSIBmp.cpp">
+      <Filter>Source Files\Bmp</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dds\LSIDds.cpp">
+      <Filter>Source Files\Dds</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Gif\LSIGif.cpp">
+      <Filter>Source Files\Gif</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Image\LSIImage.cpp">
+      <Filter>Source Files\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ImagePack\LSIImagePack.cpp">
+      <Filter>Source Files\ImagePack</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIBio.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSICio.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIDwt.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIEvent.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIJ2k.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIJp2.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIJpegImage.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIJpegInt.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIJpt.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIMct.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIMqc.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIOpenJpeg.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIPi.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIRaw.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIT1.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSIT2.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSITcd.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Jpeg\LSITgt.cpp">
+      <Filter>Source Files\Jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\LZW\LSILzwDictionary.cpp">
+      <Filter>Source Files\LZW</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Misc\LSIImageUtils.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Png\LSIPng.cpp">
+      <Filter>Source Files\Png</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Resampler\LSIResampler.cpp">
+      <Filter>Source Files\Resampler</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Tga\LSITga.cpp">
+      <Filter>Source Files\Tga</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Squish\alpha.cpp">
+      <Filter>Source Files\Squish</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Squish\clusterfit.cpp">
+      <Filter>Source Files\Squish</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Squish\colourblock.cpp">
+      <Filter>Source Files\Squish</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Squish\colourfit.cpp">
+      <Filter>Source Files\Squish</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Squish\colourset.cpp">
+      <Filter>Source Files\Squish</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Squish\maths.cpp">
+      <Filter>Source Files\Squish</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Squish\rangefit.cpp">
+      <Filter>Source Files\Squish</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Squish\singlecolourfit.cpp">
+      <Filter>Source Files\Squish</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Squish\squish.cpp">
+      <Filter>Source Files\Squish</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ispc\ispc_texcomp.cpp">
+      <Filter>Source Files\Ispc</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Astc\LSIAstc.cpp">
+      <Filter>Source Files\Astc</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ktx\LSIKtx.cpp">
+      <Filter>Source Files\Ktx</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\checkheader.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\filestream.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\hashlist.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\info.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\memstream.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\strings.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\swap.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\texture.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\texture1.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\texture2.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\vkformat_check.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\vkformat_str.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\writer1.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\writer2.c">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\basis_transcode.cpp">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\etcdec.cxx">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\etcunpack.cxx">
+      <Filter>Source Files\KTX-Software\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Kernel\LSIKernel.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\bits.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\bptc-tables.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\clamp.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\convert.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\decompress-bc.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\decompress-bptc.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\decompress-bptc-float.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\decompress-eac.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\decompress-etc.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\decompress-rgtc.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\division-tables.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\dt-texture.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\half-float.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\hdr.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\detex\misc.c">
+      <Filter>Source Files\detex</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Etc\LSIEtc.cpp">
+      <Filter>Source Files\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ETCPACK\etcpack.cxx">
+      <Filter>Source Files\ETCPACK</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ETCPACK\etcdec_.cxx">
+      <Filter>Source Files\ETCPACK</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Pvrtc\LSIPvrtc.cpp">
+      <Filter>Source Files\Pvrtc</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Qoi\LSIQoi.cpp">
+      <Filter>Source Files\Qoi</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\stb_image.c">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_averages_and_directions.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_block_sizes2.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_color_quantize.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_color_unquantize.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_compress_symbolic.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_compute_variance.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_decompress_symbolic.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_encoding_choice_error.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_find_best_partitioning.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_ideal_endpoints_and_weights.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_image_load_store.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_integer_sequence.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_kmeans_partitioning.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_partition_tables.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_percentile_tables.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_pick_best_endpoint_format.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_quantization.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_symbolic_physical.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_toplevel.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_weight_align.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\astc_weight_quant_xfer_tables.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\mathlib.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\astc-encoder\softfloat.cpp">
+      <Filter>Source Files\astc-encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\basisu\zstd\zstd.c">
+      <Filter>Source Files\KTX-Software\lib\basisu\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\dfdutils\colourspaces.c">
+      <Filter>Source Files\KTX-Software\lib\dfdutils</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\dfdutils\createdfd.c">
+      <Filter>Source Files\KTX-Software\lib\dfdutils</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\dfdutils\interpretdfd.c">
+      <Filter>Source Files\KTX-Software\lib\dfdutils</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\dfdutils\printdfd.c">
+      <Filter>Source Files\KTX-Software\lib\dfdutils</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\dfdutils\queries.c">
+      <Filter>Source Files\KTX-Software\lib\dfdutils</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KTX-Software\lib\dfdutils\vk2dfd.c">
+      <Filter>Source Files\KTX-Software\lib\dfdutils</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ispc\ispc_texcomp_astc.cpp">
+      <Filter>Source Files\Ispc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\LSIImageLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Bmp\LSIBmp.h">
+      <Filter>Header Files\Bmp</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dds\LSIDds.h">
+      <Filter>Header Files\Dds</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gif\LSIGif.h">
+      <Filter>Header Files\Gif</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Image\LSIImage.h">
+      <Filter>Header Files\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ImagePack\LSIImagePack.h">
+      <Filter>Header Files\ImagePack</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIBio.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSICio.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIDwt.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIEvent.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIJ2k.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIJp2.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIJpegCommonStructs.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIJpegFixed.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIJpegImage.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIJpegInt.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIJpt.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIMct.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIMqc.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIOpenJpeg.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIPi.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIRaw.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIT1.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSIT2.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSITcd.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Jpeg\LSITgt.h">
+      <Filter>Header Files\Jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LZW\LSILzwDictionary.h">
+      <Filter>Header Files\LZW</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Misc\LSIImageUtils.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Png\LSIPng.h">
+      <Filter>Header Files\Png</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Resampler\LSIResampler.h">
+      <Filter>Header Files\Resampler</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Tga\LSITga.h">
+      <Filter>Header Files\Tga</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\alpha.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\clusterfit.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\colourblock.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\colourfit.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\colourset.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\config.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\maths.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\rangefit.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\simd.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\simd_float.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\simd_sse.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\simd_ve.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\singlecolourfit.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Squish\squish.h">
+      <Filter>Header Files\Squish</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ispc\ispc_texcomp.h">
+      <Filter>Header Files\Ispc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Astc\LSIAstc.h">
+      <Filter>Header Files\Astc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ktx\LSIKtx.h">
+      <Filter>Header Files\Ktx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ktx\LSIKtxTexture.h">
+      <Filter>Header Files\Ktx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\include\ktx.h">
+      <Filter>Header Files\KTX-Software\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\basis_sgd.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\filestream.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\formatsize.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\gl_format.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\ktxint.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\memstream.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\texture.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\texture1.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\texture2.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\uthash.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\vk_format.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\vkformat_enum.h">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\utils\unused.h">
+      <Filter>Header Files\KTX-Software\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Kernel\LSIKernel.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\detex\bits.h">
+      <Filter>Header Files\detex</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\detex\bptc-tables.h">
+      <Filter>Header Files\detex</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\detex\detex.h">
+      <Filter>Header Files\detex</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\detex\file-info.h">
+      <Filter>Header Files\detex</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\detex\half-float.h">
+      <Filter>Header Files\detex</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\detex\hdr.h">
+      <Filter>Header Files\detex</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\detex\misc.h">
+      <Filter>Header Files\detex</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Etc\LSIEtc.h">
+      <Filter>Header Files\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Pvrtc\LSIPvrtc.h">
+      <Filter>Header Files\Pvrtc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PVRTexTool\PVRTexLib.h">
+      <Filter>Header Files\PVRTexTool</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PVRTexTool\PVRTexLib.hpp">
+      <Filter>Header Files\PVRTexTool</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PVRTexTool\PVRTexLibDefines.h">
+      <Filter>Header Files\PVRTexTool</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\PVRTexTool\PVRTextureVersion.h">
+      <Filter>Header Files\PVRTexTool</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Qoi\LSIQoi.h">
+      <Filter>Header Files\Qoi</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\astc-encoder\vectypes.h">
+      <Filter>Header Files\astc-encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\astc-encoder\astc_codec_internals.h">
+      <Filter>Header Files\astc-encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\astc-encoder\mathlib.h">
+      <Filter>Header Files\astc-encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\astc-encoder\softfloat.h">
+      <Filter>Header Files\astc-encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\basisu\zstd\zstd.h">
+      <Filter>Header Files\KTX-Software\lib\basisu\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\basisu\zstd\zstd_errors.h">
+      <Filter>Header Files\KTX-Software\lib\basisu\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\KTX-Software\lib\dfdutils\dfd.h">
+      <Filter>Header Files\KTX-Software\lib\dfdutils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Src\Ispc\kernel.ispc">
+      <Filter>Source Files\Ispc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Src\Ispc\kernel_astc.ispc">
+      <Filter>Source Files\Ispc</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Src\KTX-Software\lib\texture_funcs.inl">
+      <Filter>Header Files\KTX-Software\lib</Filter>
+    </None>
+    <None Include="Src\KTX-Software\lib\dfdutils\dfd2vk.inl">
+      <Filter>Header Files\KTX-Software\lib\dfdutils</Filter>
+    </None>
+    <None Include="Src\KTX-Software\lib\dfdutils\vk2dfd.inl">
+      <Filter>Header Files\KTX-Software\lib\dfdutils</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1111 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE4125C319470C4B00D1D40E /* libOpenEXR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4125AB19470C4B00D1D40E /* libOpenEXR.a */; };
+		CE4126AE19470C9E00D1D40E /* eLut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125D519470C9D00D1D40E /* eLut.cpp */; };
+		CE4126AF19470C9E00D1D40E /* half.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125D719470C9D00D1D40E /* half.cpp */; };
+		CE4126B019470C9E00D1D40E /* toFloat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125DD19470C9D00D1D40E /* toFloat.cpp */; };
+		CE4126B119470C9E00D1D40E /* IexBaseExc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125E119470C9D00D1D40E /* IexBaseExc.cpp */; };
+		CE4126B219470C9E00D1D40E /* IexThrowErrnoExc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125E619470C9D00D1D40E /* IexThrowErrnoExc.cpp */; };
+		CE4126B319470C9E00D1D40E /* b44ExpLogTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125EC19470C9D00D1D40E /* b44ExpLogTable.cpp */; };
+		CE4126B419470C9E00D1D40E /* ImfAcesFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125EE19470C9D00D1D40E /* ImfAcesFile.cpp */; };
+		CE4126B519470C9E00D1D40E /* ImfAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125F119470C9D00D1D40E /* ImfAttribute.cpp */; };
+		CE4126B619470C9E00D1D40E /* ImfB44Compressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125F419470C9D00D1D40E /* ImfB44Compressor.cpp */; };
+		CE4126B719470C9E00D1D40E /* ImfBoxAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125F619470C9D00D1D40E /* ImfBoxAttribute.cpp */; };
+		CE4126B819470C9E00D1D40E /* ImfChannelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125F819470C9D00D1D40E /* ImfChannelList.cpp */; };
+		CE4126B919470C9E00D1D40E /* ImfChannelListAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125FA19470C9D00D1D40E /* ImfChannelListAttribute.cpp */; };
+		CE4126BA19470C9E00D1D40E /* ImfChromaticities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125FD19470C9D00D1D40E /* ImfChromaticities.cpp */; };
+		CE4126BB19470C9E00D1D40E /* ImfChromaticitiesAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4125FF19470C9D00D1D40E /* ImfChromaticitiesAttribute.cpp */; };
+		CE4126BC19470C9E00D1D40E /* ImfCompressionAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41260219470C9D00D1D40E /* ImfCompressionAttribute.cpp */; };
+		CE4126BD19470C9E00D1D40E /* ImfCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41260419470C9D00D1D40E /* ImfCompressor.cpp */; };
+		CE4126BE19470C9E00D1D40E /* ImfConvert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41260619470C9D00D1D40E /* ImfConvert.cpp */; };
+		CE4126BF19470C9E00D1D40E /* ImfCRgbaFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41260819470C9D00D1D40E /* ImfCRgbaFile.cpp */; };
+		CE4126C019470C9E00D1D40E /* ImfDoubleAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41260A19470C9D00D1D40E /* ImfDoubleAttribute.cpp */; };
+		CE4126C119470C9E00D1D40E /* ImfEnvmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41260C19470C9D00D1D40E /* ImfEnvmap.cpp */; };
+		CE4126C219470C9E00D1D40E /* ImfEnvmapAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41260E19470C9D00D1D40E /* ImfEnvmapAttribute.cpp */; };
+		CE4126C319470C9E00D1D40E /* ImfFloatAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41261019470C9D00D1D40E /* ImfFloatAttribute.cpp */; };
+		CE4126C419470C9E00D1D40E /* ImfFrameBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41261219470C9D00D1D40E /* ImfFrameBuffer.cpp */; };
+		CE4126C519470C9E00D1D40E /* ImfFramesPerSecond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41261419470C9D00D1D40E /* ImfFramesPerSecond.cpp */; };
+		CE4126C619470C9E00D1D40E /* ImfHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41261619470C9D00D1D40E /* ImfHeader.cpp */; };
+		CE4126C719470C9E00D1D40E /* ImfHuf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41261819470C9D00D1D40E /* ImfHuf.cpp */; };
+		CE4126C819470C9E00D1D40E /* ImfInputFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41261A19470C9D00D1D40E /* ImfInputFile.cpp */; };
+		CE4126C919470C9E00D1D40E /* ImfIntAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41261D19470C9D00D1D40E /* ImfIntAttribute.cpp */; };
+		CE4126CA19470C9E00D1D40E /* ImfIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41261F19470C9E00D1D40E /* ImfIO.cpp */; };
+		CE4126CB19470C9E00D1D40E /* ImfKeyCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41262119470C9E00D1D40E /* ImfKeyCode.cpp */; };
+		CE4126CC19470C9E00D1D40E /* ImfKeyCodeAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41262319470C9E00D1D40E /* ImfKeyCodeAttribute.cpp */; };
+		CE4126CD19470C9E00D1D40E /* ImfLineOrderAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41262619470C9E00D1D40E /* ImfLineOrderAttribute.cpp */; };
+		CE4126CE19470C9E00D1D40E /* ImfLut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41262819470C9E00D1D40E /* ImfLut.cpp */; };
+		CE4126CF19470C9E00D1D40E /* ImfMatrixAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41262A19470C9E00D1D40E /* ImfMatrixAttribute.cpp */; };
+		CE4126D019470C9E00D1D40E /* ImfMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41262C19470C9E00D1D40E /* ImfMisc.cpp */; };
+		CE4126D119470C9E00D1D40E /* ImfMultiView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41262E19470C9E00D1D40E /* ImfMultiView.cpp */; };
+		CE4126D219470C9E00D1D40E /* ImfOpaqueAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41263119470C9E00D1D40E /* ImfOpaqueAttribute.cpp */; };
+		CE4126D319470C9E00D1D40E /* ImfOutputFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41263319470C9E00D1D40E /* ImfOutputFile.cpp */; };
+		CE4126D419470C9E00D1D40E /* ImfPizCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41263619470C9E00D1D40E /* ImfPizCompressor.cpp */; };
+		CE4126D519470C9E00D1D40E /* ImfPreviewImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41263819470C9E00D1D40E /* ImfPreviewImage.cpp */; };
+		CE4126D619470C9E00D1D40E /* ImfPreviewImageAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41263A19470C9E00D1D40E /* ImfPreviewImageAttribute.cpp */; };
+		CE4126D719470C9E00D1D40E /* ImfPxr24Compressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41263C19470C9E00D1D40E /* ImfPxr24Compressor.cpp */; };
+		CE4126D819470C9E00D1D40E /* ImfRational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41263E19470C9E00D1D40E /* ImfRational.cpp */; };
+		CE4126D919470C9E00D1D40E /* ImfRationalAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41264019470C9E00D1D40E /* ImfRationalAttribute.cpp */; };
+		CE4126DA19470C9E00D1D40E /* ImfRgbaFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41264319470C9E00D1D40E /* ImfRgbaFile.cpp */; };
+		CE4126DB19470C9E00D1D40E /* ImfRgbaYca.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41264519470C9E00D1D40E /* ImfRgbaYca.cpp */; };
+		CE4126DC19470C9E00D1D40E /* ImfRleCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41264719470C9E00D1D40E /* ImfRleCompressor.cpp */; };
+		CE4126DD19470C9E00D1D40E /* ImfScanLineInputFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41264919470C9E00D1D40E /* ImfScanLineInputFile.cpp */; };
+		CE4126DE19470C9E00D1D40E /* ImfStandardAttributes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41264B19470C9E00D1D40E /* ImfStandardAttributes.cpp */; };
+		CE4126DF19470C9E00D1D40E /* ImfStdIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41264D19470C9E00D1D40E /* ImfStdIO.cpp */; };
+		CE4126E019470C9E00D1D40E /* ImfStringAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41264F19470C9E00D1D40E /* ImfStringAttribute.cpp */; };
+		CE4126E119470C9E00D1D40E /* ImfStringVectorAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41265119470C9E00D1D40E /* ImfStringVectorAttribute.cpp */; };
+		CE4126E219470C9E00D1D40E /* ImfTestFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41265319470C9E00D1D40E /* ImfTestFile.cpp */; };
+		CE4126E319470C9E00D1D40E /* ImfThreading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41265519470C9E00D1D40E /* ImfThreading.cpp */; };
+		CE4126E419470C9E00D1D40E /* ImfTileDescriptionAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41265819470C9E00D1D40E /* ImfTileDescriptionAttribute.cpp */; };
+		CE4126E519470C9E00D1D40E /* ImfTiledInputFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41265A19470C9E00D1D40E /* ImfTiledInputFile.cpp */; };
+		CE4126E619470C9E00D1D40E /* ImfTiledMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41265C19470C9E00D1D40E /* ImfTiledMisc.cpp */; };
+		CE4126E719470C9E00D1D40E /* ImfTiledOutputFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41265E19470C9E00D1D40E /* ImfTiledOutputFile.cpp */; };
+		CE4126E819470C9E00D1D40E /* ImfTiledRgbaFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41266019470C9E00D1D40E /* ImfTiledRgbaFile.cpp */; };
+		CE4126E919470C9E00D1D40E /* ImfTileOffsets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41266219470C9E00D1D40E /* ImfTileOffsets.cpp */; };
+		CE4126EA19470C9E00D1D40E /* ImfTimeCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41266419470C9E00D1D40E /* ImfTimeCode.cpp */; };
+		CE4126EB19470C9E00D1D40E /* ImfTimeCodeAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41266619470C9E00D1D40E /* ImfTimeCodeAttribute.cpp */; };
+		CE4126EC19470C9E00D1D40E /* ImfVecAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41266819470C9E00D1D40E /* ImfVecAttribute.cpp */; };
+		CE4126ED19470C9E00D1D40E /* ImfVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41266A19470C9E00D1D40E /* ImfVersion.cpp */; };
+		CE4126EE19470C9E00D1D40E /* ImfWav.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41266C19470C9E00D1D40E /* ImfWav.cpp */; };
+		CE4126EF19470C9E00D1D40E /* ImfZipCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41266F19470C9E00D1D40E /* ImfZipCompressor.cpp */; };
+		CE4126F019470C9E00D1D40E /* IlmThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41267419470C9E00D1D40E /* IlmThread.cpp */; };
+		CE4126F119470C9E00D1D40E /* IlmThreadMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41267619470C9E00D1D40E /* IlmThreadMutex.cpp */; };
+		CE4126F219470C9E00D1D40E /* IlmThreadMutexPosix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41267819470C9E00D1D40E /* IlmThreadMutexPosix.cpp */; };
+		CE4126F419470C9E00D1D40E /* IlmThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41267A19470C9E00D1D40E /* IlmThreadPool.cpp */; };
+		CE4126F519470C9E00D1D40E /* IlmThreadPosix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41267C19470C9E00D1D40E /* IlmThreadPosix.cpp */; };
+		CE4126F619470C9E00D1D40E /* IlmThreadSemaphore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41267D19470C9E00D1D40E /* IlmThreadSemaphore.cpp */; };
+		CE4126F719470C9E00D1D40E /* IlmThreadSemaphorePosix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41267F19470C9E00D1D40E /* IlmThreadSemaphorePosix.cpp */; };
+		CE4126F819470C9E00D1D40E /* IlmThreadSemaphorePosixCompat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41268019470C9E00D1D40E /* IlmThreadSemaphorePosixCompat.cpp */; };
+		CE4126FB19470C9E00D1D40E /* ImathBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41268619470C9E00D1D40E /* ImathBox.cpp */; };
+		CE4126FC19470C9E00D1D40E /* ImathColorAlgo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41268A19470C9E00D1D40E /* ImathColorAlgo.cpp */; };
+		CE4126FD19470C9E00D1D40E /* ImathFun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41269119470C9E00D1D40E /* ImathFun.cpp */; };
+		CE4126FE19470C9E00D1D40E /* ImathMatrixAlgo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE41269D19470C9E00D1D40E /* ImathMatrixAlgo.cpp */; };
+		CE4126FF19470C9E00D1D40E /* ImathRandom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4126A219470C9E00D1D40E /* ImathRandom.cpp */; };
+		CE41270019470C9E00D1D40E /* ImathShear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4126A519470C9E00D1D40E /* ImathShear.cpp */; };
+		CE41270119470C9E00D1D40E /* ImathVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4126A819470C9E00D1D40E /* ImathVec.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE4125C119470C4B00D1D40E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE4125A319470C4B00D1D40E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE4125AA19470C4B00D1D40E;
+			remoteInfo = OpenEXR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE4125A919470C4B00D1D40E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE4125AB19470C4B00D1D40E /* libOpenEXR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOpenEXR.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4125BB19470C4B00D1D40E /* OpenEXRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenEXRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4125D519470C9D00D1D40E /* eLut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eLut.cpp; sourceTree = "<group>"; };
+		CE4125D619470C9D00D1D40E /* eLut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eLut.h; sourceTree = "<group>"; };
+		CE4125D719470C9D00D1D40E /* half.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = half.cpp; sourceTree = "<group>"; };
+		CE4125D819470C9D00D1D40E /* half.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = half.h; sourceTree = "<group>"; };
+		CE4125D919470C9D00D1D40E /* halfFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = halfFunction.h; sourceTree = "<group>"; };
+		CE4125DA19470C9D00D1D40E /* halfLimits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = halfLimits.h; sourceTree = "<group>"; };
+		CE4125DD19470C9D00D1D40E /* toFloat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = toFloat.cpp; sourceTree = "<group>"; };
+		CE4125DE19470C9D00D1D40E /* toFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toFloat.h; sourceTree = "<group>"; };
+		CE4125E019470C9D00D1D40E /* Iex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iex.h; sourceTree = "<group>"; };
+		CE4125E119470C9D00D1D40E /* IexBaseExc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IexBaseExc.cpp; sourceTree = "<group>"; };
+		CE4125E219470C9D00D1D40E /* IexBaseExc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IexBaseExc.h; sourceTree = "<group>"; };
+		CE4125E319470C9D00D1D40E /* IexErrnoExc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IexErrnoExc.h; sourceTree = "<group>"; };
+		CE4125E419470C9D00D1D40E /* IexMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IexMacros.h; sourceTree = "<group>"; };
+		CE4125E519470C9D00D1D40E /* IexMathExc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IexMathExc.h; sourceTree = "<group>"; };
+		CE4125E619470C9D00D1D40E /* IexThrowErrnoExc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IexThrowErrnoExc.cpp; sourceTree = "<group>"; };
+		CE4125E719470C9D00D1D40E /* IexThrowErrnoExc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IexThrowErrnoExc.h; sourceTree = "<group>"; };
+		CE4125EA19470C9D00D1D40E /* IlmBaseConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IlmBaseConfig.h; sourceTree = SOURCE_ROOT; };
+		CE4125EC19470C9D00D1D40E /* b44ExpLogTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b44ExpLogTable.cpp; sourceTree = "<group>"; };
+		CE4125ED19470C9D00D1D40E /* b44ExpLogTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b44ExpLogTable.h; sourceTree = "<group>"; };
+		CE4125EE19470C9D00D1D40E /* ImfAcesFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfAcesFile.cpp; sourceTree = "<group>"; };
+		CE4125EF19470C9D00D1D40E /* ImfAcesFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfAcesFile.h; sourceTree = "<group>"; };
+		CE4125F019470C9D00D1D40E /* ImfArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfArray.h; sourceTree = "<group>"; };
+		CE4125F119470C9D00D1D40E /* ImfAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfAttribute.cpp; sourceTree = "<group>"; };
+		CE4125F219470C9D00D1D40E /* ImfAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfAttribute.h; sourceTree = "<group>"; };
+		CE4125F319470C9D00D1D40E /* ImfAutoArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfAutoArray.h; sourceTree = "<group>"; };
+		CE4125F419470C9D00D1D40E /* ImfB44Compressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfB44Compressor.cpp; sourceTree = "<group>"; };
+		CE4125F519470C9D00D1D40E /* ImfB44Compressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfB44Compressor.h; sourceTree = "<group>"; };
+		CE4125F619470C9D00D1D40E /* ImfBoxAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfBoxAttribute.cpp; sourceTree = "<group>"; };
+		CE4125F719470C9D00D1D40E /* ImfBoxAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfBoxAttribute.h; sourceTree = "<group>"; };
+		CE4125F819470C9D00D1D40E /* ImfChannelList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfChannelList.cpp; sourceTree = "<group>"; };
+		CE4125F919470C9D00D1D40E /* ImfChannelList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfChannelList.h; sourceTree = "<group>"; };
+		CE4125FA19470C9D00D1D40E /* ImfChannelListAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfChannelListAttribute.cpp; sourceTree = "<group>"; };
+		CE4125FB19470C9D00D1D40E /* ImfChannelListAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfChannelListAttribute.h; sourceTree = "<group>"; };
+		CE4125FC19470C9D00D1D40E /* ImfCheckedArithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfCheckedArithmetic.h; sourceTree = "<group>"; };
+		CE4125FD19470C9D00D1D40E /* ImfChromaticities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfChromaticities.cpp; sourceTree = "<group>"; };
+		CE4125FE19470C9D00D1D40E /* ImfChromaticities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfChromaticities.h; sourceTree = "<group>"; };
+		CE4125FF19470C9D00D1D40E /* ImfChromaticitiesAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfChromaticitiesAttribute.cpp; sourceTree = "<group>"; };
+		CE41260019470C9D00D1D40E /* ImfChromaticitiesAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfChromaticitiesAttribute.h; sourceTree = "<group>"; };
+		CE41260119470C9D00D1D40E /* ImfCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfCompression.h; sourceTree = "<group>"; };
+		CE41260219470C9D00D1D40E /* ImfCompressionAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfCompressionAttribute.cpp; sourceTree = "<group>"; };
+		CE41260319470C9D00D1D40E /* ImfCompressionAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfCompressionAttribute.h; sourceTree = "<group>"; };
+		CE41260419470C9D00D1D40E /* ImfCompressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfCompressor.cpp; sourceTree = "<group>"; };
+		CE41260519470C9D00D1D40E /* ImfCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfCompressor.h; sourceTree = "<group>"; };
+		CE41260619470C9D00D1D40E /* ImfConvert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfConvert.cpp; sourceTree = "<group>"; };
+		CE41260719470C9D00D1D40E /* ImfConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfConvert.h; sourceTree = "<group>"; };
+		CE41260819470C9D00D1D40E /* ImfCRgbaFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfCRgbaFile.cpp; sourceTree = "<group>"; };
+		CE41260919470C9D00D1D40E /* ImfCRgbaFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfCRgbaFile.h; sourceTree = "<group>"; };
+		CE41260A19470C9D00D1D40E /* ImfDoubleAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfDoubleAttribute.cpp; sourceTree = "<group>"; };
+		CE41260B19470C9D00D1D40E /* ImfDoubleAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfDoubleAttribute.h; sourceTree = "<group>"; };
+		CE41260C19470C9D00D1D40E /* ImfEnvmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfEnvmap.cpp; sourceTree = "<group>"; };
+		CE41260D19470C9D00D1D40E /* ImfEnvmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfEnvmap.h; sourceTree = "<group>"; };
+		CE41260E19470C9D00D1D40E /* ImfEnvmapAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfEnvmapAttribute.cpp; sourceTree = "<group>"; };
+		CE41260F19470C9D00D1D40E /* ImfEnvmapAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfEnvmapAttribute.h; sourceTree = "<group>"; };
+		CE41261019470C9D00D1D40E /* ImfFloatAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfFloatAttribute.cpp; sourceTree = "<group>"; };
+		CE41261119470C9D00D1D40E /* ImfFloatAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfFloatAttribute.h; sourceTree = "<group>"; };
+		CE41261219470C9D00D1D40E /* ImfFrameBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfFrameBuffer.cpp; sourceTree = "<group>"; };
+		CE41261319470C9D00D1D40E /* ImfFrameBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfFrameBuffer.h; sourceTree = "<group>"; };
+		CE41261419470C9D00D1D40E /* ImfFramesPerSecond.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfFramesPerSecond.cpp; sourceTree = "<group>"; };
+		CE41261519470C9D00D1D40E /* ImfFramesPerSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfFramesPerSecond.h; sourceTree = "<group>"; };
+		CE41261619470C9D00D1D40E /* ImfHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfHeader.cpp; sourceTree = "<group>"; };
+		CE41261719470C9D00D1D40E /* ImfHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfHeader.h; sourceTree = "<group>"; };
+		CE41261819470C9D00D1D40E /* ImfHuf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfHuf.cpp; sourceTree = "<group>"; };
+		CE41261919470C9D00D1D40E /* ImfHuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfHuf.h; sourceTree = "<group>"; };
+		CE41261A19470C9D00D1D40E /* ImfInputFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfInputFile.cpp; sourceTree = "<group>"; };
+		CE41261B19470C9D00D1D40E /* ImfInputFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfInputFile.h; sourceTree = "<group>"; };
+		CE41261C19470C9D00D1D40E /* ImfInt64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfInt64.h; sourceTree = "<group>"; };
+		CE41261D19470C9D00D1D40E /* ImfIntAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfIntAttribute.cpp; sourceTree = "<group>"; };
+		CE41261E19470C9D00D1D40E /* ImfIntAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfIntAttribute.h; sourceTree = "<group>"; };
+		CE41261F19470C9E00D1D40E /* ImfIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfIO.cpp; sourceTree = "<group>"; };
+		CE41262019470C9E00D1D40E /* ImfIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfIO.h; sourceTree = "<group>"; };
+		CE41262119470C9E00D1D40E /* ImfKeyCode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfKeyCode.cpp; sourceTree = "<group>"; };
+		CE41262219470C9E00D1D40E /* ImfKeyCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfKeyCode.h; sourceTree = "<group>"; };
+		CE41262319470C9E00D1D40E /* ImfKeyCodeAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfKeyCodeAttribute.cpp; sourceTree = "<group>"; };
+		CE41262419470C9E00D1D40E /* ImfKeyCodeAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfKeyCodeAttribute.h; sourceTree = "<group>"; };
+		CE41262519470C9E00D1D40E /* ImfLineOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfLineOrder.h; sourceTree = "<group>"; };
+		CE41262619470C9E00D1D40E /* ImfLineOrderAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfLineOrderAttribute.cpp; sourceTree = "<group>"; };
+		CE41262719470C9E00D1D40E /* ImfLineOrderAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfLineOrderAttribute.h; sourceTree = "<group>"; };
+		CE41262819470C9E00D1D40E /* ImfLut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfLut.cpp; sourceTree = "<group>"; };
+		CE41262919470C9E00D1D40E /* ImfLut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfLut.h; sourceTree = "<group>"; };
+		CE41262A19470C9E00D1D40E /* ImfMatrixAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfMatrixAttribute.cpp; sourceTree = "<group>"; };
+		CE41262B19470C9E00D1D40E /* ImfMatrixAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfMatrixAttribute.h; sourceTree = "<group>"; };
+		CE41262C19470C9E00D1D40E /* ImfMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfMisc.cpp; sourceTree = "<group>"; };
+		CE41262D19470C9E00D1D40E /* ImfMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfMisc.h; sourceTree = "<group>"; };
+		CE41262E19470C9E00D1D40E /* ImfMultiView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfMultiView.cpp; sourceTree = "<group>"; };
+		CE41262F19470C9E00D1D40E /* ImfMultiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfMultiView.h; sourceTree = "<group>"; };
+		CE41263019470C9E00D1D40E /* ImfName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfName.h; sourceTree = "<group>"; };
+		CE41263119470C9E00D1D40E /* ImfOpaqueAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfOpaqueAttribute.cpp; sourceTree = "<group>"; };
+		CE41263219470C9E00D1D40E /* ImfOpaqueAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfOpaqueAttribute.h; sourceTree = "<group>"; };
+		CE41263319470C9E00D1D40E /* ImfOutputFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfOutputFile.cpp; sourceTree = "<group>"; };
+		CE41263419470C9E00D1D40E /* ImfOutputFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfOutputFile.h; sourceTree = "<group>"; };
+		CE41263519470C9E00D1D40E /* ImfPixelType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfPixelType.h; sourceTree = "<group>"; };
+		CE41263619470C9E00D1D40E /* ImfPizCompressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfPizCompressor.cpp; sourceTree = "<group>"; };
+		CE41263719470C9E00D1D40E /* ImfPizCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfPizCompressor.h; sourceTree = "<group>"; };
+		CE41263819470C9E00D1D40E /* ImfPreviewImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfPreviewImage.cpp; sourceTree = "<group>"; };
+		CE41263919470C9E00D1D40E /* ImfPreviewImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfPreviewImage.h; sourceTree = "<group>"; };
+		CE41263A19470C9E00D1D40E /* ImfPreviewImageAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfPreviewImageAttribute.cpp; sourceTree = "<group>"; };
+		CE41263B19470C9E00D1D40E /* ImfPreviewImageAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfPreviewImageAttribute.h; sourceTree = "<group>"; };
+		CE41263C19470C9E00D1D40E /* ImfPxr24Compressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfPxr24Compressor.cpp; sourceTree = "<group>"; };
+		CE41263D19470C9E00D1D40E /* ImfPxr24Compressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfPxr24Compressor.h; sourceTree = "<group>"; };
+		CE41263E19470C9E00D1D40E /* ImfRational.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfRational.cpp; sourceTree = "<group>"; };
+		CE41263F19470C9E00D1D40E /* ImfRational.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfRational.h; sourceTree = "<group>"; };
+		CE41264019470C9E00D1D40E /* ImfRationalAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfRationalAttribute.cpp; sourceTree = "<group>"; };
+		CE41264119470C9E00D1D40E /* ImfRationalAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfRationalAttribute.h; sourceTree = "<group>"; };
+		CE41264219470C9E00D1D40E /* ImfRgba.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfRgba.h; sourceTree = "<group>"; };
+		CE41264319470C9E00D1D40E /* ImfRgbaFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfRgbaFile.cpp; sourceTree = "<group>"; };
+		CE41264419470C9E00D1D40E /* ImfRgbaFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfRgbaFile.h; sourceTree = "<group>"; };
+		CE41264519470C9E00D1D40E /* ImfRgbaYca.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfRgbaYca.cpp; sourceTree = "<group>"; };
+		CE41264619470C9E00D1D40E /* ImfRgbaYca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfRgbaYca.h; sourceTree = "<group>"; };
+		CE41264719470C9E00D1D40E /* ImfRleCompressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfRleCompressor.cpp; sourceTree = "<group>"; };
+		CE41264819470C9E00D1D40E /* ImfRleCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfRleCompressor.h; sourceTree = "<group>"; };
+		CE41264919470C9E00D1D40E /* ImfScanLineInputFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfScanLineInputFile.cpp; sourceTree = "<group>"; };
+		CE41264A19470C9E00D1D40E /* ImfScanLineInputFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfScanLineInputFile.h; sourceTree = "<group>"; };
+		CE41264B19470C9E00D1D40E /* ImfStandardAttributes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfStandardAttributes.cpp; sourceTree = "<group>"; };
+		CE41264C19470C9E00D1D40E /* ImfStandardAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfStandardAttributes.h; sourceTree = "<group>"; };
+		CE41264D19470C9E00D1D40E /* ImfStdIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfStdIO.cpp; sourceTree = "<group>"; };
+		CE41264E19470C9E00D1D40E /* ImfStdIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfStdIO.h; sourceTree = "<group>"; };
+		CE41264F19470C9E00D1D40E /* ImfStringAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfStringAttribute.cpp; sourceTree = "<group>"; };
+		CE41265019470C9E00D1D40E /* ImfStringAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfStringAttribute.h; sourceTree = "<group>"; };
+		CE41265119470C9E00D1D40E /* ImfStringVectorAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfStringVectorAttribute.cpp; sourceTree = "<group>"; };
+		CE41265219470C9E00D1D40E /* ImfStringVectorAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfStringVectorAttribute.h; sourceTree = "<group>"; };
+		CE41265319470C9E00D1D40E /* ImfTestFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfTestFile.cpp; sourceTree = "<group>"; };
+		CE41265419470C9E00D1D40E /* ImfTestFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfTestFile.h; sourceTree = "<group>"; };
+		CE41265519470C9E00D1D40E /* ImfThreading.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfThreading.cpp; sourceTree = "<group>"; };
+		CE41265619470C9E00D1D40E /* ImfThreading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfThreading.h; sourceTree = "<group>"; };
+		CE41265719470C9E00D1D40E /* ImfTileDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfTileDescription.h; sourceTree = "<group>"; };
+		CE41265819470C9E00D1D40E /* ImfTileDescriptionAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfTileDescriptionAttribute.cpp; sourceTree = "<group>"; };
+		CE41265919470C9E00D1D40E /* ImfTileDescriptionAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfTileDescriptionAttribute.h; sourceTree = "<group>"; };
+		CE41265A19470C9E00D1D40E /* ImfTiledInputFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfTiledInputFile.cpp; sourceTree = "<group>"; };
+		CE41265B19470C9E00D1D40E /* ImfTiledInputFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfTiledInputFile.h; sourceTree = "<group>"; };
+		CE41265C19470C9E00D1D40E /* ImfTiledMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfTiledMisc.cpp; sourceTree = "<group>"; };
+		CE41265D19470C9E00D1D40E /* ImfTiledMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfTiledMisc.h; sourceTree = "<group>"; };
+		CE41265E19470C9E00D1D40E /* ImfTiledOutputFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfTiledOutputFile.cpp; sourceTree = "<group>"; };
+		CE41265F19470C9E00D1D40E /* ImfTiledOutputFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfTiledOutputFile.h; sourceTree = "<group>"; };
+		CE41266019470C9E00D1D40E /* ImfTiledRgbaFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfTiledRgbaFile.cpp; sourceTree = "<group>"; };
+		CE41266119470C9E00D1D40E /* ImfTiledRgbaFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfTiledRgbaFile.h; sourceTree = "<group>"; };
+		CE41266219470C9E00D1D40E /* ImfTileOffsets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfTileOffsets.cpp; sourceTree = "<group>"; };
+		CE41266319470C9E00D1D40E /* ImfTileOffsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfTileOffsets.h; sourceTree = "<group>"; };
+		CE41266419470C9E00D1D40E /* ImfTimeCode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfTimeCode.cpp; sourceTree = "<group>"; };
+		CE41266519470C9E00D1D40E /* ImfTimeCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfTimeCode.h; sourceTree = "<group>"; };
+		CE41266619470C9E00D1D40E /* ImfTimeCodeAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfTimeCodeAttribute.cpp; sourceTree = "<group>"; };
+		CE41266719470C9E00D1D40E /* ImfTimeCodeAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfTimeCodeAttribute.h; sourceTree = "<group>"; };
+		CE41266819470C9E00D1D40E /* ImfVecAttribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfVecAttribute.cpp; sourceTree = "<group>"; };
+		CE41266919470C9E00D1D40E /* ImfVecAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfVecAttribute.h; sourceTree = "<group>"; };
+		CE41266A19470C9E00D1D40E /* ImfVersion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfVersion.cpp; sourceTree = "<group>"; };
+		CE41266B19470C9E00D1D40E /* ImfVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfVersion.h; sourceTree = "<group>"; };
+		CE41266C19470C9E00D1D40E /* ImfWav.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfWav.cpp; sourceTree = "<group>"; };
+		CE41266D19470C9E00D1D40E /* ImfWav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfWav.h; sourceTree = "<group>"; };
+		CE41266E19470C9E00D1D40E /* ImfXdr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfXdr.h; sourceTree = "<group>"; };
+		CE41266F19470C9E00D1D40E /* ImfZipCompressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImfZipCompressor.cpp; sourceTree = "<group>"; };
+		CE41267019470C9E00D1D40E /* ImfZipCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImfZipCompressor.h; sourceTree = "<group>"; };
+		CE41267419470C9E00D1D40E /* IlmThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IlmThread.cpp; sourceTree = "<group>"; };
+		CE41267519470C9E00D1D40E /* IlmThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IlmThread.h; sourceTree = "<group>"; };
+		CE41267619470C9E00D1D40E /* IlmThreadMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IlmThreadMutex.cpp; sourceTree = "<group>"; };
+		CE41267719470C9E00D1D40E /* IlmThreadMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IlmThreadMutex.h; sourceTree = "<group>"; };
+		CE41267819470C9E00D1D40E /* IlmThreadMutexPosix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IlmThreadMutexPosix.cpp; sourceTree = "<group>"; };
+		CE41267A19470C9E00D1D40E /* IlmThreadPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IlmThreadPool.cpp; sourceTree = "<group>"; };
+		CE41267B19470C9E00D1D40E /* IlmThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IlmThreadPool.h; sourceTree = "<group>"; };
+		CE41267C19470C9E00D1D40E /* IlmThreadPosix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IlmThreadPosix.cpp; sourceTree = "<group>"; };
+		CE41267D19470C9E00D1D40E /* IlmThreadSemaphore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IlmThreadSemaphore.cpp; sourceTree = "<group>"; };
+		CE41267E19470C9E00D1D40E /* IlmThreadSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IlmThreadSemaphore.h; sourceTree = "<group>"; };
+		CE41267F19470C9E00D1D40E /* IlmThreadSemaphorePosix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IlmThreadSemaphorePosix.cpp; sourceTree = "<group>"; };
+		CE41268019470C9E00D1D40E /* IlmThreadSemaphorePosixCompat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IlmThreadSemaphorePosixCompat.cpp; sourceTree = "<group>"; };
+		CE41268619470C9E00D1D40E /* ImathBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImathBox.cpp; sourceTree = "<group>"; };
+		CE41268719470C9E00D1D40E /* ImathBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathBox.h; sourceTree = "<group>"; };
+		CE41268819470C9E00D1D40E /* ImathBoxAlgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathBoxAlgo.h; sourceTree = "<group>"; };
+		CE41268919470C9E00D1D40E /* ImathColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathColor.h; sourceTree = "<group>"; };
+		CE41268A19470C9E00D1D40E /* ImathColorAlgo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImathColorAlgo.cpp; sourceTree = "<group>"; };
+		CE41268B19470C9E00D1D40E /* ImathColorAlgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathColorAlgo.h; sourceTree = "<group>"; };
+		CE41268C19470C9E00D1D40E /* ImathEuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathEuler.h; sourceTree = "<group>"; };
+		CE41268D19470C9E00D1D40E /* ImathExc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathExc.h; sourceTree = "<group>"; };
+		CE41268E19470C9E00D1D40E /* ImathFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathFrame.h; sourceTree = "<group>"; };
+		CE41268F19470C9E00D1D40E /* ImathFrustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathFrustum.h; sourceTree = "<group>"; };
+		CE41269019470C9E00D1D40E /* ImathFrustumTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathFrustumTest.h; sourceTree = "<group>"; };
+		CE41269119470C9E00D1D40E /* ImathFun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImathFun.cpp; sourceTree = "<group>"; };
+		CE41269219470C9E00D1D40E /* ImathFun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathFun.h; sourceTree = "<group>"; };
+		CE41269319470C9E00D1D40E /* ImathGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathGL.h; sourceTree = "<group>"; };
+		CE41269419470C9E00D1D40E /* ImathGLU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathGLU.h; sourceTree = "<group>"; };
+		CE41269519470C9E00D1D40E /* ImathHalfLimits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathHalfLimits.h; sourceTree = "<group>"; };
+		CE41269619470C9E00D1D40E /* ImathInt64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathInt64.h; sourceTree = "<group>"; };
+		CE41269719470C9E00D1D40E /* ImathInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathInterval.h; sourceTree = "<group>"; };
+		CE41269819470C9E00D1D40E /* ImathLimits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathLimits.h; sourceTree = "<group>"; };
+		CE41269919470C9E00D1D40E /* ImathLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathLine.h; sourceTree = "<group>"; };
+		CE41269A19470C9E00D1D40E /* ImathLineAlgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathLineAlgo.h; sourceTree = "<group>"; };
+		CE41269B19470C9E00D1D40E /* ImathMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathMath.h; sourceTree = "<group>"; };
+		CE41269C19470C9E00D1D40E /* ImathMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathMatrix.h; sourceTree = "<group>"; };
+		CE41269D19470C9E00D1D40E /* ImathMatrixAlgo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImathMatrixAlgo.cpp; sourceTree = "<group>"; };
+		CE41269E19470C9E00D1D40E /* ImathMatrixAlgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathMatrixAlgo.h; sourceTree = "<group>"; };
+		CE41269F19470C9E00D1D40E /* ImathPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathPlane.h; sourceTree = "<group>"; };
+		CE4126A019470C9E00D1D40E /* ImathPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathPlatform.h; sourceTree = "<group>"; };
+		CE4126A119470C9E00D1D40E /* ImathQuat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathQuat.h; sourceTree = "<group>"; };
+		CE4126A219470C9E00D1D40E /* ImathRandom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImathRandom.cpp; sourceTree = "<group>"; };
+		CE4126A319470C9E00D1D40E /* ImathRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathRandom.h; sourceTree = "<group>"; };
+		CE4126A419470C9E00D1D40E /* ImathRoots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathRoots.h; sourceTree = "<group>"; };
+		CE4126A519470C9E00D1D40E /* ImathShear.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImathShear.cpp; sourceTree = "<group>"; };
+		CE4126A619470C9E00D1D40E /* ImathShear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathShear.h; sourceTree = "<group>"; };
+		CE4126A719470C9E00D1D40E /* ImathSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathSphere.h; sourceTree = "<group>"; };
+		CE4126A819470C9E00D1D40E /* ImathVec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImathVec.cpp; sourceTree = "<group>"; };
+		CE4126A919470C9E00D1D40E /* ImathVec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathVec.h; sourceTree = "<group>"; };
+		CE4126AA19470C9E00D1D40E /* ImathVecAlgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImathVecAlgo.h; sourceTree = "<group>"; };
+		CE4126AD19470C9E00D1D40E /* OpenEXRConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenEXRConfig.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE4125A819470C4B00D1D40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4125B819470C4B00D1D40E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4125C319470C4B00D1D40E /* libOpenEXR.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE4125A219470C4B00D1D40E = {
+			isa = PBXGroup;
+			children = (
+				CE4125B019470C4B00D1D40E /* OpenEXR */,
+				CE4125AD19470C4B00D1D40E /* Frameworks */,
+				CE4125AC19470C4B00D1D40E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE4125AC19470C4B00D1D40E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE4125AB19470C4B00D1D40E /* libOpenEXR.a */,
+				CE4125BB19470C4B00D1D40E /* OpenEXRTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE4125AD19470C4B00D1D40E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE4125B019470C4B00D1D40E /* OpenEXR */ = {
+			isa = PBXGroup;
+			children = (
+				CE4125D419470C9D00D1D40E /* Half */,
+				CE4125DF19470C9D00D1D40E /* Iex */,
+				CE4125EA19470C9D00D1D40E /* IlmBaseConfig.h */,
+				CE4125EB19470C9D00D1D40E /* IlmImf */,
+				CE41267319470C9E00D1D40E /* IlmThread */,
+				CE41268519470C9E00D1D40E /* Imath */,
+				CE4126AD19470C9E00D1D40E /* OpenEXRConfig.h */,
+			);
+			path = OpenEXR;
+			sourceTree = "<group>";
+		};
+		CE4125D419470C9D00D1D40E /* Half */ = {
+			isa = PBXGroup;
+			children = (
+				CE4125D519470C9D00D1D40E /* eLut.cpp */,
+				CE4125D619470C9D00D1D40E /* eLut.h */,
+				CE4125D719470C9D00D1D40E /* half.cpp */,
+				CE4125D819470C9D00D1D40E /* half.h */,
+				CE4125D919470C9D00D1D40E /* halfFunction.h */,
+				CE4125DA19470C9D00D1D40E /* halfLimits.h */,
+				CE4125DD19470C9D00D1D40E /* toFloat.cpp */,
+				CE4125DE19470C9D00D1D40E /* toFloat.h */,
+			);
+			path = Half;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE4125DF19470C9D00D1D40E /* Iex */ = {
+			isa = PBXGroup;
+			children = (
+				CE4125E019470C9D00D1D40E /* Iex.h */,
+				CE4125E119470C9D00D1D40E /* IexBaseExc.cpp */,
+				CE4125E219470C9D00D1D40E /* IexBaseExc.h */,
+				CE4125E319470C9D00D1D40E /* IexErrnoExc.h */,
+				CE4125E419470C9D00D1D40E /* IexMacros.h */,
+				CE4125E519470C9D00D1D40E /* IexMathExc.h */,
+				CE4125E619470C9D00D1D40E /* IexThrowErrnoExc.cpp */,
+				CE4125E719470C9D00D1D40E /* IexThrowErrnoExc.h */,
+			);
+			path = Iex;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE4125EB19470C9D00D1D40E /* IlmImf */ = {
+			isa = PBXGroup;
+			children = (
+				CE4125EC19470C9D00D1D40E /* b44ExpLogTable.cpp */,
+				CE4125ED19470C9D00D1D40E /* b44ExpLogTable.h */,
+				CE4125EE19470C9D00D1D40E /* ImfAcesFile.cpp */,
+				CE4125EF19470C9D00D1D40E /* ImfAcesFile.h */,
+				CE4125F019470C9D00D1D40E /* ImfArray.h */,
+				CE4125F119470C9D00D1D40E /* ImfAttribute.cpp */,
+				CE4125F219470C9D00D1D40E /* ImfAttribute.h */,
+				CE4125F319470C9D00D1D40E /* ImfAutoArray.h */,
+				CE4125F419470C9D00D1D40E /* ImfB44Compressor.cpp */,
+				CE4125F519470C9D00D1D40E /* ImfB44Compressor.h */,
+				CE4125F619470C9D00D1D40E /* ImfBoxAttribute.cpp */,
+				CE4125F719470C9D00D1D40E /* ImfBoxAttribute.h */,
+				CE4125F819470C9D00D1D40E /* ImfChannelList.cpp */,
+				CE4125F919470C9D00D1D40E /* ImfChannelList.h */,
+				CE4125FA19470C9D00D1D40E /* ImfChannelListAttribute.cpp */,
+				CE4125FB19470C9D00D1D40E /* ImfChannelListAttribute.h */,
+				CE4125FC19470C9D00D1D40E /* ImfCheckedArithmetic.h */,
+				CE4125FD19470C9D00D1D40E /* ImfChromaticities.cpp */,
+				CE4125FE19470C9D00D1D40E /* ImfChromaticities.h */,
+				CE4125FF19470C9D00D1D40E /* ImfChromaticitiesAttribute.cpp */,
+				CE41260019470C9D00D1D40E /* ImfChromaticitiesAttribute.h */,
+				CE41260119470C9D00D1D40E /* ImfCompression.h */,
+				CE41260219470C9D00D1D40E /* ImfCompressionAttribute.cpp */,
+				CE41260319470C9D00D1D40E /* ImfCompressionAttribute.h */,
+				CE41260419470C9D00D1D40E /* ImfCompressor.cpp */,
+				CE41260519470C9D00D1D40E /* ImfCompressor.h */,
+				CE41260619470C9D00D1D40E /* ImfConvert.cpp */,
+				CE41260719470C9D00D1D40E /* ImfConvert.h */,
+				CE41260819470C9D00D1D40E /* ImfCRgbaFile.cpp */,
+				CE41260919470C9D00D1D40E /* ImfCRgbaFile.h */,
+				CE41260A19470C9D00D1D40E /* ImfDoubleAttribute.cpp */,
+				CE41260B19470C9D00D1D40E /* ImfDoubleAttribute.h */,
+				CE41260C19470C9D00D1D40E /* ImfEnvmap.cpp */,
+				CE41260D19470C9D00D1D40E /* ImfEnvmap.h */,
+				CE41260E19470C9D00D1D40E /* ImfEnvmapAttribute.cpp */,
+				CE41260F19470C9D00D1D40E /* ImfEnvmapAttribute.h */,
+				CE41261019470C9D00D1D40E /* ImfFloatAttribute.cpp */,
+				CE41261119470C9D00D1D40E /* ImfFloatAttribute.h */,
+				CE41261219470C9D00D1D40E /* ImfFrameBuffer.cpp */,
+				CE41261319470C9D00D1D40E /* ImfFrameBuffer.h */,
+				CE41261419470C9D00D1D40E /* ImfFramesPerSecond.cpp */,
+				CE41261519470C9D00D1D40E /* ImfFramesPerSecond.h */,
+				CE41261619470C9D00D1D40E /* ImfHeader.cpp */,
+				CE41261719470C9D00D1D40E /* ImfHeader.h */,
+				CE41261819470C9D00D1D40E /* ImfHuf.cpp */,
+				CE41261919470C9D00D1D40E /* ImfHuf.h */,
+				CE41261A19470C9D00D1D40E /* ImfInputFile.cpp */,
+				CE41261B19470C9D00D1D40E /* ImfInputFile.h */,
+				CE41261C19470C9D00D1D40E /* ImfInt64.h */,
+				CE41261D19470C9D00D1D40E /* ImfIntAttribute.cpp */,
+				CE41261E19470C9D00D1D40E /* ImfIntAttribute.h */,
+				CE41261F19470C9E00D1D40E /* ImfIO.cpp */,
+				CE41262019470C9E00D1D40E /* ImfIO.h */,
+				CE41262119470C9E00D1D40E /* ImfKeyCode.cpp */,
+				CE41262219470C9E00D1D40E /* ImfKeyCode.h */,
+				CE41262319470C9E00D1D40E /* ImfKeyCodeAttribute.cpp */,
+				CE41262419470C9E00D1D40E /* ImfKeyCodeAttribute.h */,
+				CE41262519470C9E00D1D40E /* ImfLineOrder.h */,
+				CE41262619470C9E00D1D40E /* ImfLineOrderAttribute.cpp */,
+				CE41262719470C9E00D1D40E /* ImfLineOrderAttribute.h */,
+				CE41262819470C9E00D1D40E /* ImfLut.cpp */,
+				CE41262919470C9E00D1D40E /* ImfLut.h */,
+				CE41262A19470C9E00D1D40E /* ImfMatrixAttribute.cpp */,
+				CE41262B19470C9E00D1D40E /* ImfMatrixAttribute.h */,
+				CE41262C19470C9E00D1D40E /* ImfMisc.cpp */,
+				CE41262D19470C9E00D1D40E /* ImfMisc.h */,
+				CE41262E19470C9E00D1D40E /* ImfMultiView.cpp */,
+				CE41262F19470C9E00D1D40E /* ImfMultiView.h */,
+				CE41263019470C9E00D1D40E /* ImfName.h */,
+				CE41263119470C9E00D1D40E /* ImfOpaqueAttribute.cpp */,
+				CE41263219470C9E00D1D40E /* ImfOpaqueAttribute.h */,
+				CE41263319470C9E00D1D40E /* ImfOutputFile.cpp */,
+				CE41263419470C9E00D1D40E /* ImfOutputFile.h */,
+				CE41263519470C9E00D1D40E /* ImfPixelType.h */,
+				CE41263619470C9E00D1D40E /* ImfPizCompressor.cpp */,
+				CE41263719470C9E00D1D40E /* ImfPizCompressor.h */,
+				CE41263819470C9E00D1D40E /* ImfPreviewImage.cpp */,
+				CE41263919470C9E00D1D40E /* ImfPreviewImage.h */,
+				CE41263A19470C9E00D1D40E /* ImfPreviewImageAttribute.cpp */,
+				CE41263B19470C9E00D1D40E /* ImfPreviewImageAttribute.h */,
+				CE41263C19470C9E00D1D40E /* ImfPxr24Compressor.cpp */,
+				CE41263D19470C9E00D1D40E /* ImfPxr24Compressor.h */,
+				CE41263E19470C9E00D1D40E /* ImfRational.cpp */,
+				CE41263F19470C9E00D1D40E /* ImfRational.h */,
+				CE41264019470C9E00D1D40E /* ImfRationalAttribute.cpp */,
+				CE41264119470C9E00D1D40E /* ImfRationalAttribute.h */,
+				CE41264219470C9E00D1D40E /* ImfRgba.h */,
+				CE41264319470C9E00D1D40E /* ImfRgbaFile.cpp */,
+				CE41264419470C9E00D1D40E /* ImfRgbaFile.h */,
+				CE41264519470C9E00D1D40E /* ImfRgbaYca.cpp */,
+				CE41264619470C9E00D1D40E /* ImfRgbaYca.h */,
+				CE41264719470C9E00D1D40E /* ImfRleCompressor.cpp */,
+				CE41264819470C9E00D1D40E /* ImfRleCompressor.h */,
+				CE41264919470C9E00D1D40E /* ImfScanLineInputFile.cpp */,
+				CE41264A19470C9E00D1D40E /* ImfScanLineInputFile.h */,
+				CE41264B19470C9E00D1D40E /* ImfStandardAttributes.cpp */,
+				CE41264C19470C9E00D1D40E /* ImfStandardAttributes.h */,
+				CE41264D19470C9E00D1D40E /* ImfStdIO.cpp */,
+				CE41264E19470C9E00D1D40E /* ImfStdIO.h */,
+				CE41264F19470C9E00D1D40E /* ImfStringAttribute.cpp */,
+				CE41265019470C9E00D1D40E /* ImfStringAttribute.h */,
+				CE41265119470C9E00D1D40E /* ImfStringVectorAttribute.cpp */,
+				CE41265219470C9E00D1D40E /* ImfStringVectorAttribute.h */,
+				CE41265319470C9E00D1D40E /* ImfTestFile.cpp */,
+				CE41265419470C9E00D1D40E /* ImfTestFile.h */,
+				CE41265519470C9E00D1D40E /* ImfThreading.cpp */,
+				CE41265619470C9E00D1D40E /* ImfThreading.h */,
+				CE41265719470C9E00D1D40E /* ImfTileDescription.h */,
+				CE41265819470C9E00D1D40E /* ImfTileDescriptionAttribute.cpp */,
+				CE41265919470C9E00D1D40E /* ImfTileDescriptionAttribute.h */,
+				CE41265A19470C9E00D1D40E /* ImfTiledInputFile.cpp */,
+				CE41265B19470C9E00D1D40E /* ImfTiledInputFile.h */,
+				CE41265C19470C9E00D1D40E /* ImfTiledMisc.cpp */,
+				CE41265D19470C9E00D1D40E /* ImfTiledMisc.h */,
+				CE41265E19470C9E00D1D40E /* ImfTiledOutputFile.cpp */,
+				CE41265F19470C9E00D1D40E /* ImfTiledOutputFile.h */,
+				CE41266019470C9E00D1D40E /* ImfTiledRgbaFile.cpp */,
+				CE41266119470C9E00D1D40E /* ImfTiledRgbaFile.h */,
+				CE41266219470C9E00D1D40E /* ImfTileOffsets.cpp */,
+				CE41266319470C9E00D1D40E /* ImfTileOffsets.h */,
+				CE41266419470C9E00D1D40E /* ImfTimeCode.cpp */,
+				CE41266519470C9E00D1D40E /* ImfTimeCode.h */,
+				CE41266619470C9E00D1D40E /* ImfTimeCodeAttribute.cpp */,
+				CE41266719470C9E00D1D40E /* ImfTimeCodeAttribute.h */,
+				CE41266819470C9E00D1D40E /* ImfVecAttribute.cpp */,
+				CE41266919470C9E00D1D40E /* ImfVecAttribute.h */,
+				CE41266A19470C9E00D1D40E /* ImfVersion.cpp */,
+				CE41266B19470C9E00D1D40E /* ImfVersion.h */,
+				CE41266C19470C9E00D1D40E /* ImfWav.cpp */,
+				CE41266D19470C9E00D1D40E /* ImfWav.h */,
+				CE41266E19470C9E00D1D40E /* ImfXdr.h */,
+				CE41266F19470C9E00D1D40E /* ImfZipCompressor.cpp */,
+				CE41267019470C9E00D1D40E /* ImfZipCompressor.h */,
+			);
+			path = IlmImf;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE41267319470C9E00D1D40E /* IlmThread */ = {
+			isa = PBXGroup;
+			children = (
+				CE41267419470C9E00D1D40E /* IlmThread.cpp */,
+				CE41267519470C9E00D1D40E /* IlmThread.h */,
+				CE41267619470C9E00D1D40E /* IlmThreadMutex.cpp */,
+				CE41267719470C9E00D1D40E /* IlmThreadMutex.h */,
+				CE41267819470C9E00D1D40E /* IlmThreadMutexPosix.cpp */,
+				CE41267A19470C9E00D1D40E /* IlmThreadPool.cpp */,
+				CE41267B19470C9E00D1D40E /* IlmThreadPool.h */,
+				CE41267C19470C9E00D1D40E /* IlmThreadPosix.cpp */,
+				CE41267D19470C9E00D1D40E /* IlmThreadSemaphore.cpp */,
+				CE41267E19470C9E00D1D40E /* IlmThreadSemaphore.h */,
+				CE41267F19470C9E00D1D40E /* IlmThreadSemaphorePosix.cpp */,
+				CE41268019470C9E00D1D40E /* IlmThreadSemaphorePosixCompat.cpp */,
+			);
+			path = IlmThread;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE41268519470C9E00D1D40E /* Imath */ = {
+			isa = PBXGroup;
+			children = (
+				CE41268619470C9E00D1D40E /* ImathBox.cpp */,
+				CE41268719470C9E00D1D40E /* ImathBox.h */,
+				CE41268819470C9E00D1D40E /* ImathBoxAlgo.h */,
+				CE41268919470C9E00D1D40E /* ImathColor.h */,
+				CE41268A19470C9E00D1D40E /* ImathColorAlgo.cpp */,
+				CE41268B19470C9E00D1D40E /* ImathColorAlgo.h */,
+				CE41268C19470C9E00D1D40E /* ImathEuler.h */,
+				CE41268D19470C9E00D1D40E /* ImathExc.h */,
+				CE41268E19470C9E00D1D40E /* ImathFrame.h */,
+				CE41268F19470C9E00D1D40E /* ImathFrustum.h */,
+				CE41269019470C9E00D1D40E /* ImathFrustumTest.h */,
+				CE41269119470C9E00D1D40E /* ImathFun.cpp */,
+				CE41269219470C9E00D1D40E /* ImathFun.h */,
+				CE41269319470C9E00D1D40E /* ImathGL.h */,
+				CE41269419470C9E00D1D40E /* ImathGLU.h */,
+				CE41269519470C9E00D1D40E /* ImathHalfLimits.h */,
+				CE41269619470C9E00D1D40E /* ImathInt64.h */,
+				CE41269719470C9E00D1D40E /* ImathInterval.h */,
+				CE41269819470C9E00D1D40E /* ImathLimits.h */,
+				CE41269919470C9E00D1D40E /* ImathLine.h */,
+				CE41269A19470C9E00D1D40E /* ImathLineAlgo.h */,
+				CE41269B19470C9E00D1D40E /* ImathMath.h */,
+				CE41269C19470C9E00D1D40E /* ImathMatrix.h */,
+				CE41269D19470C9E00D1D40E /* ImathMatrixAlgo.cpp */,
+				CE41269E19470C9E00D1D40E /* ImathMatrixAlgo.h */,
+				CE41269F19470C9E00D1D40E /* ImathPlane.h */,
+				CE4126A019470C9E00D1D40E /* ImathPlatform.h */,
+				CE4126A119470C9E00D1D40E /* ImathQuat.h */,
+				CE4126A219470C9E00D1D40E /* ImathRandom.cpp */,
+				CE4126A319470C9E00D1D40E /* ImathRandom.h */,
+				CE4126A419470C9E00D1D40E /* ImathRoots.h */,
+				CE4126A519470C9E00D1D40E /* ImathShear.cpp */,
+				CE4126A619470C9E00D1D40E /* ImathShear.h */,
+				CE4126A719470C9E00D1D40E /* ImathSphere.h */,
+				CE4126A819470C9E00D1D40E /* ImathVec.cpp */,
+				CE4126A919470C9E00D1D40E /* ImathVec.h */,
+				CE4126AA19470C9E00D1D40E /* ImathVecAlgo.h */,
+			);
+			path = Imath;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE4125AA19470C4B00D1D40E /* OpenEXR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4125CE19470C4B00D1D40E /* Build configuration list for PBXNativeTarget "OpenEXR" */;
+			buildPhases = (
+				CE4125A719470C4B00D1D40E /* Sources */,
+				CE4125A819470C4B00D1D40E /* Frameworks */,
+				CE4125A919470C4B00D1D40E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenEXR;
+			productName = OpenEXR;
+			productReference = CE4125AB19470C4B00D1D40E /* libOpenEXR.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CE4125BA19470C4B00D1D40E /* OpenEXRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4125D119470C4B00D1D40E /* Build configuration list for PBXNativeTarget "OpenEXRTests" */;
+			buildPhases = (
+				CE4125B719470C4B00D1D40E /* Sources */,
+				CE4125B819470C4B00D1D40E /* Frameworks */,
+				CE4125B919470C4B00D1D40E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE4125C219470C4B00D1D40E /* PBXTargetDependency */,
+			);
+			name = OpenEXRTests;
+			productName = OpenEXRTests;
+			productReference = CE4125BB19470C4B00D1D40E /* OpenEXRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE4125A319470C4B00D1D40E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "L. Spiro Soft";
+			};
+			buildConfigurationList = CE4125A619470C4B00D1D40E /* Build configuration list for PBXProject "OpenEXR" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE4125A219470C4B00D1D40E;
+			productRefGroup = CE4125AC19470C4B00D1D40E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE4125AA19470C4B00D1D40E /* OpenEXR */,
+				CE4125BA19470C4B00D1D40E /* OpenEXRTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE4125B919470C4B00D1D40E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE4125A719470C4B00D1D40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4126C719470C9E00D1D40E /* ImfHuf.cpp in Sources */,
+				CE4126ED19470C9E00D1D40E /* ImfVersion.cpp in Sources */,
+				CE4126F619470C9E00D1D40E /* IlmThreadSemaphore.cpp in Sources */,
+				CE4126D619470C9E00D1D40E /* ImfPreviewImageAttribute.cpp in Sources */,
+				CE4126CE19470C9E00D1D40E /* ImfLut.cpp in Sources */,
+				CE4126E119470C9E00D1D40E /* ImfStringVectorAttribute.cpp in Sources */,
+				CE4126E019470C9E00D1D40E /* ImfStringAttribute.cpp in Sources */,
+				CE4126C319470C9E00D1D40E /* ImfFloatAttribute.cpp in Sources */,
+				CE4126DE19470C9E00D1D40E /* ImfStandardAttributes.cpp in Sources */,
+				CE4126FD19470C9E00D1D40E /* ImathFun.cpp in Sources */,
+				CE4126B119470C9E00D1D40E /* IexBaseExc.cpp in Sources */,
+				CE4126CC19470C9E00D1D40E /* ImfKeyCodeAttribute.cpp in Sources */,
+				CE4126D519470C9E00D1D40E /* ImfPreviewImage.cpp in Sources */,
+				CE4126C619470C9E00D1D40E /* ImfHeader.cpp in Sources */,
+				CE4126E819470C9E00D1D40E /* ImfTiledRgbaFile.cpp in Sources */,
+				CE4126CA19470C9E00D1D40E /* ImfIO.cpp in Sources */,
+				CE4126B619470C9E00D1D40E /* ImfB44Compressor.cpp in Sources */,
+				CE4126B519470C9E00D1D40E /* ImfAttribute.cpp in Sources */,
+				CE4126DA19470C9E00D1D40E /* ImfRgbaFile.cpp in Sources */,
+				CE4126E419470C9E00D1D40E /* ImfTileDescriptionAttribute.cpp in Sources */,
+				CE4126EC19470C9E00D1D40E /* ImfVecAttribute.cpp in Sources */,
+				CE4126B219470C9E00D1D40E /* IexThrowErrnoExc.cpp in Sources */,
+				CE4126EE19470C9E00D1D40E /* ImfWav.cpp in Sources */,
+				CE4126C919470C9E00D1D40E /* ImfIntAttribute.cpp in Sources */,
+				CE4126E719470C9E00D1D40E /* ImfTiledOutputFile.cpp in Sources */,
+				CE4126C219470C9E00D1D40E /* ImfEnvmapAttribute.cpp in Sources */,
+				CE4126FE19470C9E00D1D40E /* ImathMatrixAlgo.cpp in Sources */,
+				CE4126BA19470C9E00D1D40E /* ImfChromaticities.cpp in Sources */,
+				CE4126D319470C9E00D1D40E /* ImfOutputFile.cpp in Sources */,
+				CE4126AF19470C9E00D1D40E /* half.cpp in Sources */,
+				CE4126B919470C9E00D1D40E /* ImfChannelListAttribute.cpp in Sources */,
+				CE4126EB19470C9E00D1D40E /* ImfTimeCodeAttribute.cpp in Sources */,
+				CE4126B019470C9E00D1D40E /* toFloat.cpp in Sources */,
+				CE4126D919470C9E00D1D40E /* ImfRationalAttribute.cpp in Sources */,
+				CE4126C819470C9E00D1D40E /* ImfInputFile.cpp in Sources */,
+				CE4126B819470C9E00D1D40E /* ImfChannelList.cpp in Sources */,
+				CE4126D019470C9E00D1D40E /* ImfMisc.cpp in Sources */,
+				CE41270019470C9E00D1D40E /* ImathShear.cpp in Sources */,
+				CE4126E319470C9E00D1D40E /* ImfThreading.cpp in Sources */,
+				CE4126F219470C9E00D1D40E /* IlmThreadMutexPosix.cpp in Sources */,
+				CE4126E919470C9E00D1D40E /* ImfTileOffsets.cpp in Sources */,
+				CE41270119470C9E00D1D40E /* ImathVec.cpp in Sources */,
+				CE4126FB19470C9E00D1D40E /* ImathBox.cpp in Sources */,
+				CE4126B319470C9E00D1D40E /* b44ExpLogTable.cpp in Sources */,
+				CE4126CB19470C9E00D1D40E /* ImfKeyCode.cpp in Sources */,
+				CE4126EA19470C9E00D1D40E /* ImfTimeCode.cpp in Sources */,
+				CE4126DB19470C9E00D1D40E /* ImfRgbaYca.cpp in Sources */,
+				CE4126D219470C9E00D1D40E /* ImfOpaqueAttribute.cpp in Sources */,
+				CE4126C519470C9E00D1D40E /* ImfFramesPerSecond.cpp in Sources */,
+				CE4126BC19470C9E00D1D40E /* ImfCompressionAttribute.cpp in Sources */,
+				CE4126EF19470C9E00D1D40E /* ImfZipCompressor.cpp in Sources */,
+				CE4126D419470C9E00D1D40E /* ImfPizCompressor.cpp in Sources */,
+				CE4126D719470C9E00D1D40E /* ImfPxr24Compressor.cpp in Sources */,
+				CE4126F019470C9E00D1D40E /* IlmThread.cpp in Sources */,
+				CE4126D119470C9E00D1D40E /* ImfMultiView.cpp in Sources */,
+				CE4126DF19470C9E00D1D40E /* ImfStdIO.cpp in Sources */,
+				CE4126BE19470C9E00D1D40E /* ImfConvert.cpp in Sources */,
+				CE4126FC19470C9E00D1D40E /* ImathColorAlgo.cpp in Sources */,
+				CE4126DD19470C9E00D1D40E /* ImfScanLineInputFile.cpp in Sources */,
+				CE4126F719470C9E00D1D40E /* IlmThreadSemaphorePosix.cpp in Sources */,
+				CE4126DC19470C9E00D1D40E /* ImfRleCompressor.cpp in Sources */,
+				CE4126BD19470C9E00D1D40E /* ImfCompressor.cpp in Sources */,
+				CE4126CF19470C9E00D1D40E /* ImfMatrixAttribute.cpp in Sources */,
+				CE4126C119470C9E00D1D40E /* ImfEnvmap.cpp in Sources */,
+				CE4126D819470C9E00D1D40E /* ImfRational.cpp in Sources */,
+				CE4126F819470C9E00D1D40E /* IlmThreadSemaphorePosixCompat.cpp in Sources */,
+				CE4126F119470C9E00D1D40E /* IlmThreadMutex.cpp in Sources */,
+				CE4126B719470C9E00D1D40E /* ImfBoxAttribute.cpp in Sources */,
+				CE4126C019470C9E00D1D40E /* ImfDoubleAttribute.cpp in Sources */,
+				CE4126C419470C9E00D1D40E /* ImfFrameBuffer.cpp in Sources */,
+				CE4126BB19470C9E00D1D40E /* ImfChromaticitiesAttribute.cpp in Sources */,
+				CE4126B419470C9E00D1D40E /* ImfAcesFile.cpp in Sources */,
+				CE4126F519470C9E00D1D40E /* IlmThreadPosix.cpp in Sources */,
+				CE4126F419470C9E00D1D40E /* IlmThreadPool.cpp in Sources */,
+				CE4126E619470C9E00D1D40E /* ImfTiledMisc.cpp in Sources */,
+				CE4126BF19470C9E00D1D40E /* ImfCRgbaFile.cpp in Sources */,
+				CE4126E519470C9E00D1D40E /* ImfTiledInputFile.cpp in Sources */,
+				CE4126FF19470C9E00D1D40E /* ImathRandom.cpp in Sources */,
+				CE4126E219470C9E00D1D40E /* ImfTestFile.cpp in Sources */,
+				CE4126CD19470C9E00D1D40E /* ImfLineOrderAttribute.cpp in Sources */,
+				CE4126AE19470C9E00D1D40E /* eLut.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4125B719470C4B00D1D40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE4125C219470C4B00D1D40E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE4125AA19470C4B00D1D40E /* OpenEXR */;
+			targetProxy = CE4125C119470C4B00D1D40E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CE2C081B1B69300A002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = "Debug Metal";
+		};
+		CE2C081C1B69300A002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/OpenEXR.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					_LIB,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./ ./IlmImf ./Imath ./Iex ./Half ./IlmThread ../ZLib";
+			};
+			name = "Debug Metal";
+		};
+		CE2C081D1B69300A002ACFA8 /* Debug Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenEXR/OpenEXR-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OpenEXRTests/OpenEXRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Debug Metal";
+		};
+		CE2C081E1B693010002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Metal";
+		};
+		CE2C081F1B693010002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/OpenEXR.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					_LIB,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./ ./IlmImf ./Imath ./Iex ./Half ./IlmThread ../ZLib";
+			};
+			name = "Release Metal";
+		};
+		CE2C08201B693010002ACFA8 /* Release Metal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenEXR/OpenEXR-Prefix.pch";
+				INFOPLIST_FILE = "OpenEXRTests/OpenEXRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Release Metal";
+		};
+		CE4125CC19470C4B00D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE4125CD19470C4B00D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE4125CF19470C4B00D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/OpenEXR.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					_LIB,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./ ./IlmImf ./Imath ./Iex ./Half ./IlmThread ../ZLib";
+			};
+			name = Debug;
+		};
+		CE4125D019470C4B00D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/iOSLibs/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/OpenEXR.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					_LIB,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "./ ./IlmImf ./Imath ./Iex ./Half ./IlmThread ../ZLib";
+			};
+			name = Release;
+		};
+		CE4125D219470C4B00D1D40E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenEXR/OpenEXR-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OpenEXRTests/OpenEXRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CE4125D319470C4B00D1D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenEXR/OpenEXR-Prefix.pch";
+				INFOPLIST_FILE = "OpenEXRTests/OpenEXRTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE4125A619470C4B00D1D40E /* Build configuration list for PBXProject "OpenEXR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4125CC19470C4B00D1D40E /* Debug */,
+				CE2C081B1B69300A002ACFA8 /* Debug Metal */,
+				CE4125CD19470C4B00D1D40E /* Release */,
+				CE2C081E1B693010002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4125CE19470C4B00D1D40E /* Build configuration list for PBXNativeTarget "OpenEXR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4125CF19470C4B00D1D40E /* Debug */,
+				CE2C081C1B69300A002ACFA8 /* Debug Metal */,
+				CE4125D019470C4B00D1D40E /* Release */,
+				CE2C081F1B693010002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4125D119470C4B00D1D40E /* Build configuration list for PBXNativeTarget "OpenEXRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4125D219470C4B00D1D40E /* Debug */,
+				CE2C081D1B69300A002ACFA8 /* Debug Metal */,
+				CE4125D319470C4B00D1D40E /* Release */,
+				CE2C08201B693010002ACFA8 /* Release Metal */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE4125A319470C4B00D1D40E /* Project object */;
+}

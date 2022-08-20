@@ -1,0 +1,32 @@
+#ifndef LSD_D_TERMS
+#define LSD_D_TERMS
+
+#include "LSDPi.lssl"
+#include "LSDSqr.lssl"
+
+// _fCosThetaH = N*H.
+// _fW = Roughness^2.
+float TrowbridgeReitzD( float _fCosThetaH, float _fW ) {
+	float fA2 = Sqr( _fW );
+	return fA2 / (PI * Sqr( Sqr( _fCosThetaH ) * (fA2 - 1.0) + 1.0 ));
+}
+
+// _fCosThetaH = N*H.
+// _fRoughnessX = RoughnessX^2.
+// _fRoughnessY = RoughnessY^2.
+float TrowbridgeReitzAnisoD( float _fCosThetaH, float _fRoughnessX, float _fRoughnessY, vec3 _vH, vec3 _vX, vec3 _vY ) {
+	float fXoH = dot( _vX, _vH );
+	float fYoH = dot( _vY, _vH );
+	float fD = Sqr( fXoH ) / Sqr( _fRoughnessX ) + Sqr( fYoH ) / Sqr( _fRoughnessY ) + Sqr( _fCosThetaH );
+	return 1.0 / (PI * _fRoughnessX * _fRoughnessY * Sqr( fD ));
+}
+
+// _fCosThetaH = N*H.
+// _fM = Roughness (or Roughness^2 for a shinier look).
+float BeckmannD( float _fCosThetaH, float _fM ) {
+    float fM2 = Sqr( _fM );
+    float fA2 = max( Sqr( _fCosThetaH ), LSE_EPSILON );
+    return exp( (fA2 - 1.0) / (fM2 * fA2) ) / (PI * fM2 * Sqr( fA2 ));
+}
+
+#endif	// LSD_D_TERMS

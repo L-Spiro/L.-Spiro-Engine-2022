@@ -1,0 +1,96 @@
+/**
+ * Copyright L. Spiro 2014
+ * All rights reserved.
+ *
+ * Written by:	Shawn (L. Spiro) Wilcoxen
+ *
+ * This code may not be sold or traded for any personal gain without express written consent.  You may use
+ *	this code in your own projects and modify it to suit your needs as long as this disclaimer remains intact.
+ *	You may not take credit for having written this code.
+ *
+ *
+ * Description: A compiled shader part (vertex, pixel, geometry, etc.) for Metal.  After being compiled, the
+ *	managing shader object will perform the linking.
+ */
+
+#include "LSGMetalCompiledShader.h"
+
+#if defined( LSG_METAL )
+
+#include "../Metal/LSGMetalObject.h"
+
+#include <Metal/MTLLibrary.h>
+
+namespace lsg {
+
+	// == Various constructors.
+	LSE_CALLCTOR CMetalCompiledShader::CMetalCompiledShader() :
+		m_pvShaderHandle( NULL ),
+		m_pvFunc( NULL ) {
+	}
+	LSE_CALLCTOR CMetalCompiledShader::~CMetalCompiledShader() {
+		Reset();
+	}
+
+	// == Functions.
+	/**
+	 * Reset everything to scratch.
+	 */
+	LSVOID LSE_CALL CMetalCompiledShader::Reset() {
+		if ( m_pvFunc ) {
+			CFBridgingRelease( m_pvFunc );
+			m_pvFunc = NULL;
+		}
+		if ( m_pvShaderHandle ) {
+			CFBridgingRelease( m_pvShaderHandle );
+			m_pvShaderHandle = NULL;
+		}
+		Parent::Reset();
+	}
+
+	/**
+	 * Gets our Metal handle.
+	 *
+	 * \return Returns the Metal handle for this object.
+	 */
+	const LSVOID * LSE_CALL CMetalCompiledShader::GetHandle() const {
+		return m_pvFunc;
+	}
+
+	/**
+	 * Compile to the given platform.  Must be overridden.  The shader text must be syntactically correct for whatever
+	 *	the target graphics API is.  GLSL, HLSL, Cg, etc.  This function will register the shader with the hardware after
+	 *	compilation.
+	 *
+	 * \param _sShaderText The shader text to compile.  The syntax depends on the target graphics API.
+	 * \param _stShaderType The shader type.
+	 * \param _sError Holds returned errors.
+	 * \return Returns true if the text compiles on the current graphics API.
+	 */
+	LSBOOL LSE_CALL CMetalCompiledShader::Compile( const CString &_sShaderText, LSG_SHADER_TYPES _stShaderType, CString &_sError ) {
+		Reset();
+
+		m_stType = _stShaderType;
+		NSString * sCode = [NSString stringWithCString:_sShaderText.CStr() encoding:NSUTF8StringEncoding];
+		NSError * peError = nil;
+		id <MTLLibrary> lLibrary = [GetMetalDevice() newLibraryWithSource:sCode options:nil
+			error:&peError];
+		if ( lLibrary == nil ) {
+			_sError.Set( [peError.localizedDescription UTF8String] );
+			Reset();
+			return false;
+		}
+		
+		m_pvShaderHandle = CFBridgingRetain( lLibrary );
+		
+		// Get the Main() function.
+		id <MTLFunction> fFunc = [lLibrary newFunctionWithName:@"Main"];
+		m_pvFunc = CFBridgingRetain( fFunc );
+
+		// We are compiled and read to go.
+		return true;
+	}
+
+}	// namespace lsg
+
+#endif	// #if defined( LSG_METAL )

@@ -1,0 +1,1214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DX11 Debug|Win32">
+      <Configuration>DX11 Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DX11 Debug|x64">
+      <Configuration>DX11 Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DX11 Release|Win32">
+      <Configuration>DX11 Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DX11 Release|x64">
+      <Configuration>DX11 Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DX9 Debug|Win32">
+      <Configuration>DX9 Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DX9 Debug|x64">
+      <Configuration>DX9 Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DX9 Release|Win32">
+      <Configuration>DX9 Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DX9 Release|x64">
+      <Configuration>DX9 Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OGL Debug|Win32">
+      <Configuration>OGL Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OGL Debug|x64">
+      <Configuration>OGL Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OGL Release|Win32">
+      <Configuration>OGL Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="OGL Release|x64">
+      <Configuration>OGL Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Tools Debug|Win32">
+      <Configuration>Tools Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Tools Debug|x64">
+      <Configuration>Tools Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Tools Release|Win32">
+      <Configuration>Tools Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Tools Release|x64">
+      <Configuration>Tools Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Vulkan Debug|Win32">
+      <Configuration>Vulkan Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Vulkan Debug|x64">
+      <Configuration>Vulkan Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Vulkan Release|Win32">
+      <Configuration>Vulkan Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Vulkan Release|x64">
+      <Configuration>Vulkan Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6347EBBE-CA87-4B39-ACC6-63DA3D882597}</ProjectGuid>
+    <RootNamespace>LSGraphicsLib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tools Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tools Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tools Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tools Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Tools Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Tools Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Tools Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Tools Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.24730.2</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tools Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tools Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tools Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tools Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_DIRECTX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_DIRECTX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_DIRECTX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_DIRECTX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_DIRECTX11;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_DIRECTX11;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_DIRECTX11;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DX11 Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_DIRECTX11;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Tools Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LSA_TOOLS;WIN32;_DEBUG;_LIB;LSG_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Tools Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LSA_TOOLS;WIN32;_DEBUG;_LIB;LSG_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Tools Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LSA_TOOLS;WIN32;NDEBUG;_LIB;LSG_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OGL Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Tools Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LSA_TOOLS;WIN32;NDEBUG;_LIB;LSG_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\LSStandardLib\Src\;$(ProjectDir)..\LSThreadLib\Src\;$(ProjectDir)..\LSTL\Src\;$(ProjectDir)..\LSFileLib\Src\;$(ProjectDir)..\LSMemLib\Src\;$(ProjectDir)..\LSMathLib\Src\;$(ProjectDir)..\LSImageLib\Src\;$(ProjectDir)..\LSCompressionLib\Src\;$(VK_SDK_PATH)\include\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4985;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LSCompressionLib\LSCompressionLib.vcxproj">
+      <Project>{a8427b7a-989f-407e-ba37-ef709db6327c}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\LSFileLib\LSFileLib.vcxproj">
+      <Project>{2b9fcf88-efdf-4f8a-bb80-c20c674fbabc}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\LSImageLib\LSImageLib.vcxproj">
+      <Project>{644b6920-3c18-41ef-ad73-7fc42fae4147}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\LSMathLib\LSMathLib.vcxproj">
+      <Project>{b9558fbd-f6dd-49d7-8e3b-5e32a1f6b62f}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\LSMemLib\LSMemLib.vcxproj">
+      <Project>{ac490b7a-804a-43e5-bd36-1a36e5f99535}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\LSStandardLib\LSStandardLib.vcxproj">
+      <Project>{6307f094-4285-4523-982a-2df4a2a7b0aa}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\LSThreadLib\LSThreadLib.vcxproj">
+      <Project>{e98f2547-10c7-4952-aa71-f72a4369a7a5}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\LSTL\LSTL.vcxproj">
+      <Project>{a4882463-794c-4e75-b57a-32cc28824b19}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\DirectX11Framebuffer\LSGDirectX11FramebufferBase.cpp" />
+    <ClCompile Include="Src\DirectX11IndexBuffer\LSGDirectX11IndexBuffer.cpp" />
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11CBuffer.cpp" />
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11CompiledShader.cpp" />
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11CompiledShaderManager.cpp" />
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11PixelShader.cpp" />
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11Shader.cpp" />
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11ShaderManager.cpp" />
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11ShaderTranslator.cpp" />
+    <ClCompile Include="Src\DirectX11Shaders\LSGDirectX11VertexShader.cpp" />
+    <ClCompile Include="Src\DirectX11Texture\LSGDirectX11Texture2d.cpp" />
+    <ClCompile Include="Src\DirectX11VertexBuffer\LSGDirectX11VertexBuffer.cpp" />
+    <ClCompile Include="Src\DirectX11\LSGDirectX11.cpp" />
+    <ClCompile Include="Src\DirectX9Framebuffer\LSGDirectX9FramebufferBase.cpp" />
+    <ClCompile Include="Src\DirectX9IndexBuffer\LSGDirectX9IndexBuffer.cpp" />
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9CompiledShader.cpp" />
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9CompiledShaderManager.cpp" />
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9PixelShader.cpp" />
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9Shader.cpp" />
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9ShaderManager.cpp" />
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9ShaderTranslator.cpp" />
+    <ClCompile Include="Src\DirectX9Shaders\LSGDirectX9VertexShader.cpp" />
+    <ClCompile Include="Src\DirectX9Texture\LSGDirectX9Texture2d.cpp" />
+    <ClCompile Include="Src\DirectX9VertexBuffer\LSGDirectX9VertexBuffer.cpp" />
+    <ClCompile Include="Src\DirectX9\LSGDirectX9.cpp" />
+    <ClCompile Include="Src\DirectX9\LSGDirectX9LosableResource.cpp" />
+    <ClCompile Include="Src\DirectX9\LSGDirectX9LosableResourceManager.cpp" />
+    <ClCompile Include="Src\Framebuffer\LSGFramebuffer.cpp" />
+    <ClCompile Include="Src\Framebuffer\LSGFramebufferBase.cpp" />
+    <ClCompile Include="Src\Gfx\LSGGfx.cpp" />
+    <ClCompile Include="Src\Gfx\LSGGfxBase.cpp" />
+    <ClCompile Include="Src\IndexBuffer\LSGIndexBuffer.cpp" />
+    <ClCompile Include="Src\IndexBuffer\LSGIndexBufferBase.cpp" />
+    <ClCompile Include="Src\LSGGraphicsLib.cpp" />
+    <ClCompile Include="Src\OpenGLESFramebuffer\LSGOpenGlEsFramebuffer.cpp" />
+    <ClCompile Include="Src\OpenGLESIndexBuffer\LSGOpenGlEsIndexBuffer.cpp" />
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsCompiledShader.cpp" />
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsCompiledShaderManager.cpp" />
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsShader.cpp" />
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsShaderManager.cpp" />
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsShaderProgramManager.cpp" />
+    <ClCompile Include="Src\OpenGLESShaders\LSGOpenGlEsShaderTranslator.cpp" />
+    <ClCompile Include="Src\OpenGlESTexture\LSGOpenGlEsTexture2d.cpp" />
+    <ClCompile Include="Src\OpenGLESVertexBuffer\LSGOpenGlEsVertexBuffer.cpp" />
+    <ClCompile Include="Src\OpenGLES\LSGOpenGlEs.cpp" />
+    <ClCompile Include="Src\OpenGLFramebuffer\LSGOpenGlFramebuffer.cpp" />
+    <ClCompile Include="Src\OpenGLFramebuffer\LSGOpenGlFramebufferBase.cpp" />
+    <ClCompile Include="Src\OpenGlIndexBuffer\LSGOpenGlIndexBuffer.cpp" />
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlCompiledShader.cpp" />
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlCompiledShaderManager.cpp" />
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlShader.cpp" />
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlShaderManager.cpp" />
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlShaderProgramManager.cpp" />
+    <ClCompile Include="Src\OpenGLShaders\LSGOpenGlShaderTranslator.cpp" />
+    <ClCompile Include="Src\OpenGLTexture\LSGOpenGlTexture2d.cpp" />
+    <ClCompile Include="Src\OpenGLVertexBuffer\LSGOpenGlVertexBuffer.cpp" />
+    <ClCompile Include="Src\OpenGL\LSGOpenGl.cpp" />
+    <ClCompile Include="Src\PreProcGen\LSGPreProcLexBase.cpp" />
+    <ClCompile Include="Src\PreProcGen\LSGPreProcParser.cpp" />
+    <ClCompile Include="Src\PreProc\LSGPreProc.cpp" />
+    <ClCompile Include="Src\PreProc\LSGPreProcContainer.cpp" />
+    <ClCompile Include="Src\PreProc\LSGPreProcLexer.cpp" />
+    <ClCompile Include="Src\RenderTarget\LSGRenderTargetInterface.cpp" />
+    <ClCompile Include="Src\Sampler\LSGSampler.cpp" />
+    <ClCompile Include="Src\ShaderLangGen\LSGShaderLexBase.cpp" />
+    <ClCompile Include="Src\ShaderLangGen\LSGShaderParser.cpp" />
+    <ClCompile Include="Src\ShaderLanguage\LSGCompiledShaderBase.cpp" />
+    <ClCompile Include="Src\ShaderLanguage\LSGShader.cpp" />
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderBase.cpp" />
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderLanguageParser.cpp" />
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderLexer.cpp" />
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderParserWrapper.cpp" />
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderScope.cpp" />
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderScopeStack.cpp" />
+    <ClCompile Include="Src\ShaderLanguage\LSGShaderTranslationProcessorBase.cpp" />
+    <ClCompile Include="Src\Texture\LSGTexture2d.cpp" />
+    <ClCompile Include="Src\Texture\LSGTexture2dBase.cpp" />
+    <ClCompile Include="Src\VertexBuffer\LSGVertexBuffer.cpp" />
+    <ClCompile Include="Src\VertexBuffer\LSGVertexBufferBase.cpp" />
+    <ClCompile Include="Src\VulkanCommandBuffer\LSGVulkanCommandBuffer.cpp" />
+    <ClCompile Include="Src\VulkanIndexBuffer\LSGVulkanIndexBuffer.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\GenericCodeGen\CodeGen.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\GenericCodeGen\Link.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Constant.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\glslang_tab.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\InfoSink.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Initialize.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Intermediate.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\intermOut.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\IntermTraverse.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\limits.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\linkValidate.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\parseConst.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\ParseHelper.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\PoolAlloc.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\Pp.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpAtom.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpContext.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpMemory.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpScanner.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpSymbols.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpTokens.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\reflection.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\RemoveTree.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Scan.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\ShaderLang.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\SymbolTable.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Versions.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\disassemble.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\doc.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\GlslangToSpv.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\InReadableOrder.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\SpvBuilder.cpp" />
+    <ClCompile Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\SPVRemapper.cpp" />
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanCompiledShader.cpp" />
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanCompiledShaderManager.cpp" />
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanShader.cpp" />
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanShaderManager.cpp" />
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanShaderProgramManager.cpp" />
+    <ClCompile Include="Src\VulkanShaders\LSGVulkanShaderTranslator.cpp" />
+    <ClCompile Include="Src\VulkanTexture\LSGVulkanTexture2d.cpp" />
+    <ClCompile Include="Src\VulkanVertexBuffer\LSGVulkanVertexBuffer.cpp" />
+    <ClCompile Include="Src\Vulkan\LSGVulkan.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\DirectX11Framebuffer\LSGDirectX11FramebufferBase.h" />
+    <ClInclude Include="Src\DirectX11IndexBuffer\LSGDirectX11IndexBuffer.h" />
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11CBuffer.h" />
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11CompiledShader.h" />
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11CompiledShaderManager.h" />
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11PixelShader.h" />
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11Shader.h" />
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11ShaderManager.h" />
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11ShaderTranslator.h" />
+    <ClInclude Include="Src\DirectX11Shaders\LSGDirectX11VertexShader.h" />
+    <ClInclude Include="Src\DirectX11Texture\LSGDirectX11Texture2d.h" />
+    <ClInclude Include="Src\DirectX11Texture\LSGDirectX11TextureConstants.h" />
+    <ClInclude Include="Src\DirectX11VertexBuffer\LSGDirectX11VertexBuffer.h" />
+    <ClInclude Include="Src\DirectX11\LSGDirectX11.h" />
+    <ClInclude Include="Src\DirectX9Framebuffer\LSGDirectX9FramebufferBase.h" />
+    <ClInclude Include="Src\DirectX9IndexBuffer\LSGDirectX9IndexBuffer.h" />
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9CompiledShader.h" />
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9CompiledShaderManager.h" />
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9PixelShader.h" />
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9Shader.h" />
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9ShaderManager.h" />
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9ShaderTranslator.h" />
+    <ClInclude Include="Src\DirectX9Shaders\LSGDirectX9VertexShader.h" />
+    <ClInclude Include="Src\DirectX9Texture\LSGDirectX9Texture2d.h" />
+    <ClInclude Include="Src\DirectX9Texture\LSGDirectX9TextureConstants.h" />
+    <ClInclude Include="Src\DirectX9VertexBuffer\LSGDirectX9VertexBuffer.h" />
+    <ClInclude Include="Src\DirectX9\LSGDirectX9.h" />
+    <ClInclude Include="Src\DirectX9\LSGDirectX9LosableResource.h" />
+    <ClInclude Include="Src\DirectX9\LSGDirectX9LosableResourceManager.h" />
+    <ClInclude Include="Src\Framebuffer\LSGFramebuffer.h" />
+    <ClInclude Include="Src\Framebuffer\LSGFramebufferBase.h" />
+    <ClInclude Include="Src\Gfx\LSGCreateStatesDecl.h" />
+    <ClInclude Include="Src\Gfx\LSGCreateStatesDef.h" />
+    <ClInclude Include="Src\Gfx\LSGCreateStatesMembersDecl.h" />
+    <ClInclude Include="Src\Gfx\LSGCreateStatesMembersDef.h" />
+    <ClInclude Include="Src\Gfx\LSGDescFuncDecl.h" />
+    <ClInclude Include="Src\Gfx\LSGDescFuncDef.h" />
+    <ClInclude Include="Src\Gfx\LSGDescStructs.h" />
+    <ClInclude Include="Src\Gfx\LSGGfx.h" />
+    <ClInclude Include="Src\Gfx\LSGGfxBase.h" />
+    <ClInclude Include="Src\Gfx\LSGGfxState.h" />
+    <ClInclude Include="Src\Gfx\LSGStateRefDecl.h" />
+    <ClInclude Include="Src\IndexBuffer\LSGIndexBuffer.h" />
+    <ClInclude Include="Src\IndexBuffer\LSGIndexBufferBase.h" />
+    <ClInclude Include="Src\LSGGraphicsLib.h" />
+    <ClInclude Include="Src\OpenGLESFramebuffer\LSGOpenGlEsFramebuffer.h" />
+    <ClInclude Include="Src\OpenGLESIndexBuffer\LSGOpenGlEsIndexBuffer.h" />
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsCompiledShader.h" />
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsCompiledShaderManager.h" />
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsShader.h" />
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsShaderManager.h" />
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsShaderProgramManager.h" />
+    <ClInclude Include="Src\OpenGLESShaders\LSGOpenGlEsShaderTranslator.h" />
+    <ClInclude Include="Src\OpenGlESTexture\LSGOpenGlEsTexture2d.h" />
+    <ClInclude Include="Src\OpenGlESTexture\LSGOpenGlEsTextureConstants.h" />
+    <ClInclude Include="Src\OpenGLESVertexBuffer\LSGOpenGlEsVertexBuffer.h" />
+    <ClInclude Include="Src\OpenGLES\LSGOpenGlEs.h" />
+    <ClInclude Include="Src\OpenGLFramebuffer\LSGOpenGlFramebuffer.h" />
+    <ClInclude Include="Src\OpenGLFramebuffer\LSGOpenGlFramebufferBase.h" />
+    <ClInclude Include="Src\OpenGlIndexBuffer\LSGOpenGlIndexBuffer.h" />
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlCompiledShader.h" />
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlCompiledShaderManager.h" />
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlShader.h" />
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlShaderManager.h" />
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlShaderProgramManager.h" />
+    <ClInclude Include="Src\OpenGLShaders\LSGOpenGlShaderTranslator.h" />
+    <ClInclude Include="Src\OpenGLTexture\LSGOpenGlTexture2d.h" />
+    <ClInclude Include="Src\OpenGLTexture\LSGOpenGlTextureConstants.h" />
+    <ClInclude Include="Src\OpenGLVertexBuffer\LSGOpenGlVertexBuffer.h" />
+    <ClInclude Include="Src\OpenGL\LSGOpenGl.h" />
+    <ClInclude Include="Src\PreProcGen\LSGPreProcLexBase.h" />
+    <ClInclude Include="Src\PreProcGen\LSGPreProcParser.h" />
+    <ClInclude Include="Src\PreProcGen\LSGPreProcParserLocation.h" />
+    <ClInclude Include="Src\PreProcGen\LSGPreProcParserPosition.h" />
+    <ClInclude Include="Src\PreProcGen\LSGPreProcParserStack.h" />
+    <ClInclude Include="Src\PreProc\LSGPreProc.h" />
+    <ClInclude Include="Src\PreProc\LSGPreProcContainer.h" />
+    <ClInclude Include="Src\PreProc\LSGPreProcLexer.h" />
+    <ClInclude Include="Src\PreProc\LSGPreProcSyntaxNodes.h" />
+    <ClInclude Include="Src\RenderTarget\LSGRenderTargetInterface.h" />
+    <ClInclude Include="Src\Sampler\LSGSampler.h" />
+    <ClInclude Include="Src\ShaderLangGen\LSGShaderLexBase.h" />
+    <ClInclude Include="Src\ShaderLangGen\LSGShaderParser.h" />
+    <ClInclude Include="Src\ShaderLangGen\LSGShaderParserLocation.h" />
+    <ClInclude Include="Src\ShaderLangGen\LSGShaderParserPosition.h" />
+    <ClInclude Include="Src\ShaderLangGen\LSGShaderParserStack.h" />
+    <ClInclude Include="Src\ShaderLanguage\LSGCompiledShaderBase.h" />
+    <ClInclude Include="Src\ShaderLanguage\LSGShader.h" />
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderBase.h" />
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderLanguageParser.h" />
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderLexer.h" />
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderParserWrapper.h" />
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderScope.h" />
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderScopeStack.h" />
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderSyntaxNodes.h" />
+    <ClInclude Include="Src\ShaderLanguage\LSGShaderTranslationProcessorBase.h" />
+    <ClInclude Include="Src\Texture\LSGTexture2d.h" />
+    <ClInclude Include="Src\Texture\LSGTexture2dBase.h" />
+    <ClInclude Include="Src\VertexBuffer\LSGNBufferVertexBuffer.h" />
+    <ClInclude Include="Src\VertexBuffer\LSGVertexBuffer.h" />
+    <ClInclude Include="Src\VertexBuffer\LSGVertexBufferBase.h" />
+    <ClInclude Include="Src\VertexBuffer\LSGVertexBufferCommonDecl.h" />
+    <ClInclude Include="Src\VertexBuffer\LSGVertexBufferCommonImpl.h" />
+    <ClInclude Include="Src\VulkanCommandBuffer\LSGVulkanCommandBuffer.h" />
+    <ClInclude Include="Src\VulkanIndexBuffer\LSGVulkanIndexBuffer.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\arrays.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\BaseTypes.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\Common.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\ConstantUnion.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\InfoSink.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\InitializeGlobals.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\intermediate.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\PoolAlloc.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\ResourceLimits.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\revision.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\ShHandle.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Include\Types.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\glslang_tab.cpp.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\gl_types.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Initialize.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\localintermediate.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\ParseHelper.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpContext.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\preprocessor\PpTokens.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\reflection.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\RemoveTree.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Scan.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\ScanContext.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\SymbolTable.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\MachineIndependent\Versions.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\glslang\Public\ShaderLang.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\disassemble.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\doc.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\GLSL.std.450.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\GlslangToSpv.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\spirv.hpp" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\SpvBuilder.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\spvIR.h" />
+    <ClInclude Include="Src\VulkanShaders\GLSL-SPIR-V\SPIRV\SPVRemapper.h" />
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanCompiledShader.h" />
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanCompiledShaderManager.h" />
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanShader.h" />
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanShaderManager.h" />
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanShaderProgramManager.h" />
+    <ClInclude Include="Src\VulkanShaders\LSGVulkanShaderTranslator.h" />
+    <ClInclude Include="Src\VulkanTexture\LSGVulkanTexture2d.h" />
+    <ClInclude Include="Src\VulkanTexture\LSGVulkanTextureConstants.h" />
+    <ClInclude Include="Src\VulkanVertexBuffer\LSGVulkanVertexBuffer.h" />
+    <ClInclude Include="Src\Vulkan\LSGVulkan.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

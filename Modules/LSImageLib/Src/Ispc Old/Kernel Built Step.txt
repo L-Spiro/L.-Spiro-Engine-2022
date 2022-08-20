@@ -1,0 +1,6 @@
+"$(SolutionDir)ispc.exe" -O2 "$(InputPath)" -o "$(PlatformName)\$(ConfigurationName)\$(InputName).obj" -h "$(ProjectDir)Src\Ispc\$(InputName)_ispc.h" --target=sse2,sse4 --opt=fast-math
+"$(SolutionDir)ispc.exe" -O2 "$(InputPath)" -o "$(PlatformName)\$(ConfigurationName)\$(InputName).obj" -h "$(ProjectDir)Src\Ispc\$(InputName)_ispc.h" --arch=x86 --target=sse2 --opt=fast-math
+
+"$(ProjectDir)$(PlatformName)\$(ConfigurationName)\$(InputName).obj"
+"$(ProjectDir)$(PlatformName)\$(ConfigurationName)\$(InputName)_sse2.obj"
+"$(ProjectDir)$(PlatformName)\$(ConfigurationName)\$(InputName)_sse4.obj"

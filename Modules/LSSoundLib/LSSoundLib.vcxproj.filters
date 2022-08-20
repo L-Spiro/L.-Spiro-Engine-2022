@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Ogg">
+      <UniqueIdentifier>{398ba58d-062a-4523-a2de-25b980a47ee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SoundComponents">
+      <UniqueIdentifier>{3f382f1a-cb51-4dcd-a567-df2bcd4a6ae3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SoundComponentsEx">
+      <UniqueIdentifier>{bdb00e5e-4c03-4d2f-b810-f9653c04d607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SoundCore">
+      <UniqueIdentifier>{dd1b0d89-d56e-49c5-9026-3a2246edcb12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Wave">
+      <UniqueIdentifier>{30a06169-ffc2-4248-aab2-3b0dbc36d312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Ogg">
+      <UniqueIdentifier>{873d41fe-29ab-4f45-87e7-df663a5d6e44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SoundComponents">
+      <UniqueIdentifier>{1e0a9177-0be8-4e55-bbd8-3d1ecc30cd3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SoundComponentsEx">
+      <UniqueIdentifier>{8052620f-94b8-4309-b021-af2a1d2dfff3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SoundCore">
+      <UniqueIdentifier>{91041ab5-b0be-4896-83d7-82c1ba38743d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Wave">
+      <UniqueIdentifier>{dbb9d4cf-ccee-4881-a02a-abd5cf0eccbf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\LSSSoundLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSOgg.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSOggStreamingSoundSourceStreamer.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSOggWindow.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisBackends.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisBitrate.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisCodeBook.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisCodec.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisCodecInternal.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisConstants.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisEnvelope.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisFile.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisFloor0.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisFloor1.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisHighLevel.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisLpc.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisLsp.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisMapping0.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisMasking.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisMdct.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisMisc.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisOs.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisPsy.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisRegistry.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisRes0.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisSmallFt.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ogg\LSSVorbisStructs.cpp">
+      <Filter>Source Files\Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundComponents\LSSSoundBuffer.cpp">
+      <Filter>Source Files\SoundComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundComponents\LSSSoundListener.cpp">
+      <Filter>Source Files\SoundComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundComponents\LSSSoundSource.cpp">
+      <Filter>Source Files\SoundComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundComponents\LSSStaticSoundSource.cpp">
+      <Filter>Source Files\SoundComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundComponents\LSSStaticSoundSource2d.cpp">
+      <Filter>Source Files\SoundComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundComponents\LSSStaticSoundSource3d.cpp">
+      <Filter>Source Files\SoundComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundComponents\LSSStreamingSoundSource.cpp">
+      <Filter>Source Files\SoundComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundComponents\LSSStreamingSoundSource2d.cpp">
+      <Filter>Source Files\SoundComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundComponents\LSSStreamingSoundSourceStreamer.cpp">
+      <Filter>Source Files\SoundComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundComponentsEx\LSSSoundBufferEx.cpp">
+      <Filter>Source Files\SoundComponentsEx</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundCore\LSSSoundManager.cpp">
+      <Filter>Source Files\SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SoundCore\LSSSoundManagerEx.cpp">
+      <Filter>Source Files\SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Wave\LSSWaveLoader.cpp">
+      <Filter>Source Files\Wave</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Wave\LSSWaveStreamingSoundSourceStreamer.cpp">
+      <Filter>Source Files\Wave</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\LSSSoundLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSOgg.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSOggStreamingSoundSourceStreamer.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSOggWindow.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisBackends.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisBitrate.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisCodeBook.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisCodec.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisCodecInternal.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisConstants.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisEnvelope.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisFile.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisFloor0.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisFloor1.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisHighLevel.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisLpc.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisLsp.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisMapping0.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisMasking.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisMdct.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisMisc.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisOs.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisPsy.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisRegistry.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisRes0.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisSmallFt.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Ogg\LSSVorbisStructs.h">
+      <Filter>Header Files\Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponents\LSSSoundBuffer.h">
+      <Filter>Header Files\SoundComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponents\LSSSoundListener.h">
+      <Filter>Header Files\SoundComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponents\LSSSoundSource.h">
+      <Filter>Header Files\SoundComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponents\LSSSoundSourceLoadParms.h">
+      <Filter>Header Files\SoundComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponents\LSSSoundSourceTypes.h">
+      <Filter>Header Files\SoundComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponents\LSSStaticSoundSource.h">
+      <Filter>Header Files\SoundComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponents\LSSStaticSoundSource2d.h">
+      <Filter>Header Files\SoundComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponents\LSSStaticSoundSource3d.h">
+      <Filter>Header Files\SoundComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponents\LSSStreamingSoundSource.h">
+      <Filter>Header Files\SoundComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponents\LSSStreamingSoundSource2d.h">
+      <Filter>Header Files\SoundComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponents\LSSStreamingSoundSourceStreamer.h">
+      <Filter>Header Files\SoundComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponentsEx\LSSSoundBufferEx.h">
+      <Filter>Header Files\SoundComponentsEx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundComponentsEx\LSSStreamerTypes.h">
+      <Filter>Header Files\SoundComponentsEx</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundCore\LSSSoundManager.h">
+      <Filter>Header Files\SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SoundCore\LSSSoundManagerEx.h">
+      <Filter>Header Files\SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Wave\LSSWaveLoader.h">
+      <Filter>Header Files\Wave</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Wave\LSSWaveStreamingSoundSourceStreamer.h">
+      <Filter>Header Files\Wave</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

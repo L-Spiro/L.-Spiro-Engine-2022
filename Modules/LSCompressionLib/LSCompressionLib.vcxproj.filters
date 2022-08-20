@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\BitStream">
+      <UniqueIdentifier>{e0593d6b-095c-4997-87ab-2b77fe0a25c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LZW">
+      <UniqueIdentifier>{e23777fe-8c4e-4b3d-a039-0b85fadd25e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Misc">
+      <UniqueIdentifier>{13bde5cf-2c22-4b42-8e1b-1ee1af4e7e72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ZLib">
+      <UniqueIdentifier>{5e718aa4-6730-4e27-bb1e-2ee37fd98776}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TriangleStrips">
+      <UniqueIdentifier>{71f23c0d-ab04-4939-8554-3d464a84294e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TriangleCache">
+      <UniqueIdentifier>{1ba9166f-8224-493c-8039-d268327ca2a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\BitStream">
+      <UniqueIdentifier>{495f0580-e5dd-4186-9bc5-23844a6a1ac8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\LZW">
+      <UniqueIdentifier>{c1327b37-05a8-42f1-952b-23b9618cf64f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Misc">
+      <UniqueIdentifier>{65517369-787e-4211-834f-bcd494e8481a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ZLib">
+      <UniqueIdentifier>{3fe3f2b8-b07e-48a4-a89d-30b05e5d7955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TriangleStrips">
+      <UniqueIdentifier>{f45801db-9d3a-452e-9e28-2cb10121c52c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TriangleCache">
+      <UniqueIdentifier>{1dca3452-ba63-4226-b16e-2be63d7833ec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\LSCCompressionLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\BitStream\LSCBitStream.cpp">
+      <Filter>Source Files\BitStream</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\LZW\LSCLzwDecoder.cpp">
+      <Filter>Source Files\LZW</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\LZW\LSCLzwDecodingDict.cpp">
+      <Filter>Source Files\LZW</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\LZW\LSCLzwEncoder.cpp">
+      <Filter>Source Files\LZW</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\LZW\LSCLzwEncodingDict.cpp">
+      <Filter>Source Files\LZW</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Misc\LSCMisc.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ZLib\LSCZLib.cpp">
+      <Filter>Source Files\ZLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\TriangleStrips\LSCStripAdjacency.cpp">
+      <Filter>Source Files\TriangleStrips</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\TriangleStrips\LSCTriangleStripper.cpp">
+      <Filter>Source Files\TriangleStrips</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\TriangleCache\LSCLiveTriangleList.cpp">
+      <Filter>Source Files\TriangleCache</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\TriangleCache\LSCTriangleCacheOptimizer.cpp">
+      <Filter>Source Files\TriangleCache</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\TriangleCache\LSCVertexTriangleAdjacency.cpp">
+      <Filter>Source Files\TriangleCache</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\LSCCompressionLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\BitStream\LSCBitStream.h">
+      <Filter>Header Files\BitStream</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LZW\LSCLzwDecoder.h">
+      <Filter>Header Files\LZW</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LZW\LSCLzwDecodingDict.h">
+      <Filter>Header Files\LZW</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LZW\LSCLzwEncoder.h">
+      <Filter>Header Files\LZW</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\LZW\LSCLzwEncodingDict.h">
+      <Filter>Header Files\LZW</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Misc\LSCMisc.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ZLib\LSCZLib.h">
+      <Filter>Header Files\ZLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\TriangleStrips\LSCStripAdjacency.h">
+      <Filter>Header Files\TriangleStrips</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\TriangleStrips\LSCTriangleStripper.h">
+      <Filter>Header Files\TriangleStrips</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\TriangleCache\LSCLiveTriangleList.h">
+      <Filter>Header Files\TriangleCache</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\TriangleCache\LSCTriangleCacheOptimizer.h">
+      <Filter>Header Files\TriangleCache</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\TriangleCache\LSCVertexTriangleAdjacency.h">
+      <Filter>Header Files\TriangleCache</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
