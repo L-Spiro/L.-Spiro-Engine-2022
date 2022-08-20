@@ -7,7 +7,7 @@ An incomplete game engine with tons of useful code.
 * Direct 3D 9
 * Direct 3D 11
 * OpenGl 3.2
-* OpenGL 4.X
+* OpenGL 4.4
 * OpenGL ES 2.0
 ## Partial support for:  
 * Vulkan
