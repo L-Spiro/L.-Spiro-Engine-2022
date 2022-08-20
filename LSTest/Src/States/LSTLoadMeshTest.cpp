@@ -197,17 +197,19 @@ void LSE_CALL CLoadMeshTest::Init( CGame * _pgGame, int32_t /*_ui32State*/, int3
 	//m_smipModel->Orientation().SetScale( 0.025f );
 
 	m_smipModel = m_sm3dScene.CreateModelInstance( "Dodge.lsm" );
-
-
-	m_smipModel = m_sm3dScene.CreateModelInstance( "Chevy.lsm" );
 	if ( m_smipModel.Valid() ) {
-		m_smipModel->Orientation().Pos() = CVector3( 20.0f, 0.0f, 0.0f );
+		m_smipModel->Orientation().Pos() = CVector3( -20.0f, 0.0f, 0.0f );
+	}
+
+	m_smipModel = m_sm3dScene.CreateModelInstance( "Glut.lsm" );
+	if ( m_smipModel.Valid() ) {
+		m_smipModel->Orientation().Pos() = CVector3( 27.0f, 0.0f, 12.0f );
 	}
 
 
-	m_smipModel = m_sm3dScene.CreateModelInstance( "Toad Harbor.lsm" );
+	m_smipModel = m_sm3dScene.CreateModelInstance( "Yoshi's Island.lsm" );
 	if ( m_smipModel.Valid() ) {
-		m_smipModel->Orientation().Pos() = CVector3( -20.0f, -5.0f, 0.0f );
+		m_smipModel->Orientation().Pos() = CVector3( -0.0f, 0.0f, 0.0f );
 	}
 #endif
 
@@ -260,7 +262,7 @@ void LSE_CALL CLoadMeshTest::Destroy( CGame * /*_pgGame*/, int32_t /*_ui32NextSt
  */
 LSBOOL LSE_CALL CLoadMeshTest::Draw( CGame * _pgGame ) {
 	//CGfx::SetClearColor( 10.1f, 10.1f, 10.1f, 1.0f );
-	CGfx::SetClearColor( CImageLib::LinearToSRgb( 0.1f ), CImageLib::LinearToSRgb( 0.01f ), CImageLib::LinearToSRgb( 0.01f ), 1.0f );
+	CGfx::SetClearColor( CImageLib::LinearToSRgb( 0.01f ), CImageLib::LinearToSRgb( 0.01f ), CImageLib::LinearToSRgb( 0.1f ), 1.0f );
 	//CGfx::SetClearColor( CImageLib::LinearToSRgb( 0.207843f ), CImageLib::LinearToSRgb( 0.596078f ), CImageLib::LinearToSRgb( 0.996078f ), 1.0f );
 	//CGfx::SetShader( m_sspShader.Get() );
 

@@ -38,12 +38,12 @@ INT APIENTRY wWinMain( HINSTANCE /*_hInstance*/, HINSTANCE /*_hPrevInstance*/, L
 
 		// Before running the "game" we need to tell it where to begin. 
 		// In this demo we just set the state to lse::LSE_GS_DEFAULT.
-		gGame.SetNextState( LST_S_TEXTURETEST, 0, true );
+		gGame.SetNextState( LST_S_LOADMESHTEST, 0, true );
 		
 		// After creating a game class, we can finish initializing the engine.
 		lse::CEngine::LSE_ENGINE_SECONDARY_INIT esiSecondInit = {
 			&gGame,							// Needed for the window to send input to the game class.
-			256 * 2,	224 * 2,			// Windowed resolution.
+			480 * 2,	320 * 2,			// Windowed resolution.
 			//2000,	1125,
 			0,		0,						// Full-screen resolution.  0 = desktop resolution.
 			"L. Spiro Engine",				// Window title.
