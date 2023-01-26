@@ -81,7 +81,7 @@ namespace lss {
 		 * \return Returns NULL if the ID is invalid or if the buffer was not created via a path,
 		 *	otherwise _pcRet is filled with the path and returned.
 		 */
-		char * LSE_CALL								GetBufferPathById( uint32_t _ui32Id, char * _pcRet ) const;
+		char * LSE_CALL									GetBufferPathById( uint32_t _ui32Id, char * _pcRet ) const;
 
 		/**
 		 * Load (but do not play) a sound at a specified 3D location.  The loaded sound is returned and UnLock()

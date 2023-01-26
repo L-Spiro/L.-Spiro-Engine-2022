@@ -39,7 +39,6 @@ namespace lss {
 	uint32_t CSoundLib::m_ui32MaxDeviceNameLength = 1;
 
 	// Various enumerated values indicating the number and arrangement of channels.
-	// Various enumerated values indicating the number and arrangement of channels.
 	CSoundLib::LSS_CHANNEL_ARRANGEMENT CSoundLib::m_caChannels[LSS_C_TOTAL] = {
 		{ "AL_FORMAT_MONO8",			0,	8,	1, },
 		{ "AL_FORMAT_MONO16",			0,	16,	1, },
