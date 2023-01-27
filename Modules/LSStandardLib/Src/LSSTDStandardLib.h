@@ -275,6 +275,7 @@ namespace lsstd {
 		LSSTD_E_BADVERSION,				/**< Unsupported version (of a file etc.) */
 		LSSTD_E_FILEOVERFLOW,			/**< The file exceeded the maximum size supported by the system. */
 		LSSTD_E_FILEWRITEERROR,			/**< An error occurred while writing the file. */
+		LSSTD_E_BADFORMAT,				/**< Bad data format. */
 	};
 
 

@@ -276,25 +276,25 @@ namespace lsx {
 		/** Conversion table for uncompressed formats. */
 		struct LSX_UNCOMPRESSED_TABLE {
 				/** Image format by our enumerated value. */
-				LSX_IMAGE_FORMATS					ifFormat;
+				LSX_IMAGE_FORMATS				ifFormat;
 
 				/** The dwFlags value. */
-				uint32_t							ui32Flags;
+				uint32_t						ui32Flags;
 
 				/** The dwRGBBitCount value. */
-				uint32_t							ui32RgbBitCount;
+				uint32_t						ui32RgbBitCount;
 
 				/** The dwRBitMask value. */
-				uint32_t							ui32RBitMask;
+				uint32_t						ui32RBitMask;
 
 				/** The dwGBitMask value. */
-				uint32_t							ui32GBitMask;
+				uint32_t						ui32GBitMask;
 
 				/** The dwBBitMask value. */
-				uint32_t							ui32BBitMask;
+				uint32_t						ui32BBitMask;
 
 				/** Image dwABitMask value. */
-				uint32_t							ui32ABitMask;
+				uint32_t						ui32ABitMask;
 			};
 
 
@@ -365,6 +365,18 @@ namespace lsx {
 		 * \return Returns an error code indicating successor failure.
 		 */
 		static LSSTD_ERRORS LSE_CALL			CreateKtx1( const LSX_OPTIONS &_oOptions, const CImage &_iImage, CMemFile &_mfFile,
+			uint32_t _ui32FileIndex );
+
+		/**
+		 * Creates a BMP file.
+		 *
+		 * \param _oOptions Conversion options.
+		 * \param _iImage The image to save.
+		 * \param _mfFile The in-memory file to which to write the file data.
+		 * \param _ui32FileIndex Index of the file being converted.
+		 * \return Returns an error code indicating successor failure.
+		 */
+		static LSSTD_ERRORS LSE_CALL			CreateBmp( const LSX_OPTIONS &_oOptions, const CImage &_iImage, CMemFile &_mfFile,
 			uint32_t _ui32FileIndex );
 
 		/**

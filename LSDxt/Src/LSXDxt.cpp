@@ -13,6 +13,7 @@
  */
 
 #include "LSXDxt.h"
+#include "Bmp/LSIBmp.h"
 #include "Dds/LSIDds.h"
 #include "Etc/LSIEtc.h"
 #include "FileStream/LSFFileStream.h"
@@ -1698,10 +1699,18 @@ namespace lsx {
 				iImage.ConvertToNormalMap( kU, kV, _oOptions.fNormalMapStr, vWeights, _oOptions.amAddressMode, _oOptions.ui32NormalMapChannel == CImage::LSI_CA_MAX );
 			}
 
+			const char * pcExtension = CFileLib::GetExtension( _oOptions.slOutputs[I].CStr() );
+
 			// Create an image of the final file in memory.
 			CMemFile mfFileImage;
 			if ( _oOptions.kifFormat != static_cast<LSI_KTX_INTERNAL_FORMAT>(0) ) {
 				eError = CreateKtx1( _oOptions, iImage, mfFileImage, I );
+				if ( eError != LSSTD_E_SUCCESS ) {
+					continue;
+				}
+			}
+			else if ( pcExtension && CStd::StrICmp( pcExtension, "bmp" ) == 0 ) {
+				eError = CreateBmp( _oOptions, iImage, mfFileImage, I );
 				if ( eError != LSSTD_E_SUCCESS ) {
 					continue;
 				}
@@ -2291,6 +2300,180 @@ namespace lsx {
 		// glInternalFormat.
 		// For compressed textures, glInternalFormat must equal the compressed internal format, usually one of the values from table 8.14 of the OpenGL 4.4 specification [OPENGL44].
 #endif	// #if 0
+	}
+
+	/**
+	 * Creates a BMP file.
+	 *
+	 * \param _oOptions Conversion options.
+	 * \param _iImage The image to save.
+	 * \param _mfFile The in-memory file to which to write the file data.
+	 * \param _ui32FileIndex Index of the file being converted.
+	 * \return Returns an error code indicating successor failure.
+	 */
+	LSSTD_ERRORS LSE_CALL CDxt::CreateBmp( const LSX_OPTIONS &_oOptions, const CImage &_iImage, CMemFile &_mfFile,
+		uint32_t _ui32FileIndex ) {
+		LSSTD_ERRORS eError = LSSTD_E_SUCCESS;
+		uint32_t ui32FormatBytes = CImageLib::GetFormatSize( _iImage.GetFormat() );
+		switch ( ui32FormatBytes ) {
+			case 32 / 8 : {
+				break;
+			}
+			case 24 / 8 : {
+				break;
+			}
+			case 16 / 8 : {
+				break;
+			}
+			default : {
+				eError = LSSTD_E_BADFORMAT;
+				::printf( "Failed to create BMP file: Format must be 16-, 24-, or 32- bit.\r\n" );
+				return eError;
+			}
+		}
+		uint32_t ui32Stride = ui32FormatBytes * _iImage.GetWidth();
+		if ( ui32Stride & 0x3 ) {
+			ui32Stride = (ui32Stride & ~3) + 4;
+		}
+
+		CBmp::LSI_BITMAPFILEHEADER bmfhHeader = { 0x4D42 };
+		bmfhHeader.ui32Offset = sizeof( CBmp::LSI_BITMAPFILEHEADER ) + sizeof( CBmp::LSI_BITMAPINFOHEADER );
+		bmfhHeader.ui32Size = bmfhHeader.ui32Offset + ui32Stride * _iImage.GetHeight() + 2;
+		CBmp::LSI_BITMAPINFOHEADER bihInfo = { sizeof( CBmp::LSI_BITMAPINFOHEADER ) };
+		bihInfo.ui32Width = _iImage.GetWidth();
+		bihInfo.ui32Height = _iImage.GetHeight();
+		bihInfo.ui16Planes = 1;
+		bihInfo.ui32ImageSize = ui32Stride * _iImage.GetHeight() + 2;
+		bihInfo.ui32PixelsPerMeterX = static_cast<uint32_t>(std::round( 96.0 * 39.37007874015748096 ));
+		bihInfo.ui32PixelsPerMeterY = static_cast<uint32_t>(std::round( 96.0 * 39.37007874015748096 ));
+		
+		bihInfo.ui16BitsPerPixel = ui32FormatBytes * 8;
+		if ( !_mfFile.Append( reinterpret_cast<const uint8_t *>(&bmfhHeader), sizeof( bmfhHeader ) ) ) {
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to create BMP file: Out of memory.\r\n" );
+			return eError;
+		}
+		if ( !_mfFile.Append( reinterpret_cast<const uint8_t *>(&bihInfo), sizeof( bihInfo ) ) ) {
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to create BMP file: Out of memory.\r\n" );
+			return eError;
+		}
+
+		
+		CVectorPoD<uint8_t, uint32_t, 0x10000> vRow;
+		if ( !vRow.Resize( ui32Stride ) ) {
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to create BMP file: Out of memory.\r\n" );
+			return eError;
+		}
+		LSI_PIXEL_FORMAT pfDstFormat = LSI_PF_R8G8B8A8;
+		const CBmp::LSI_BITMAPCOLORMASK * lpbcmMask;
+		if ( bihInfo.ui32Compression == BI_BITFIELDS ) {
+			//lpbcmMask = reinterpret_cast<const CBmp::LSI_BITMAPCOLORMASK *>(&_pui8FileData[sizeof( CBmp::LSI_BITMAPFILEHEADER )+sizeof( CBmp::LSI_BITMAPINFOHEADER )]);
+		}
+		else {
+			static const CBmp::LSI_BITMAPCOLORMASK bcmDefaultMask32 = {
+				0x00FF0000,
+				0x0000FF00,
+				0x000000FF,
+				0xFF000000,
+			};
+			static const CBmp::LSI_BITMAPCOLORMASK bcmDefaultMask24 = {
+				0x00FF0000,
+				0x0000FF00,
+				0x000000FF,
+				0x00000000,
+			};
+			static const CBmp::LSI_BITMAPCOLORMASK bcmDefaultMask16 = {
+				0x00007C00,
+				0x000003E0,
+				0x0000001F,
+				0x00000000,
+			};
+			if ( bihInfo.ui16BitsPerPixel == 16 ) {
+				lpbcmMask = &bcmDefaultMask16;
+				pfDstFormat = LSI_PF_R5G6B5;
+			}
+			else if ( bihInfo.ui16BitsPerPixel == 32 ) {
+				lpbcmMask = &bcmDefaultMask32;
+				pfDstFormat = LSI_PF_R8G8B8A8;
+			}
+			else {
+				lpbcmMask = &bcmDefaultMask24;
+				pfDstFormat = LSI_PF_R8G8B8;
+			}
+		}
+		// Determine how much we need to shift each channel to get the values we expect.
+		uint32_t ui32RShift = 0;
+		uint32_t ui32GShift = 0;
+		uint32_t ui32BShift = 0;
+		uint32_t ui32AShift = 0;
+		while ( ui32RShift < 32 && !(lpbcmMask->ui32Red & (1 << ui32RShift)) ) { ++ui32RShift; }
+		while ( ui32GShift < 32 && !(lpbcmMask->ui32Green & (1 << ui32GShift)) ) { ++ui32GShift; }
+		while ( ui32BShift < 32 && !(lpbcmMask->ui32Blue & (1 << ui32BShift)) ) { ++ui32BShift; }
+		while ( ui32AShift < 32 && !(lpbcmMask->ui32Alpha & (1 << ui32AShift)) ) { ++ui32AShift; }
+
+		// Also get the number of bits per component.
+		uint32_t ui32RBits = 0;
+		uint32_t ui32GBits = 0;
+		uint32_t ui32BBits = 0;
+		uint32_t ui32ABits = 0;
+		while ( (lpbcmMask->ui32Red & (1 << (ui32RShift + ui32RBits)) ) ) { ++ui32RBits; }
+		while ( (lpbcmMask->ui32Green & (1 << (ui32GShift + ui32GBits)) ) ) { ++ui32GBits; }
+		while ( (lpbcmMask->ui32Blue & (1 << (ui32BShift + ui32BBits)) ) ) { ++ui32BBits; }
+		while ( (lpbcmMask->ui32Alpha & (1 << (ui32AShift + ui32ABits)) ) ) { ++ui32ABits; }
+
+		uint32_t ui32RMask = (1 << ui32RBits) - 1;
+		uint32_t ui32GMask = (1 << ui32GBits) - 1;
+		uint32_t ui32BMask = (1 << ui32BBits) - 1;
+		uint32_t ui32AMask = (1 << ui32ABits) - 1;
+
+		for ( uint32_t Y = 0; Y < bihInfo.ui32Height; ++Y ) {
+			CStd::MemSet( &vRow[0], 0, vRow.Length() );
+			uint8_t * ui8Dst = &vRow[0];
+			for ( uint32_t X = 0; X < bihInfo.ui32Width; ++X ) {
+				uint64_t ui64Texel = _iImage.GetTexelAt( LSI_PF_R8G8B8A8, X, (bihInfo.ui32Height - 1) - Y );
+				uint8_t ui8A = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_A ) );
+				uint8_t ui8R = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_R ) );
+				uint8_t ui8G = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_G ) );
+				uint8_t ui8B = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_B ) );
+				if ( bihInfo.ui16BitsPerPixel == 16 ) {
+					uint16_t * pui16Dst = reinterpret_cast<uint16_t *>(ui8Dst);
+					(*pui16Dst) = uint16_t( ((ui8A & ui32AMask) << ui32AShift) |
+						((ui8R & ui32RMask) << ui32RShift) |
+						((ui8G & ui32GMask) << ui32GShift) |
+						((ui8B & ui32BMask) << ui32BShift) );
+				}
+				else if ( bihInfo.ui16BitsPerPixel == 32 ) {
+					uint32_t * pui32Dst = reinterpret_cast<uint32_t *>(ui8Dst);
+					(*pui32Dst) = uint32_t( ((ui8A & ui32AMask) << ui32AShift) |
+						((ui8R & ui32RMask) << ui32RShift) |
+						((ui8G & ui32GMask) << ui32GShift) |
+						((ui8B & ui32BMask) << ui32BShift) );
+				}
+				else {
+					ui8Dst[ui32RShift>>3] = ui8R;
+					ui8Dst[ui32GShift>>3] = ui8G;
+					ui8Dst[ui32BShift>>3] = ui8B;
+				}
+
+				ui8Dst += ui32FormatBytes;
+			}
+			if ( !_mfFile.Append( reinterpret_cast<const uint8_t *>(&vRow[0]), vRow.Length() ) ) {
+				eError = LSSTD_E_OUTOFMEMORY;
+				::printf( "Failed to create BMP file: Out of memory.\r\n" );
+				return eError;
+			}
+		}
+
+		uint16_t ui16Post = 0;
+		if ( !_mfFile.Append( reinterpret_cast<const uint8_t *>(&ui16Post), sizeof( ui16Post ) ) ) {
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to create BMP file: Out of memory.\r\n" );
+			return eError;
+		}
+		
+		return eError;
 	}
 
 	/**

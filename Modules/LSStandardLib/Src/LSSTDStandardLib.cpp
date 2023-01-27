@@ -2911,6 +2911,7 @@ namespace lsstd {
 			"Invalid version.",										// LSSTD_E_BADVERSION
 			"File overflow.",										// LSSTD_E_FILEOVERFLOW
 			"File write error.",									// LSSTD_E_FILEWRITEERROR
+			"Bad data format.",										// LSSTD_E_BADFORMAT
 		};
 		DebugPrintA( pcTable[_eError] );
 	}

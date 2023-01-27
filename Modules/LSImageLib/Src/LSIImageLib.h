@@ -327,7 +327,7 @@ namespace lsi {
 		 * \return Returns the converted component.
 		 */
 		static LSE_INLINE const uint32_t LSE_FCALL	ConvComponent( LSI_PIXEL_FORMAT _pfSrcFormat, LSI_PIXEL_FORMAT _pfDstFormat,
-			LSI_PIXEL_COMPONENTS _ppComp, uint32_t _ui32Component, LSI_GAMMA _gGammConv );
+			LSI_PIXEL_COMPONENTS _ppComp, uint32_t _ui32Component, LSI_GAMMA _gGammConv = LSI_G_NONE );
 
 		/**
 		 * Converts a single float value from sRGB space to linear space.  Performs an accurate conversion.

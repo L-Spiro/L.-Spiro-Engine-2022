@@ -28,38 +28,6 @@ namespace lsi {
 	 */
 	class CBmp {
 	public :
-		// == Functions.
-		/**
-		 * Load a BMP file from memory.
-		 *
-		 * \param _pui8FileData The in-memory image of the file.
-		 * \param _ui32DataLen The length of the in-memory image of the file.
-		 * \param _ui32Width The returned width of the image.
-		 * \param _ui32Height The returned height of the image.
-		 * \param _pfFormat Indicates the format of the converted data held in _tbReturn.
-		 * \param _tbReturn The returned data.
-		 * \return Returns true if the file was successfully loaded.  False indicates an invalid file or lack of RAM.
-		 */
-		static LSBOOL LSE_CALL			LoadBmp( const uint8_t * _pui8FileData, uint32_t _ui32DataLen,
-			uint32_t &_ui32Width, uint32_t &_ui32Height, LSI_PIXEL_FORMAT &_pfFormat,
-			CImageLib::CTexelBuffer &_tbReturn );
-
-		/**
-		 * Load a BMP file from a file.
-		 *
-		 * \param _pcFile File from which to load the bitmap data.  Must be in UTF-8 format.
-		 * \param _ui32Width The returned width of the image.
-		 * \param _ui32Height The returned height of the image.
-		 * \param _pfFormat Indicates the format of the converted data held in _tbReturn.
-		 * \param _tbReturn The returned data.
-		 * \return Returns true if the file was successfully loaded.  False indicates an invalid file or lack of RAM.
-		 */
-		static LSBOOL LSE_CALL			LoadBmp( const char * _pcFile,
-			uint32_t &_ui32Width, uint32_t &_ui32Height, LSI_PIXEL_FORMAT &_pfFormat,
-			CImageLib::CTexelBuffer &_tbReturn );
-		
-
-	protected :
 		// == Types.
 #pragma pack( push, 1 )
 		/** The bitmap file header. */
@@ -105,6 +73,37 @@ namespace lsi {
 			uint32_t					ui32Color;
 		} * LPLSI_BITMAPPALETTE, * const LPCLSI_BITMAPPALETTE;
 #pragma pack( pop )
+
+
+		// == Functions.
+		/**
+		 * Load a BMP file from memory.
+		 *
+		 * \param _pui8FileData The in-memory image of the file.
+		 * \param _ui32DataLen The length of the in-memory image of the file.
+		 * \param _ui32Width The returned width of the image.
+		 * \param _ui32Height The returned height of the image.
+		 * \param _pfFormat Indicates the format of the converted data held in _tbReturn.
+		 * \param _tbReturn The returned data.
+		 * \return Returns true if the file was successfully loaded.  False indicates an invalid file or lack of RAM.
+		 */
+		static LSBOOL LSE_CALL			LoadBmp( const uint8_t * _pui8FileData, uint32_t _ui32DataLen,
+			uint32_t &_ui32Width, uint32_t &_ui32Height, LSI_PIXEL_FORMAT &_pfFormat,
+			CImageLib::CTexelBuffer &_tbReturn );
+
+		/**
+		 * Load a BMP file from a file.
+		 *
+		 * \param _pcFile File from which to load the bitmap data.  Must be in UTF-8 format.
+		 * \param _ui32Width The returned width of the image.
+		 * \param _ui32Height The returned height of the image.
+		 * \param _pfFormat Indicates the format of the converted data held in _tbReturn.
+		 * \param _tbReturn The returned data.
+		 * \return Returns true if the file was successfully loaded.  False indicates an invalid file or lack of RAM.
+		 */
+		static LSBOOL LSE_CALL			LoadBmp( const char * _pcFile,
+			uint32_t &_ui32Width, uint32_t &_ui32Height, LSI_PIXEL_FORMAT &_pfFormat,
+			CImageLib::CTexelBuffer &_tbReturn );
 	};
 
 }	// namespace lsi
