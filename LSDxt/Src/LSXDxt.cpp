@@ -17,6 +17,7 @@
 #include "Dds/LSIDds.h"
 #include "Etc/LSIEtc.h"
 #include "FileStream/LSFFileStream.h"
+#include "FreeImage.h"
 #include "Time/LSSTDTime.h"
 #include "Vector/LSMVector3Base.h"
 #include <iostream>
@@ -1725,6 +1726,12 @@ namespace lsx {
 					continue;
 				}
 			}
+			else if ( pcExtension && CStd::StrICmp( pcExtension, "ico" ) == 0 ) {
+				eError = CreateIco( _oOptions, iImage, mfFileImage, I );
+				if ( eError != LSSTD_E_SUCCESS ) {
+					continue;
+				}
+			}
 			else {
 				eError = CreateDds( _oOptions, iImage, mfFileImage, I );
 				if ( eError != LSSTD_E_SUCCESS ) {
@@ -2492,6 +2499,77 @@ namespace lsx {
 			return eError;
 		}
 		
+		return eError;
+	}
+
+	/**
+	 * Creates a. ICO file.
+	 *
+	 * \param _oOptions Conversion options.
+	 * \param _iImage The image to save.
+	 * \param _mfFile The in-memory file to which to write the file data.
+	 * \param _ui32FileIndex Index of the file being converted.
+	 * \return Returns an error code indicating successor failure.
+	 */
+	LSSTD_ERRORS LSE_CALL CDxt::CreateIco( const LSX_OPTIONS &_oOptions, const CImage &_iImage, CMemFile &_mfFile,
+		uint32_t _ui32FileIndex ) {
+		LSSTD_ERRORS eError = LSSTD_E_SUCCESS;
+
+		CImage iImage;
+		_iImage.ConvertToFormat( LSI_PF_R8G8B8A8, iImage );
+		FIBITMAP * pbmBitmap = ::FreeImage_Allocate( iImage.GetWidth(), iImage.GetHeight(), 32 );
+		if ( !pbmBitmap ) {
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to allocate bitmap structure for ICO file (%s).\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		for ( uint32_t Y = 0; Y < iImage.GetHeight(); ++Y ) {
+			for ( uint32_t X = 0; X < iImage.GetWidth(); ++X ) {
+				uint64_t ui64Texel = iImage.GetTexelAt( LSI_PF_R8G8B8A8, X, (iImage.GetWidth() - 1) - Y );
+				RGBQUAD rqQuad;
+				rqQuad.rgbReserved = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_A ) );
+				rqQuad.rgbRed = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_R ) );
+				rqQuad.rgbGreen = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_G ) );
+				rqQuad.rgbBlue = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_B ) );
+				::FreeImage_SetPixelColor( pbmBitmap, X, Y, &rqQuad );
+			}
+		}
+
+		FIMEMORY * pmMemory = ::FreeImage_OpenMemory();
+		if ( nullptr == pmMemory ) {
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to memory stream for ICO file (%s).\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+
+		if ( !::FreeImage_SaveToMemory( FIF_ICO, pbmBitmap, pmMemory, ICO_DEFAULT ) ) {
+			::FreeImage_CloseMemory( pmMemory );
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_INTERNALERROR;
+			::printf( "Failed to save ICO file (%s) to memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		BYTE * pbData;
+		DWORD dwSize;
+		if ( !::FreeImage_AcquireMemory( pmMemory, &pbData, &dwSize ) ) {
+			::FreeImage_CloseMemory( pmMemory );
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_INTERNALERROR;
+			::printf( "Failed to save ICO file (%s) to memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		if ( !_mfFile.Append( pbData, dwSize ) ) {
+			::FreeImage_CloseMemory( pmMemory );
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to copy ICO file (%s) memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+
+		::FreeImage_CloseMemory( pmMemory );
+		::FreeImage_Unload( pbmBitmap );
+
 		return eError;
 	}
 

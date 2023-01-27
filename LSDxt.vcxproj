@@ -95,7 +95,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='OGL Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\FreeImage\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;LSG_OPENGL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);KHRONOS_STATIC; KTX_FEATURE_WRITE</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
@@ -122,7 +122,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\FreeImage\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;LSG_OPENGL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);KHRONOS_STATIC; KTX_FEATURE_WRITE</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Async</ExceptionHandling>
@@ -154,7 +154,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\FreeImage\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;LSG_OPENGL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);KHRONOS_STATIC; KTX_FEATURE_WRITE</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
@@ -184,7 +184,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSMemLib\Src;$(SolutionDir)Modules\LSStandardLib\Src;$(SolutionDir)Modules\LSThreadLib\Src;$(SolutionDir)Modules\LSTL\Src;$(SolutionDir)Modules\LSFileLib\Src;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\FreeImage\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;LSG_OPENGL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);KHRONOS_STATIC; KTX_FEATURE_WRITE</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Async</ExceptionHandling>
