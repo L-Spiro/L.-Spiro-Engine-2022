@@ -92,6 +92,7 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 			lsx::CDxt::LSX_ET_NONE,				// etEtcType
 			lsx::CDxt::LSE_EF_RGB_A8,			// efEtcFormat
 			lsx::CDxt::LSX_E_PERCEPTUAL,		// eeErrorMetric
+			0,									// ui8BmpBits
 		};
 
 		uint32_t ui32CreateNormalMapArg = LSE_MAXU32;
@@ -304,6 +305,10 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 					else if ( CStd::WStrICmp( _pwcArgv[I], L"etc2" ) == 0 ) {
 						oOptions.etEtcType = lsx::CDxt::LSX_ET_ETC2;
 					}
+				}
+				// Number of mipmaps to generate.
+				else if ( LSX_VERIFY_INPUT( bmp, 1 ) ) {
+					oOptions.ui8BmpBits = uint8_t( CStd::WtoI32( _pwcArgv[++I] ) );
 				}
 				// Rescaling.
 				else if ( LSX_VERIFY_INPUT( prescale, 2 ) ) {
@@ -1644,10 +1649,15 @@ namespace lsx {
 			}
 
 			// Resize the image in-place.
-			if ( !iImage.ResampleInPlace( ui32NewWidth, ui32NewHeight, _oOptions.fFilter, _oOptions.fFilterGamma, _oOptions.amAddressMode, 1.0f ) ) {
-				eError = LSSTD_E_PARTIALFAILURE;
-				::printf( "Failed to resize image %s.\r\n", _oOptions.slInputs[I].CStr() );
-				continue;
+			if ( iImage.GetWidth() != ui32NewWidth || iImage.GetHeight() != ui32NewHeight ) {
+				if ( iImage.GetFormat() >= LSI_PF_TOTAL ) {
+					iImage.ConvertToFormatInPlace( LSI_PF_R16G16B16A16 );
+				}
+				if ( !iImage.ResampleInPlace( ui32NewWidth, ui32NewHeight, _oOptions.fFilter, _oOptions.fFilterGamma, _oOptions.amAddressMode, 1.0f ) ) {
+					eError = LSSTD_E_PARTIALFAILURE;
+					::printf( "Failed to resize image %s.\r\n", _oOptions.slInputs[I].CStr() );
+					continue;
+				}
 			}
 
 			// If converting to a normal map, do it now.
@@ -2245,7 +2255,7 @@ namespace lsx {
 			}
 
 			do {
-				if ( !_mfFile.Append( puiBuffer, sBufferLen ) ) {
+				if ( !_mfFile.Append( puiBuffer, uint32_t( sBufferLen ) ) ) {
 					eError = LSSTD_E_OUTOFMEMORY;
 					::printf( "Failed to create file image %s.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
 					//bErrored = true;
@@ -2314,48 +2324,59 @@ namespace lsx {
 	LSSTD_ERRORS LSE_CALL CDxt::CreateBmp( const LSX_OPTIONS &_oOptions, const CImage &_iImage, CMemFile &_mfFile,
 		uint32_t _ui32FileIndex ) {
 		LSSTD_ERRORS eError = LSSTD_E_SUCCESS;
-		uint32_t ui32FormatBytes = CImageLib::GetFormatSize( _iImage.GetFormat() );
-		switch ( ui32FormatBytes ) {
-			case 32 / 8 : {
+
+		CImage iImage;
+		_iImage.ConvertToFormat( LSI_PF_R8G8B8A8, iImage );
+
+		LSI_PIXEL_FORMAT pfDstFormat = LSI_PF_R8G8B8A8;
+		switch ( _oOptions.ui8BmpBits ) {
+			case 0 : {}
+			case 32 : {
+				pfDstFormat = LSI_PF_R8G8B8A8;
 				break;
 			}
-			case 24 / 8 : {
+			case 24 : {
+				pfDstFormat = LSI_PF_R8G8B8;
 				break;
 			}
-			case 16 / 8 : {
+			case 16 : {
+				pfDstFormat = LSI_PF_R5G6B5;
+				//pfDstFormat = LSI_PF_R5G5B5A1;
 				break;
 			}
 			default : {
 				eError = LSSTD_E_BADFORMAT;
-				::printf( "Failed to create BMP file: Format must be 16-, 24-, or 32- bit.\r\n" );
+				::printf( "Failed to create BMP file (%s): Format must be 16-, 24-, or 32- bit.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
 				return eError;
 			}
 		}
-		uint32_t ui32Stride = ui32FormatBytes * _iImage.GetWidth();
+
+		uint32_t ui32FormatBytes = CImageLib::GetFormatSize( pfDstFormat );
+		uint32_t ui32Stride = ui32FormatBytes * iImage.GetWidth();
 		if ( ui32Stride & 0x3 ) {
 			ui32Stride = (ui32Stride & ~3) + 4;
 		}
 
 		CBmp::LSI_BITMAPFILEHEADER bmfhHeader = { 0x4D42 };
 		bmfhHeader.ui32Offset = sizeof( CBmp::LSI_BITMAPFILEHEADER ) + sizeof( CBmp::LSI_BITMAPINFOHEADER );
-		bmfhHeader.ui32Size = bmfhHeader.ui32Offset + ui32Stride * _iImage.GetHeight() + 2;
+		bmfhHeader.ui32Size = bmfhHeader.ui32Offset + ui32Stride * iImage.GetHeight() + 2;
 		CBmp::LSI_BITMAPINFOHEADER bihInfo = { sizeof( CBmp::LSI_BITMAPINFOHEADER ) };
-		bihInfo.ui32Width = _iImage.GetWidth();
-		bihInfo.ui32Height = _iImage.GetHeight();
+		bihInfo.ui32Width = iImage.GetWidth();
+		bihInfo.ui32Height = iImage.GetHeight();
 		bihInfo.ui16Planes = 1;
-		bihInfo.ui32ImageSize = ui32Stride * _iImage.GetHeight() + 2;
+		bihInfo.ui32ImageSize = ui32Stride * iImage.GetHeight() + 2;
 		bihInfo.ui32PixelsPerMeterX = static_cast<uint32_t>(std::round( 96.0 * 39.37007874015748096 ));
 		bihInfo.ui32PixelsPerMeterY = static_cast<uint32_t>(std::round( 96.0 * 39.37007874015748096 ));
 		
-		bihInfo.ui16BitsPerPixel = ui32FormatBytes * 8;
+		bihInfo.ui16BitsPerPixel = uint16_t( ui32FormatBytes * 8 );
 		if ( !_mfFile.Append( reinterpret_cast<const uint8_t *>(&bmfhHeader), sizeof( bmfhHeader ) ) ) {
 			eError = LSSTD_E_OUTOFMEMORY;
-			::printf( "Failed to create BMP file: Out of memory.\r\n" );
+			::printf( "Failed to create BMP file (%s): Out of memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
 			return eError;
 		}
 		if ( !_mfFile.Append( reinterpret_cast<const uint8_t *>(&bihInfo), sizeof( bihInfo ) ) ) {
 			eError = LSSTD_E_OUTOFMEMORY;
-			::printf( "Failed to create BMP file: Out of memory.\r\n" );
+			::printf( "Failed to create BMP file (%s): Out of memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
 			return eError;
 		}
 
@@ -2363,10 +2384,10 @@ namespace lsx {
 		CVectorPoD<uint8_t, uint32_t, 0x10000> vRow;
 		if ( !vRow.Resize( ui32Stride ) ) {
 			eError = LSSTD_E_OUTOFMEMORY;
-			::printf( "Failed to create BMP file: Out of memory.\r\n" );
+			::printf( "Failed to create BMP file (%s): Out of memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
 			return eError;
 		}
-		LSI_PIXEL_FORMAT pfDstFormat = LSI_PF_R8G8B8A8;
+		
 		const CBmp::LSI_BITMAPCOLORMASK * lpbcmMask;
 		if ( bihInfo.ui32Compression == BI_BITFIELDS ) {
 			//lpbcmMask = reinterpret_cast<const CBmp::LSI_BITMAPCOLORMASK *>(&_pui8FileData[sizeof( CBmp::LSI_BITMAPFILEHEADER )+sizeof( CBmp::LSI_BITMAPINFOHEADER )]);
@@ -2392,15 +2413,12 @@ namespace lsx {
 			};
 			if ( bihInfo.ui16BitsPerPixel == 16 ) {
 				lpbcmMask = &bcmDefaultMask16;
-				pfDstFormat = LSI_PF_R5G6B5;
 			}
 			else if ( bihInfo.ui16BitsPerPixel == 32 ) {
 				lpbcmMask = &bcmDefaultMask32;
-				pfDstFormat = LSI_PF_R8G8B8A8;
 			}
 			else {
 				lpbcmMask = &bcmDefaultMask24;
-				pfDstFormat = LSI_PF_R8G8B8;
 			}
 		}
 		// Determine how much we need to shift each channel to get the values we expect.
@@ -2432,17 +2450,18 @@ namespace lsx {
 			CStd::MemSet( &vRow[0], 0, vRow.Length() );
 			uint8_t * ui8Dst = &vRow[0];
 			for ( uint32_t X = 0; X < bihInfo.ui32Width; ++X ) {
-				uint64_t ui64Texel = _iImage.GetTexelAt( LSI_PF_R8G8B8A8, X, (bihInfo.ui32Height - 1) - Y );
+				uint64_t ui64Texel = iImage.GetTexelAt( LSI_PF_R8G8B8A8, X, (bihInfo.ui32Height - 1) - Y );
 				uint8_t ui8A = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_A ) );
 				uint8_t ui8R = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_R ) );
 				uint8_t ui8G = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_G ) );
 				uint8_t ui8B = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_B ) );
 				if ( bihInfo.ui16BitsPerPixel == 16 ) {
 					uint16_t * pui16Dst = reinterpret_cast<uint16_t *>(ui8Dst);
-					(*pui16Dst) = uint16_t( ((ui8A & ui32AMask) << ui32AShift) |
-						((ui8R & ui32RMask) << ui32RShift) |
-						((ui8G & ui32GMask) << ui32GShift) |
-						((ui8B & ui32BMask) << ui32BShift) );
+					(*pui16Dst) = uint16_t(
+						(((ui8A >> (8 - ui32ABits)) & ui32AMask) << ui32AShift) |
+						(((ui8R >> (8 - ui32RBits)) & ui32RMask) << ui32RShift) |
+						(((ui8G >> (8 - ui32GBits)) & ui32GMask) << ui32GShift) |
+						(((ui8B >> (8 - ui32BBits)) & ui32BMask) << ui32BShift) );
 				}
 				else if ( bihInfo.ui16BitsPerPixel == 32 ) {
 					uint32_t * pui32Dst = reinterpret_cast<uint32_t *>(ui8Dst);
@@ -2461,7 +2480,7 @@ namespace lsx {
 			}
 			if ( !_mfFile.Append( reinterpret_cast<const uint8_t *>(&vRow[0]), vRow.Length() ) ) {
 				eError = LSSTD_E_OUTOFMEMORY;
-				::printf( "Failed to create BMP file: Out of memory.\r\n" );
+				::printf( "Failed to create BMP file (%s): Out of memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
 				return eError;
 			}
 		}
@@ -2469,7 +2488,7 @@ namespace lsx {
 		uint16_t ui16Post = 0;
 		if ( !_mfFile.Append( reinterpret_cast<const uint8_t *>(&ui16Post), sizeof( ui16Post ) ) ) {
 			eError = LSSTD_E_OUTOFMEMORY;
-			::printf( "Failed to create BMP file: Out of memory.\r\n" );
+			::printf( "Failed to create BMP file (%s): Out of memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
 			return eError;
 		}
 		

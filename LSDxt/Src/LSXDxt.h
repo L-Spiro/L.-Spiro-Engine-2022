@@ -244,6 +244,9 @@ namespace lsx {
 
 			/** The ETC error metric. */
 			LSX_ETC_ERROR						eeErrorMetric;
+
+			/** The BMP bit-depth. */
+			uint8_t								ui8BmpBits;
 		} * LPLSX_OPTIONS, * const LPCLSX_OPTIONS;
 
 		/** A floating-point vector. */
