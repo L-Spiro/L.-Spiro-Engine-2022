@@ -130,6 +130,14 @@ namespace lsx {
 			LSX_E_NONPERCEPTUAL,										/**< Nonperceptual (highest PSNR). */
 		};
 
+		/** PNG compression. */
+		enum LSX_PNG_COMPRESSION {
+			LSX_PC_BEST_SPEED,											/**< Use Zlib level 1 compression when saving PNG files. */
+			LSX_PC_DEFAULT_COMPRESSION,									/**< Use Zlib level 6 compression when saving PNG files. */
+			LSX_PC_BEST_COMPRESSION,									/**< Use Zlib level 9 compression when saving PNG files. */
+			LSX_PC_NO_COMPRESSION,										/**< No Zlib compression when saving PNG files. */
+		};
+
 
 		// == Types.
 		/** Options for compression. */
@@ -247,6 +255,12 @@ namespace lsx {
 
 			/** The BMP bit-depth. */
 			uint8_t								ui8BmpBits;
+
+			/** The PNG compression. */
+			LSX_PNG_COMPRESSION					pcPngCompress;
+
+			/** Interlaced PNG. */
+			bool								bPngInterlaced;
 		} * LPLSX_OPTIONS, * const LPCLSX_OPTIONS;
 
 		/** A floating-point vector. */
@@ -383,7 +397,7 @@ namespace lsx {
 			uint32_t _ui32FileIndex );
 
 		/**
-		 * Creates a. ICO file.
+		 * Creates an ICO file.
 		 *
 		 * \param _oOptions Conversion options.
 		 * \param _iImage The image to save.
@@ -392,6 +406,18 @@ namespace lsx {
 		 * \return Returns an error code indicating successor failure.
 		 */
 		static LSSTD_ERRORS LSE_CALL			CreateIco( const LSX_OPTIONS &_oOptions, const CImage &_iImage, CMemFile &_mfFile,
+			uint32_t _ui32FileIndex );
+
+		/**
+		 * Creates a PNG file.
+		 *
+		 * \param _oOptions Conversion options.
+		 * \param _iImage The image to save.
+		 * \param _mfFile The in-memory file to which to write the file data.
+		 * \param _ui32FileIndex Index of the file being converted.
+		 * \return Returns an error code indicating successor failure.
+		 */
+		static LSSTD_ERRORS LSE_CALL			CreatePng( const LSX_OPTIONS &_oOptions, const CImage &_iImage, CMemFile &_mfFile,
 			uint32_t _ui32FileIndex );
 
 		/**

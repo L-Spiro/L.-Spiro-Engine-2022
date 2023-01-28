@@ -55,45 +55,46 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 
 		// Get the command-line options and fill out the options structure.
 		lsx::CDxt::LSX_OPTIONS oOptions = {
-			CStringList(),						// slInputs
-			CStringList(),						// slOutputs
-			lsx::CDxt::LSX_IF_DXT3,				// ifOutFormat
-			lsx::CDxt::LSX_Q_NORMAL,			// qQuality
-			0,									// ui32RescaleWidth
-			0,									// ui32RescaleHeight
-			lsx::CDxt::LSX_PO_NO_RESCALE,		// poPo2Options
-			1.0f,								// fRelScaleWidth
-			1.0f,								// fRelScaleHeight
-			LSI_F_BOX_FILTER,					// fFilter
-			LSI_F_KAISER_FILTER,				// fMipFilter
-			CResampler::LSI_AM_CLAMP,			// amAddressMode
-			0,									// ui32WidthClamp
-			0,									// ui32HeightClamp
-			0.0f,								// fRelWidthClamp
-			0.0f,								// fRelHeightClamp
-			true,								// bMipMaps
-			32UL,								// ui32Mips
-			false,								// bRgbE
-			false,								// bFlip
-			false,								// bSwapRB
-			false,								// bNormalizeMips
-			0,									// ui32NormalMapKernelSize
-			CImage::LSI_CA_MAX,					// ui32NormalMapChannel
-			1.0f,								// fNormalMapStr
-			LSI_R_WEIGHT,						// fRedWeight
-			LSI_G_WEIGHT,						// fGreenWeight
-			LSI_B_WEIGHT,						// fBlueWeight
-			-2.2f,								// fFilterGamma
-			0,									// ui8AlphaThresh
-			false,								// bIgnoreAlpha
-			false,								// bPause
-			false,								// bShowTime
-			static_cast<LSI_KTX_INTERNAL_FORMAT>(0),
-												// kifFormat
-			lsx::CDxt::LSX_ET_NONE,				// etEtcType
-			lsx::CDxt::LSE_EF_RGB_A8,			// efEtcFormat
-			lsx::CDxt::LSX_E_PERCEPTUAL,		// eeErrorMetric
-			0,									// ui8BmpBits
+			CStringList(),									// slInputs
+			CStringList(),									// slOutputs
+			lsx::CDxt::LSX_IF_DXT3,							// ifOutFormat
+			lsx::CDxt::LSX_Q_NORMAL,						// qQuality
+			0,												// ui32RescaleWidth
+			0,												// ui32RescaleHeight
+			lsx::CDxt::LSX_PO_NO_RESCALE,					// poPo2Options
+			1.0f,											// fRelScaleWidth
+			1.0f,											// fRelScaleHeight
+			LSI_F_BOX_FILTER,								// fFilter
+			LSI_F_KAISER_FILTER,							// fMipFilter
+			CResampler::LSI_AM_CLAMP,						// amAddressMode
+			0,												// ui32WidthClamp
+			0,												// ui32HeightClamp
+			0.0f,											// fRelWidthClamp
+			0.0f,											// fRelHeightClamp
+			true,											// bMipMaps
+			32UL,											// ui32Mips
+			false,											// bRgbE
+			false,											// bFlip
+			false,											// bSwapRB
+			false,											// bNormalizeMips
+			0,												// ui32NormalMapKernelSize
+			CImage::LSI_CA_MAX,								// ui32NormalMapChannel
+			1.0f,											// fNormalMapStr
+			LSI_R_WEIGHT,									// fRedWeight
+			LSI_G_WEIGHT,									// fGreenWeight
+			LSI_B_WEIGHT,									// fBlueWeight
+			-2.2f,											// fFilterGamma
+			0,												// ui8AlphaThresh
+			false,											// bIgnoreAlpha
+			false,											// bPause
+			false,											// bShowTime
+			static_cast<LSI_KTX_INTERNAL_FORMAT>(0),		// kifFormat
+			lsx::CDxt::LSX_ET_NONE,							// etEtcType
+			lsx::CDxt::LSE_EF_RGB_A8,						// efEtcFormat
+			lsx::CDxt::LSX_E_PERCEPTUAL,					// eeErrorMetric
+			0,												// ui8BmpBits
+			lsx::CDxt::LSX_PC_DEFAULT_COMPRESSION,			// pcPngCompress
+			false,											// bPngInterlaced
 		};
 
 		uint32_t ui32CreateNormalMapArg = LSE_MAXU32;
@@ -132,38 +133,49 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 					}
 				}
 				// Output format.
-				else if ( LSX_VERIFY_INPUT( dxt1c, 0 ) || LSX_VERIFY_INPUT( bc1, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( dxt1c, 0 ) || LSX_VERIFY_INPUT( bc1, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_DXT1C;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( dxt1a, 0 ) || LSX_VERIFY_INPUT( bc1a, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( dxt1a, 0 ) || LSX_VERIFY_INPUT( bc1a, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_DXT1A;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( dxt2, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( dxt2, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_DXT2;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( dxt3, 0 ) || LSX_VERIFY_INPUT( bc2, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( dxt3, 0 ) || LSX_VERIFY_INPUT( bc2, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_DXT3;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( dxt4, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( dxt4, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_DXT4;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( dxt5, 0 ) || LSX_VERIFY_INPUT( bc3, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( dxt5, 0 ) || LSX_VERIFY_INPUT( bc3, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_DXT5;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( bc4, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( bc4, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_BC4;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( bc5, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( bc5, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_BC5;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( bc6, 0 ) || LSX_VERIFY_INPUT( bc6h, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( bc6, 0 ) || LSX_VERIFY_INPUT( bc6h, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_BC6H;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( bc7, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( bc7, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_BC7;
+					continue;
 				}
-#define LSX_GET_IMAGE( TYPE )	else if ( LSX_VERIFY_INPUT( TYPE, 0 ) ) {	\
+#define LSX_GET_IMAGE( TYPE )	if ( LSX_VERIFY_INPUT( TYPE, 0 ) ) {		\
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_ ## TYPE;		\
+					continue;												\
 				}
 				LSX_GET_IMAGE( A8B8G8R8 )
 				LSX_GET_IMAGE( G16R16 )
@@ -185,208 +197,287 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 				LSX_GET_IMAGE( L8 )
 				LSX_GET_IMAGE( A4L4 )
 #undef LSX_GET_IMAGE
-				else if ( LSX_VERIFY_INPUT( u1555, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( u1555, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_A1R5G5B5;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( u4444, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( u4444, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_A4R4G4B4;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( u565, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( u565, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_R5G6B5;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( u8888, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( u8888, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_A8R8G8B8;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( u888, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( u888, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_R8G8B8;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( u555, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( u555, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_X1R5G5B5;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( L8, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( L8, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_L8;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( A8, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( A8, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_A8;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( A8L8, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( A8L8, 0 ) ) {
 					oOptions.ifOutFormat = lsx::CDxt::LSX_IF_A8L8;
+					continue;
 				}
 				// Quality settings.
-				else if ( LSX_VERIFY_INPUT( quick, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( quick, 0 ) ) {
 					oOptions.qQuality = lsx::CDxt::LSX_Q_QUICK;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( quality_normal, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( quality_normal, 0 ) ) {
 					oOptions.qQuality = lsx::CDxt::LSX_Q_NORMAL;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( quality_production, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( quality_production, 0 ) ) {
 					oOptions.qQuality = lsx::CDxt::LSX_Q_PRODUCTION;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( quality_highest, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( quality_highest, 0 ) ) {
 					oOptions.qQuality = lsx::CDxt::LSX_Q_BEST;
+					continue;
 				}
 				// ETCPACK "s"peed setting.
-				else if ( LSX_VERIFY_INPUT( s, 1 ) ) {
+				if ( LSX_VERIFY_INPUT( s, 1 ) ) {
 					++I;
 					if ( CStd::WStrICmp( _pwcArgv[I], L"fast" ) == 0 ) {
 						oOptions.qQuality = lsx::CDxt::LSX_Q_QUICK;
+						continue;
 					}
 					else if ( CStd::WStrICmp( _pwcArgv[I], L"slow" ) == 0 ) {
 						oOptions.qQuality = lsx::CDxt::LSX_Q_BEST;
+						continue;
 					}
 				}
 				// ETCPACK "e"rror-metric setting.
-				else if ( LSX_VERIFY_INPUT( e, 1 ) ) {
+				if ( LSX_VERIFY_INPUT( e, 1 ) ) {
 					++I;
 					if ( CStd::WStrICmp( _pwcArgv[I], L"perceptual" ) == 0 ) {
 						oOptions.eeErrorMetric = lsx::CDxt::LSX_E_PERCEPTUAL;
+						continue;
 					}
 					else if ( CStd::WStrICmp( _pwcArgv[I], L"nonperceptual" ) == 0 ) {
 						oOptions.eeErrorMetric = lsx::CDxt::LSX_E_NONPERCEPTUAL;
+						continue;
 					}
 				}
 				// Rescale filters/ETCPACK "f"ormat setting.
-				else if ( LSX_VERIFY_INPUT( f, 1 ) ) {
+				if ( LSX_VERIFY_INPUT( f, 1 ) ) {
 					++I;
 					if ( CStd::WStrICmp( _pwcArgv[I], L"box" ) == 0 ) {
 						oOptions.fFilter = LSI_F_BOX_FILTER;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"quadratic" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"quadratic" ) == 0 ) {
 						oOptions.fFilter = LSI_F_QUADRATIC_FILTER;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"bspline" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"bspline" ) == 0 ) {
 						oOptions.fFilter = LSI_F_BSPLINE_FILTER;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"mitchell" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"mitchell" ) == 0 ) {
 						oOptions.fFilter = LSI_F_MITCHELL_FILTER;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"lanczos" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"lanczos" ) == 0 ) {
 						oOptions.fFilter = LSI_F_LANCZOS64_FILTER;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"kaiser" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"kaiser" ) == 0 ) {
 						oOptions.fFilter = LSI_F_KAISER_FILTER;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"R" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"R" ) == 0 ) {
 						oOptions.efEtcFormat = lsx::CDxt::LSE_EF_R;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"RG" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"RG" ) == 0 ) {
 						oOptions.efEtcFormat = lsx::CDxt::LSE_EF_RG;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"R_signed" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"R_signed" ) == 0 ) {
 						oOptions.efEtcFormat = lsx::CDxt::LSE_EF_SIGNED_R;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"RG_signed" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"RG_signed" ) == 0 ) {
 						oOptions.efEtcFormat = lsx::CDxt::LSE_EF_SIGNED_RG;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"RGB" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"RGB" ) == 0 ) {
 						oOptions.efEtcFormat = lsx::CDxt::LSE_EF_RGB;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"RGBA1" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"RGBA1" ) == 0 ) {
 						oOptions.efEtcFormat = lsx::CDxt::LSE_EF_RGB_A1;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"RGBA8" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"RGBA8" ) == 0 ) {
 						oOptions.efEtcFormat = lsx::CDxt::LSE_EF_RGB_A8;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"sRGB" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"sRGB" ) == 0 ) {
 						oOptions.efEtcFormat = lsx::CDxt::LSE_EF_SRGB;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"sRGBA1" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"sRGBA1" ) == 0 ) {
 						oOptions.efEtcFormat = lsx::CDxt::LSE_EF_SRGB_A1;
+						continue;
 					}
-					else if ( CStd::WStrICmp( _pwcArgv[I], L"sRGBA8" ) == 0 ) {
+					if ( CStd::WStrICmp( _pwcArgv[I], L"sRGBA8" ) == 0 ) {
 						oOptions.efEtcFormat = lsx::CDxt::LSE_EF_SRGB_A8;
+						continue;
 					}
 				}
 				// ETCPACK "c"ompression type setting.
-				else if ( LSX_VERIFY_INPUT( c, 1 ) ) {
+				if ( LSX_VERIFY_INPUT( c, 1 ) ) {
 					++I;
 					if ( CStd::WStrICmp( _pwcArgv[I], L"etc1" ) == 0 ) {
 						oOptions.etEtcType = lsx::CDxt::LSX_ET_ETC1;
+						continue;
 					}
 					else if ( CStd::WStrICmp( _pwcArgv[I], L"etc2" ) == 0 ) {
 						oOptions.etEtcType = lsx::CDxt::LSX_ET_ETC2;
+						continue;
 					}
 				}
-				// Number of mipmaps to generate.
-				else if ( LSX_VERIFY_INPUT( bmp, 1 ) ) {
+				// BMP bit-depth.
+				if ( LSX_VERIFY_INPUT( bmp, 1 ) ) {
 					oOptions.ui8BmpBits = uint8_t( CStd::WtoI32( _pwcArgv[++I] ) );
+					continue;
+				}
+				// PNG compression level.
+				if ( LSX_VERIFY_INPUT( png, 1 ) ) {
+					++I;
+					if ( CStd::WStrICmp( _pwcArgv[I], L"fast" ) == 0 ) {
+						oOptions.pcPngCompress = lsx::CDxt::LSX_PC_BEST_SPEED;
+						continue;
+					}
+					else if ( CStd::WStrICmp( _pwcArgv[I], L"small" ) == 0 ) {
+						oOptions.pcPngCompress = lsx::CDxt::LSX_PC_BEST_COMPRESSION;
+						continue;
+					}
+					else if ( CStd::WStrICmp( _pwcArgv[I], L"none" ) == 0 ) {
+						oOptions.pcPngCompress = lsx::CDxt::LSX_PC_NO_COMPRESSION;
+						continue;
+					}
+				}
+				// PNG interlace.
+				if ( LSX_VERIFY_INPUT( png_interlaced, 0 ) ) {
+					oOptions.bPngInterlaced = true;
+					continue;
 				}
 				// Rescaling.
-				else if ( LSX_VERIFY_INPUT( prescale, 2 ) ) {
+				if ( LSX_VERIFY_INPUT( prescale, 2 ) ) {
 					oOptions.ui32RescaleWidth = CStd::WtoI32( _pwcArgv[++I] );
 					oOptions.ui32RescaleHeight = CStd::WtoI32( _pwcArgv[++I] );
+					continue;
 				}
 				// Rescaling by power-of-2.
-				else if ( LSX_VERIFY_INPUT( rescale, 1 ) ) {
+				if ( LSX_VERIFY_INPUT( rescale, 1 ) ) {
 					++I;
 					if ( CStd::WStrICmp( _pwcArgv[I], L"nearest" ) == 0 ) {
 						oOptions.poPo2Options = lsx::CDxt::LSX_PO_NEAREST;
+						continue;
 					}
 					else if ( CStd::WStrICmp( _pwcArgv[I], L"hi" ) == 0 ) {
 						oOptions.poPo2Options = lsx::CDxt::LSX_PO_NEXT_HI;
+						continue;
 					}
 					else if ( CStd::WStrICmp( _pwcArgv[I], L"lo" ) == 0 || CStd::WStrICmp( _pwcArgv[I], L"next_lo" ) == 0 ) {
 						oOptions.poPo2Options = lsx::CDxt::LSX_PO_NEXT_LO;
+						continue;
 					}
 					else {
 						LSX_ERROR( LSSTD_E_INVALIDCALL );
 					}
 				}
 				// Rescaling by ratio.
-				else if ( LSX_VERIFY_INPUT( rel_scale, 2 ) ) {
+				if ( LSX_VERIFY_INPUT( rel_scale, 2 ) ) {
 					oOptions.fRelScaleWidth = static_cast<float>(CStd::WtoF( _pwcArgv[++I] ));
 					oOptions.fRelScaleHeight = static_cast<float>(CStd::WtoF( _pwcArgv[++I] ));
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleBox, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleBox, 0 ) ) {
 					oOptions.fFilter = LSI_F_BOX_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleTent, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleTent, 0 ) ) {
 					oOptions.fFilter = LSI_F_BILINEAR_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleQuadratic, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleQuadratic, 0 ) ) {
 					oOptions.fFilter = LSI_F_QUADRATIC_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleKaiser, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleKaiser, 0 ) ) {
 					oOptions.fFilter = LSI_F_KAISER_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleLanczos2, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleLanczos2, 0 ) ) {
 					oOptions.fFilter = LSI_F_LANCZOS2_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleLanczos3, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleLanczos3, 0 ) ) {
 					oOptions.fFilter = LSI_F_LANCZOS3_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleLanczos4, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleLanczos4, 0 ) ) {
 					oOptions.fFilter = LSI_F_LANCZOS4_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleLanczos6, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleLanczos6, 0 ) ) {
 					oOptions.fFilter = LSI_F_LANCZOS6_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleLanczos8, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleLanczos8, 0 ) ) {
 					oOptions.fFilter = LSI_F_LANCZOS8_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleLanczos12, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleLanczos12, 0 ) ) {
 					oOptions.fFilter = LSI_F_LANCZOS12_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleLanczos64, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleLanczos64, 0 ) ) {
 					oOptions.fFilter = LSI_F_LANCZOS64_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleMitchell, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleMitchell, 0 ) ) {
 					oOptions.fFilter = LSI_F_MITCHELL_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleCatrom, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleCatrom, 0 ) ) {
 					oOptions.fFilter = LSI_F_CATMULLROM_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleBSpline, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleBSpline, 0 ) ) {
 					oOptions.fFilter = LSI_F_BSPLINE_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleBlackman, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleBlackman, 0 ) ) {
 					oOptions.fFilter = LSI_F_BLACKMAN_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleGaussian, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleGaussian, 0 ) ) {
 					oOptions.fFilter = LSI_F_GAUSSIAN_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( RescaleBell, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( RescaleBell, 0 ) ) {
 					oOptions.fFilter = LSI_F_BELL_FILTER;
+					continue;
 				}
 				// Mipmap filters.
 				else if ( LSX_VERIFY_INPUT( Box, 0 ) ) {
@@ -1732,6 +1823,12 @@ namespace lsx {
 					continue;
 				}
 			}
+			else if ( pcExtension && CStd::StrICmp( pcExtension, "png" ) == 0 ) {
+				eError = CreatePng( _oOptions, iImage, mfFileImage, I );
+				if ( eError != LSSTD_E_SUCCESS ) {
+					continue;
+				}
+			}
 			else {
 				eError = CreateDds( _oOptions, iImage, mfFileImage, I );
 				if ( eError != LSSTD_E_SUCCESS ) {
@@ -2503,7 +2600,7 @@ namespace lsx {
 	}
 
 	/**
-	 * Creates a. ICO file.
+	 * Creates an ICO file.
 	 *
 	 * \param _oOptions Conversion options.
 	 * \param _iImage The image to save.
@@ -2564,6 +2661,100 @@ namespace lsx {
 			::FreeImage_Unload( pbmBitmap );
 			eError = LSSTD_E_OUTOFMEMORY;
 			::printf( "Failed to copy ICO file (%s) memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+
+		::FreeImage_CloseMemory( pmMemory );
+		::FreeImage_Unload( pbmBitmap );
+
+		return eError;
+	}
+
+	/**
+	 * Creates a PNG file.
+	 *
+	 * \param _oOptions Conversion options.
+	 * \param _iImage The image to save.
+	 * \param _mfFile The in-memory file to which to write the file data.
+	 * \param _ui32FileIndex Index of the file being converted.
+	 * \return Returns an error code indicating successor failure.
+	 */
+	LSSTD_ERRORS LSE_CALL CDxt::CreatePng( const LSX_OPTIONS &_oOptions, const CImage &_iImage, CMemFile &_mfFile,
+		uint32_t _ui32FileIndex ) {
+		LSSTD_ERRORS eError = LSSTD_E_SUCCESS;
+
+		int iFlags = 0;
+		switch ( _oOptions.pcPngCompress ) {
+			case LSX_PC_BEST_SPEED : {
+				iFlags |= PNG_Z_BEST_SPEED;
+				break;
+			}
+			case LSX_PC_DEFAULT_COMPRESSION : {
+				iFlags |= PNG_Z_DEFAULT_COMPRESSION;
+				break;
+			}
+			case LSX_PC_BEST_COMPRESSION : {
+				iFlags |= PNG_Z_BEST_COMPRESSION;
+				break;
+			}
+			case LSX_PC_NO_COMPRESSION : {
+				iFlags |= PNG_Z_NO_COMPRESSION;
+				break;
+			}
+		}
+		if ( _oOptions.bPngInterlaced ) {
+			iFlags |= PNG_INTERLACED;
+		}
+
+		CImage iImage;
+		_iImage.ConvertToFormat( LSI_PF_R8G8B8A8, iImage );
+		FIBITMAP * pbmBitmap = ::FreeImage_Allocate( iImage.GetWidth(), iImage.GetHeight(), 32 );
+		if ( !pbmBitmap ) {
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to allocate bitmap structure for PNG file (%s).\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		for ( uint32_t Y = 0; Y < iImage.GetHeight(); ++Y ) {
+			for ( uint32_t X = 0; X < iImage.GetWidth(); ++X ) {
+				uint64_t ui64Texel = iImage.GetTexelAt( LSI_PF_R8G8B8A8, X, (iImage.GetWidth() - 1) - Y );
+				RGBQUAD rqQuad;
+				rqQuad.rgbReserved = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_A ) );
+				rqQuad.rgbRed = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_R ) );
+				rqQuad.rgbGreen = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_G ) );
+				rqQuad.rgbBlue = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_B ) );
+				::FreeImage_SetPixelColor( pbmBitmap, X, Y, &rqQuad );
+			}
+		}
+
+		FIMEMORY * pmMemory = ::FreeImage_OpenMemory();
+		if ( nullptr == pmMemory ) {
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to memory stream for PNG file (%s).\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+
+		if ( !::FreeImage_SaveToMemory( FIF_PNG, pbmBitmap, pmMemory, iFlags ) ) {
+			::FreeImage_CloseMemory( pmMemory );
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_INTERNALERROR;
+			::printf( "Failed to save PNG file (%s) to memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		BYTE * pbData;
+		DWORD dwSize;
+		if ( !::FreeImage_AcquireMemory( pmMemory, &pbData, &dwSize ) ) {
+			::FreeImage_CloseMemory( pmMemory );
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_INTERNALERROR;
+			::printf( "Failed to save PNG file (%s) to memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		if ( !_mfFile.Append( pbData, dwSize ) ) {
+			::FreeImage_CloseMemory( pmMemory );
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to copy PNG file (%s) memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
 			return eError;
 		}
 
