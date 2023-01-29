@@ -1829,6 +1829,12 @@ namespace lsx {
 					continue;
 				}
 			}
+			else if ( pcExtension && CStd::StrICmp( pcExtension, "qoi" ) == 0 ) {
+				eError = CreateQoi( _oOptions, iImage, mfFileImage, I );
+				if ( eError != LSSTD_E_SUCCESS ) {
+					continue;
+				}
+			}
 			else {
 				eError = CreateDds( _oOptions, iImage, mfFileImage, I );
 				if ( eError != LSSTD_E_SUCCESS ) {
@@ -2716,7 +2722,7 @@ namespace lsx {
 		}
 		for ( uint32_t Y = 0; Y < iImage.GetHeight(); ++Y ) {
 			for ( uint32_t X = 0; X < iImage.GetWidth(); ++X ) {
-				uint64_t ui64Texel = iImage.GetTexelAt( LSI_PF_R8G8B8A8, X, (iImage.GetWidth() - 1) - Y );
+				uint64_t ui64Texel = iImage.GetTexelAt( LSI_PF_R8G8B8A8, X, (iImage.GetHeight() - 1) - Y );
 				RGBQUAD rqQuad;
 				rqQuad.rgbReserved = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_A ) );
 				rqQuad.rgbRed = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_R ) );
@@ -2762,6 +2768,199 @@ namespace lsx {
 		::FreeImage_Unload( pbmBitmap );
 
 		return eError;
+	}
+
+	/**
+	 * Creates a QOI file.
+	 *
+	 * \param _oOptions Conversion options.
+	 * \param _iImage The image to save.
+	 * \param _mfFile The in-memory file to which to write the file data.
+	 * \param _ui32FileIndex Index of the file being converted.
+	 * \return Returns an error code indicating successor failure.
+	 */
+	LSSTD_ERRORS LSE_CALL CDxt::CreateQoi( const LSX_OPTIONS &_oOptions, const CImage &_iImage, CMemFile &_mfFile,
+		uint32_t _ui32FileIndex ) {
+		constexpr uint32_t QOI_OP_INDEX = 0x00;		/* 00xxxxxx */
+		constexpr uint32_t QOI_OP_DIFF = 0x40;		/* 01xxxxxx */
+		constexpr uint32_t QOI_OP_LUMA = 0x80;		/* 10xxxxxx */
+		constexpr uint32_t QOI_OP_RUN = 0xC0;		/* 11xxxxxx */
+		constexpr uint32_t QOI_OP_RGB = 0xFE;		/* 11111110 */
+		constexpr uint32_t QOI_OP_RGBA = 0xFF;		/* 11111111 */
+
+		constexpr uint32_t QOI_MASK_2 = 0xC0;		/* 11000000 */
+
+#define QOI_COLOR_HASH(C)							(C.rgba.r * 3 + C.rgba.g * 5 + C.rgba.b * 7 + C.rgba.a * 11)
+#define QOI_ZEROARR( a )							CStd::MemSet( (a), 0, sizeof( a ) )
+		
+		constexpr uint32_t QOI_MAGIC = (uint32_t( 'q' ) << 24) |
+			(uint32_t( 'o' ) << 16) |
+			(uint32_t( 'i' ) <<  8) |
+			uint32_t( 'f' );
+		constexpr uint32_t QOI_HEADER_SIZE = 14;
+		/* 2GB is the max file size that this implementation can safely handle. We guard
+		against anything larger than that, assuming the worst case with 5 pui8Bytes per
+		pixel, rounded down to a nice clean value. 400 million pui8Pixels ought to be
+		enough for anybody. */
+		constexpr uint32_t QOI_PIXELS_MAX = 400000000;
+		constexpr uint32_t QOI_SRGB = 0;
+		constexpr uint32_t QOI_LINEAR = 1;
+
+		typedef union {
+			struct { unsigned char r, g, b, a; } rgba;
+			unsigned int v;
+		} QOI_RGBA;
+
+		static const unsigned char qoi_padding[8] = {0,0,0,0,0,0,0,1};
+
+		auto Write32 = [=](uint8_t *pui8Bytes, uint32_t *ui32Pos, uint32_t v) {
+			pui8Bytes[(*ui32Pos)++] = (0xff000000 & v) >> 24;
+			pui8Bytes[(*ui32Pos)++] = (0x00ff0000 & v) >> 16;
+			pui8Bytes[(*ui32Pos)++] = (0x0000ff00 & v) >> 8;
+			pui8Bytes[(*ui32Pos)++] = (0x000000ff & v);
+		};
+
+		LSSTD_ERRORS eError = LSSTD_E_SUCCESS;
+
+		uint32_t ui32Channels = CImageLib::GetTotalComponents( _iImage.GetFormat() );
+		uint32_t ui32ColorSpace = _iImage.IsSRgb() ? QOI_SRGB : QOI_LINEAR;
+		CImage iImage;
+		_iImage.ConvertToFormat( ui32Channels == 4 ? LSI_PF_R8G8B8A8 : LSI_PF_R8G8B8, iImage );
+		iImage.SwapChannels( LSI_PC_R, LSI_PC_B );
+		const uint8_t * pui8Pixels = reinterpret_cast<const uint8_t *>(iImage.GetBufferData());
+
+
+
+		QOI_RGBA rIndex[64];
+		QOI_RGBA rPx, rPxPrev;
+
+		if ( iImage.GetWidth() == 0 || iImage.GetHeight() == 0 ) {
+			eError = LSSTD_E_INVALIDDATA;
+			::printf( "QOI width and height must not be 0: (%s).\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		if ( ui32Channels < 3 || ui32Channels > 4 ) {
+			eError = LSSTD_E_INVALIDDATA;
+			::printf( "QOI files must have either 3 or 4 channels: (%s).\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		if ( iImage.GetHeight() >= QOI_PIXELS_MAX / iImage.GetWidth() ) {
+			eError = LSSTD_E_INVALIDDATA;
+			::printf( "QOI file size too large: (%s).\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+
+		uint32_t ui32MaxSize =
+			iImage.GetWidth() * iImage.GetHeight() * (ui32Channels + 1) +
+			QOI_HEADER_SIZE + sizeof(qoi_padding);
+
+		uint32_t ui32Pos = 0;
+		if ( !_mfFile.Resize( ui32MaxSize ) ) {
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Unable to allocate memory for QOI files (%s).\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		uint8_t * pui8Bytes = &_mfFile[0];
+
+		Write32( pui8Bytes, &ui32Pos, QOI_MAGIC );
+		Write32( pui8Bytes, &ui32Pos, iImage.GetWidth() );
+		Write32( pui8Bytes, &ui32Pos, iImage.GetHeight() );
+		pui8Bytes[ui32Pos++] = ui32Channels;
+		pui8Bytes[ui32Pos++] = ui32ColorSpace;
+
+
+		QOI_ZEROARR( rIndex );
+
+		uint32_t ui32Run = 0;
+		rPxPrev.rgba.r = 0;
+		rPxPrev.rgba.g = 0;
+		rPxPrev.rgba.b = 0;
+		rPxPrev.rgba.a = 255;
+		rPx = rPxPrev;
+
+		uint32_t ui32PxLen = iImage.GetWidth() * iImage.GetHeight() * ui32Channels;
+		uint32_t ui32PxEnd = ui32PxLen - ui32Channels;
+
+		for ( uint32_t px_pos = 0; px_pos < ui32PxLen; px_pos += ui32Channels ) {
+			rPx.rgba.r = pui8Pixels[px_pos + 0];
+			rPx.rgba.g = pui8Pixels[px_pos + 1];
+			rPx.rgba.b = pui8Pixels[px_pos + 2];
+
+			if ( ui32Channels == 4 ) {
+				rPx.rgba.a = pui8Pixels[px_pos + 3];
+			}
+
+			if ( rPx.v == rPxPrev.v ) {
+				ui32Run++;
+				if ( ui32Run == 62 || px_pos == ui32PxEnd ) {
+					pui8Bytes[ui32Pos++] = QOI_OP_RUN | (ui32Run - 1);
+					ui32Run = 0;
+				}
+			}
+			else {
+				int32_t i32IdxPos;
+
+				if ( ui32Run > 0 ) {
+					pui8Bytes[ui32Pos++] = QOI_OP_RUN | (ui32Run - 1);
+					ui32Run = 0;
+				}
+
+				i32IdxPos = QOI_COLOR_HASH( rPx ) % 64;
+
+				if ( rIndex[i32IdxPos].v == rPx.v ) {
+					pui8Bytes[ui32Pos++] = QOI_OP_INDEX | i32IdxPos;
+				}
+				else {
+					rIndex[i32IdxPos] = rPx;
+
+					if ( rPx.rgba.a == rPxPrev.rgba.a ) {
+						int8_t i8Vr = rPx.rgba.r - rPxPrev.rgba.r;
+						int8_t i8Vg = rPx.rgba.g - rPxPrev.rgba.g;
+						int8_t i8Vb = rPx.rgba.b - rPxPrev.rgba.b;
+
+						int8_t i8VgR = i8Vr - i8Vg;
+						int8_t i8VgB = i8Vb - i8Vg;
+
+						if ( i8Vr > -3 && i8Vr < 2 &&
+							i8Vg > -3 && i8Vg < 2 &&
+							i8Vb > -3 && i8Vb < 2 ) {
+							pui8Bytes[ui32Pos++] = QOI_OP_DIFF | (i8Vr + 2) << 4 | (i8Vg + 2) << 2 | (i8Vb + 2);
+						}
+						else if ( i8VgR > -9 && i8VgR < 8 &&
+							i8Vg > -33 && i8Vg < 32 &&
+							i8VgB > -9 && i8VgB < 8 ) {
+							pui8Bytes[ui32Pos++] = QOI_OP_LUMA | (i8Vg   + 32);
+							pui8Bytes[ui32Pos++] = (i8VgR + 8) << 4 | (i8VgB +  8);
+						}
+						else {
+							pui8Bytes[ui32Pos++] = QOI_OP_RGB;
+							pui8Bytes[ui32Pos++] = rPx.rgba.r;
+							pui8Bytes[ui32Pos++] = rPx.rgba.g;
+							pui8Bytes[ui32Pos++] = rPx.rgba.b;
+						}
+					}
+					else {
+						pui8Bytes[ui32Pos++] = QOI_OP_RGBA;
+						pui8Bytes[ui32Pos++] = rPx.rgba.r;
+						pui8Bytes[ui32Pos++] = rPx.rgba.g;
+						pui8Bytes[ui32Pos++] = rPx.rgba.b;
+						pui8Bytes[ui32Pos++] = rPx.rgba.a;
+					}
+				}
+			}
+			rPxPrev = rPx;
+		}
+
+		for ( size_t I = 0; I < sizeof( qoi_padding ); I++ ) {
+			pui8Bytes[ui32Pos++] = qoi_padding[I];
+		}
+
+		_mfFile.Resize( ui32Pos );
+
+		return eError;
+
+#undef QOI_ZEROARR
+#undef QOI_COLOR_HASH
 	}
 
 	/**
