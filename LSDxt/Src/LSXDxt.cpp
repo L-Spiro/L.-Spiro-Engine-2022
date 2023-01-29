@@ -2790,7 +2790,7 @@ namespace lsx {
 
 		constexpr uint32_t QOI_MASK_2 = 0xC0;		/* 11000000 */
 
-#define QOI_COLOR_HASH(C)							(C.rgba.r * 3 + C.rgba.g * 5 + C.rgba.b * 7 + C.rgba.a * 11)
+#define QOI_COLOR_HASH( C )							(C.rgba.r * 3 + C.rgba.g * 5 + C.rgba.b * 7 + C.rgba.a * 11)
 #define QOI_ZEROARR( a )							CStd::MemSet( (a), 0, sizeof( a ) )
 		
 		constexpr uint32_t QOI_MAGIC = (uint32_t( 'q' ) << 24) |
@@ -2799,7 +2799,7 @@ namespace lsx {
 			uint32_t( 'f' );
 		constexpr uint32_t QOI_HEADER_SIZE = 14;
 		/* 2GB is the max file size that this implementation can safely handle. We guard
-		against anything larger than that, assuming the worst case with 5 pui8Bytes per
+		against anything larger than that, assuming the worst case with 5 bytes per
 		pixel, rounded down to a nice clean value. 400 million pui8Pixels ought to be
 		enough for anybody. */
 		constexpr uint32_t QOI_PIXELS_MAX = 400000000;
@@ -2814,10 +2814,10 @@ namespace lsx {
 		static const unsigned char qoi_padding[8] = {0,0,0,0,0,0,0,1};
 
 		auto Write32 = [=](uint8_t *pui8Bytes, uint32_t *ui32Pos, uint32_t v) {
-			pui8Bytes[(*ui32Pos)++] = (0xff000000 & v) >> 24;
-			pui8Bytes[(*ui32Pos)++] = (0x00ff0000 & v) >> 16;
-			pui8Bytes[(*ui32Pos)++] = (0x0000ff00 & v) >> 8;
-			pui8Bytes[(*ui32Pos)++] = (0x000000ff & v);
+			pui8Bytes[(*ui32Pos)++] = (0xFF000000 & v) >> 24;
+			pui8Bytes[(*ui32Pos)++] = (0x00FF0000 & v) >> 16;
+			pui8Bytes[(*ui32Pos)++] = (0x0000FF00 & v) >> 8;
+			pui8Bytes[(*ui32Pos)++] = (0x000000FF & v);
 		};
 
 		LSSTD_ERRORS eError = LSSTD_E_SUCCESS;
@@ -2882,12 +2882,12 @@ namespace lsx {
 		uint32_t ui32PxEnd = ui32PxLen - ui32Channels;
 
 		for ( uint32_t px_pos = 0; px_pos < ui32PxLen; px_pos += ui32Channels ) {
-			rPx.rgba.r = pui8Pixels[px_pos + 0];
-			rPx.rgba.g = pui8Pixels[px_pos + 1];
-			rPx.rgba.b = pui8Pixels[px_pos + 2];
+			rPx.rgba.r = pui8Pixels[px_pos+0];
+			rPx.rgba.g = pui8Pixels[px_pos+1];
+			rPx.rgba.b = pui8Pixels[px_pos+2];
 
 			if ( ui32Channels == 4 ) {
-				rPx.rgba.a = pui8Pixels[px_pos + 3];
+				rPx.rgba.a = pui8Pixels[px_pos+3];
 			}
 
 			if ( rPx.v == rPxPrev.v ) {
