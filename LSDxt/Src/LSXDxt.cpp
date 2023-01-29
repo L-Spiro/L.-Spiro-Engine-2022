@@ -2807,8 +2807,8 @@ namespace lsx {
 		constexpr uint32_t QOI_LINEAR = 1;
 
 		typedef union {
-			struct { unsigned char r, g, b, a; } rgba;
-			unsigned int v;
+			struct { uint8_t r, g, b, a; } rgba;
+			uint32_t v;
 		} QOI_RGBA;
 
 		static const unsigned char qoi_padding[8] = {0,0,0,0,0,0,0,1};
@@ -2852,7 +2852,7 @@ namespace lsx {
 
 		uint32_t ui32MaxSize =
 			iImage.GetWidth() * iImage.GetHeight() * (ui32Channels + 1) +
-			QOI_HEADER_SIZE + sizeof(qoi_padding);
+			QOI_HEADER_SIZE + sizeof( qoi_padding );
 
 		uint32_t ui32Pos = 0;
 		if ( !_mfFile.Resize( ui32MaxSize ) ) {
