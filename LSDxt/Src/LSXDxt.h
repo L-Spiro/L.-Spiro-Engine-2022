@@ -397,6 +397,18 @@ namespace lsx {
 			uint32_t _ui32FileIndex );
 
 		/**
+		 * Creates a BMP file using FreeImage.
+		 *
+		 * \param _oOptions Conversion options.
+		 * \param _iImage The image to save.
+		 * \param _mfFile The in-memory file to which to write the file data.
+		 * \param _ui32FileIndex Index of the file being converted.
+		 * \return Returns an error code indicating successor failure.
+		 */
+		static LSSTD_ERRORS LSE_CALL			CreateBmp_FI( const LSX_OPTIONS &_oOptions, const CImage &_iImage, CMemFile &_mfFile,
+			uint32_t _ui32FileIndex );
+
+		/**
 		 * Creates an ICO file.
 		 *
 		 * \param _oOptions Conversion options.

@@ -2498,7 +2498,7 @@ namespace lsx {
 			return eError;
 		}
 		
-		const CBmp::LSI_BITMAPCOLORMASK * lpbcmMask;
+		const CBmp::LSI_BITMAPCOLORMASK * lpbcmMask = nullptr;
 		if ( bihInfo.ui32Compression == BI_BITFIELDS ) {
 			//lpbcmMask = reinterpret_cast<const CBmp::LSI_BITMAPCOLORMASK *>(&_pui8FileData[sizeof( CBmp::LSI_BITMAPFILEHEADER )+sizeof( CBmp::LSI_BITMAPINFOHEADER )]);
 		}
@@ -2602,6 +2602,77 @@ namespace lsx {
 			return eError;
 		}
 		
+		return eError;
+	}
+
+	/**
+	 * Creates a BMP file using FreeImage.
+	 *
+	 * \param _oOptions Conversion options.
+	 * \param _iImage The image to save.
+	 * \param _mfFile The in-memory file to which to write the file data.
+	 * \param _ui32FileIndex Index of the file being converted.
+	 * \return Returns an error code indicating successor failure.
+	 */
+	LSSTD_ERRORS LSE_CALL CDxt::CreateBmp_FI( const LSX_OPTIONS &_oOptions, const CImage &_iImage, CMemFile &_mfFile,
+		uint32_t _ui32FileIndex ) {
+		LSSTD_ERRORS eError = LSSTD_E_SUCCESS;
+
+		CImage iImage;
+		_iImage.ConvertToFormat( LSI_PF_R8G8B8A8, iImage );
+		FIBITMAP * pbmBitmap = ::FreeImage_Allocate( iImage.GetWidth(), iImage.GetHeight(), 32 );
+		if ( !pbmBitmap ) {
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to allocate bitmap structure for BMP file (%s).\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		for ( uint32_t Y = 0; Y < iImage.GetHeight(); ++Y ) {
+			for ( uint32_t X = 0; X < iImage.GetWidth(); ++X ) {
+				uint64_t ui64Texel = iImage.GetTexelAt( LSI_PF_R8G8B8A8, X, (iImage.GetWidth() - 1) - Y );
+				RGBQUAD rqQuad;
+				rqQuad.rgbReserved = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_A ) );
+				rqQuad.rgbRed = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_R ) );
+				rqQuad.rgbGreen = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_G ) );
+				rqQuad.rgbBlue = uint8_t( ui64Texel >> CImageLib::GetComponentOffset( LSI_PF_R8G8B8A8, LSI_PC_B ) );
+				::FreeImage_SetPixelColor( pbmBitmap, X, Y, &rqQuad );
+			}
+		}
+
+		FIMEMORY * pmMemory = ::FreeImage_OpenMemory();
+		if ( nullptr == pmMemory ) {
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to memory stream for BMP file (%s).\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+
+		if ( !::FreeImage_SaveToMemory( FIF_BMP, pbmBitmap, pmMemory, BMP_DEFAULT ) ) {
+			::FreeImage_CloseMemory( pmMemory );
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_INTERNALERROR;
+			::printf( "Failed to save BMP file (%s) to memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		BYTE * pbData;
+		DWORD dwSize;
+		if ( !::FreeImage_AcquireMemory( pmMemory, &pbData, &dwSize ) ) {
+			::FreeImage_CloseMemory( pmMemory );
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_INTERNALERROR;
+			::printf( "Failed to save BMP file (%s) to memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+		if ( !_mfFile.Append( pbData, dwSize ) ) {
+			::FreeImage_CloseMemory( pmMemory );
+			::FreeImage_Unload( pbmBitmap );
+			eError = LSSTD_E_OUTOFMEMORY;
+			::printf( "Failed to copy BMP file (%s) memory.\r\n", _oOptions.slInputs[_ui32FileIndex].CStr() );
+			return eError;
+		}
+
+		::FreeImage_CloseMemory( pmMemory );
+		::FreeImage_Unload( pbmBitmap );
+
 		return eError;
 	}
 
@@ -2788,7 +2859,6 @@ namespace lsx {
 		constexpr uint32_t QOI_OP_RGB = 0xFE;		/* 11111110 */
 		constexpr uint32_t QOI_OP_RGBA = 0xFF;		/* 11111111 */
 
-		constexpr uint32_t QOI_MASK_2 = 0xC0;		/* 11000000 */
 
 #define QOI_COLOR_HASH( C )							(C.rgba.r * 3 + C.rgba.g * 5 + C.rgba.b * 7 + C.rgba.a * 11)
 #define QOI_ZEROARR( a )							CStd::MemSet( (a), 0, sizeof( a ) )
@@ -2814,10 +2884,10 @@ namespace lsx {
 		static const unsigned char qoi_padding[8] = {0,0,0,0,0,0,0,1};
 
 		auto Write32 = [=](uint8_t *pui8Bytes, uint32_t *ui32Pos, uint32_t v) {
-			pui8Bytes[(*ui32Pos)++] = (0xFF000000 & v) >> 24;
-			pui8Bytes[(*ui32Pos)++] = (0x00FF0000 & v) >> 16;
-			pui8Bytes[(*ui32Pos)++] = (0x0000FF00 & v) >> 8;
-			pui8Bytes[(*ui32Pos)++] = (0x000000FF & v);
+			pui8Bytes[(*ui32Pos)++] = uint8_t( (0xFF000000 & v) >> 24 );
+			pui8Bytes[(*ui32Pos)++] = uint8_t( (0x00FF0000 & v) >> 16 );
+			pui8Bytes[(*ui32Pos)++] = uint8_t( (0x0000FF00 & v) >> 8 );
+			pui8Bytes[(*ui32Pos)++] = uint8_t( 0x000000FF & v );
 		};
 
 		LSSTD_ERRORS eError = LSSTD_E_SUCCESS;
@@ -2865,8 +2935,8 @@ namespace lsx {
 		Write32( pui8Bytes, &ui32Pos, QOI_MAGIC );
 		Write32( pui8Bytes, &ui32Pos, iImage.GetWidth() );
 		Write32( pui8Bytes, &ui32Pos, iImage.GetHeight() );
-		pui8Bytes[ui32Pos++] = ui32Channels;
-		pui8Bytes[ui32Pos++] = ui32ColorSpace;
+		pui8Bytes[ui32Pos++] = uint8_t( ui32Channels );
+		pui8Bytes[ui32Pos++] = uint8_t( ui32ColorSpace );
 
 
 		QOI_ZEROARR( rIndex );
@@ -2893,7 +2963,7 @@ namespace lsx {
 			if ( rPx.v == rPxPrev.v ) {
 				ui32Run++;
 				if ( ui32Run == 62 || px_pos == ui32PxEnd ) {
-					pui8Bytes[ui32Pos++] = QOI_OP_RUN | (ui32Run - 1);
+					pui8Bytes[ui32Pos++] = uint8_t( QOI_OP_RUN | (ui32Run - 1) );
 					ui32Run = 0;
 				}
 			}
@@ -2901,14 +2971,14 @@ namespace lsx {
 				int32_t i32IdxPos;
 
 				if ( ui32Run > 0 ) {
-					pui8Bytes[ui32Pos++] = QOI_OP_RUN | (ui32Run - 1);
+					pui8Bytes[ui32Pos++] = uint8_t( QOI_OP_RUN | (ui32Run - 1) );
 					ui32Run = 0;
 				}
 
 				i32IdxPos = QOI_COLOR_HASH( rPx ) % 64;
 
 				if ( rIndex[i32IdxPos].v == rPx.v ) {
-					pui8Bytes[ui32Pos++] = QOI_OP_INDEX | i32IdxPos;
+					pui8Bytes[ui32Pos++] = uint8_t( QOI_OP_INDEX | i32IdxPos );
 				}
 				else {
 					rIndex[i32IdxPos] = rPx;
