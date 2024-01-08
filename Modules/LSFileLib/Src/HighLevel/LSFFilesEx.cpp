@@ -14,6 +14,7 @@
  */
 
 #include "LSFFilesEx.h"
+#include "String/LSTLWString.h"
 #include <cassert>
 
 
@@ -133,6 +134,112 @@ namespace lsf {
 		}
 		CFileLib::CloseFile( fFile );
 		return true;
+	}
+
+	/**
+	 * Lists all the files and folders in a given directory.
+	 * 
+	 * \param _pcFolderPath The path to the directory to search.
+	 * \param _pcSearchString A wildcard search string to find only certain files/folders.
+	 * \param _bIncludeFolders If true, folders are included in the return.
+	 * \param _slReturn Thereturn array.  Found files and folders are appended to the array.
+	 * \return Returns true if at least 1 file/folder was found and there was enough memory to add all found files/folders to _slReturn.
+	 **/
+	LSBOOL LSE_CALL CFilesEx::GetFilesInDir( const char * _pcFolderPath, const char * _pcSearchString, bool _bIncludeFolders, CStringList &_slReturn ) {
+#ifdef LSE_WINDOWS
+		CString sPath = _pcFolderPath;
+		sPath.FindAndReplaceChar( '\\', '/' );
+		while ( sPath.GetLastChar() == '/' ) { sPath.RemLastChar(); }
+		sPath.Append( '/' );
+		CString sSearch;
+		if ( _pcSearchString ) {
+			sSearch = _pcSearchString;
+			sSearch.FindAndReplaceChar( '\\', '/' );
+			while ( sSearch.CStr()[0] == '/' ) {
+				sSearch.RemChar( 0 );
+			}
+		}
+		else {
+			sSearch = "*";
+		}
+
+
+		CString sSearchPath = sPath + sSearch;
+		if ( sSearchPath.FindString( 0, "\\\\?\\" ).ui32Start != 0 ) {
+			if ( !sSearchPath.Insert( 0, "\\\\?\\" ) ) { return false; }
+		}
+		WIN32_FIND_DATAA wfdData;
+		HANDLE hDir = ::FindFirstFileA( sSearchPath.CStr(), &wfdData );
+		if ( INVALID_HANDLE_VALUE == hDir ) { return false; }
+		
+		do {
+			if ( wfdData.cFileName[0] == '.' ) { continue; }
+			bool bIsFolder = ((wfdData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0);
+			if ( !_bIncludeFolders && bIsFolder ) {
+				continue;
+			}
+			if ( !_slReturn.Push( sPath + wfdData.cFileName ) ) { return false; }
+		} while ( ::FindNextFileA( hDir, &wfdData ) );
+
+		::FindClose( hDir );
+		return true;
+#else
+
+		return false;
+#endif	// #ifdef LSE_WINDOWS
+	}
+
+	/**
+	 * Lists all the files and folders in a given directory.
+	 * 
+	 * \param _pwcFolderPath The path to the directory to search.
+	 * \param _pwcSearchString A wildcard search string to find only certain files/folders.
+	 * \param _bIncludeFolders If true, folders are included in the return.
+	 * \param _slReturn Thereturn array.  Found files and folders are appended to the array.
+	 * \return Returns true if at least 1 file/folder was found and there was enough memory to add all found files/folders to _slReturn.
+	 **/
+	LSBOOL LSE_CALL CFilesEx::GetFilesInDir( const wchar_t * _pwcFolderPath, const wchar_t * _pwcSearchString, bool _bIncludeFolders, CStringList &_slReturn ) {
+#ifdef LSE_WINDOWS
+		CWString sPath = _pwcFolderPath;
+		sPath.FindAndReplaceChar( L'\\', L'/' );
+		while ( sPath.GetLastChar() == L'/' ) { sPath.RemLastChar(); }
+		sPath.Append( L'/' );
+		CWString sSearch;
+		if ( _pwcSearchString ) {
+			sSearch = _pwcSearchString;
+			sSearch.FindAndReplaceChar( L'\\', L'/' );
+			while ( sSearch.CStr()[0] == L'/' ) {
+				sSearch.RemChar( 0 );
+			}
+		}
+		else {
+			sSearch = "*";
+		}
+
+
+		CWString sSearchPath = sPath + sSearch;
+		/*if ( sSearchPath.FindString( 0, L"\\\\?\\" ).ui32Start != 0 ) {
+			if ( !sSearchPath.Insert( 0, L"\\\\?\\" ) ) { return false; }
+		}*/
+		WIN32_FIND_DATAW wfdData;
+		HANDLE hDir = ::FindFirstFileW( sSearchPath.CStr(), &wfdData );
+		if ( INVALID_HANDLE_VALUE == hDir ) { return false; }
+		
+		do {
+			if ( wfdData.cFileName[0] == L'.' ) { continue; }
+			bool bIsFolder = ((wfdData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0);
+			if ( !_bIncludeFolders && bIsFolder ) {
+				continue;
+			}
+			if ( !_slReturn.Push( CString::CStringFromUtfX( (sPath + wfdData.cFileName).CStr() ) ) ) { return false; }
+		} while ( ::FindNextFileW( hDir, &wfdData ) );
+
+		::FindClose( hDir );
+		return true;
+#else
+
+		return false;
+#endif	// #ifdef LSE_WINDOWS
 	}
 
 }	// namespace lsf

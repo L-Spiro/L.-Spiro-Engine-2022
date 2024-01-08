@@ -903,6 +903,7 @@
     <ClCompile Include="Src\astc-encoder\stb_image.c" />
     <ClCompile Include="Src\Astc\LSIAstc.cpp" />
     <ClCompile Include="Src\Bmp\LSIBmp.cpp" />
+    <ClCompile Include="Src\Bmp\LSIPBmp.cpp" />
     <ClCompile Include="Src\Dds\LSIDds.cpp" />
     <ClCompile Include="Src\detex\bits.c" />
     <ClCompile Include="Src\detex\bptc-tables.c" />
@@ -974,6 +975,8 @@
     <ClCompile Include="Src\LSIImageLib.cpp" />
     <ClCompile Include="Src\LZW\LSILzwDictionary.cpp" />
     <ClCompile Include="Src\Misc\LSIImageUtils.cpp" />
+    <ClCompile Include="Src\Palette\LSIPalette.cpp" />
+    <ClCompile Include="Src\Palette\LSIPaletteDatabase.cpp" />
     <ClCompile Include="Src\Png\LSIPng.cpp" />
     <ClCompile Include="Src\Pvrtc\LSIPvrtc.cpp" />
     <ClCompile Include="Src\Qoi\LSIQoi.cpp" />
@@ -1048,6 +1051,7 @@
     <ClInclude Include="Src\astc-encoder\vectypes.h" />
     <ClInclude Include="Src\Astc\LSIAstc.h" />
     <ClInclude Include="Src\Bmp\LSIBmp.h" />
+    <ClInclude Include="Src\Bmp\LSIPBmp.h" />
     <ClInclude Include="Src\Dds\LSIDds.h" />
     <ClInclude Include="Src\detex\bits.h" />
     <ClInclude Include="Src\detex\bptc-tables.h" />
@@ -1104,6 +1108,8 @@
     <ClInclude Include="Src\LSIImageLib.h" />
     <ClInclude Include="Src\LZW\LSILzwDictionary.h" />
     <ClInclude Include="Src\Misc\LSIImageUtils.h" />
+    <ClInclude Include="Src\Palette\LSIPalette.h" />
+    <ClInclude Include="Src\Palette\LSIPaletteDatabase.h" />
     <ClInclude Include="Src\Png\LSIPng.h" />
     <ClInclude Include="Src\Pvrtc\LSIPvrtc.h" />
     <ClInclude Include="Src\PVRTexTool\PVRTexLib.h" />

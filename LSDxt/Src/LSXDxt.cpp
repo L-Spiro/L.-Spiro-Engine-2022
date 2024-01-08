@@ -18,6 +18,8 @@
 #include "Etc/LSIEtc.h"
 #include "FileStream/LSFFileStream.h"
 #include "FreeImage.h"
+#include "Palette/LSIPaletteDatabase.h"
+#include "String/LSTLWString.h"
 #include "Time/LSSTDTime.h"
 #include "Vector/LSMVector3Base.h"
 #include <iostream>
@@ -57,6 +59,7 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 		lsx::CDxt::LSX_OPTIONS oOptions = {
 			CStringList(),									// slInputs
 			CStringList(),									// slOutputs
+			CStringList(),									// slPalDir
 			lsx::CDxt::LSX_IF_DXT3,							// ifOutFormat
 			lsx::CDxt::LSX_Q_NORMAL,						// qQuality
 			0,												// ui32RescaleWidth
@@ -131,6 +134,13 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 					if ( !oOptions.slOutputs.Push( CString::CStringFromUtfX( _pwcArgv[++I] ) ) ) {
 						LSX_ERROR( LSSTD_E_OUTOFMEMORY );
 					}
+				}
+				// Palette directories.
+				if ( LSX_VERIFY_INPUT( pal_dir, 1 ) || LSX_VERIFY_INPUT( paldir, 1 ) || LSX_VERIFY_INPUT( palette_dir, 1 ) ) {
+					if ( !oOptions.slPalDir.Push( CString::CStringFromUtfX( _pwcArgv[++I] ) ) ) {
+						LSX_ERROR( LSSTD_E_OUTOFMEMORY );
+					}
+					continue;
 				}
 				// Output format.
 				if ( LSX_VERIFY_INPUT( dxt1c, 0 ) || LSX_VERIFY_INPUT( bc1, 0 ) ) {
@@ -652,6 +662,10 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 				}
 				else if ( LSX_VERIFY_INPUT( mirror, 0 ) || LSX_VERIFY_INPUT( reflect, 0 ) ) {
 					oOptions.amAddressMode = CResampler::LSI_AM_MIRROR;
+				}
+				// Ignore alpha.
+				else if ( LSX_VERIFY_INPUT( ignore_alpha, 0 ) || LSX_VERIFY_INPUT( ia, 0 ) ) {
+					oOptions.bIgnoreAlpha = true;
 				}
 				// Alpha threshold.
 				else if ( LSX_VERIFY_INPUT( alpha_threshold, 1 ) || LSX_VERIFY_INPUT( alpha_thresh, 1 ) ) {
@@ -1649,6 +1663,28 @@ namespace lsx {
 	 */
 	LSSTD_ERRORS LSE_CALL CDxt::Process( const LSX_OPTIONS &_oOptions ) {
 		LSSTD_ERRORS eError = LSSTD_E_SUCCESS;
+		CPaletteDatabase pdPalettes;
+		// Load/find any palettes necessary.
+		for ( uint32_t I = 0; I < _oOptions.slPalDir.Length(); ++I ) {
+			if ( CFileLib::Exists( _oOptions.slPalDir[I].CStr() ) ) {
+				if ( !pdPalettes.LoadPalatte( _oOptions.slPalDir[I].CStr() ) ) {
+					eError = LSSTD_E_PARTIALFAILURE;
+					::printf( "Failed to load palette file %s.\r\n", _oOptions.slPalDir[I].CStr() );
+					return eError;
+				}
+			}
+			else {
+				CStringList slTmp;
+				CFilesEx::GetFilesInDir( CWString::FromUtf8( reinterpret_cast<const LSUTF8 *>(_oOptions.slPalDir[I].CStr()) ).CStr(), L"*.pal", false, slTmp );
+				CFilesEx::GetFilesInDir( CWString::FromUtf8( reinterpret_cast<const LSUTF8 *>(_oOptions.slPalDir[I].CStr()) ).CStr(), L"*.ppl", false, slTmp );
+				for ( uint32_t J = 0; J < slTmp.Length(); ++J ) {
+					if ( !pdPalettes.LoadPalatte( slTmp[J].CStr() ) ) {
+						eError = LSSTD_E_PARTIALFAILURE;
+						::printf( "Failed to load palette file %s.\r\n", slTmp[J].CStr() );
+					}
+				}
+			}
+		}
 		// Process the files in order.
 		for ( uint32_t I = 0; I < _oOptions.slInputs.Length(); ++I ) {
 			// Load the image.
@@ -1685,6 +1721,28 @@ namespace lsx {
 						// Add them back.
 						ui64Color |= (ui64Red << CImageLib::GetComponentOffset( LSI_PF_R16G16B16A16, LSI_PC_B )) |
 							(ui64Blue << CImageLib::GetComponentOffset( LSI_PF_R16G16B16A16, LSI_PC_R ));
+
+						// Put them back into the image.
+						iImage.SetTexelAt( ui64Color, LSI_PF_R16G16B16A16, X, Y );
+					}
+				}
+			}
+
+			// If we are ignoring alpha, set alpha to 1.
+			if ( _oOptions.bIgnoreAlpha ) {
+				for ( uint32_t Y = iImage.GetHeight(); Y--; ) {
+					for ( uint32_t X = iImage.GetWidth(); X--; ) {
+						// Get the color.
+						uint64_t ui64Color = iImage.GetTexelAt( LSI_PF_R16G16B16A16, X, Y );
+
+						// Get the alpha mask.
+						uint64_t ui64AlphaMask = (1ULL << CImageLib::GetComponentBits( LSI_PF_R16G16B16A16, LSI_PC_A )) - 1ULL;
+
+						// Shift into position.
+						ui64AlphaMask <<= CImageLib::GetComponentOffset( LSI_PF_R16G16B16A16, LSI_PC_A );
+
+						// Full alpha means just setting all the alpha bits, which is what the alpha mask is.
+						ui64Color |= (ui64AlphaMask << CImageLib::GetComponentOffset( LSI_PF_R16G16B16A16, LSI_PC_A ));
 
 						// Put them back into the image.
 						iImage.SetTexelAt( ui64Color, LSI_PF_R16G16B16A16, X, Y );

@@ -148,6 +148,9 @@ namespace lsx {
 			/** List of output files in UTF-8 format. */
 			CStringList							slOutputs;
 
+			/** Directory where to find palettes (UTF-8). */
+			CStringList							slPalDir;
+
 			/** Output format. */
 			LSX_IMAGE_FORMATS					ifOutFormat;
 

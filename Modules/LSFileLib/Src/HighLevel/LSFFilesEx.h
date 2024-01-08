@@ -19,6 +19,9 @@
 
 #include "../LSFFileLib.h"
 #include "Allocators/LSAStdAllocator.h"
+#include "String/LSTLString.h"
+#include "String/LSTLStringList.h"
+#include "Vector/LSTLVector.h"
 
 namespace lsf {
 
@@ -72,6 +75,28 @@ namespace lsf {
 		 * \return Returns true if the file was created and its contents written.
 		 */
 		static LSBOOL LSE_CALL				SendBufferToFile( const char * _pcPath, const uint8_t * _pui8Buffer, uintptr_t _uiptrSize );
+
+		/**
+		 * Lists all the files and folders in a given directory.
+		 * 
+		 * \param _pcFolderPath The path to the directory to search.
+		 * \param _pcSearchString A wildcard search string to find only certain files/folders.
+		 * \param _bIncludeFolders If true, folders are included in the return.
+		 * \param _slReturn Thereturn array.  Found files and folders are appended to the array.
+		 * \return Returns true if at least 1 file/folder was found and there was enough memory to add all found files/folders to _slReturn.
+		 **/
+		static LSBOOL LSE_CALL				GetFilesInDir( const char * _pcFolderPath, const char * _pcSearchString, bool _bIncludeFolders, CStringList &_slReturn );
+
+		/**
+		 * Lists all the files and folders in a given directory.
+		 * 
+		 * \param _pwcFolderPath The path to the directory to search.
+		 * \param _pwcSearchString A wildcard search string to find only certain files/folders.
+		 * \param _bIncludeFolders If true, folders are included in the return.
+		 * \param _slReturn Thereturn array.  Found files and folders are appended to the array.
+		 * \return Returns true if at least 1 file/folder was found and there was enough memory to add all found files/folders to _slReturn.
+		 **/
+		static LSBOOL LSE_CALL				GetFilesInDir( const wchar_t * _pwcFolderPath, const wchar_t * _pwcSearchString, bool _bIncludeFolders, CStringList &_slReturn );
 
 
 	protected :

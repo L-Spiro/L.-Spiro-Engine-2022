@@ -77,14 +77,14 @@ namespace lsf {
 		 *
 		 * \return Returns the 32-bit float at the current position in the stream.
 		 */
-		virtual float LSE_CALL				ReadFloat() const;
+		virtual float LSE_CALL					ReadFloat() const;
 
 		/**
 		 * Reads a 64-bit double from the stream and advances the stream position.
 		 *
 		 * \return Returns the 64-bit double at the current position in the stream.
 		 */
-		virtual double LSE_CALL				ReadDouble() const;
+		virtual double LSE_CALL					ReadDouble() const;
 
 		/**
 		 * Write bytes to the stream.  Stream position is advanced by the amount written.

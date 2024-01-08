@@ -108,7 +108,7 @@ namespace lsi {
 		ui32BytesPerPixelDst = CImageLib::GetFormatSize( _pfFormat );
 
 		// We are now ready to begin the extraction of the image data.
-		// Start by Allocating enough RAM.
+		// Start by allocating enough RAM.
 		uint32_t ui32Height = lpbfhInfo->ui32Height;
 		LSBOOL bReverse = false;
 		if ( ui32Height & 0x80000000 ) {

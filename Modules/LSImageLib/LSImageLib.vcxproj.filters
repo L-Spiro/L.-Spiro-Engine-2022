@@ -183,6 +183,12 @@
     <Filter Include="Source Files\KTX-Software\lib\dfdutils">
       <UniqueIdentifier>{f673714f-2ab7-4426-97d0-33dd44a3d0d5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Palette">
+      <UniqueIdentifier>{f16b77f0-36dd-4625-b672-eef77c530751}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Palette">
+      <UniqueIdentifier>{66c1ba9c-0d63-4a80-af36-6ac5b2fd71fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\LSIImageLib.cpp">
@@ -518,6 +524,15 @@
     <ClCompile Include="Src\Ispc\ispc_texcomp_astc.cpp">
       <Filter>Source Files\Ispc</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Bmp\LSIPBmp.cpp">
+      <Filter>Source Files\Bmp</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Palette\LSIPalette.cpp">
+      <Filter>Source Files\Palette</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Palette\LSIPaletteDatabase.cpp">
+      <Filter>Source Files\Palette</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\LSIImageLib.h">
@@ -774,6 +789,15 @@
     </ClInclude>
     <ClInclude Include="Src\KTX-Software\lib\dfdutils\dfd.h">
       <Filter>Header Files\KTX-Software\lib\dfdutils</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Bmp\LSIPBmp.h">
+      <Filter>Header Files\Bmp</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Palette\LSIPalette.h">
+      <Filter>Header Files\Palette</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Palette\LSIPaletteDatabase.h">
+      <Filter>Header Files\Palette</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
