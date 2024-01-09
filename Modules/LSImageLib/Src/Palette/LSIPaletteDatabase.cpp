@@ -34,13 +34,27 @@ namespace lsi {
 	 * \return Returns true if the file was successfully loaded.  False indicates an invalid file or lack of RAM.
 	 */
 	LSBOOL LSE_CALL CPaletteDatabase::LoadPalatte( const uint8_t * _pui8FileData, uint32_t _ui32DataLen, const CString &_sFileName ) {
-		CPalette pPal;
-		if ( !pPal.LoadPal( _pui8FileData, _ui32DataLen, _sFileName ) ) {
-			if ( !pPal.LoadPpl( _pui8FileData, _ui32DataLen, _sFileName ) ) {
-				return false;
+		{
+			CPalette pPal;
+			if ( pPal.LoadPal( _pui8FileData, _ui32DataLen, _sFileName ) ) {
+				return m_vPalettes.Push( pPal );
 			}
 		}
-		return m_vPalettes.Push( pPal );
+
+		// Size checks.
+		if ( _ui32DataLen < sizeof( LSI_PPL_HEADER ) ) { return false; }
+		const LSI_PPL_HEADER * pphHeader = reinterpret_cast<const LSI_PPL_HEADER *>(_pui8FileData);
+		if ( pphHeader->ui32Pl98 != 0x38394C50 ) { return false; }														// RIFF.
+		if ( (pphHeader->ui32NumPalettes * 256 + 2) * 4 + sizeof( LSI_PPL_HEADER ) > _ui32DataLen ) { return false; }	// There has to be enough data to store X palettes, each 256 entries and 4 bytes per entry, plus the header, plus 2 4-byte values after the table.
+		_pui8FileData += sizeof( LSI_PPL_HEADER );
+		_ui32DataLen -= sizeof( LSI_PPL_HEADER );
+		for ( uint32_t I = 0; I < pphHeader->ui32NumPalettes; ++I ) {
+			CString sTmpName = _sFileName + CString( "." ) + CString::CreateFromI64( I );
+			CPalette pPal;
+			if ( !pPal.LoadPpl( _pui8FileData, _ui32DataLen, sTmpName ) ) { return false; }
+			if ( !m_vPalettes.Push( pPal ) ) { return false; }
+		}
+		return true;
 	}
 
 	/**

@@ -35,6 +35,21 @@ namespace lsi {
 		LSE_CALLCTOR							~CPaletteDatabase();
 
 
+		// == Types.
+		/** A PAL header. */
+		struct LSI_PPL_HEADER {
+#pragma pack( push, 1 )
+			uint32_t							ui32Pl98;				/**< "PL98". */
+			uint32_t							ui32NumPalettes;		/**< The number of palettes. */
+
+			int32_t								i32ShadeShift;			/**< Shade shift. */
+			int32_t								i32HazeLevels;			/**< Haze levels. */
+			int32_t								i32HazeColors;			/**< Haze colors. */
+			uint8_t								ui8ValidColors[32];		/**< 256 bit indicating colors that can be matched against. */
+#pragma pack( pop )
+		};
+
+
 		// == Functions.
 		/**
 		 * Loads a palette file from memory.  The loaded palette is added to the database.

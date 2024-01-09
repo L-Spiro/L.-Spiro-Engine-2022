@@ -20,6 +20,7 @@
 #include "../Dds/LSIDds.h"
 #include "../Kernel/LSIKernel.h"
 #include "../Ktx/LSIKtx.h"
+#include "../Palette/LSIPaletteDatabase.h"
 #include "../Resampler/LSIResampler.h"
 #include "Map/LSTLLinearMap.h"
 #include "Map/LSTLStaticMap.h"
@@ -246,17 +247,19 @@ namespace lsi {
 		 *
 		 * \param _pui8FileData Pointer to the loaded file.
 		 * \param _ui32DataLen Length of the loaded file data.
+		 * \param _ppdPalettes An optional palette database.
 		 * \return Returns true if the file can be loaded and if there are enough resources available to load the file.
 		 */
-		LSBOOL LSE_CALL								LoadFileFromMemory( const uint8_t * _pui8FileData, uint32_t _ui32DataLen );
+		LSBOOL LSE_CALL								LoadFileFromMemory( const uint8_t * _pui8FileData, uint32_t _ui32DataLen, const CPaletteDatabase * _ppdPalettes = NULL );
 
 		/**
 		 * Create an image from a file.  Path must be in UTF-8 format.
 		 *
 		 * \param _pcFile UTF-8-formatted string representing the path to the file to load.
+		 * \param _ppdPalettes An optional palette database.
 		 * \return Returns true if the file can be loaded and if there are enough resources available to load the file.
 		 */
-		LSBOOL LSE_CALL								LoadFile( const char * _pcFile );
+		LSBOOL LSE_CALL								LoadFile( const char * _pcFile, const CPaletteDatabase * _ppdPalettes = NULL );
 
 		/**
 		 * Creates a blank image.

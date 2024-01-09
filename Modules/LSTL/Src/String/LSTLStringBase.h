@@ -140,6 +140,21 @@ namespace lstl {
 			return sbRet;
 		}
 
+		/**
+		 * Append this string with another string and return the result as a new string.
+		 * The returned string uses the same allocator as this string.
+		 *
+		 * \param _sbString The string to append.
+		 * \return Returns a new string representing the concatenation of this string and the given string.
+		 */
+		CStringBase<_tDerived, _tDataType, _uAllocSize> LSE_CALL			operator + ( const CStringBase<_tDerived, _tDataType, _uAllocSize> &_sbString ) const LSTL_STRINGS_THROW_DECL {
+			CStringBase sbRet( (*this), Parent::m_paOurAllocator );
+			if ( !sbRet.Append( _sbString ) ) {
+				LSTL_STRINGS_THROW( LSTL_SE_OUTOFMEMORY );
+			}
+			return sbRet;
+		}
+
 
 
 		// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

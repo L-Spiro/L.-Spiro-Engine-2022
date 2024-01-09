@@ -23,6 +23,7 @@ namespace lsi {
 		m_ptType( LSI_PT_NO_REMAP ) {
 	}
 	LSE_CALLCTOR CPalette::~CPalette() {
+		return;
 	}
 
 	// == Functions.
@@ -71,15 +72,40 @@ namespace lsi {
 	/**
 	 * Loads a PPL file from memory.
 	 *
-	 * \param _pui8FileData The in-memory image of the file.
+	 * \param _pui8FileData The in-memory image of the file.  This points only to the palette data and the ID/type that follow it.  On return,
+	 *	this is adjusted to the end of the palette/ID/type data to the start of the next palette for the database to load.
 	 * \param _ui32DataLen The length of the in-memory image of the file.
 	 * \param _sFileName The name of the loaded file.
 	 * \return Returns true if the file was successfully loaded.  False indicates an invalid file or lack of RAM.
 	 */
-	LSBOOL LSE_CALL CPalette::LoadPpl( const uint8_t * _pui8FileData, uint32_t _ui32DataLen, const CString &_sFileName ) {
+	LSBOOL LSE_CALL CPalette::LoadPpl( const uint8_t * &_pui8FileData, uint32_t &_ui32DataLen, const CString &_sFileName ) {
+		if ( _ui32DataLen < sizeof( LSI_PALETTE_ENTRY ) * 256 ) { return false; }
+
+		for ( uint32_t I = 0; I < 256; ++I ) {
+			if ( _ui32DataLen < sizeof( LSI_PALETTE_ENTRY ) ) { return false; }
+			const CPalette::LSI_PALETTE_ENTRY * ppeEntry = reinterpret_cast<const LSI_PALETTE_ENTRY *>(_pui8FileData);
+			if ( !m_paPalette.Push( (*ppeEntry) ) ) { return false; }
+
+			_pui8FileData += sizeof( LSI_PALETTE_ENTRY );
+			_ui32DataLen -= sizeof( LSI_PALETTE_ENTRY );
+		}
+
+		if ( _ui32DataLen >= sizeof( uint32_t ) ) {
+			m_ui32Id = (*reinterpret_cast<const uint32_t *>(_pui8FileData));
+
+			_pui8FileData += sizeof( uint32_t );
+			_ui32DataLen -= sizeof( uint32_t );
+		}
+		if ( _ui32DataLen >= sizeof( uint32_t ) ) {
+			m_ptType = static_cast<LSI_PAL_TYPE>((*reinterpret_cast<const uint32_t *>(_pui8FileData)));
+
+			_pui8FileData += sizeof( uint32_t );
+			_ui32DataLen -= sizeof( uint32_t );
+		}
+
 
 		m_sFileName = _sFileName;
-		return false;
+		return true;
 	}
 
 }	// namespace lsi

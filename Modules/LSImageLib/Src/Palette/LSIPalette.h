@@ -107,12 +107,13 @@ namespace lsi {
 		/**
 		 * Loads a PPL file from memory.
 		 *
-		 * \param _pui8FileData The in-memory image of the file.
+		 * \param _pui8FileData The in-memory image of the file.  This points only to the palette data and the ID/type that follow it.  On return,
+		 *	this is adjusted to the end of the palette/ID/type data to the start of the next palette for the database to load.
 		 * \param _ui32DataLen The length of the in-memory image of the file.
 		 * \param _sFileName The name of the loaded file.
 		 * \return Returns true if the file was successfully loaded.  False indicates an invalid file or lack of RAM.
 		 */
-		LSBOOL LSE_CALL							LoadPpl( const uint8_t * _pui8FileData, uint32_t _ui32DataLen, const CString &_sFileName );
+		LSBOOL LSE_CALL							LoadPpl( const uint8_t * &_pui8FileData, uint32_t &_ui32DataLen, const CString &_sFileName );
 
 
 	protected :

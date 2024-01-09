@@ -50,6 +50,7 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 #define return									CImageLib::ShutDownImageLibrary(); CFilesEx::ShutDownFilesEx(); CMemLib::Destroy(); return
 #define LSX_ERROR( CODE )						oOptions.slInputs.Reset();						\
 												oOptions.slOutputs.Reset();						\
+												oOptions.slPalDir.Reset();						\
 												CStd::PrintError( CODE );						\
 												CStd::DebugPrintA( "\r\n" );					\
 												if ( oOptions.bPause ) { ::system( "pause" ); }	\
@@ -1685,6 +1686,7 @@ namespace lsx {
 				}
 			}
 		}
+
 		// Process the files in order.
 		for ( uint32_t I = 0; I < _oOptions.slInputs.Length(); ++I ) {
 			// Load the image.

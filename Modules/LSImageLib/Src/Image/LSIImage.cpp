@@ -277,9 +277,10 @@ namespace lsi {
 	 *
 	 * \param _pui8FileData Pointer to the loaded file.
 	 * \param _ui32DataLen Length of the loaded file data.
+	 * \param _ppdPalettes An optional palette database.
 	 * \return Returns true if the file can be loaded and if there are enough resources available to load the file.
 	 */
-	LSBOOL LSE_CALL CImage::LoadFileFromMemory( const uint8_t * _pui8FileData, uint32_t _ui32DataLen ) {
+	LSBOOL LSE_CALL CImage::LoadFileFromMemory( const uint8_t * _pui8FileData, uint32_t _ui32DataLen, const CPaletteDatabase * _ppdPalettes ) {
 		Reset();
 		
 		if ( CBmp::LoadBmp( _pui8FileData, _ui32DataLen, m_ui32Width, m_ui32Height, m_pfFormat, m_tbBuffer ) ) { PostLoad(); return true; }
@@ -308,13 +309,14 @@ namespace lsi {
 	 * Create an image from a file.  Path must be in UTF-8 format.
 	 *
 	 * \param _pcFile UTF-8-formatted string representing the path to the file to load.
+	 * \param _ppdPalettes An optional palette database.
 	 * \return Returns true if the file can be loaded and if there are enough resources available to load the file.
 	 */
-	LSBOOL LSE_CALL CImage::LoadFile( const char * _pcFile ) {
+	LSBOOL LSE_CALL CImage::LoadFile( const char * _pcFile, const CPaletteDatabase * _ppdPalettes ) {
 		uint8_t * ui8Buffer;
 		uintptr_t uiptrSize;
 		if ( !CFilesEx::LoadFileToMemory( _pcFile, ui8Buffer, &uiptrSize ) ) { return false; }
-		LSBOOL bRet = LoadFileFromMemory( ui8Buffer, static_cast<uint32_t>(uiptrSize) );
+		LSBOOL bRet = LoadFileFromMemory( ui8Buffer, static_cast<uint32_t>(uiptrSize), _ppdPalettes );
 		CFilesEx::FreeFile( ui8Buffer );
 		return bRet;
 	}
