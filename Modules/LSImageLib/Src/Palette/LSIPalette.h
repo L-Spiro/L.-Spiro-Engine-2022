@@ -70,14 +70,6 @@ namespace lsi {
 		typedef CVectorPoD<LSI_PALETTE_ENTRY, uint32_t, 256>
 												CPalArray;
 
-		/** A chunk header. */
-		struct LSI_CHUNK {
-#pragma pack( push, 1 )
-			uint32_t							ui32Name;				/**< The chunk name. */
-			uint32_t							ui32Size;				/**< The chunk size. */
-#pragma pack( pop )
-		};
-
 		/** A PAL header. */
 		struct LSI_PAL_HEADER {
 #pragma pack( push, 1 )

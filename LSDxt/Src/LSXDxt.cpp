@@ -1691,7 +1691,7 @@ namespace lsx {
 		for ( uint32_t I = 0; I < _oOptions.slInputs.Length(); ++I ) {
 			// Load the image.
 			CImage iImage;
-			if ( !iImage.LoadFile( _oOptions.slInputs[I].CStr() ) ) {
+			if ( !iImage.LoadFile( _oOptions.slInputs[I].CStr(), &pdPalettes ) ) {
 				// We can continue to the next file.
 				eError = LSSTD_E_PARTIALFAILURE;
 				::printf( "Failed to open image %s.\r\n", _oOptions.slInputs[I].CStr() );

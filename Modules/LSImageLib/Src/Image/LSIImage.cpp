@@ -14,6 +14,7 @@
 
 #include "LSIImage.h"
 #include "../Bmp/LSIBmp.h"
+#include "../Bmp/LSIPBmp.h"
 #include "../Gif/LSIGif.h"
 #ifndef LSE_IPHONE
 #include "../Ispc/ispc_texcomp.h"
@@ -302,6 +303,10 @@ namespace lsi {
 		if ( CKtx::LoadKtx2( _pui8FileData, _ui32DataLen, m_ui32Width, m_ui32Height, m_pfFormat, 
 			m_kvKtx2.vkFormat,
 			m_tbBuffer, m_vMipMapBuffer ) ) { PostLoad(); return true; }
+
+		if ( _ppdPalettes ) {
+			if ( CPBmp::LoadPBmp( _pui8FileData, _ui32DataLen, m_ui32Width, m_ui32Height, m_pfFormat, (*_ppdPalettes), m_tbBuffer, m_vMipMapBuffer ) ) { PostLoad(); return true; }
+		}
 		return LoadLsi( _pui8FileData, _ui32DataLen );	// Calls PostLoad().
 	}
 
