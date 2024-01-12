@@ -107,6 +107,30 @@ namespace lsi {
 		 */
 		LSBOOL LSE_CALL							LoadPpl( const uint8_t * &_pui8FileData, uint32_t &_ui32DataLen, const CString &_sFileName );
 
+		/**
+		 * Gets the ID.
+		 * 
+		 * \return Returns the palette ID.
+		 **/
+		uint32_t LSE_CALL						Id() const { return m_ui32Id; }
+
+		/**
+		 * Gets a palette entry by index.
+		 * 
+		 * \param _ui32Idx The palette index to get.
+		 * \return Returns the RGBA entry at the given index in the palette.
+		 **/
+		const LSI_PALETTE_ENTRY & LSE_CALL		Get( uint32_t _ui32Idx ) const {
+			return _ui32Idx < m_paPalette.Length() ? m_paPalette[_ui32Idx] : LSI_PALETTE_ENTRY();
+		}
+
+		/**
+		 * Gets the total number of entries in the palette.
+		 * 
+		 * \return Returns the number of entries in the palette.
+		 **/
+		uint32_t LSE_CALL						Total() const { return m_paPalette.Length(); }
+
 
 	protected :
 		// == Members.

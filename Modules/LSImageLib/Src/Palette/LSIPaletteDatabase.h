@@ -59,7 +59,7 @@ namespace lsi {
 		 * \param _sFileName The name of the loaded file.
 		 * \return Returns true if the file was successfully loaded.  False indicates an invalid file or lack of RAM.
 		 */
-		LSBOOL LSE_CALL							LoadPalatte( const uint8_t * _pui8FileData, uint32_t _ui32DataLen, const CString &_sFileName );
+		LSBOOL LSE_CALL							LoadPalette( const uint8_t * _pui8FileData, uint32_t _ui32DataLen, const CString &_sFileName );
 
 		/**
 		 * Loads a palette file from a file path.
@@ -67,7 +67,15 @@ namespace lsi {
 		 * \param _pcFile _pcFile UTF-8-formatted string representing the path to the file to load.
 		 * \return Returns true if the file was successfully loaded.  False indicates an invalid file or lack of RAM, or that the given file does not exist.
 		 */
-		LSBOOL LSE_CALL							LoadPalatte( const char * _pcFile );
+		LSBOOL LSE_CALL							LoadPalette( const char * _pcFile );
+
+		/**
+		 * Gets a constant pointer to a palette by its ID, or NULL if no such palette could be found.  The database should not be modified while the point is being used.
+		 * 
+		 * \param _ui32Id The ID of the palette to find.
+		 * \return Returns a pointer to the requested palette or NULL if no matching palette could be found.
+		 **/
+		const CPalette *						PaletteById( uint32_t _ui32Id ) const;
 
 
 	protected :

@@ -33,7 +33,7 @@ namespace lsi {
 	 * \param _sFileName The name of the loaded file.
 	 * \return Returns true if the file was successfully loaded.  False indicates an invalid file or lack of RAM.
 	 */
-	LSBOOL LSE_CALL CPaletteDatabase::LoadPalatte( const uint8_t * _pui8FileData, uint32_t _ui32DataLen, const CString &_sFileName ) {
+	LSBOOL LSE_CALL CPaletteDatabase::LoadPalette( const uint8_t * _pui8FileData, uint32_t _ui32DataLen, const CString &_sFileName ) {
 		{
 			CPalette pPal;
 			if ( pPal.LoadPal( _pui8FileData, _ui32DataLen, _sFileName ) ) {
@@ -63,17 +63,30 @@ namespace lsi {
 	 * \param _pcFile _pcFile UTF-8-formatted string representing the path to the file to load.
 	 * \return Returns true if the file was successfully loaded.  False indicates an invalid file or lack of RAM, or that the given file does not exist.
 	 */
-	LSBOOL LSE_CALL CPaletteDatabase::LoadPalatte( const char * _pcFile ) {
+	LSBOOL LSE_CALL CPaletteDatabase::LoadPalette( const char * _pcFile ) {
 		uint8_t * ui8Buffer;
 		uintptr_t uiptrSize;
 		if ( !CFilesEx::LoadFileToMemory( _pcFile, ui8Buffer, &uiptrSize ) ) { return false; }
 		char * pcTmp = new char[CStd::StrLen( _pcFile ) + 1];
 		CStd::StrCpy( pcTmp, _pcFile );
 		CFileLib::NoPath( pcTmp );
-		LSBOOL bRet = LoadPalatte( ui8Buffer, static_cast<uint32_t>(uiptrSize), pcTmp );
+		LSBOOL bRet = LoadPalette( ui8Buffer, static_cast<uint32_t>(uiptrSize), pcTmp );
 		CFilesEx::FreeFile( ui8Buffer );
 		delete [] pcTmp;
 		return bRet;
+	}
+
+	/**
+	 * Gets a constant pointer to a palette by its ID, or NULL if no such palette could be found.  The database should not be modified while the point is being used.
+	 * 
+	 * \param _ui32Id The ID of the palette to find.
+	 * \return Returns a pointer to the requested palette or NULL if no matching palette could be found.
+	 **/
+	const CPalette * CPaletteDatabase::PaletteById( uint32_t _ui32Id ) const {
+		for ( uint32_t I = 0; I < m_vPalettes.Length(); ++I ) {
+			if ( m_vPalettes[I].Id() == _ui32Id ) { return &m_vPalettes[I]; }
+		}
+		return NULL;
 	}
 
 }	// namespace lsi

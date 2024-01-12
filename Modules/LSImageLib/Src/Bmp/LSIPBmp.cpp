@@ -84,10 +84,83 @@ namespace lsi {
 		if ( pcPidX == NULL ) { return false; }
 		if ( pcData == NULL ) { return false; }
 
-		if ( pcDetl->ui32MipLevels == 0 ) { return false; }
-		if ( pcData->ui32Size < (pcHeader->ui32Width * pcHeader->ui32Height * pcHeader->ui32BitDepth) / 8 ) { return false; }
+		const CPalette * ppPal = _pdPalettes.PaletteById( pcPidX->ui32PalIdx );
+		if ( ppPal == NULL ) { return false; }
 
-		return false;
+		
+		switch ( pcHeader->ui32BitDepth ) {
+			case 8 : {
+				_pfFormat = LSI_PF_R8G8B8A8;
+				break;
+			}
+			default : { return false; }
+		}
+
+		uint32_t ui32Mips = 1;
+		if ( pcDetl->ui32MipLevels == 0 ) { return false; }
+		if ( pcDetl->ui32MipLevels > 1 ) {
+			uint32_t ui32MaxMipsW = static_cast<uint32_t>(std::round( std::log2( pcHeader->ui32Width ) + 1.0 ));
+			uint32_t ui32MaxMipsH = static_cast<uint32_t>(std::round( std::log2( pcHeader->ui32Height ) + 1.0 ));
+			ui32Mips = CStd::Min( CStd::Min( ui32MaxMipsW, ui32MaxMipsH ), pcDetl->ui32MipLevels );
+			if ( !_vMipMaps.Resize( ui32Mips - 1 ) ) { return false; }
+		}
+
+
+		uint32_t ui32BytesPerPixelDst = CImageLib::GetFormatSize( _pfFormat );
+		const uint8_t * pui8Src = pcData->ui8Data;
+		uint32_t ui32SizeRem = pcData->ui32Size;
+		for ( uint32_t I = 0; I < ui32Mips; ++I ) {
+			uint32_t ui32W = pcHeader->ui32Width >> I;
+			if ( !ui32W ) { return false; }
+			uint32_t ui32H = pcHeader->ui32Height >> I;
+			if ( !ui32H ) { return false; }
+			uint32_t ui32ThisSize = ((ui32W * ui32H * pcHeader->ui32BitDepth >> 3) + 3) & ~3;
+
+			CImageLib::CTexelBuffer & tbDest = (I == 0) ? _tbReturn : _vMipMaps[I-1];
+			if ( ui32SizeRem < ui32ThisSize ) { return false; }
+
+			if ( !tbDest.Resize( CImageLib::GetBufferSizeWithPadding( _pfFormat, ui32W, ui32H ) ) ) { return false; }
+			CStd::MemSet( &tbDest[0], 0, tbDest.Length() );
+			uint32_t ui32DestRowWidth = CImageLib::GetRowSize( _pfFormat, ui32W );
+
+			constexpr bool bReverse = true;
+			switch ( pcHeader->ui32BitDepth ) {
+				case 8 : {
+					for ( uint32_t Y = 0; Y < ui32H; ++Y ) {
+						uint32_t ui32YOff = Y * ui32W;
+
+						// This line is what handles reverse-encoded bitmaps.
+						uint32_t ui32YOffDest = bReverse ? Y * ui32DestRowWidth :
+							(ui32H - Y - 1) * ui32DestRowWidth;
+
+						uint8_t * pui8Dest = &tbDest[ui32YOffDest];
+
+						
+
+						for ( uint32_t X = 0; X < ui32W; ++X ) {
+							const CPalette::LSI_PALETTE_ENTRY peEntry = ppPal->Get( pui8Src[ui32YOff+X] );
+
+							uint32_t ui32Color = (peEntry.perRgba.ui8R << CImageLib::GetComponentOffset( _pfFormat, LSI_PC_R )) |
+								(peEntry.perRgba.ui8G << CImageLib::GetComponentOffset( _pfFormat, LSI_PC_G )) |
+								(peEntry.perRgba.ui8B << CImageLib::GetComponentOffset( _pfFormat, LSI_PC_B )) |
+								(peEntry.perRgba.ui8A << CImageLib::GetComponentOffset( _pfFormat, LSI_PC_A ));
+
+							uint32_t * pui32Dst = reinterpret_cast<uint32_t *>(&pui8Dest[X*ui32BytesPerPixelDst]);
+							(*pui32Dst) = ui32Color;
+						}
+					}
+					break;
+				}
+				default : { return false; }
+			}
+
+
+			pui8Src += ui32ThisSize;
+			ui32SizeRem -= ui32ThisSize;
+		}
+		_ui32Width = pcHeader->ui32Width;
+		_ui32Height = pcHeader->ui32Height;
+		return true;
 	}
 
 

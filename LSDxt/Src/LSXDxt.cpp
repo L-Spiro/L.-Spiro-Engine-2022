@@ -1668,7 +1668,7 @@ namespace lsx {
 		// Load/find any palettes necessary.
 		for ( uint32_t I = 0; I < _oOptions.slPalDir.Length(); ++I ) {
 			if ( CFileLib::Exists( _oOptions.slPalDir[I].CStr() ) ) {
-				if ( !pdPalettes.LoadPalatte( _oOptions.slPalDir[I].CStr() ) ) {
+				if ( !pdPalettes.LoadPalette( _oOptions.slPalDir[I].CStr() ) ) {
 					eError = LSSTD_E_PARTIALFAILURE;
 					::printf( "Failed to load palette file %s.\r\n", _oOptions.slPalDir[I].CStr() );
 					return eError;
@@ -1679,7 +1679,7 @@ namespace lsx {
 				CFilesEx::GetFilesInDir( CWString::FromUtf8( reinterpret_cast<const LSUTF8 *>(_oOptions.slPalDir[I].CStr()) ).CStr(), L"*.pal", false, slTmp );
 				CFilesEx::GetFilesInDir( CWString::FromUtf8( reinterpret_cast<const LSUTF8 *>(_oOptions.slPalDir[I].CStr()) ).CStr(), L"*.ppl", false, slTmp );
 				for ( uint32_t J = 0; J < slTmp.Length(); ++J ) {
-					if ( !pdPalettes.LoadPalatte( slTmp[J].CStr() ) ) {
+					if ( !pdPalettes.LoadPalette( slTmp[J].CStr() ) ) {
 						eError = LSSTD_E_PARTIALFAILURE;
 						::printf( "Failed to load palette file %s.\r\n", slTmp[J].CStr() );
 					}
