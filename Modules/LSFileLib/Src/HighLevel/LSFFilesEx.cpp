@@ -142,7 +142,7 @@ namespace lsf {
 	 * \param _pcFolderPath The path to the directory to search.
 	 * \param _pcSearchString A wildcard search string to find only certain files/folders.
 	 * \param _bIncludeFolders If true, folders are included in the return.
-	 * \param _slReturn Thereturn array.  Found files and folders are appended to the array.
+	 * \param _slReturn The return array.  Found files and folders are appended to the array.
 	 * \return Returns true if at least 1 file/folder was found and there was enough memory to add all found files/folders to _slReturn.
 	 **/
 	LSBOOL LSE_CALL CFilesEx::GetFilesInDir( const char * _pcFolderPath, const char * _pcSearchString, bool _bIncludeFolders, CStringList &_slReturn ) {
@@ -178,7 +178,10 @@ namespace lsf {
 			if ( !_bIncludeFolders && bIsFolder ) {
 				continue;
 			}
-			if ( !_slReturn.Push( sPath + wfdData.cFileName ) ) { return false; }
+			if ( !_slReturn.Push( sPath + wfdData.cFileName ) ) {
+				::FindClose( hDir );
+				return false;
+			}
 		} while ( ::FindNextFileA( hDir, &wfdData ) );
 
 		::FindClose( hDir );
@@ -195,7 +198,7 @@ namespace lsf {
 	 * \param _pwcFolderPath The path to the directory to search.
 	 * \param _pwcSearchString A wildcard search string to find only certain files/folders.
 	 * \param _bIncludeFolders If true, folders are included in the return.
-	 * \param _slReturn Thereturn array.  Found files and folders are appended to the array.
+	 * \param _slReturn The return array.  Found files and folders are appended to the array.
 	 * \return Returns true if at least 1 file/folder was found and there was enough memory to add all found files/folders to _slReturn.
 	 **/
 	LSBOOL LSE_CALL CFilesEx::GetFilesInDir( const wchar_t * _pwcFolderPath, const wchar_t * _pwcSearchString, bool _bIncludeFolders, CStringList &_slReturn ) {
@@ -213,7 +216,7 @@ namespace lsf {
 			}
 		}
 		else {
-			sSearch = "*";
+			sSearch = L"*";
 		}
 
 
@@ -231,7 +234,10 @@ namespace lsf {
 			if ( !_bIncludeFolders && bIsFolder ) {
 				continue;
 			}
-			if ( !_slReturn.Push( CString::CStringFromUtfX( (sPath + wfdData.cFileName).CStr() ) ) ) { return false; }
+			if ( !_slReturn.Push( CString::CStringFromUtfX( (sPath + wfdData.cFileName).CStr() ) ) ) {
+				::FindClose( hDir );
+				return false;
+			}
 		} while ( ::FindNextFileW( hDir, &wfdData ) );
 
 		::FindClose( hDir );
