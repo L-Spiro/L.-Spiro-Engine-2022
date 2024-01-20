@@ -238,6 +238,9 @@ namespace lsx {
 			/** If true, alpha is ignored. */
 			LSBOOL								bIgnoreAlpha;
 
+			/** If true, alpha is pre-multiplied. */
+			LSBOOL								bPremultiplyAlpha;
+
 			/** If true, the tool pauses after the conversion. */
 			LSBOOL								bPause;
 
@@ -295,27 +298,27 @@ namespace lsx {
 
 		/** Conversion table for uncompressed formats. */
 		struct LSX_UNCOMPRESSED_TABLE {
-				/** Image format by our enumerated value. */
-				LSX_IMAGE_FORMATS				ifFormat;
+			/** Image format by our enumerated value. */
+			LSX_IMAGE_FORMATS					ifFormat;
 
-				/** The dwFlags value. */
-				uint32_t						ui32Flags;
+			/** The dwFlags value. */
+			uint32_t							ui32Flags;
 
-				/** The dwRGBBitCount value. */
-				uint32_t						ui32RgbBitCount;
+			/** The dwRGBBitCount value. */
+			uint32_t							ui32RgbBitCount;
 
-				/** The dwRBitMask value. */
-				uint32_t						ui32RBitMask;
+			/** The dwRBitMask value. */
+			uint32_t							ui32RBitMask;
 
-				/** The dwGBitMask value. */
-				uint32_t						ui32GBitMask;
+			/** The dwGBitMask value. */
+			uint32_t							ui32GBitMask;
 
-				/** The dwBBitMask value. */
-				uint32_t						ui32BBitMask;
+			/** The dwBBitMask value. */
+			uint32_t							ui32BBitMask;
 
-				/** Image dwABitMask value. */
-				uint32_t						ui32ABitMask;
-			};
+			/** Image dwABitMask value. */
+			uint32_t							ui32ABitMask;
+		};
 
 
 

@@ -90,6 +90,7 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 			-2.2f,											// fFilterGamma
 			0,												// ui8AlphaThresh
 			false,											// bIgnoreAlpha
+			false,											// bPremultiplyAlpha
 			false,											// bPause
 			false,											// bShowTime
 			static_cast<LSI_KTX_INTERNAL_FORMAT>(0),		// kifFormat
@@ -664,13 +665,17 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 				else if ( LSX_VERIFY_INPUT( mirror, 0 ) || LSX_VERIFY_INPUT( reflect, 0 ) ) {
 					oOptions.amAddressMode = CResampler::LSI_AM_MIRROR;
 				}
+				// Alpha threshold.
+				else if ( LSX_VERIFY_INPUT( alpha_threshold, 1 ) || LSX_VERIFY_INPUT( alpha_thresh, 1 ) ) {
+					oOptions.ui8AlphaThresh = static_cast<uint8_t>(CStd::Clamp<uint32_t>( CStd::WtoI32( _pwcArgv[++I] ), 0, 255UL ));
+				}
 				// Ignore alpha.
 				else if ( LSX_VERIFY_INPUT( ignore_alpha, 0 ) || LSX_VERIFY_INPUT( ia, 0 ) ) {
 					oOptions.bIgnoreAlpha = true;
 				}
-				// Alpha threshold.
-				else if ( LSX_VERIFY_INPUT( alpha_threshold, 1 ) || LSX_VERIFY_INPUT( alpha_thresh, 1 ) ) {
-					oOptions.ui8AlphaThresh = static_cast<uint8_t>(CStd::Clamp<uint32_t>( CStd::WtoI32( _pwcArgv[++I] ), 0, 255UL ));
+				// Pre-multiply alpha.
+				else if ( LSX_VERIFY_INPUT( premultiply_alpha, 0 ) || LSX_VERIFY_INPUT( premult_alpha, 0 ) ) {
+					oOptions.bPremultiplyAlpha = true;
 				}
 				// Pausing.
 				else if ( LSX_VERIFY_INPUT( pause, 0 ) ) {
@@ -1750,6 +1755,11 @@ namespace lsx {
 						iImage.SetTexelAt( ui64Color, LSI_PF_R16G16B16A16, X, Y );
 					}
 				}
+			}
+
+			// Should we pre-multiply alpha?
+			if ( _oOptions.bPremultiplyAlpha ) {
+				iImage.PreMultiplyAlpha();
 			}
 
 			// Determine the resampling size.
