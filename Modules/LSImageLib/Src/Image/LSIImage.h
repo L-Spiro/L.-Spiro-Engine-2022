@@ -384,6 +384,13 @@ namespace lsi {
 		void LSE_CALL								Flip();
 
 		/**
+		 * Gets the color space.
+		 *
+		 * \return Returns the color space of the image.
+		 */
+		LSE_INLINE LSI_GAMMA LSE_FCALL				GetColorSpace();
+
+		/**
 		 * Sets the color space.
 		 *
 		 * \param _gColorSpace The color space to set.
@@ -1228,6 +1235,15 @@ namespace lsi {
 			CImageLib::BatchFloatTexelToFloatTexel( LSI_PF_R32G32B32A32F, _pfValue,
 				GetFormat(), &pui8Buffer[_ui32Y*ui32RowWidth+_ui32X*m_ui32TexelSize], 1, LSI_G_NONE );
 		}
+	}
+
+	/**
+	 * Gets the color space.
+	 *
+	 * \return Returns the color space of the image.
+	 */
+	LSE_INLINE LSI_GAMMA LSE_FCALL CImage::GetColorSpace() {
+		return m_gColorSpace;
 	}
 
 	/**

@@ -1705,6 +1705,13 @@ namespace lsx {
 
 			// File loaded.
 
+			// Configure the color space.
+			// If it is sRGB then the color space was set by the file.
+			bool bIsSrgb = iImage.IsSRgb();
+			iImage.SetColorSpace( _oOptions.bRgbE ? LSI_G_LINEAR :							// Forced to linear because of command line.
+				(!bIsSrgb ? (_oOptions.fFilterGamma == 0 ? LSI_G_LINEAR : LSI_G_sRGB)		// If not set by the file, use _oOptions.fFilterGamma as a hint.
+					: iImage.GetColorSpace()) );											// Keep it the same (not overridden by the command line and set by the file).
+
 			// Should it be flipped?
 			if ( _oOptions.bFlip ) {
 				iImage.Flip();
