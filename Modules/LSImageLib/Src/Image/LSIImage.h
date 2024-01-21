@@ -388,7 +388,7 @@ namespace lsi {
 		 *
 		 * \return Returns the color space of the image.
 		 */
-		LSE_INLINE LSI_GAMMA LSE_FCALL				GetColorSpace();
+		LSE_INLINE LSI_GAMMA LSE_FCALL				GetColorSpace() const;
 
 		/**
 		 * Sets the color space.
@@ -403,6 +403,13 @@ namespace lsi {
 		 * \return Returns true if the color space is set to LSI_G_sRGB.
 		 */
 		LSE_INLINE LSBOOL LSE_CALL					IsSRgb() const;
+
+		/**
+		 * Was the color space set automatically?
+		 * 
+		 * \return Returns true if the color space was set during file load.
+		 **/
+		LSE_INLINE LSBOOL LSE_CALL					AutoColorSpace() const;
 
 		/**
 		 * Is the given channel entirely set to a given value?
@@ -575,6 +582,22 @@ namespace lsi {
 		 * Pre-multiplies the alpha in-place.  This should not be done more than once on a single image for correct results.
 		 */
 		void LSE_CALL								PreMultiplyAlpha();
+
+		/**
+		 * Increases the canvas area of the texture without resizing the image.  The additional space around the image is filled in with
+		 *	a texture-mapping determined by _amAddressModeU and _amAddressModeV.
+		 * 
+		 * \param _iDest The destination texture.
+		 * \param _ui32SizeFactorX The width multiplier of the new texture.
+		 * \param _ui32SizeFactorY The height multiplier of the new texture.
+		 * \param _amAddressModeU Addressing mode for the U texture coordinates.
+		 * \param _amAddressModeV Addressing mode for the V texture coordinates.
+		 * \return DESC
+		 **/
+		LSBOOL LSE_CALL								BakeTextureMapping( CImage &_iDest,
+			uint32_t _ui32SizeFactorX, uint32_t _ui32SizeFactorY,
+			CResampler::LSI_ADDRESS_MODE _amAddressModeU = CResampler::LSI_AM_REPEAT,
+			CResampler::LSI_ADDRESS_MODE _amAddressModeV = CResampler::LSI_AM_REPEAT ) const;
 
 		/**
 		 * Adds a normal-map channel to the Z component.
@@ -797,6 +820,9 @@ namespace lsi {
 
 		/** KTX 2 data.*/
 		LSI_KTX2_VALUES								m_kvKtx2;
+
+		/** Was the color space set in the file? */
+		LSBOOL										m_bAutoGamma;
 
 
 		// == Functions.
@@ -1242,7 +1268,7 @@ namespace lsi {
 	 *
 	 * \return Returns the color space of the image.
 	 */
-	LSE_INLINE LSI_GAMMA LSE_FCALL CImage::GetColorSpace() {
+	LSE_INLINE LSI_GAMMA LSE_FCALL CImage::GetColorSpace() const {
 		return m_gColorSpace;
 	}
 
@@ -1262,6 +1288,15 @@ namespace lsi {
 	 */
 	LSE_INLINE LSBOOL LSE_CALL CImage::IsSRgb() const {
 		return m_gColorSpace == LSI_G_sRGB;
+	}
+
+	/**
+	 * Was the color space set automatically?
+	 * 
+	 * \return Returns true if the color space was set during file load.
+	 **/
+	LSE_INLINE LSBOOL LSE_CALL CImage::AutoColorSpace() const {
+		return m_bAutoGamma;
 	}
 
 	/**

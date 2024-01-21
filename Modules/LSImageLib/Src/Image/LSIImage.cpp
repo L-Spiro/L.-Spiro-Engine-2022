@@ -65,7 +65,8 @@ namespace lsi {
 		m_pfFormat( LSI_PF_ANY ),
 		m_ui32RowWidth( 0 ),
 		m_ui32TexelSize( 0 ),
-		m_gColorSpace( LSI_G_LINEAR ) {
+		m_gColorSpace( LSI_G_LINEAR ),
+		m_bAutoGamma( false ) {
 	}
 	LSE_CALLCTOR CImage::CImage( const CImage &_iOther ) {
 		m_ui32Width = _iOther.m_ui32Width;
@@ -76,6 +77,7 @@ namespace lsi {
 		m_gColorSpace = _iOther.m_gColorSpace;
 		m_kvKtx1 = _iOther.m_kvKtx1;
 		m_kvKtx2 = _iOther.m_kvKtx2;
+		m_bAutoGamma = _iOther.m_bAutoGamma;
 
 		if ( !m_tbBuffer.Resize( _iOther.m_tbBuffer.Length() ) ) { throw LSSTD_E_OUTOFMEMORY; }
 		if ( _iOther.m_tbBuffer.Length() ) {
@@ -165,6 +167,7 @@ namespace lsi {
 
 		m_ui32RowWidth = m_ui32TexelSize = 0;
 		m_gColorSpace = LSI_G_LINEAR;
+		m_bAutoGamma = false;
 	}
 
 	/**
@@ -930,10 +933,9 @@ namespace lsi {
 #endif	// #ifdef _DEBUG
 
 
-		if ( !_iDest.CreateBlank( GetFormat(), _ui32NewWidth, _ui32NewHeight ) ) {
+		if ( !_iDest.CreateBlank( GetFormat(), _ui32NewWidth, _ui32NewHeight, 1U, GetColorSpace() ) ) {
 			LSI_FAIL( "Out of memory while resampling." );
 		}
-		_iDest.SetColorSpace( IsSRgb() ? LSI_G_sRGB : LSI_G_LINEAR );
 
 		return Resample( _ui32NewWidth, _ui32NewHeight, _fFilter, _iDest.m_tbBuffer, _fSrcGamma, _amAddressMode, _fFilterScale );
 	}
@@ -1939,6 +1941,54 @@ namespace lsi {
 	}
 
 	/**
+	 * Increases the canvas area of the texture without resizing the image.  The additional space around the image is filled in with
+	 *	a texture-mapping determined by _amAddressModeU and _amAddressModeV.
+	 * 
+	 * \param _iDest The destination texture.
+	 * \param _ui32SizeFactorX The width multiplier of the new texture.
+	 * \param _ui32SizeFactorY The height multiplier of the new texture.
+	 * \param _amAddressModeU Addressing mode for the U texture coordinates.
+	 * \param _amAddressModeV Addressing mode for the V texture coordinates.
+	 * \return DESC
+	 **/
+	LSBOOL LSE_CALL CImage::BakeTextureMapping( CImage &_iDest,
+		uint32_t _ui32SizeFactorX, uint32_t _ui32SizeFactorY,
+		CResampler::LSI_ADDRESS_MODE _amAddressModeU,
+		CResampler::LSI_ADDRESS_MODE _amAddressModeV ) const {
+
+		// If resizing is necessary then the texture must not be a DXT format.
+		if ( CImageLib::IsCompressed( GetFormat() ) ) { return false; }
+
+#ifdef _DEBUG
+#define LSI_FAIL( STRING )			CStd::DebugPrintA( "CImage::BakeTextureMapping(): " STRING "\r\n" ); return false
+#else
+#define LSI_FAIL( STRING )			return false
+#endif	// #ifdef _DEBUG
+
+
+		if ( !_iDest.CreateBlank( GetFormat(), GetWidth() * _ui32SizeFactorX, GetHeight() * _ui32SizeFactorY,
+			TotalMipLevels(), GetColorSpace() ) ) {
+			LSI_FAIL( "Out of memory while baking texture addressing." );
+		}
+		_iDest.SetColorSpace( GetColorSpace() );
+
+
+		float fVal[4];
+		uint32_t ui32Width = GetWidth();
+		uint32_t ui32Height = GetHeight();
+		for ( uint32_t I = 0; I < TotalMipLevels(); ++I ) {
+			CImageLib::CTexelBuffer & tbDest = I == 0 ? _iDest.m_tbBuffer : _iDest.m_vMipMapBuffer[I-1];
+			const CImageLib::CTexelBuffer & tbSrc = GetMipMapBuffers( I );
+			ui32Width = CStd::Max<uint32_t>( GetWidth() >> I, 1 );
+			ui32Height = CStd::Max<uint32_t>( GetHeight() >> I, 1 );
+			for ( uint32_t Y = 0; Y < ui32Height; ++Y ) {
+				for ( uint32_t X = 0; X < ui32Width; ++X ) {
+				}
+			}
+		}
+	}
+
+	/**
 	 * Adds a normal-map channel to the Z component.
 	 */
 	void LSE_CALL CImage::AddNormalMapZ() {
@@ -2141,6 +2191,7 @@ namespace lsi {
 				m_gColorSpace = LSI_G_sRGB;
 			}
 			else { m_gColorSpace = LSI_G_LINEAR; }
+			m_bAutoGamma = true;
 		}
 		else if ( m_pfFormat == LSI_PF_KTX2 ) {
 		}
