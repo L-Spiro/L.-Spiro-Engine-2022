@@ -71,6 +71,11 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 			LSI_F_BOX_FILTER,								// fFilter
 			LSI_F_KAISER_FILTER,							// fMipFilter
 			CResampler::LSI_AM_CLAMP,						// amAddressMode
+			false,											// bBakeTextureMapping
+			CResampler::LSI_AM_REPEAT,						// amBakedAddressU
+			CResampler::LSI_AM_REPEAT,						// amBakedAddressV
+			1,												// ui32BakeMultiplierU
+			1,												// ui32BakeMultiplierV
 			0,												// ui32WidthClamp
 			0,												// ui32HeightClamp
 			0.0f,											// fRelWidthClamp
@@ -492,158 +497,195 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 					continue;
 				}
 				// Mipmap filters.
-				else if ( LSX_VERIFY_INPUT( Box, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Box, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_BOX_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Tent, 0 ) ) {
+				 if ( LSX_VERIFY_INPUT( Tent, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_BILINEAR_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Quadratic, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Quadratic, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_QUADRATIC_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Kaiser, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Kaiser, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_KAISER_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Lanczos2, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Lanczos2, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_LANCZOS2_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Lanczos3, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Lanczos3, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_LANCZOS3_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Lanczos4, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Lanczos4, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_LANCZOS4_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Lanczos6, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Lanczos6, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_LANCZOS6_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Lanczos8, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Lanczos8, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_LANCZOS8_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Lanczos12, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Lanczos12, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_LANCZOS12_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Lanczos64, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Lanczos64, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_LANCZOS64_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Mitchell, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Mitchell, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_MITCHELL_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Catrom, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Catrom, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_CATMULLROM_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( BSpline, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( BSpline, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_BSPLINE_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Blackman, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Blackman, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_BLACKMAN_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Gaussian, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Gaussian, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_GAUSSIAN_FILTER;
+					continue;
 				}
-				else if ( LSX_VERIFY_INPUT( Bell, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( Bell, 0 ) ) {
 					oOptions.fMipFilter = LSI_F_BELL_FILTER;
+					continue;
 				}
 				// Clamping.
-				else if ( LSX_VERIFY_INPUT( clamp, 2 ) ) {
+				if ( LSX_VERIFY_INPUT( clamp, 2 ) ) {
 					oOptions.ui32WidthClamp = CStd::WtoI32( _pwcArgv[++I] );
 					oOptions.ui32HeightClamp = CStd::WtoI32( _pwcArgv[++I] );
+					continue;
 				}
 				// Scaled clamping.
-				else if ( LSX_VERIFY_INPUT( clampScale, 2 ) ) {
+				if ( LSX_VERIFY_INPUT( clampScale, 2 ) ) {
 					oOptions.fRelWidthClamp = static_cast<float>(CStd::WtoF( _pwcArgv[++I] ));
 					oOptions.fRelHeightClamp = static_cast<float>(CStd::WtoF( _pwcArgv[++I] ));
+					continue;
 				}
 				// Mipmaps off.
-				else if ( LSX_VERIFY_INPUT( nomipmap, 0 ) || LSX_VERIFY_INPUT( nomipmaps, 0 ) || LSX_VERIFY_INPUT( nomips, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( nomipmap, 0 ) || LSX_VERIFY_INPUT( nomipmaps, 0 ) || LSX_VERIFY_INPUT( nomips, 0 ) ) {
 					oOptions.bMipMaps = false;
+					continue;
 				}
 				// Number of mipmaps to generate.
-				else if ( LSX_VERIFY_INPUT( nmips, 1 ) ) {
+				if ( LSX_VERIFY_INPUT( nmips, 1 ) ) {
 					oOptions.ui32Mips = CStd::WtoI32( _pwcArgv[++I] );
+					continue;
 				}
 				// RGBe mode.
-				else if ( LSX_VERIFY_INPUT( rgbe, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( rgbe, 0 ) ) {
 					oOptions.bRgbE = true;
 					oOptions.fFilterGamma = 0.0f;	// Already in linear mode so don't gamma-correct during filtering.
+					continue;
 				}
 				// Flipping.
-				else if ( LSX_VERIFY_INPUT( flip, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( flip, 0 ) ) {
 					oOptions.bFlip = true;
+					continue;
 				}
 				// Swap R and B.
-				else if ( LSX_VERIFY_INPUT( swap, 0 ) ) {
+				if ( LSX_VERIFY_INPUT( swap, 0 ) ) {
 					oOptions.bSwapRB = true;
+					continue;
 				}
 				// Normalize mipmaps.
-				else if ( (LSX_VERIFY_INPUT( norm, 0 )) || LSX_VERIFY_INPUT( normalize, 0 ) ) {
+				if ( (LSX_VERIFY_INPUT( norm, 0 )) || LSX_VERIFY_INPUT( normalize, 0 ) ) {
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
 				// Generate a normal map.
-				else if ( (LSX_VERIFY_INPUT( n3x3, 0 )) ) {
+				if ( (LSX_VERIFY_INPUT( n3x3, 0 )) ) {
 					oOptions.ui32NormalMapKernelSize = 3;
 					ui32CreateNormalMapArg = I;
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
-				else if ( (LSX_VERIFY_INPUT( n5x5, 0 )) ) {
+				if ( (LSX_VERIFY_INPUT( n5x5, 0 )) ) {
 					oOptions.ui32NormalMapKernelSize = 5;
 					ui32CreateNormalMapArg = I;
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
-				else if ( (LSX_VERIFY_INPUT( n7x7, 0 )) ) {
+				if ( (LSX_VERIFY_INPUT( n7x7, 0 )) ) {
 					oOptions.ui32NormalMapKernelSize = 7;
 					ui32CreateNormalMapArg = I;
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
-				else if ( (LSX_VERIFY_INPUT( n9x9, 0 )) ) {
+				if ( (LSX_VERIFY_INPUT( n9x9, 0 )) ) {
 					oOptions.ui32NormalMapKernelSize = 9;
 					ui32CreateNormalMapArg = I;
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
 				// Select the normal-map source channel.
-				else if ( (LSX_VERIFY_INPUT( alpha, 0 )) ) {
+				if ( (LSX_VERIFY_INPUT( alpha, 0 )) ) {
 					/*if ( ui32CreateNormalMapArg != I - 1 ) {
 					}*/
 					oOptions.ui32NormalMapChannel = LSI_PC_A;
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
-				else if ( (LSX_VERIFY_INPUT( rgb, 0 )) ) {
+				if ( (LSX_VERIFY_INPUT( rgb, 0 )) ) {
 					/*if ( ui32CreateNormalMapArg != I - 1 ) {
 					}*/
 					oOptions.ui32NormalMapChannel = CImage::LSI_CA_AVERAGE;
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
-				else if ( (LSX_VERIFY_INPUT( red, 0 )) ) {
+				if ( (LSX_VERIFY_INPUT( red, 0 )) ) {
 					/*if ( ui32CreateNormalMapArg != I - 1 ) {
 					}*/
 					oOptions.ui32NormalMapChannel = LSI_PC_R;
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
-				else if ( (LSX_VERIFY_INPUT( green, 0 )) ) {
+				if ( (LSX_VERIFY_INPUT( green, 0 )) ) {
 					/*if ( ui32CreateNormalMapArg != I - 1 ) {
 					}*/
 					oOptions.ui32NormalMapChannel = LSI_PC_G;
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
-				else if ( (LSX_VERIFY_INPUT( blue, 0 )) ) {
+				if ( (LSX_VERIFY_INPUT( blue, 0 )) ) {
 					/*if ( ui32CreateNormalMapArg != I - 1 ) {
 					}*/
 					oOptions.ui32NormalMapChannel = LSI_PC_B;
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
-				else if ( (LSX_VERIFY_INPUT( max, 0 )) ) {
+				if ( (LSX_VERIFY_INPUT( max, 0 )) ) {
 					/*if ( ui32CreateNormalMapArg != I - 1 ) {
 					}*/
 					oOptions.ui32NormalMapChannel = CImage::LSI_CA_MAX;
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
-				else if ( (LSX_VERIFY_INPUT( colorspace, 0 )) ) {
+				if ( (LSX_VERIFY_INPUT( colorspace, 0 )) ) {
 					/*if ( ui32CreateNormalMapArg != I - 1 ) {
 					}*/
 					oOptions.ui32NormalMapChannel = CImage::LSI_CA_WEIGHTED_AVERAGE;
 					oOptions.bNormalizeMips = true;
+					continue;
 				}
-				else if ( (LSX_VERIFY_INPUT( scale, 1 )) ) {
+				if ( (LSX_VERIFY_INPUT( scale, 1 )) ) {
 					oOptions.fNormalMapStr = static_cast<float>(CStd::WtoF( _pwcArgv[++I] ));
+					continue;
 				}
 				// Color weights.
 				else if ( (LSX_VERIFY_INPUT( weight, 3 )) || (LSX_VERIFY_INPUT( weights, 3 )) ) {
@@ -664,6 +706,44 @@ int32_t LSE_CCALL wmain( int32_t _i32Args, LSUTFX * _pwcArgv[] ) {
 				}
 				else if ( LSX_VERIFY_INPUT( mirror, 0 ) || LSX_VERIFY_INPUT( reflect, 0 ) ) {
 					oOptions.amAddressMode = CResampler::LSI_AM_MIRROR;
+				}
+				// Baked texture-mapping U addressing mode and multiplier.
+				else if ( LSX_VERIFY_INPUT( bake_tex_mapping_u, 2 ) ) {
+					++I;
+					oOptions.bBakeTextureMapping = true;
+					if ( CStd::WStrICmp( _pwcArgv[I], L"clamp" ) == 0 ) {
+						oOptions.amBakedAddressU = CResampler::LSI_AM_CLAMP;
+					}
+					else if ( CStd::WStrICmp( _pwcArgv[I], L"repeat" ) == 0 ) {
+						oOptions.amBakedAddressU = CResampler::LSI_AM_REPEAT;
+					}
+					else if ( CStd::WStrICmp( _pwcArgv[I], L"mirror" ) == 0 ) {
+						oOptions.amBakedAddressU = CResampler::LSI_AM_MIRROR;
+					}
+					else {
+						LSX_ERROR( LSSTD_E_INVALIDCALL );
+					}
+					oOptions.ui32BakeMultiplierU = CStd::WtoI32( _pwcArgv[++I] );
+					continue;
+				}
+				// Baked texture-mapping V addressing mode and multiplier.
+				else if ( LSX_VERIFY_INPUT( bake_tex_mapping_v, 2 ) ) {
+					++I;
+					oOptions.bBakeTextureMapping = true;
+					if ( CStd::WStrICmp( _pwcArgv[I], L"clamp" ) == 0 ) {
+						oOptions.amBakedAddressV = CResampler::LSI_AM_CLAMP;
+					}
+					else if ( CStd::WStrICmp( _pwcArgv[I], L"repeat" ) == 0 ) {
+						oOptions.amBakedAddressV = CResampler::LSI_AM_REPEAT;
+					}
+					else if ( CStd::WStrICmp( _pwcArgv[I], L"mirror" ) == 0 ) {
+						oOptions.amBakedAddressV = CResampler::LSI_AM_MIRROR;
+					}
+					else {
+						LSX_ERROR( LSSTD_E_INVALIDCALL );
+					}
+					oOptions.ui32BakeMultiplierV = CStd::WtoI32( _pwcArgv[++I] );
+					continue;
 				}
 				// Alpha threshold.
 				else if ( LSX_VERIFY_INPUT( alpha_threshold, 1 ) || LSX_VERIFY_INPUT( alpha_thresh, 1 ) ) {
@@ -1875,6 +1955,17 @@ namespace lsx {
 					}
 				}
 				iImage.ConvertToNormalMap( kU, kV, _oOptions.fNormalMapStr, vWeights, _oOptions.amAddressMode, _oOptions.ui32NormalMapChannel == CImage::LSI_CA_MAX );
+			}
+
+			// Baking texture mapping is the final operation, since we are emulating an operation that would normally
+			//	be done after the texture has already been saved to a file and reloaded into a game.
+			if ( _oOptions.bBakeTextureMapping ) {
+				if ( !iImage.BakeTextureMappingInPlace( _oOptions.ui32BakeMultiplierU, _oOptions.ui32BakeMultiplierV,
+					_oOptions.amBakedAddressU, _oOptions.amBakedAddressV ) ) {
+					eError = LSSTD_E_PARTIALFAILURE;
+					::printf( "Failed to bake texture mapping for image %s.\r\n", _oOptions.slInputs[I].CStr() );
+					continue;
+				}
 			}
 
 			const char * pcExtension = CFileLib::GetExtension( _oOptions.slOutputs[I].CStr() );

@@ -181,6 +181,21 @@ namespace lsx {
 			/** Address mode. */
 			CResampler::LSI_ADDRESS_MODE		amAddressMode;
 
+			/** Bake texture mapping? */
+			LSBOOL								bBakeTextureMapping;
+
+			/** Baked texture-mapping: U addressing mode. */
+			CResampler::LSI_ADDRESS_MODE		amBakedAddressU;
+
+			/** Baked texture-mapping: V addressing mode. */
+			CResampler::LSI_ADDRESS_MODE		amBakedAddressV;
+
+			/** Multiplier for the baked U texture mapping. */
+			uint32_t							ui32BakeMultiplierU;
+
+			/** Multiplier for the baked V texture mapping. */
+			uint32_t							ui32BakeMultiplierV;
+
 			/** Clamp on the image width or 0 for no restrictions. */
 			uint32_t							ui32WidthClamp;
 

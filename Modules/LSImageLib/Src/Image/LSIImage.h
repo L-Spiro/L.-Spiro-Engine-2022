@@ -600,6 +600,20 @@ namespace lsi {
 			CResampler::LSI_ADDRESS_MODE _amAddressModeV = CResampler::LSI_AM_REPEAT ) const;
 
 		/**
+		 * Increases the canvas area of the texture without resizing the image (in-place).  The additional space around the image is filled in with
+		 *	a texture-mapping determined by _amAddressModeU and _amAddressModeV.
+		 * 
+		 * \param _ui32SizeFactorX The width multiplier of the new texture.
+		 * \param _ui32SizeFactorY The height multiplier of the new texture.
+		 * \param _amAddressModeU Addressing mode for the U texture coordinates.
+		 * \param _amAddressModeV Addressing mode for the V texture coordinates.
+		 * \return DESC
+		 **/
+		LSBOOL LSE_CALL								BakeTextureMappingInPlace( uint32_t _ui32SizeFactorX, uint32_t _ui32SizeFactorY,
+			CResampler::LSI_ADDRESS_MODE _amAddressModeU = CResampler::LSI_AM_REPEAT,
+			CResampler::LSI_ADDRESS_MODE _amAddressModeV = CResampler::LSI_AM_REPEAT );
+
+		/**
 		 * Adds a normal-map channel to the Z component.
 		 */
 		void LSE_CALL								AddNormalMapZ();

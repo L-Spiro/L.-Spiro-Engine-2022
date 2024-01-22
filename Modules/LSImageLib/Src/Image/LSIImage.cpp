@@ -1970,22 +1970,79 @@ namespace lsi {
 			TotalMipLevels(), GetColorSpace() ) ) {
 			LSI_FAIL( "Out of memory while baking texture addressing." );
 		}
-		_iDest.SetColorSpace( GetColorSpace() );
 
 
 		float fVal[4];
-		uint32_t ui32Width = GetWidth();
-		uint32_t ui32Height = GetHeight();
+		uint32_t ui32Width = 0;
+		uint32_t ui32Height = 0;
+		uint32_t ui32SrcWidth = 0;
+		uint32_t ui32SrcHeight = 0;
 		for ( uint32_t I = 0; I < TotalMipLevels(); ++I ) {
-			CImageLib::CTexelBuffer & tbDest = I == 0 ? _iDest.m_tbBuffer : _iDest.m_vMipMapBuffer[I-1];
-			const CImageLib::CTexelBuffer & tbSrc = GetMipMapBuffers( I );
-			ui32Width = CStd::Max<uint32_t>( GetWidth() >> I, 1 );
-			ui32Height = CStd::Max<uint32_t>( GetHeight() >> I, 1 );
+			ui32SrcWidth = CStd::Max<uint32_t>( GetWidth() >> I, 1 );
+			ui32SrcHeight = CStd::Max<uint32_t>( GetHeight() >> I, 1 );
+			ui32Width = CStd::Max<uint32_t>( (GetWidth() * _ui32SizeFactorX) >> I, 1 );
+			ui32Height = CStd::Max<uint32_t>( (GetHeight() * _ui32SizeFactorY) >> I, 1 );
+
+			
 			for ( uint32_t Y = 0; Y < ui32Height; ++Y ) {
+				int32_t i32SrcV = 0;
+				switch ( _amAddressModeV ) {
+					case CResampler::LSI_AM_CLAMP : {
+						i32SrcV = CStd::Clamp( int32_t( Y ) - int32_t( ui32Height - ui32SrcHeight ) / 2, 0, int32_t( ui32SrcHeight ) - 1 );
+						break;
+					}
+					case CResampler::LSI_AM_REPEAT : {
+						i32SrcV = int32_t( Y % ui32SrcHeight );
+						break;
+					}
+					case CResampler::LSI_AM_MIRROR : {
+						i32SrcV = int32_t( ((Y / ui32SrcHeight) & 1) ? (ui32SrcHeight - 1 - (Y % ui32SrcHeight)) : (Y % ui32SrcHeight) );
+						break;
+					}
+				}
 				for ( uint32_t X = 0; X < ui32Width; ++X ) {
+					int32_t i32SrcU = 0;
+					switch ( _amAddressModeU ) {
+						case CResampler::LSI_AM_CLAMP : {
+							i32SrcU = CStd::Clamp( int32_t( X ) - int32_t( ui32Width - ui32SrcWidth ) / 2, 0, int32_t( ui32SrcWidth ) - 1 );
+							break;
+						}
+						case CResampler::LSI_AM_REPEAT : {
+							i32SrcU = int32_t( X % ui32SrcWidth );
+							break;
+						}
+						case CResampler::LSI_AM_MIRROR : {
+							i32SrcU = int32_t( ((X / ui32SrcWidth) & 1) ? (ui32SrcWidth - 1 - (X % ui32SrcWidth)) : (X % ui32SrcWidth) );
+							break;
+						}
+					}
+
+					GetTexelAt( i32SrcU, i32SrcV, fVal, I );
+					_iDest.SetTexelAt( X, Y, fVal, I );
 				}
 			}
 		}
+		return true;
+	}
+
+	/**
+	 * Increases the canvas area of the texture without resizing the image (in-place).  The additional space around the image is filled in with
+	 *	a texture-mapping determined by _amAddressModeU and _amAddressModeV.
+	 * 
+	 * \param _ui32SizeFactorX The width multiplier of the new texture.
+	 * \param _ui32SizeFactorY The height multiplier of the new texture.
+	 * \param _amAddressModeU Addressing mode for the U texture coordinates.
+	 * \param _amAddressModeV Addressing mode for the V texture coordinates.
+	 * \return DESC
+	 **/
+	LSBOOL LSE_CALL CImage::BakeTextureMappingInPlace( uint32_t _ui32SizeFactorX, uint32_t _ui32SizeFactorY,
+		CResampler::LSI_ADDRESS_MODE _amAddressModeU,
+		CResampler::LSI_ADDRESS_MODE _amAddressModeV ) {
+
+		CImage iTemp;
+		if ( !BakeTextureMapping( iTemp, _ui32SizeFactorX, _ui32SizeFactorY, _amAddressModeU, _amAddressModeV ) ) { return false; }
+		(*this) = iTemp;
+		return true;
 	}
 
 	/**
