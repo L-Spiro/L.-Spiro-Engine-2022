@@ -29,7 +29,7 @@
 #include "CriticalSection/LSHCriticalSection.h"
 #include "Map/LSTLLinearMap.h"
 
-#include <vulkan/vk_sdk_platform.h>
+#include <vulkan/vk_platform.h>
 #include <vulkan/vulkan.h>
 
 namespace lsg {

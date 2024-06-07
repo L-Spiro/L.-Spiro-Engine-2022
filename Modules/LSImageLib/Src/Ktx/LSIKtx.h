@@ -1195,7 +1195,7 @@ namespace lsi {
 					int64_t i64Texel = ((_ui64Value >> _uShift) & ui64Mask);
 					// Sign-extend.
 					i64Texel <<= 64ULL - _uBits;
-					i64Texel >>= _uBits;
+					i64Texel >>= 64ULL - _uBits;
 					// warning C4293: '<<': shift count negative or too big, undefined behavior
 					//	_uBits can't be 0 so this warning is invalid.
 					// warning C4723: potential divide by 0

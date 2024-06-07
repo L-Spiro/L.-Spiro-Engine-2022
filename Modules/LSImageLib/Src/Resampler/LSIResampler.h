@@ -248,13 +248,13 @@ namespace lsi {
 		CVectorPoD<float, uint32_t> *				m_pvDstBuffer;
 
 		/** Temporary sampler buffer. */
-		mutable CVectorPoD<float, uint32_t>		m_vTempBuffer;
+		mutable CVectorPoD<float, uint32_t>			m_vTempBuffer;
 
 		/** Scanline buffer. */
 		LSI_SCANLINE *								m_psScanBuffer;
 
 		/** A chunk allocated for use by the scanline buffer. */
-		CVectorPoD<float, uint32_t>				m_vScanBufferChunk;
+		CVectorPoD<float, uint32_t>					m_vScanBufferChunk;
 
 		/** Current position within the chunk. */
 		uint32_t									m_ui32ScanChunkPos;

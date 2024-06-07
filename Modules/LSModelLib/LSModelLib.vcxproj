@@ -284,7 +284,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DX9 Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_DIRECTX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -310,7 +310,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_DIRECTX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -335,7 +335,7 @@
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_DIRECTX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -363,7 +363,7 @@
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_DIRECTX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -590,7 +590,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;$(VK_SDK_PATH)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -616,7 +616,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;$(VK_SDK_PATH)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LSG_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -641,7 +641,7 @@
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;$(VK_SDK_PATH)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -669,7 +669,7 @@
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Modules\LSStandardLib\Src\;$(SolutionDir)Modules\LSMemLib\Src\;$(SolutionDir)Modules\LSThreadLib\Src\;$(SolutionDir)Modules\LSMathLib\Src\;$(SolutionDir)Modules\LSFileLib\Src\;$(SolutionDir)Modules\LSCompressionLib\Src\;$(SolutionDir)Modules\LSTL\Src\;$(SolutionDir)Modules\LSGraphicsLib\Src\;$(SolutionDir)Modules\LSImageLib\Src\;$(SolutionDir)Modules\LSPhysicsLib\Src\;$(VK_SDK_PATH)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LSG_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>

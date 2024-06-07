@@ -164,7 +164,7 @@ void LSE_CALL CTextureTest::Init( CGame * _pgGame, int32_t /*_ui32State*/, int32
 	char szBuffer[LSF_MAX_PATH];
 
 	//iImage.LoadFile( CFileLib::ExpandResourcePath( "test-texture-RGB8.dds", szBuffer ) );
-	iImage.LoadFile( CFileLib::ExpandResourcePath( "73.bmp", szBuffer ) );
+	iImage.LoadFile( CFileLib::ExpandResourcePath( "Mt Fuji 20.png", szBuffer ) );
 	//iImage.SetColorSpace( LSI_G_sRGB );
 	//iImage.ResampleInPlace( iImage.GetWidth() >> 1, iImage.GetHeight() >> 1, LSI_F_KAISER_FILTER, 1.0/*-2.2*/ );
 	//iImage.ResampleInPlace( 1920, 1080, LSI_F_MITCHELL_FILTER, 1.0/*-2.2*/ );
@@ -198,6 +198,7 @@ void LSE_CALL CTextureTest::Init( CGame * _pgGame, int32_t /*_ui32State*/, int32
 	//iImage.ConvertToFormatInPlace( LSI_PF_R32G32B32A32F );
 	//iImage.ConvertToFormatInPlace( LSI_PF_R3G3B2 );
 	//iImage.ResampleInPlace( iImage.GetWidth() >> 1, iImage.GetHeight() >> 1, LSI_F_BOX_FILTER, -2.2 );
+	iImage.ResampleInPlace( iImage.GetWidth() - 1, iImage.GetHeight() - 1, LSI_F_BOX_FILTER, -2.2 );
 	m_t2Texture.CreateTexture( &iImage );
 
 
