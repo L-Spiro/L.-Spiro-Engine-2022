@@ -5,7 +5,7 @@
 //
 
 #pragma once
-#include "../LSIImageLib.h"
+#include <stdint.h>
 
 
 

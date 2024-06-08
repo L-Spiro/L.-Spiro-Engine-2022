@@ -417,3 +417,14 @@ LSTest/Data/F14.lsm
 LSTest/Data/QuadBot.lsm
 LSTest/Data/Toad Harbor.lsm
 !Modules/LSImageLib/Src/FreeImage/Source/LibJXR/image/x86/
+/Modules/LSImageLib/Src/FreeImage/Source/FreeImageLib/Vulkan Debug
+/Modules/LSImageLib/Src/FreeImage/Source/LibJPEG/Vulkan Debug
+/Vulkan Debug
+/Modules/LSImageLib/Src/FreeImage/Source/LibJXR/Vulkan Debug
+/Modules/LSImageLib/Src/FreeImage/Source/LibOpenJPEG/Vulkan Debug
+/Modules/LSImageLib/Src/FreeImage/Source/LibPNG/Vulkan Debug
+/Modules/LSImageLib/Src/FreeImage/Source/LibRawLite/Vulkan Debug
+/Modules/LSImageLib/Src/FreeImage/Source/LibTIFF4/Vulkan Debug
+/Modules/LSImageLib/Src/FreeImage/Source/LibWebP/Vulkan Debug
+/Modules/LSImageLib/Src/FreeImage/Source/OpenEXR/Vulkan Debug
+/Modules/LSImageLib/Src/FreeImage/Source/ZLib/Vulkan Debug
