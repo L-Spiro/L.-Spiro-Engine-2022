@@ -49,7 +49,7 @@ namespace lsi {
 		 * \param _ui32Index Index of the row to get.
 		 * \return Returns a pointer to the start of the given row.
 		 */
-		LSE_INLINE const float * LSE_FCALL	operator [] ( uint32_t _ui32Index ) const;
+		LSE_INLINE const float * LSE_FCALL		operator [] ( uint32_t _ui32Index ) const;
 
 		/**
 		 * Copy operator.
@@ -118,7 +118,7 @@ namespace lsi {
 	protected :
 		// == Members.
 		/** The kernel array. */
-		float *								m_pfKernel;
+		float *									m_pfKernel;
 
 		/** Size of the array. */
 		uint32_t								m_ui32Size;

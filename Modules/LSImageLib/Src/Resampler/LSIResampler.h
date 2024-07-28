@@ -80,7 +80,7 @@ namespace lsi {
 		/** A buffered scanline. */
 		typedef struct LSI_SCANLINE {
 			/** Pointers to samples. */
-			float *								pfScanBufL[LSI_MAX_SCANLINE];
+			float *									pfScanBufL[LSI_MAX_SCANLINE];
 
 			/** Scaline values. */
 			int32_t									i32ScanBufY[LSI_MAX_SCANLINE];

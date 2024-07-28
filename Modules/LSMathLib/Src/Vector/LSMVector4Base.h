@@ -214,7 +214,7 @@ namespace lsm {
 		 * \param _fZ The new Z-axis value.
 		 * \param _fW The new W-axis value.
 		 */
-		void LSE_FCALL						Set( _tType _fX, _tType _fY, _tType _fZ, _tType _fW ) {
+		void LSE_FCALL							Set( _tType _fX, _tType _fY, _tType _fZ, _tType _fW ) {
 			x = _fX;
 			y = _fY;
 			z = _fZ;
@@ -224,14 +224,14 @@ namespace lsm {
 		/**
 		 * Sets all axes on this vector to 0.
 		 */
-		void LSE_FCALL						Clear() {
+		void LSE_FCALL							Clear() {
 			x = y = z = w = _tType( 0 );
 		}
 
 		/**
 		 * Negates each axis on this vector.
 		 */
-		void LSE_FCALL						Invert() {
+		void LSE_FCALL							Invert() {
 			x = -x;
 			y = -y;
 			z = -z;
@@ -262,7 +262,7 @@ namespace lsm {
 		 *	unit length (1 unit in length) while maintaining its direction.
 		 * Accuracy/speed depends on the LSM_PERFORMANCE macro.
 		 */
-		void LSE_FCALL						Normalize() {
+		void LSE_FCALL							Normalize() {
 			LSREAL fInvLen = CMathLib::InvSqrt( x * x + y * y + z * z + w * w );
 			x *= fInvLen;
 			y *= fInvLen;

@@ -198,7 +198,7 @@ void LSE_CALL CTextureTest::Init( CGame * _pgGame, int32_t /*_ui32State*/, int32
 	//iImage.ConvertToFormatInPlace( LSI_PF_R32G32B32A32F );
 	//iImage.ConvertToFormatInPlace( LSI_PF_R3G3B2 );
 	//iImage.ResampleInPlace( iImage.GetWidth() >> 1, iImage.GetHeight() >> 1, LSI_F_BOX_FILTER, -2.2 );
-	iImage.ResampleInPlace( iImage.GetWidth() - 1, iImage.GetHeight() - 1, LSI_F_BOX_FILTER, -2.2 );
+	iImage.ResampleInPlace( iImage.GetWidth(), iImage.GetHeight() - 1, LSI_F_BOX_FILTER, -2.2 );
 	m_t2Texture.CreateTexture( &iImage );
 
 
