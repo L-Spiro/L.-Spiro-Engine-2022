@@ -566,7 +566,7 @@ namespace lsm {
 		 * \param _ui32Row The row to set.
 		 * \param _v3bVec The value to apply to the row.  The 4th component of the row is not modified.
 		 */
-		void LSE_FCALL								SetRow( uint32_t _ui32Row, const _tVector3Type &_v3bVec ) {
+		void LSE_FCALL									SetRow( uint32_t _ui32Row, const _tVector3Type &_v3bVec ) {
 			LSE_UNALIGNED _tType * pfData = &_11;
 			pfData += (_ui32Row << 2);
 			
@@ -581,7 +581,7 @@ namespace lsm {
 		 * \param _ui32Row The row to set.
 		 * \param _v4bVec The value to apply to the row.  The 4th component of the row is not modified.
 		 */
-		void LSE_FCALL								SetRow( uint32_t _ui32Row, const _tVector4Type &_v4bVec ) {
+		void LSE_FCALL									SetRow( uint32_t _ui32Row, const _tVector4Type &_v4bVec ) {
 			LSE_UNALIGNED _tType * pfData = &_11;
 			pfData += (_ui32Row << 2);
 			
@@ -599,7 +599,7 @@ namespace lsm {
 		 * \param _tNear Z-value of the near view-plane.
 		 * \param _tFar Z-value of the far view-plane.
 		 */
-		void LSE_FCALL								PerspectiveFovRH( _tType _tFov, _tType _tAspect, _tType _tNear, _tType _tFar ) {
+		void LSE_FCALL									PerspectiveFovRH( _tType _tFov, _tType _tAspect, _tType _tNear, _tType _tFar ) {
 			// Zero out the ones that need to be zero.
 			_12 = _13 = _14 = _tType( 0.0 );
 			_21 = _23 = _24 = _tType( 0.0 );
@@ -625,7 +625,7 @@ namespace lsm {
 		 * \param _tAspect Aspect ratio, defined as view space width divided by height.
 		 * \param _tNear Z-value of the near view-plane.
 		 */
-		void LSE_FCALL								PerspectiveFovRH( _tType _tFov, _tType _tAspect, _tType _tNear ) {
+		void LSE_FCALL									PerspectiveFovRH( _tType _tFov, _tType _tAspect, _tType _tNear ) {
 			// Zero out the ones that need to be zero.
 			_12 = _13 = _14 = _tType( 0.0 );
 			_21 = _23 = _24 = _tType( 0.0 );
@@ -652,7 +652,7 @@ namespace lsm {
 		 * \param _tNear Minimum z-value of the view volume.
 		 * \param _tFar Maximum z-value of the view volume.
 		 */
-		void LSE_FCALL								OrthoOffCenterRH( _tType _tLeft, _tType _tRight, _tType _tBottom, _tType _tTop, _tType _tNear, _tType _tFar ) {
+		void LSE_FCALL									OrthoOffCenterRH( _tType _tLeft, _tType _tRight, _tType _tBottom, _tType _tTop, _tType _tNear, _tType _tFar ) {
 			// Zero out the ones that need to be zero.
 			_12 = _13 = _14 = _tType( 0.0 );
 			_21 = _23 = _24 = _tType( 0.0 );
@@ -681,7 +681,7 @@ namespace lsm {
 		 * \param _tNear Minimum z-value of the view volume.
 		 * \param _tFar Maximum z-value of the view volume.
 		 */
-		void LSE_FCALL								OrthoOffCenterLH( _tType _tLeft, _tType _tRight, _tType _tBottom, _tType _tTop, _tType _tNear, _tType _tFar ) {
+		void LSE_FCALL									OrthoOffCenterLH( _tType _tLeft, _tType _tRight, _tType _tBottom, _tType _tTop, _tType _tNear, _tType _tFar ) {
 			// Zero out the ones that need to be zero.
 			_12 = _13 = _14 = _tType( 0.0 );
 			_21 = _23 = _24 = _tType( 0.0 );
@@ -1278,7 +1278,7 @@ namespace lsm {
 		 * \param _tPitch Holds the returned pitch.
 		 * \param _tRoll Holds the returned roll.
 		 */
-		void LSE_FCALL								GetYawPitchRoll( _tType &_tYaw, _tType &_tPitch, _tType &_tRoll ) const {
+		void LSE_FCALL									GetYawPitchRoll( _tType &_tYaw, _tType &_tPitch, _tType &_tRoll ) const {
 			_tYaw = CMathLib::ATan( static_cast<LSREAL>(_21), static_cast<LSREAL>(_11) );
 			_tPitch = CMathLib::ATan( static_cast<LSREAL>(-_31), CMathLib::Sqrt( static_cast<LSREAL>(_32 * _32 + _33 * _33) ) );
 			_tRoll = CMathLib::ATan( static_cast<LSREAL>(_32), static_cast<LSREAL>(_33) );
