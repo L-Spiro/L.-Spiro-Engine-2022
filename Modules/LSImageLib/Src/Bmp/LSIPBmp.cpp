@@ -99,8 +99,8 @@ namespace lsi {
 		uint32_t ui32Mips = 1;
 		if ( pcDetl->ui32MipLevels == 0 ) { return false; }
 		if ( pcDetl->ui32MipLevels > 1 ) {
-			uint32_t ui32MaxMipsW = static_cast<uint32_t>(std::round( std::log2( pcHeader->ui32Width ) + 1.0 ));
-			uint32_t ui32MaxMipsH = static_cast<uint32_t>(std::round( std::log2( pcHeader->ui32Height ) + 1.0 ));
+			uint32_t ui32MaxMipsW = static_cast<uint32_t>(std::floor( std::log2( pcHeader->ui32Width ) + 1.0 ));
+			uint32_t ui32MaxMipsH = static_cast<uint32_t>(std::floor( std::log2( pcHeader->ui32Height ) + 1.0 ));
 			ui32Mips = CStd::Min( CStd::Min( ui32MaxMipsW, ui32MaxMipsH ), pcDetl->ui32MipLevels );
 			if ( !_vMipMaps.Resize( ui32Mips - 1 ) ) { return false; }
 		}

@@ -629,7 +629,7 @@ namespace lsi {
 	 * \return Returns happiness.
 	 */
 	LSE_INLINE float LSE_CALL CResampler::BlackmanWindow( double _dX ) {
-		return static_cast<float>(42659071 + 0.49656062 * ::cos( LSM_PI_DOUBLE * _dX ) + 0.07684867 * ::cos( 2.0 * LSM_PI_DOUBLE * _dX ));
+		return static_cast<float>(0.42659071 + 0.49656062 * ::cos( LSM_PI_DOUBLE * _dX ) + 0.07684867 * ::cos( 2.0 * LSM_PI_DOUBLE * _dX ));
 	}
 
 	/**
